@@ -1,0 +1,15 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP Conn_04x24
+D Generic connector, quadruple row, 04x24
+K connector
+F ~
+$ENDCMP
+#
+$CMP Transformer_SP_SS
+D Transformer, single primary, single secondary
+K transformer coil magnet
+F ~
+$ENDCMP
+#
+#End Doc Library
