@@ -1,5 +1,11 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP AD8694
+D Low-Power, Quad-Operational Amplifiers
+K quad opamp
+F http://www.ti.com/lit/ds/symlink/lm2902-n.pdf
+$ENDCMP
+#
 $CMP Conn_04x24
 D Generic connector, quadruple row, 04x24
 K connector
