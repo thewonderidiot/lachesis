@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr USLedger 17000 11000
 encoding utf-8
-Sheet 3 3
+Sheet 4 4
 Title ""
 Date ""
 Rev ""
@@ -3473,11 +3473,11 @@ XCN03
 Entry Wire Line
 	7500 8600 7600 8500
 Text HLabel 4750 1450 0    50   Input ~ 0
-~IL0[1..8]
+~IL[01..08]
 Wire Bus Line
 	4800 1450 4750 1450
 Text HLabel 4750 1350 0    50   Input ~ 0
-IL0[1..8]
+IL[01..08]
 Wire Bus Line
 	4950 1350 4750 1350
 Wire Wire Line
@@ -3649,9 +3649,9 @@ Wire Bus Line
 	13700 1650 13900 1650
 Connection ~ 13700 1650
 Text HLabel 13900 1550 2    50   Output ~ 0
-XFN0[1..8]
+XFN[01..08]
 Text HLabel 13900 1650 2    50   Output ~ 0
-XCN0[1..8]
+XCN[01..08]
 Wire Bus Line
 	3750 1750 3750 3150
 Wire Bus Line
