@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr USLedger 17000 11000
 encoding utf-8
-Sheet 1 4
+Sheet 1 5
 Title ""
 Date ""
 Rev ""
@@ -14,14 +14,14 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Sheet
-S 4000 1500 1150 600 
+S 3250 1550 1150 600 
 U 61EC7443
 F0 "Sense Amplifiers" 50
 F1 "sense_amps.sch" 50
-F2 "SBF" I L 4000 1900 50 
-F3 "GAR[01..16]" I L 4000 1650 50 
-F4 "GBR[01..16]" I L 4000 1750 50 
-F5 "SA[01..16]" O R 5150 1650 50 
+F2 "SBF" I L 3250 1950 50 
+F3 "GAR[01..16]" I L 3250 1700 50 
+F4 "GBR[01..16]" I L 3250 1800 50 
+F5 "SA[01..16]" O R 4400 1700 50 
 $EndSheet
 $Sheet
 S 6600 1150 1250 1150
@@ -66,9 +66,19 @@ Wire Bus Line
 Wire Bus Line
 	7950 3000 7850 3000
 $Sheet
-S 4000 2600 1150 850 
+S 4750 1550 1150 850 
 U 652D8F7B
 F0 "FPGA and Power" 50
 F1 "fpga_power.sch" 50
+F2 "SA[01..16]" I L 4750 1700 50 
+F3 "STEN[01..12]" O R 5900 1700 50 
 $EndSheet
+Wire Bus Line
+	4400 1700 4750 1700
+Wire Bus Line
+	5900 1700 6200 1700
+Wire Bus Line
+	6200 1700 6200 1250
+Wire Bus Line
+	6200 1250 6600 1250
 $EndSCHEMATC

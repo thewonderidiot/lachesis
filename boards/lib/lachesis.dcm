@@ -6,6 +6,12 @@ K quad opamp
 F http://www.ti.com/lit/ds/symlink/lm2902-n.pdf
 $ENDCMP
 #
+$CMP Cmod_A7
+D Generic connector, single row, 01x24, script generated (kicad-library-utils/schlib/autogen/connector/)
+K connector
+F ~
+$ENDCMP
+#
 $CMP Conn_04x24
 D Generic connector, quadruple row, 04x24
 K connector
