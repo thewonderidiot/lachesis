@@ -1644,7 +1644,7 @@ Connection ~ 11250 4350
 Text Label 11600 4350 2    50   ~ 0
 RSTRD0
 Text Label 11600 4750 2    50   ~ 0
-XRSTN0
+XRST0
 Entry Wire Line
 	11600 4350 11700 4250
 Entry Wire Line
@@ -1685,7 +1685,7 @@ Connection ~ 11250 5000
 Text Label 11600 5000 2    50   ~ 0
 RSTRD1
 Text Label 11600 5400 2    50   ~ 0
-XRSTN1
+XRST1
 Entry Wire Line
 	11600 5000 11700 4900
 Entry Wire Line
@@ -1726,7 +1726,7 @@ Connection ~ 11250 5650
 Text Label 11600 5650 2    50   ~ 0
 RSTRD2
 Text Label 11600 6050 2    50   ~ 0
-XRSTN2
+XRST2
 Entry Wire Line
 	11600 5650 11700 5550
 Entry Wire Line
@@ -1767,7 +1767,7 @@ Connection ~ 11250 6300
 Text Label 11600 6300 2    50   ~ 0
 RSTRD3
 Text Label 11600 6700 2    50   ~ 0
-XRSTN3
+XRST3
 Entry Wire Line
 	11600 6300 11700 6200
 Entry Wire Line
@@ -2188,7 +2188,7 @@ Wire Bus Line
 Text HLabel 11900 4150 2    50   Output ~ 0
 RSTRD[0..3]
 Text HLabel 11900 4250 2    50   Output ~ 0
-XRSTN[0..3]
+XRST[0..3]
 Wire Bus Line
 	13600 2650 13650 2650
 Text HLabel 13650 2650 2    50   Output ~ 0
