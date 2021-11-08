@@ -1,5 +1,11 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP 74LVC2G04
+D Dual NOT Gate, Low-Voltage CMOS
+K Dual Gate NOT LVC CMOS
+F http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf
+$ENDCMP
+#
 $CMP AD8694
 D Low-Power, Quad-Operational Amplifiers
 K quad opamp
