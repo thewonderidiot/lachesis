@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr USLedger 17000 11000
 encoding utf-8
-Sheet 2 68
+Sheet 2 69
 Title ""
 Date ""
 Rev ""
@@ -169,9 +169,9 @@ Entry Wire Line
 Entry Wire Line
 	1600 2350 1700 2450
 Text Label 1800 1650 0    50   ~ 0
-GAR01
+GAR1
 Text Label 1800 2450 0    50   ~ 0
-GBR01
+GBR1
 NoConn ~ 2550 2050
 NoConn ~ 3350 2050
 Wire Wire Line
@@ -327,9 +327,9 @@ Entry Wire Line
 Entry Wire Line
 	1600 3350 1700 3450
 Text Label 1800 2650 0    50   ~ 0
-GAR02
+GAR2
 Text Label 1800 3450 0    50   ~ 0
-GBR02
+GBR2
 NoConn ~ 2550 3050
 NoConn ~ 3350 3050
 Wire Wire Line
@@ -485,9 +485,9 @@ Entry Wire Line
 Entry Wire Line
 	1600 4350 1700 4450
 Text Label 1800 3650 0    50   ~ 0
-GAR03
+GAR3
 Text Label 1800 4450 0    50   ~ 0
-GBR03
+GBR3
 NoConn ~ 2550 4050
 NoConn ~ 3350 4050
 Wire Wire Line
@@ -643,9 +643,9 @@ Entry Wire Line
 Entry Wire Line
 	1600 5350 1700 5450
 Text Label 1800 4650 0    50   ~ 0
-GAR04
+GAR4
 Text Label 1800 5450 0    50   ~ 0
-GBR04
+GBR4
 NoConn ~ 2550 5050
 NoConn ~ 3350 5050
 Wire Wire Line
@@ -801,9 +801,9 @@ Entry Wire Line
 Entry Wire Line
 	1600 6350 1700 6450
 Text Label 1800 5650 0    50   ~ 0
-GAR05
+GAR5
 Text Label 1800 6450 0    50   ~ 0
-GBR05
+GBR5
 NoConn ~ 2550 6050
 NoConn ~ 3350 6050
 Wire Wire Line
@@ -959,9 +959,9 @@ Entry Wire Line
 Entry Wire Line
 	1600 7350 1700 7450
 Text Label 1800 6650 0    50   ~ 0
-GAR06
+GAR6
 Text Label 1800 7450 0    50   ~ 0
-GBR06
+GBR6
 NoConn ~ 2550 7050
 NoConn ~ 3350 7050
 Wire Wire Line
@@ -1117,9 +1117,9 @@ Entry Wire Line
 Entry Wire Line
 	1600 8350 1700 8450
 Text Label 1800 7650 0    50   ~ 0
-GAR07
+GAR7
 Text Label 1800 8450 0    50   ~ 0
-GBR07
+GBR7
 NoConn ~ 2550 8050
 NoConn ~ 3350 8050
 Wire Wire Line
@@ -1275,9 +1275,9 @@ Entry Wire Line
 Entry Wire Line
 	1600 9350 1700 9450
 Text Label 1800 8650 0    50   ~ 0
-GAR08
+GAR8
 Text Label 1800 9450 0    50   ~ 0
-GBR08
+GBR8
 NoConn ~ 2550 9050
 NoConn ~ 3350 9050
 Wire Wire Line
@@ -1433,9 +1433,9 @@ Entry Wire Line
 Entry Wire Line
 	6200 2450 6100 2550
 Text Label 6300 1650 0    50   ~ 0
-GAR09
+GAR9
 Text Label 6300 2450 0    50   ~ 0
-GBR09
+GBR9
 NoConn ~ 7050 2050
 NoConn ~ 7850 2050
 Wire Wire Line
@@ -2605,13 +2605,13 @@ Wire Wire Line
 Text HLabel 1250 1200 0    50   Input ~ 0
 SBF
 Text HLabel 1250 1300 0    50   Input ~ 0
-GAR[01..16]
+GAR[1..16]
 Text HLabel 1250 1400 0    50   Input ~ 0
-GBR[01..16]
+GBR[1..16]
 Wire Wire Line
 	5200 2050 5500 2050
 Text Label 5250 2050 0    50   ~ 0
-SA01
+SA1
 Entry Wire Line
 	5500 2050 5600 1950
 Connection ~ 6700 2650
@@ -2624,49 +2624,49 @@ Connection ~ 6700 8650
 Wire Wire Line
 	5200 3050 5500 3050
 Text Label 5250 3050 0    50   ~ 0
-SA02
+SA2
 Entry Wire Line
 	5500 3050 5600 2950
 Wire Wire Line
 	5200 4050 5500 4050
 Text Label 5250 4050 0    50   ~ 0
-SA03
+SA3
 Entry Wire Line
 	5500 4050 5600 3950
 Wire Wire Line
 	5200 5050 5500 5050
 Text Label 5250 5050 0    50   ~ 0
-SA04
+SA4
 Entry Wire Line
 	5500 5050 5600 4950
 Wire Wire Line
 	5200 6050 5500 6050
 Text Label 5250 6050 0    50   ~ 0
-SA05
+SA5
 Entry Wire Line
 	5500 6050 5600 5950
 Wire Wire Line
 	5200 7050 5500 7050
 Text Label 5250 7050 0    50   ~ 0
-SA06
+SA6
 Entry Wire Line
 	5500 7050 5600 6950
 Wire Wire Line
 	5200 8050 5500 8050
 Text Label 5250 8050 0    50   ~ 0
-SA07
+SA7
 Entry Wire Line
 	5500 8050 5600 7950
 Wire Wire Line
 	5200 9050 5500 9050
 Text Label 5250 9050 0    50   ~ 0
-SA08
+SA8
 Entry Wire Line
 	5500 9050 5600 8950
 Wire Wire Line
 	9700 2050 10000 2050
 Text Label 9750 2050 0    50   ~ 0
-SA09
+SA9
 Entry Wire Line
 	10000 2050 10100 1950
 Wire Wire Line
@@ -2717,7 +2717,7 @@ Wire Bus Line
 	10100 1300 10300 1300
 Connection ~ 10100 1300
 Text HLabel 10300 1300 2    50   Output ~ 0
-SA[01..16]
+SA[1..16]
 $Comp
 L lachesis:SN7524 U?
 U 3 1 617E2409

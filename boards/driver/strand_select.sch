@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr USLedger 17000 11000
 encoding utf-8
-Sheet 4 68
+Sheet 4 69
 Title ""
 Date ""
 Rev ""
@@ -14,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Text HLabel 12050 2100 2    50   Output ~ 0
-STR[01..12]
+STR[1..12]
 Text Notes 10700 1500 2    50   ~ 0
 Strand Select
 $Sheet
@@ -272,11 +272,11 @@ $EndSheet
 Wire Wire Line
 	11500 2300 11800 2300
 Text Label 11550 2300 0    50   ~ 0
-STR01
+STR1
 Wire Wire Line
 	10100 2300 10800 2300
 Text Label 10150 2300 0    50   ~ 0
-SE01
+SE1
 $Sheet
 S 9450 2200 650  200 
 U 61899537
@@ -286,7 +286,7 @@ F2 "IN" I L 9450 2300 50
 F3 "OUT" O R 10100 2300 50 
 $EndSheet
 Text Label 9150 2300 0    50   ~ 0
-STEN01
+STEN1
 $Sheet
 S 10800 2750 700  350 
 U 6189F177
@@ -299,11 +299,11 @@ $EndSheet
 Wire Wire Line
 	11500 2850 11800 2850
 Text Label 11550 2850 0    50   ~ 0
-STR02
+STR2
 Wire Wire Line
 	10100 2850 10800 2850
 Text Label 10150 2850 0    50   ~ 0
-SE02
+SE2
 $Sheet
 S 9450 2750 650  200 
 U 6189F17F
@@ -313,7 +313,7 @@ F2 "IN" I L 9450 2850 50
 F3 "OUT" O R 10100 2850 50 
 $EndSheet
 Text Label 9150 2850 0    50   ~ 0
-STEN02
+STEN2
 $Sheet
 S 10800 3300 700  350 
 U 618A142B
@@ -326,11 +326,11 @@ $EndSheet
 Wire Wire Line
 	11500 3400 11800 3400
 Text Label 11550 3400 0    50   ~ 0
-STR03
+STR3
 Wire Wire Line
 	10100 3400 10800 3400
 Text Label 10150 3400 0    50   ~ 0
-SE03
+SE3
 $Sheet
 S 9450 3300 650  200 
 U 618A1433
@@ -340,7 +340,7 @@ F2 "IN" I L 9450 3400 50
 F3 "OUT" O R 10100 3400 50 
 $EndSheet
 Text Label 9150 3400 0    50   ~ 0
-STEN03
+STEN3
 $Sheet
 S 10800 3850 700  350 
 U 618A143A
@@ -353,11 +353,11 @@ $EndSheet
 Wire Wire Line
 	11500 3950 11800 3950
 Text Label 11550 3950 0    50   ~ 0
-STR04
+STR4
 Wire Wire Line
 	10100 3950 10800 3950
 Text Label 10150 3950 0    50   ~ 0
-SE04
+SE4
 $Sheet
 S 9450 3850 650  200 
 U 618A1442
@@ -367,7 +367,7 @@ F2 "IN" I L 9450 3950 50
 F3 "OUT" O R 10100 3950 50 
 $EndSheet
 Text Label 9150 3950 0    50   ~ 0
-STEN04
+STEN4
 $Sheet
 S 10800 4400 700  350 
 U 618A4047
@@ -380,11 +380,11 @@ $EndSheet
 Wire Wire Line
 	11500 4500 11800 4500
 Text Label 11550 4500 0    50   ~ 0
-STR05
+STR5
 Wire Wire Line
 	10100 4500 10800 4500
 Text Label 10150 4500 0    50   ~ 0
-SE05
+SE5
 $Sheet
 S 9450 4400 650  200 
 U 618A404F
@@ -393,8 +393,6 @@ F1 "input.sch" 50
 F2 "IN" I L 9450 4500 50 
 F3 "OUT" O R 10100 4500 50 
 $EndSheet
-Text Label 9150 4500 0    50   ~ 0
-STEN05
 $Sheet
 S 10800 4950 700  350 
 U 618A4056
@@ -407,11 +405,11 @@ $EndSheet
 Wire Wire Line
 	11500 5050 11800 5050
 Text Label 11550 5050 0    50   ~ 0
-STR06
+STR6
 Wire Wire Line
 	10100 5050 10800 5050
 Text Label 10150 5050 0    50   ~ 0
-SE06
+SE6
 $Sheet
 S 9450 4950 650  200 
 U 618A405E
@@ -421,7 +419,7 @@ F2 "IN" I L 9450 5050 50
 F3 "OUT" O R 10100 5050 50 
 $EndSheet
 Text Label 9150 5050 0    50   ~ 0
-STEN06
+STEN6
 $Sheet
 S 10800 5500 700  350 
 U 618A4065
@@ -434,11 +432,11 @@ $EndSheet
 Wire Wire Line
 	11500 5600 11800 5600
 Text Label 11550 5600 0    50   ~ 0
-STR07
+STR7
 Wire Wire Line
 	10100 5600 10800 5600
 Text Label 10150 5600 0    50   ~ 0
-SE07
+SE7
 $Sheet
 S 9450 5500 650  200 
 U 618A406D
@@ -448,7 +446,7 @@ F2 "IN" I L 9450 5600 50
 F3 "OUT" O R 10100 5600 50 
 $EndSheet
 Text Label 9150 5600 0    50   ~ 0
-STEN07
+STEN7
 $Sheet
 S 10800 6050 700  350 
 U 618A4074
@@ -461,11 +459,11 @@ $EndSheet
 Wire Wire Line
 	11500 6150 11800 6150
 Text Label 11550 6150 0    50   ~ 0
-STR08
+STR8
 Wire Wire Line
 	10100 6150 10800 6150
 Text Label 10150 6150 0    50   ~ 0
-SE08
+SE8
 $Sheet
 S 9450 6050 650  200 
 U 618A407C
@@ -475,7 +473,7 @@ F2 "IN" I L 9450 6150 50
 F3 "OUT" O R 10100 6150 50 
 $EndSheet
 Text Label 9150 6150 0    50   ~ 0
-STEN08
+STEN8
 $Sheet
 S 10800 6600 700  350 
 U 618ABD34
@@ -488,11 +486,11 @@ $EndSheet
 Wire Wire Line
 	11500 6700 11800 6700
 Text Label 11550 6700 0    50   ~ 0
-STR09
+STR9
 Wire Wire Line
 	10100 6700 10800 6700
 Text Label 10150 6700 0    50   ~ 0
-SE09
+SE9
 $Sheet
 S 9450 6600 650  200 
 U 618ABD3C
@@ -502,7 +500,7 @@ F2 "IN" I L 9450 6700 50
 F3 "OUT" O R 10100 6700 50 
 $EndSheet
 Text Label 9150 6700 0    50   ~ 0
-STEN09
+STEN9
 $Sheet
 S 10800 7150 700  350 
 U 618ABD43
@@ -730,9 +728,11 @@ Entry Wire Line
 Entry Wire Line
 	9000 2200 9100 2300
 Text HLabel 8850 2100 0    50   Input ~ 0
-STEN[01..12]
+STEN[1..12]
 Wire Bus Line
 	11900 2100 11900 8250
 Wire Bus Line
 	9000 2100 9000 8250
+Text Label 9150 4500 0    50   ~ 0
+STEN5
 $EndSCHEMATC

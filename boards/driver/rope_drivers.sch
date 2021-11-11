@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr USLedger 17000 11000
 encoding utf-8
-Sheet 31 68
+Sheet 31 69
 Title ""
 Date ""
 Rev ""
@@ -47,7 +47,7 @@ Wire Wire Line
 Wire Wire Line
 	6200 1300 9000 1300
 Text Label 10950 7800 2    50   ~ 0
-XCN08
+XCN8
 Wire Wire Line
 	10650 7800 10950 7800
 Text Label 9550 8050 0    50   ~ 0
@@ -55,7 +55,7 @@ Text Label 9550 8050 0    50   ~ 0
 Wire Wire Line
 	9900 8050 9550 8050
 Text Label 9650 7800 0    50   ~ 0
-~IL08
+~IL8
 Wire Wire Line
 	9900 7800 9650 7800
 $Sheet
@@ -75,7 +75,7 @@ Wire Wire Line
 Wire Wire Line
 	8900 5850 9900 5850
 Text Label 10950 7100 2    50   ~ 0
-XCN07
+XCN7
 Wire Wire Line
 	10650 7100 10950 7100
 Text Label 9550 7350 0    50   ~ 0
@@ -83,7 +83,7 @@ Text Label 9550 7350 0    50   ~ 0
 Wire Wire Line
 	9900 7350 9550 7350
 Text Label 9650 7100 0    50   ~ 0
-~IL07
+~IL7
 Wire Wire Line
 	9900 7100 9650 7100
 $Sheet
@@ -97,11 +97,11 @@ F4 "OUT" O R 10650 7100 50
 F5 "GND" I L 9900 7350 50 
 $EndSheet
 Text Label 10950 6400 2    50   ~ 0
-XCN06
+XCN6
 Wire Wire Line
 	10650 6400 10950 6400
 Text Label 9650 6400 0    50   ~ 0
-~IL06
+~IL6
 Wire Wire Line
 	9900 6400 9650 6400
 Text Label 9550 6650 0    50   ~ 0
@@ -109,7 +109,7 @@ Text Label 9550 6650 0    50   ~ 0
 Wire Wire Line
 	9900 6650 9550 6650
 Text Label 10950 5700 2    50   ~ 0
-XCN05
+XCN5
 Wire Wire Line
 	10650 5700 10950 5700
 Text Label 9550 5950 0    50   ~ 0
@@ -117,7 +117,7 @@ Text Label 9550 5950 0    50   ~ 0
 Wire Wire Line
 	9900 5950 9550 5950
 Text Label 9650 5700 0    50   ~ 0
-~IL05
+~IL5
 Wire Wire Line
 	9900 5700 9650 5700
 $Sheet
@@ -141,11 +141,11 @@ F4 "OUT" O R 10650 5700 50
 F5 "GND" I L 9900 5950 50 
 $EndSheet
 Text Label 10950 4950 2    50   ~ 0
-XCN04
+XCN4
 Wire Wire Line
 	10650 4950 10950 4950
 Text Label 9650 4950 0    50   ~ 0
-~IL04
+~IL4
 Wire Wire Line
 	9900 4950 9650 4950
 Text Label 9550 5200 0    50   ~ 0
@@ -153,7 +153,7 @@ Text Label 9550 5200 0    50   ~ 0
 Wire Wire Line
 	9900 5200 9550 5200
 Text Label 10950 4250 2    50   ~ 0
-XCN03
+XCN3
 Wire Wire Line
 	10650 4250 10950 4250
 Text Label 9550 4500 0    50   ~ 0
@@ -163,7 +163,7 @@ Wire Wire Line
 Wire Wire Line
 	9000 4400 9900 4400
 Text Label 9650 4250 0    50   ~ 0
-~IL03
+~IL3
 Wire Wire Line
 	9900 4250 9650 4250
 $Sheet
@@ -189,11 +189,11 @@ $EndSheet
 Wire Wire Line
 	9000 3700 9900 3700
 Text Label 10950 3550 2    50   ~ 0
-XCN02
+XCN2
 Wire Wire Line
 	10650 3550 10950 3550
 Text Label 9650 3550 0    50   ~ 0
-~IL02
+~IL2
 Wire Wire Line
 	9900 3550 9650 3550
 Text Label 9550 3800 0    50   ~ 0
@@ -201,7 +201,7 @@ Text Label 9550 3800 0    50   ~ 0
 Wire Wire Line
 	9900 3800 9550 3800
 Text Label 10950 2850 2    50   ~ 0
-XCN01
+XCN1
 Wire Wire Line
 	10650 2850 10950 2850
 Text Label 9550 3100 0    50   ~ 0
@@ -211,7 +211,7 @@ Wire Wire Line
 Wire Wire Line
 	9000 3000 9900 3000
 Text Label 9650 2850 0    50   ~ 0
-~IL01
+~IL1
 Wire Wire Line
 	9900 2850 9650 2850
 $Sheet
@@ -240,7 +240,7 @@ Wire Wire Line
 Wire Wire Line
 	6200 7950 7100 7950
 Text Label 8150 7800 2    50   ~ 0
-XFN08
+XFN8
 Wire Wire Line
 	7850 7800 8150 7800
 Text Label 6750 8050 0    50   ~ 0
@@ -248,7 +248,7 @@ Text Label 6750 8050 0    50   ~ 0
 Wire Wire Line
 	7100 8050 6750 8050
 Text Label 6850 7800 0    50   ~ 0
-IL08
+IL8
 Wire Wire Line
 	7100 7800 6850 7800
 $Sheet
@@ -282,7 +282,7 @@ Connection ~ 6200 3700
 Wire Wire Line
 	6200 3700 6200 4400
 Text Label 8150 7100 2    50   ~ 0
-XFN07
+XFN7
 Wire Wire Line
 	7850 7100 8150 7100
 Text Label 6750 7350 0    50   ~ 0
@@ -290,7 +290,7 @@ Text Label 6750 7350 0    50   ~ 0
 Wire Wire Line
 	7100 7350 6750 7350
 Text Label 6850 7100 0    50   ~ 0
-IL07
+IL7
 Wire Wire Line
 	7100 7100 6850 7100
 $Sheet
@@ -304,11 +304,11 @@ F4 "OUT" O R 7850 7100 50
 F5 "GND" I L 7100 7350 50 
 $EndSheet
 Text Label 8150 6400 2    50   ~ 0
-XFN06
+XFN6
 Wire Wire Line
 	7850 6400 8150 6400
 Text Label 6850 6400 0    50   ~ 0
-IL06
+IL6
 Wire Wire Line
 	7100 6400 6850 6400
 Text Label 6750 6650 0    50   ~ 0
@@ -316,7 +316,7 @@ Text Label 6750 6650 0    50   ~ 0
 Wire Wire Line
 	7100 6650 6750 6650
 Text Label 8150 5700 2    50   ~ 0
-XFN05
+XFN5
 Wire Wire Line
 	7850 5700 8150 5700
 Text Label 6750 5950 0    50   ~ 0
@@ -324,7 +324,7 @@ Text Label 6750 5950 0    50   ~ 0
 Wire Wire Line
 	7100 5950 6750 5950
 Text Label 6850 5700 0    50   ~ 0
-IL05
+IL5
 Wire Wire Line
 	7100 5700 6850 5700
 $Sheet
@@ -350,11 +350,11 @@ $EndSheet
 Wire Wire Line
 	6200 5100 7100 5100
 Text Label 8150 4950 2    50   ~ 0
-XFN04
+XFN4
 Wire Wire Line
 	7850 4950 8150 4950
 Text Label 6850 4950 0    50   ~ 0
-IL04
+IL4
 Wire Wire Line
 	7100 4950 6850 4950
 Text Label 6750 5200 0    50   ~ 0
@@ -362,7 +362,7 @@ Text Label 6750 5200 0    50   ~ 0
 Wire Wire Line
 	7100 5200 6750 5200
 Text Label 8150 4250 2    50   ~ 0
-XFN03
+XFN3
 Wire Wire Line
 	7850 4250 8150 4250
 Text Label 6750 4500 0    50   ~ 0
@@ -372,7 +372,7 @@ Wire Wire Line
 Wire Wire Line
 	6200 4400 7100 4400
 Text Label 6850 4250 0    50   ~ 0
-IL03
+IL3
 Wire Wire Line
 	7100 4250 6850 4250
 $Sheet
@@ -401,11 +401,11 @@ Wire Wire Line
 Wire Wire Line
 	6200 3000 6200 3700
 Text Label 8150 3550 2    50   ~ 0
-XFN02
+XFN2
 Wire Wire Line
 	7850 3550 8150 3550
 Text Label 6850 3550 0    50   ~ 0
-IL02
+IL2
 Wire Wire Line
 	7100 3550 6850 3550
 Text Label 6750 3800 0    50   ~ 0
@@ -413,7 +413,7 @@ Text Label 6750 3800 0    50   ~ 0
 Wire Wire Line
 	7100 3800 6750 3800
 Text Label 8150 2850 2    50   ~ 0
-XFN01
+XFN1
 Wire Wire Line
 	7850 2850 8150 2850
 Text Label 6750 3100 0    50   ~ 0
@@ -425,7 +425,7 @@ Wire Wire Line
 Wire Wire Line
 	6200 3000 7100 3000
 Text Label 6850 2850 0    50   ~ 0
-IL01
+IL1
 Wire Wire Line
 	7100 2850 6850 2850
 $Sheet
@@ -830,35 +830,35 @@ Wire Wire Line
 Wire Wire Line
 	14500 3700 14800 3700
 Text Label 14800 3700 2    50   ~ 0
-RFD01
+RFD1
 Wire Wire Line
 	14500 3800 14800 3800
 Text Label 14800 3800 2    50   ~ 0
-RFD02
+RFD2
 Wire Wire Line
 	14500 3900 14800 3900
 Text Label 14800 3900 2    50   ~ 0
-RFD03
+RFD3
 Wire Wire Line
 	14500 4000 14800 4000
 Text Label 14800 4000 2    50   ~ 0
-RFD04
+RFD4
 Wire Wire Line
 	14500 4150 14950 4150
 Text Label 14800 4150 2    50   ~ 0
-RCD01
+RCD1
 Wire Wire Line
 	14500 4250 14950 4250
 Text Label 14800 4250 2    50   ~ 0
-RCD02
+RCD2
 Wire Wire Line
 	14500 4350 14950 4350
 Text Label 14800 4350 2    50   ~ 0
-RCD03
+RCD3
 Wire Wire Line
 	14500 4450 14950 4450
 Text Label 14800 4450 2    50   ~ 0
-RCD04
+RCD4
 Wire Wire Line
 	14500 4600 15100 4600
 Text Label 14800 4600 2    50   ~ 0
@@ -898,35 +898,31 @@ XRST2
 Wire Wire Line
 	14500 5300 14800 5300
 Text Label 14800 5300 2    50   ~ 0
-RFD05
+RFD5
 Wire Wire Line
 	14500 5400 14800 5400
 Text Label 14800 5400 2    50   ~ 0
-RFD06
+RFD6
 Wire Wire Line
 	14500 5500 14800 5500
 Text Label 14800 5500 2    50   ~ 0
-RFD07
+RFD7
 Wire Wire Line
 	14500 5600 14800 5600
 Text Label 14800 5600 2    50   ~ 0
-RFD08
+RFD8
 Wire Wire Line
 	14500 5750 14950 5750
 Text Label 14800 5750 2    50   ~ 0
-RCD05
+RCD5
 Wire Wire Line
 	14500 5850 14950 5850
-Text Label 14800 5850 2    50   ~ 0
-RCD06
 Wire Wire Line
 	14500 5950 14950 5950
-Text Label 14800 5950 2    50   ~ 0
-RCD07
 Wire Wire Line
 	14500 6050 14950 6050
 Text Label 14800 6050 2    50   ~ 0
-RCD08
+RCD8
 Wire Wire Line
 	14500 6200 15100 6200
 Text Label 14800 6200 2    50   ~ 0
@@ -1017,7 +1013,7 @@ Wire Bus Line
 	6750 2700 6700 2700
 Connection ~ 6200 1300
 Text HLabel 6700 2700 0    50   Input ~ 0
-IL[01..08]
+IL[1..8]
 Entry Wire Line
 	9550 2750 9650 2850
 Entry Wire Line
@@ -1049,7 +1045,7 @@ Entry Wire Line
 Wire Bus Line
 	9550 2700 9500 2700
 Text HLabel 9500 2700 0    50   Input ~ 0
-~IL[01..08]
+~IL[1..8]
 Entry Wire Line
 	8150 2850 8250 2750
 Entry Wire Line
@@ -1069,7 +1065,7 @@ Entry Wire Line
 Wire Bus Line
 	8250 2700 8300 2700
 Text HLabel 8300 2700 2    50   Output ~ 0
-XFN[01..08]
+XFN[1..8]
 Entry Wire Line
 	10950 2850 11050 2750
 Entry Wire Line
@@ -1089,7 +1085,7 @@ Entry Wire Line
 Wire Bus Line
 	11050 2700 11100 2700
 Text HLabel 11100 2700 2    50   Output ~ 0
-XCN[01..08]
+XCN[1..8]
 Entry Wire Line
 	14800 3700 14900 3600
 Entry Wire Line
@@ -1109,7 +1105,7 @@ Entry Wire Line
 Wire Bus Line
 	14900 3550 15400 3550
 Text HLabel 15400 3550 2    50   Output ~ 0
-RFD[01..08]
+RFD[1..8]
 Entry Wire Line
 	14950 4150 15050 4050
 Entry Wire Line
@@ -1129,7 +1125,7 @@ Entry Wire Line
 Wire Bus Line
 	15050 4000 15400 4000
 Text HLabel 15400 4000 2    50   Output ~ 0
-RCD[01..08]
+RCD[1..8]
 Entry Wire Line
 	15100 4600 15200 4500
 Entry Wire Line
@@ -1156,6 +1152,10 @@ Text Notes 7800 1100 2    50   ~ 0
 Inhibit Drivers
 Text Notes 2300 900  2    50   ~ 0
 Filtered Power
+Text Label 14800 5950 2    50   ~ 0
+RCD7
+Text Label 14800 5850 2    50   ~ 0
+RCD6
 Wire Bus Line
 	1750 3850 1750 4600
 Wire Bus Line
