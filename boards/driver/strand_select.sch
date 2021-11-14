@@ -729,10 +729,10 @@ Entry Wire Line
 	9000 2200 9100 2300
 Text HLabel 8850 2100 0    50   Input ~ 0
 STEN[1..12]
+Text Label 9150 4500 0    50   ~ 0
+STEN5
 Wire Bus Line
 	11900 2100 11900 8250
 Wire Bus Line
 	9000 2100 9000 8250
-Text Label 9150 4500 0    50   ~ 0
-STEN5
 $EndSCHEMATC

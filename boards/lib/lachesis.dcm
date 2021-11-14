@@ -24,6 +24,10 @@ K connector
 F ~
 $ENDCMP
 #
+$CMP LTC4231-1
+D Hot swap controller
+$ENDCMP
+#
 $CMP Transformer_SP_SS
 D Transformer, single primary, single secondary
 K transformer coil magnet
