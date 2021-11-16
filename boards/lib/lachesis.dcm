@@ -28,6 +28,12 @@ $CMP LTC4231-1
 D Hot swap controller
 $ENDCMP
 #
+$CMP Q_NMOS_SO8
+D N-MOSFET transistor, drain/gate/source
+K transistor NMOS N-MOS N-MOSFET
+F ~
+$ENDCMP
+#
 $CMP Transformer_SP_SS
 D Transformer, single primary, single secondary
 K transformer coil magnet

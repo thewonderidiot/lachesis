@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 69 69
+Sheet 77 64
 Title ""
 Date ""
 Rev ""
@@ -30,12 +30,12 @@ MODR1
 Text HLabel 6000 3650 0    50   Input ~ 0
 STR[1..12]
 $Comp
-L Connector_Generic:Conn_01x24 J2
+L Connector_Generic:Conn_01x24 J5
 U 1 1 61D594E4
 P 3050 3200
-F 0 "J2" H 3130 3192 50  0000 L CNN
+F 0 "J5" H 3130 3192 50  0000 L CNN
 F 1 "Conn_01x24" H 3130 3101 50  0000 L CNN
-F 2 "" H 3050 3200 50  0001 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x24_P1.00mm_Vertical" H 3050 3200 50  0001 C CNN
 F 3 "~" H 3050 3200 50  0001 C CNN
 	1    3050 3200
 	1    0    0    -1  
@@ -181,12 +181,12 @@ Entry Wire Line
 Wire Bus Line
 	2450 3350 2500 3350
 $Comp
-L Connector_Generic:Conn_01x24 J3
+L Connector_Generic:Conn_01x24 J6
 U 1 1 61D62885
 P 4750 3200
-F 0 "J3" H 4830 3192 50  0000 L CNN
+F 0 "J6" H 4830 3192 50  0000 L CNN
 F 1 "Conn_01x24" H 4830 3101 50  0000 L CNN
-F 2 "" H 4750 3200 50  0001 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x24_P1.00mm_Vertical" H 4750 3200 50  0001 C CNN
 F 3 "~" H 4750 3200 50  0001 C CNN
 	1    4750 3200
 	1    0    0    -1  
@@ -340,12 +340,12 @@ Entry Wire Line
 Wire Bus Line
 	4100 3350 4150 3350
 $Comp
-L Connector_Generic:Conn_01x24 J4
+L Connector_Generic:Conn_01x24 J7
 U 1 1 61D7843B
 P 6600 3200
-F 0 "J4" H 6680 3192 50  0000 L CNN
+F 0 "J7" H 6680 3192 50  0000 L CNN
 F 1 "Conn_01x24" H 6680 3101 50  0000 L CNN
-F 2 "" H 6600 3200 50  0001 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x24_P1.00mm_Vertical" H 6600 3200 50  0001 C CNN
 F 3 "~" H 6600 3200 50  0001 C CNN
 	1    6600 3200
 	1    0    0    -1  
@@ -447,12 +447,12 @@ Entry Wire Line
 Entry Wire Line
 	6000 2000 6100 2100
 $Comp
-L Connector_Generic:Conn_01x24 J5
+L Connector_Generic:Conn_01x24 J8
 U 1 1 61D85B99
 P 8050 3200
-F 0 "J5" H 8130 3192 50  0000 L CNN
+F 0 "J8" H 8130 3192 50  0000 L CNN
 F 1 "Conn_01x24" H 8130 3101 50  0000 L CNN
-F 2 "" H 8050 3200 50  0001 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x24_P1.00mm_Vertical" H 8050 3200 50  0001 C CNN
 F 3 "~" H 8050 3200 50  0001 C CNN
 	1    8050 3200
 	1    0    0    -1  

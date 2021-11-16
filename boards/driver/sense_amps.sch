@@ -1,9 +1,9 @@
 EESchema Schematic File Version 4
 EELAYER 30 0
 EELAYER END
-$Descr USLedger 17000 11000
+$Descr USLetter 11000 8500
 encoding utf-8
-Sheet 2 69
+Sheet 2 64
 Title ""
 Date ""
 Rev ""
@@ -13,4158 +13,712 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L Device:R_US R?
-U 1 1 61F021B6
-P 2200 1850
-AR Path="/61F021B6" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F021B6" Ref="R1"  Part="1" 
-F 0 "R1" H 2268 1896 50  0000 L CNN
-F 1 "2.7k" H 2268 1805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 2240 1840 50  0001 C CNN
-F 3 "~" H 2200 1850 50  0001 C CNN
-	1    2200 1850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R?
-U 1 1 61F021BC
-P 2200 2250
-AR Path="/61F021BC" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F021BC" Ref="R2"  Part="1" 
-F 0 "R2" H 2268 2296 50  0000 L CNN
-F 1 "2.7k" H 2268 2205 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 2240 2240 50  0001 C CNN
-F 3 "~" H 2200 2250 50  0001 C CNN
-	1    2200 2250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2200 2000 2200 2050
-Wire Wire Line
-	2200 2050 1800 2050
-Connection ~ 2200 2050
-Wire Wire Line
-	2200 2050 2200 2100
-Wire Wire Line
-	2200 1700 2200 1650
-Wire Wire Line
-	2200 1650 1500 1650
-Wire Wire Line
-	2200 2400 2200 2450
-Wire Wire Line
-	2200 2450 1700 2450
-Wire Wire Line
-	2200 1650 2550 1650
-Wire Wire Line
-	2550 1650 2550 1850
-Connection ~ 2200 1650
-Wire Wire Line
-	2550 2250 2550 2450
-Wire Wire Line
-	2550 2450 2200 2450
-Connection ~ 2200 2450
-$Comp
-L Device:R_US R?
-U 1 1 61F021D1
-P 3700 1850
-AR Path="/61F021D1" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F021D1" Ref="R17"  Part="1" 
-F 0 "R17" H 3900 1900 50  0000 R CNN
-F 1 "470" H 3900 1800 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 3740 1840 50  0001 C CNN
-F 3 "~" H 3700 1850 50  0001 C CNN
-	1    3700 1850
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R?
-U 1 1 61F021D7
-P 3700 2250
-AR Path="/61F021D7" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F021D7" Ref="R18"  Part="1" 
-F 0 "R18" H 3900 2300 50  0000 R CNN
-F 1 "470" H 3900 2200 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 3740 2240 50  0001 C CNN
-F 3 "~" H 3700 2250 50  0001 C CNN
-	1    3700 2250
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	3700 2000 3700 2050
-Wire Wire Line
-	3700 2050 3900 2050
-Connection ~ 3700 2050
-Wire Wire Line
-	3700 2050 3700 2100
-Wire Wire Line
-	3700 1700 3700 1650
-Wire Wire Line
-	3700 1650 4050 1650
-Wire Wire Line
-	3700 2400 3700 2450
-Wire Wire Line
-	3700 2450 4050 2450
-Wire Wire Line
-	3700 1650 3350 1650
-Connection ~ 3700 1650
-Wire Wire Line
-	3350 2450 3700 2450
-Connection ~ 3700 2450
-Wire Wire Line
-	3350 1650 3350 1850
-Wire Wire Line
-	3350 2250 3350 2450
-$Comp
-L power:GND #PWR?
-U 1 1 61F021EB
-P 3900 2150
-AR Path="/61F021EB" Ref="#PWR?"  Part="1" 
-AR Path="/61EC7443/61F021EB" Ref="#PWR01"  Part="1" 
-F 0 "#PWR01" H 3900 1900 50  0001 C CNN
-F 1 "GND" H 3905 1977 50  0000 C CNN
-F 2 "" H 3900 2150 50  0001 C CNN
-F 3 "" H 3900 2150 50  0001 C CNN
-	1    3900 2150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3900 2050 3900 2150
-$Comp
-L lachesis:SN7524 U?
-U 1 1 61F021F2
-P 4900 2050
-AR Path="/61F021F2" Ref="U?"  Part="1" 
-AR Path="/61EC7443/61F021F2" Ref="U1"  Part="1" 
-F 0 "U1" H 4900 2417 50  0000 C CNN
-F 1 "SN7524" H 4900 2326 50  0000 C CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 4900 2050 50  0001 C CNN
-F 3 "" H 4900 2050 50  0001 C CNN
-	1    4900 2050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4050 2450 4050 2150
-Wire Wire Line
-	4050 2150 4600 2150
-Wire Wire Line
-	4050 1650 4050 1950
-Wire Wire Line
-	4050 1950 4600 1950
-$Comp
-L lachesis:Transformer_SP_SS T?
-U 1 1 61F02202
-P 2950 2050
-AR Path="/61F02202" Ref="T?"  Part="1" 
-AR Path="/61EC7443/61F02202" Ref="T1"  Part="1" 
-F 0 "T1" H 2950 1800 50  0000 C CNN
-F 1 "1:1" H 2950 2340 50  0000 C CNN
-F 2 "" H 2950 2050 50  0001 C CNN
-F 3 "~" H 2950 2050 50  0001 C CNN
-	1    2950 2050
-	1    0    0    -1  
-$EndComp
-Entry Wire Line
-	1400 1550 1500 1650
-Entry Wire Line
-	1600 2350 1700 2450
-Text Label 1800 1650 0    50   ~ 0
-GAR1
-Text Label 1800 2450 0    50   ~ 0
-GBR1
-NoConn ~ 2550 2050
-NoConn ~ 3350 2050
-Wire Wire Line
-	4900 2300 4900 2350
-Wire Wire Line
-	4900 2350 4400 2350
-$Comp
-L Device:R_US R?
-U 1 1 61F02210
-P 2200 2850
-AR Path="/61F02210" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F02210" Ref="R3"  Part="1" 
-F 0 "R3" H 2268 2896 50  0000 L CNN
-F 1 "2.7k" H 2268 2805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 2240 2840 50  0001 C CNN
-F 3 "~" H 2200 2850 50  0001 C CNN
-	1    2200 2850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R?
-U 1 1 61F02216
-P 2200 3250
-AR Path="/61F02216" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F02216" Ref="R4"  Part="1" 
-F 0 "R4" H 2268 3296 50  0000 L CNN
-F 1 "2.7k" H 2268 3205 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 2240 3240 50  0001 C CNN
-F 3 "~" H 2200 3250 50  0001 C CNN
-	1    2200 3250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2200 2700 2200 2650
-Wire Wire Line
-	2200 2650 1500 2650
-Wire Wire Line
-	2200 3400 2200 3450
-Wire Wire Line
-	2200 3450 1700 3450
-Wire Wire Line
-	2200 2650 2550 2650
-Wire Wire Line
-	2550 2650 2550 2850
-Connection ~ 2200 2650
-Wire Wire Line
-	2550 3250 2550 3450
-Wire Wire Line
-	2550 3450 2200 3450
-Connection ~ 2200 3450
-$Comp
-L Device:R_US R?
-U 1 1 61F0222B
-P 3700 2850
-AR Path="/61F0222B" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F0222B" Ref="R19"  Part="1" 
-F 0 "R19" H 3900 2900 50  0000 R CNN
-F 1 "470" H 3900 2800 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 3740 2840 50  0001 C CNN
-F 3 "~" H 3700 2850 50  0001 C CNN
-	1    3700 2850
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R?
-U 1 1 61F02231
-P 3700 3250
-AR Path="/61F02231" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F02231" Ref="R20"  Part="1" 
-F 0 "R20" H 3900 3300 50  0000 R CNN
-F 1 "470" H 3900 3200 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 3740 3240 50  0001 C CNN
-F 3 "~" H 3700 3250 50  0001 C CNN
-	1    3700 3250
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	3700 3000 3700 3050
-Wire Wire Line
-	3700 3050 3900 3050
-Connection ~ 3700 3050
-Wire Wire Line
-	3700 3050 3700 3100
-Wire Wire Line
-	3700 2700 3700 2650
-Wire Wire Line
-	3700 2650 4050 2650
-Wire Wire Line
-	3700 3400 3700 3450
-Wire Wire Line
-	3700 3450 4050 3450
-Wire Wire Line
-	3700 2650 3350 2650
-Connection ~ 3700 2650
-Wire Wire Line
-	3350 3450 3700 3450
-Connection ~ 3700 3450
-Wire Wire Line
-	3350 2650 3350 2850
-Wire Wire Line
-	3350 3250 3350 3450
-$Comp
-L power:GND #PWR?
-U 1 1 61F02245
-P 3900 3150
-AR Path="/61F02245" Ref="#PWR?"  Part="1" 
-AR Path="/61EC7443/61F02245" Ref="#PWR02"  Part="1" 
-F 0 "#PWR02" H 3900 2900 50  0001 C CNN
-F 1 "GND" H 3905 2977 50  0000 C CNN
-F 2 "" H 3900 3150 50  0001 C CNN
-F 3 "" H 3900 3150 50  0001 C CNN
-	1    3900 3150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3900 3050 3900 3150
-$Comp
-L lachesis:SN7524 U?
-U 2 1 61F0224C
-P 4900 3050
-AR Path="/61F0224C" Ref="U?"  Part="2" 
-AR Path="/61EC7443/61F0224C" Ref="U1"  Part="2" 
-F 0 "U1" H 4900 3417 50  0000 C CNN
-F 1 "SN7524" H 4900 3326 50  0000 C CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 4900 3050 50  0001 C CNN
-F 3 "" H 4900 3050 50  0001 C CNN
-	2    4900 3050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4050 3450 4050 3150
-Wire Wire Line
-	4050 3150 4600 3150
-Wire Wire Line
-	4050 2650 4050 2950
-Wire Wire Line
-	4050 2950 4600 2950
-$Comp
-L lachesis:Transformer_SP_SS T?
-U 1 1 61F0225C
-P 2950 3050
-AR Path="/61F0225C" Ref="T?"  Part="1" 
-AR Path="/61EC7443/61F0225C" Ref="T2"  Part="1" 
-F 0 "T2" H 2950 2800 50  0000 C CNN
-F 1 "1:1" H 2950 3340 50  0000 C CNN
-F 2 "" H 2950 3050 50  0001 C CNN
-F 3 "~" H 2950 3050 50  0001 C CNN
-	1    2950 3050
-	1    0    0    -1  
-$EndComp
-Entry Wire Line
-	1400 2550 1500 2650
-Entry Wire Line
-	1600 3350 1700 3450
-Text Label 1800 2650 0    50   ~ 0
-GAR2
-Text Label 1800 3450 0    50   ~ 0
-GBR2
-NoConn ~ 2550 3050
-NoConn ~ 3350 3050
-Wire Wire Line
-	4900 3300 4900 3350
-Wire Wire Line
-	4900 3350 4400 3350
-$Comp
-L Device:R_US R?
-U 1 1 61F0226A
-P 2200 3850
-AR Path="/61F0226A" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F0226A" Ref="R5"  Part="1" 
-F 0 "R5" H 2268 3896 50  0000 L CNN
-F 1 "2.7k" H 2268 3805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 2240 3840 50  0001 C CNN
-F 3 "~" H 2200 3850 50  0001 C CNN
-	1    2200 3850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R?
-U 1 1 61F02270
-P 2200 4250
-AR Path="/61F02270" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F02270" Ref="R6"  Part="1" 
-F 0 "R6" H 2268 4296 50  0000 L CNN
-F 1 "2.7k" H 2268 4205 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 2240 4240 50  0001 C CNN
-F 3 "~" H 2200 4250 50  0001 C CNN
-	1    2200 4250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2200 3700 2200 3650
-Wire Wire Line
-	2200 3650 1500 3650
-Wire Wire Line
-	2200 4400 2200 4450
-Wire Wire Line
-	2200 4450 1700 4450
-Wire Wire Line
-	2200 3650 2550 3650
-Wire Wire Line
-	2550 3650 2550 3850
-Connection ~ 2200 3650
-Wire Wire Line
-	2550 4250 2550 4450
-Wire Wire Line
-	2550 4450 2200 4450
-Connection ~ 2200 4450
-$Comp
-L Device:R_US R?
-U 1 1 61F02285
-P 3700 3850
-AR Path="/61F02285" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F02285" Ref="R21"  Part="1" 
-F 0 "R21" H 3900 3900 50  0000 R CNN
-F 1 "470" H 3900 3800 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 3740 3840 50  0001 C CNN
-F 3 "~" H 3700 3850 50  0001 C CNN
-	1    3700 3850
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R?
-U 1 1 61F0228B
-P 3700 4250
-AR Path="/61F0228B" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F0228B" Ref="R22"  Part="1" 
-F 0 "R22" H 3900 4300 50  0000 R CNN
-F 1 "470" H 3900 4200 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 3740 4240 50  0001 C CNN
-F 3 "~" H 3700 4250 50  0001 C CNN
-	1    3700 4250
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	3700 4000 3700 4050
-Wire Wire Line
-	3700 4050 3900 4050
-Connection ~ 3700 4050
-Wire Wire Line
-	3700 4050 3700 4100
-Wire Wire Line
-	3700 3700 3700 3650
-Wire Wire Line
-	3700 3650 4050 3650
-Wire Wire Line
-	3700 4400 3700 4450
-Wire Wire Line
-	3700 4450 4050 4450
-Wire Wire Line
-	3700 3650 3350 3650
-Connection ~ 3700 3650
-Wire Wire Line
-	3350 4450 3700 4450
-Connection ~ 3700 4450
-Wire Wire Line
-	3350 3650 3350 3850
-Wire Wire Line
-	3350 4250 3350 4450
-$Comp
-L power:GND #PWR?
-U 1 1 61F0229F
-P 3900 4150
-AR Path="/61F0229F" Ref="#PWR?"  Part="1" 
-AR Path="/61EC7443/61F0229F" Ref="#PWR03"  Part="1" 
-F 0 "#PWR03" H 3900 3900 50  0001 C CNN
-F 1 "GND" H 3905 3977 50  0000 C CNN
-F 2 "" H 3900 4150 50  0001 C CNN
-F 3 "" H 3900 4150 50  0001 C CNN
-	1    3900 4150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3900 4050 3900 4150
-$Comp
-L lachesis:SN7524 U?
-U 1 1 61F022A6
-P 4900 4050
-AR Path="/61F022A6" Ref="U?"  Part="1" 
-AR Path="/61EC7443/61F022A6" Ref="U2"  Part="1" 
-F 0 "U2" H 4900 4417 50  0000 C CNN
-F 1 "SN7524" H 4900 4326 50  0000 C CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 4900 4050 50  0001 C CNN
-F 3 "" H 4900 4050 50  0001 C CNN
-	1    4900 4050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4050 4450 4050 4150
-Wire Wire Line
-	4050 4150 4600 4150
-Wire Wire Line
-	4050 3650 4050 3950
-Wire Wire Line
-	4050 3950 4600 3950
-$Comp
-L lachesis:Transformer_SP_SS T?
-U 1 1 61F022B6
-P 2950 4050
-AR Path="/61F022B6" Ref="T?"  Part="1" 
-AR Path="/61EC7443/61F022B6" Ref="T3"  Part="1" 
-F 0 "T3" H 2950 3800 50  0000 C CNN
-F 1 "1:1" H 2950 4340 50  0000 C CNN
-F 2 "" H 2950 4050 50  0001 C CNN
-F 3 "~" H 2950 4050 50  0001 C CNN
-	1    2950 4050
-	1    0    0    -1  
-$EndComp
-Entry Wire Line
-	1400 3550 1500 3650
-Entry Wire Line
-	1600 4350 1700 4450
-Text Label 1800 3650 0    50   ~ 0
-GAR3
-Text Label 1800 4450 0    50   ~ 0
-GBR3
-NoConn ~ 2550 4050
-NoConn ~ 3350 4050
-Wire Wire Line
-	4900 4300 4900 4350
-Wire Wire Line
-	4900 4350 4400 4350
-$Comp
-L Device:R_US R?
-U 1 1 61F022C4
-P 2200 4850
-AR Path="/61F022C4" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F022C4" Ref="R7"  Part="1" 
-F 0 "R7" H 2268 4896 50  0000 L CNN
-F 1 "2.7k" H 2268 4805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 2240 4840 50  0001 C CNN
-F 3 "~" H 2200 4850 50  0001 C CNN
-	1    2200 4850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R?
-U 1 1 61F022CA
-P 2200 5250
-AR Path="/61F022CA" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F022CA" Ref="R8"  Part="1" 
-F 0 "R8" H 2268 5296 50  0000 L CNN
-F 1 "2.7k" H 2268 5205 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 2240 5240 50  0001 C CNN
-F 3 "~" H 2200 5250 50  0001 C CNN
-	1    2200 5250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2200 4700 2200 4650
-Wire Wire Line
-	2200 4650 1500 4650
-Wire Wire Line
-	2200 5400 2200 5450
-Wire Wire Line
-	2200 5450 1700 5450
-Wire Wire Line
-	2200 4650 2550 4650
-Wire Wire Line
-	2550 4650 2550 4850
-Connection ~ 2200 4650
-Wire Wire Line
-	2550 5250 2550 5450
-Wire Wire Line
-	2550 5450 2200 5450
-Connection ~ 2200 5450
-$Comp
-L Device:R_US R?
-U 1 1 61F022DF
-P 3700 4850
-AR Path="/61F022DF" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F022DF" Ref="R23"  Part="1" 
-F 0 "R23" H 3900 4900 50  0000 R CNN
-F 1 "470" H 3900 4800 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 3740 4840 50  0001 C CNN
-F 3 "~" H 3700 4850 50  0001 C CNN
-	1    3700 4850
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R?
-U 1 1 61F022E5
-P 3700 5250
-AR Path="/61F022E5" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F022E5" Ref="R24"  Part="1" 
-F 0 "R24" H 3900 5300 50  0000 R CNN
-F 1 "470" H 3900 5200 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 3740 5240 50  0001 C CNN
-F 3 "~" H 3700 5250 50  0001 C CNN
-	1    3700 5250
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	3700 5000 3700 5050
-Wire Wire Line
-	3700 5050 3900 5050
-Connection ~ 3700 5050
-Wire Wire Line
-	3700 5050 3700 5100
-Wire Wire Line
-	3700 4700 3700 4650
-Wire Wire Line
-	3700 4650 4050 4650
-Wire Wire Line
-	3700 5400 3700 5450
-Wire Wire Line
-	3700 5450 4050 5450
-Wire Wire Line
-	3700 4650 3350 4650
-Connection ~ 3700 4650
-Wire Wire Line
-	3350 5450 3700 5450
-Connection ~ 3700 5450
-Wire Wire Line
-	3350 4650 3350 4850
-Wire Wire Line
-	3350 5250 3350 5450
-$Comp
-L power:GND #PWR?
-U 1 1 61F022F9
-P 3900 5150
-AR Path="/61F022F9" Ref="#PWR?"  Part="1" 
-AR Path="/61EC7443/61F022F9" Ref="#PWR04"  Part="1" 
-F 0 "#PWR04" H 3900 4900 50  0001 C CNN
-F 1 "GND" H 3905 4977 50  0000 C CNN
-F 2 "" H 3900 5150 50  0001 C CNN
-F 3 "" H 3900 5150 50  0001 C CNN
-	1    3900 5150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3900 5050 3900 5150
-$Comp
-L lachesis:SN7524 U?
-U 2 1 61F02300
-P 4900 5050
-AR Path="/61F02300" Ref="U?"  Part="2" 
-AR Path="/61EC7443/61F02300" Ref="U2"  Part="2" 
-F 0 "U2" H 4900 5417 50  0000 C CNN
-F 1 "SN7524" H 4900 5326 50  0000 C CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 4900 5050 50  0001 C CNN
-F 3 "" H 4900 5050 50  0001 C CNN
-	2    4900 5050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4050 5450 4050 5150
-Wire Wire Line
-	4050 5150 4600 5150
-Wire Wire Line
-	4050 4650 4050 4950
-Wire Wire Line
-	4050 4950 4600 4950
-$Comp
-L lachesis:Transformer_SP_SS T?
-U 1 1 61F02310
-P 2950 5050
-AR Path="/61F02310" Ref="T?"  Part="1" 
-AR Path="/61EC7443/61F02310" Ref="T4"  Part="1" 
-F 0 "T4" H 2950 4800 50  0000 C CNN
-F 1 "1:1" H 2950 5340 50  0000 C CNN
-F 2 "" H 2950 5050 50  0001 C CNN
-F 3 "~" H 2950 5050 50  0001 C CNN
-	1    2950 5050
-	1    0    0    -1  
-$EndComp
-Entry Wire Line
-	1400 4550 1500 4650
-Entry Wire Line
-	1600 5350 1700 5450
-Text Label 1800 4650 0    50   ~ 0
-GAR4
-Text Label 1800 5450 0    50   ~ 0
-GBR4
-NoConn ~ 2550 5050
-NoConn ~ 3350 5050
-Wire Wire Line
-	4900 5300 4900 5350
-Wire Wire Line
-	4900 5350 4400 5350
-$Comp
-L Device:R_US R?
-U 1 1 61F0231E
-P 2200 5850
-AR Path="/61F0231E" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F0231E" Ref="R9"  Part="1" 
-F 0 "R9" H 2268 5896 50  0000 L CNN
-F 1 "2.7k" H 2268 5805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 2240 5840 50  0001 C CNN
-F 3 "~" H 2200 5850 50  0001 C CNN
-	1    2200 5850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R?
-U 1 1 61F02324
-P 2200 6250
-AR Path="/61F02324" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F02324" Ref="R10"  Part="1" 
-F 0 "R10" H 2268 6296 50  0000 L CNN
-F 1 "2.7k" H 2268 6205 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 2240 6240 50  0001 C CNN
-F 3 "~" H 2200 6250 50  0001 C CNN
-	1    2200 6250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2200 5700 2200 5650
-Wire Wire Line
-	2200 5650 1500 5650
-Wire Wire Line
-	2200 6400 2200 6450
-Wire Wire Line
-	2200 6450 1700 6450
-Wire Wire Line
-	2200 5650 2550 5650
-Wire Wire Line
-	2550 5650 2550 5850
-Connection ~ 2200 5650
-Wire Wire Line
-	2550 6250 2550 6450
-Wire Wire Line
-	2550 6450 2200 6450
-Connection ~ 2200 6450
-$Comp
-L Device:R_US R?
-U 1 1 61F02339
-P 3700 5850
-AR Path="/61F02339" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F02339" Ref="R25"  Part="1" 
-F 0 "R25" H 3900 5900 50  0000 R CNN
-F 1 "470" H 3900 5800 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 3740 5840 50  0001 C CNN
-F 3 "~" H 3700 5850 50  0001 C CNN
-	1    3700 5850
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R?
-U 1 1 61F0233F
-P 3700 6250
-AR Path="/61F0233F" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F0233F" Ref="R26"  Part="1" 
-F 0 "R26" H 3900 6300 50  0000 R CNN
-F 1 "470" H 3900 6200 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 3740 6240 50  0001 C CNN
-F 3 "~" H 3700 6250 50  0001 C CNN
-	1    3700 6250
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	3700 6000 3700 6050
-Wire Wire Line
-	3700 6050 3900 6050
-Connection ~ 3700 6050
-Wire Wire Line
-	3700 6050 3700 6100
-Wire Wire Line
-	3700 5700 3700 5650
-Wire Wire Line
-	3700 5650 4050 5650
-Wire Wire Line
-	3700 6400 3700 6450
-Wire Wire Line
-	3700 6450 4050 6450
-Wire Wire Line
-	3700 5650 3350 5650
-Connection ~ 3700 5650
-Wire Wire Line
-	3350 6450 3700 6450
-Connection ~ 3700 6450
-Wire Wire Line
-	3350 5650 3350 5850
-Wire Wire Line
-	3350 6250 3350 6450
-$Comp
-L power:GND #PWR?
-U 1 1 61F02353
-P 3900 6150
-AR Path="/61F02353" Ref="#PWR?"  Part="1" 
-AR Path="/61EC7443/61F02353" Ref="#PWR05"  Part="1" 
-F 0 "#PWR05" H 3900 5900 50  0001 C CNN
-F 1 "GND" H 3905 5977 50  0000 C CNN
-F 2 "" H 3900 6150 50  0001 C CNN
-F 3 "" H 3900 6150 50  0001 C CNN
-	1    3900 6150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3900 6050 3900 6150
-$Comp
-L lachesis:SN7524 U?
-U 1 1 61F0235A
-P 4900 6050
-AR Path="/61F0235A" Ref="U?"  Part="1" 
-AR Path="/61EC7443/61F0235A" Ref="U3"  Part="1" 
-F 0 "U3" H 4900 6417 50  0000 C CNN
-F 1 "SN7524" H 4900 6326 50  0000 C CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 4900 6050 50  0001 C CNN
-F 3 "" H 4900 6050 50  0001 C CNN
-	1    4900 6050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4050 6450 4050 6150
-Wire Wire Line
-	4050 6150 4600 6150
-Wire Wire Line
-	4050 5650 4050 5950
-Wire Wire Line
-	4050 5950 4600 5950
-$Comp
-L lachesis:Transformer_SP_SS T?
-U 1 1 61F0236A
-P 2950 6050
-AR Path="/61F0236A" Ref="T?"  Part="1" 
-AR Path="/61EC7443/61F0236A" Ref="T5"  Part="1" 
-F 0 "T5" H 2950 5800 50  0000 C CNN
-F 1 "1:1" H 2950 6340 50  0000 C CNN
-F 2 "" H 2950 6050 50  0001 C CNN
-F 3 "~" H 2950 6050 50  0001 C CNN
-	1    2950 6050
-	1    0    0    -1  
-$EndComp
-Entry Wire Line
-	1400 5550 1500 5650
-Entry Wire Line
-	1600 6350 1700 6450
-Text Label 1800 5650 0    50   ~ 0
-GAR5
-Text Label 1800 6450 0    50   ~ 0
-GBR5
-NoConn ~ 2550 6050
-NoConn ~ 3350 6050
-Wire Wire Line
-	4900 6300 4900 6350
-Wire Wire Line
-	4900 6350 4400 6350
-$Comp
-L Device:R_US R?
-U 1 1 61F02378
-P 2200 6850
-AR Path="/61F02378" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F02378" Ref="R11"  Part="1" 
-F 0 "R11" H 2268 6896 50  0000 L CNN
-F 1 "2.7k" H 2268 6805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 2240 6840 50  0001 C CNN
-F 3 "~" H 2200 6850 50  0001 C CNN
-	1    2200 6850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R?
-U 1 1 61F0237E
-P 2200 7250
-AR Path="/61F0237E" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F0237E" Ref="R12"  Part="1" 
-F 0 "R12" H 2268 7296 50  0000 L CNN
-F 1 "2.7k" H 2268 7205 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 2240 7240 50  0001 C CNN
-F 3 "~" H 2200 7250 50  0001 C CNN
-	1    2200 7250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2200 6700 2200 6650
-Wire Wire Line
-	2200 6650 1500 6650
-Wire Wire Line
-	2200 7400 2200 7450
-Wire Wire Line
-	2200 7450 1700 7450
-Wire Wire Line
-	2200 6650 2550 6650
-Wire Wire Line
-	2550 6650 2550 6850
-Connection ~ 2200 6650
-Wire Wire Line
-	2550 7250 2550 7450
-Wire Wire Line
-	2550 7450 2200 7450
-Connection ~ 2200 7450
-$Comp
-L Device:R_US R?
-U 1 1 61F02393
-P 3700 6850
-AR Path="/61F02393" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F02393" Ref="R27"  Part="1" 
-F 0 "R27" H 3900 6900 50  0000 R CNN
-F 1 "470" H 3900 6800 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 3740 6840 50  0001 C CNN
-F 3 "~" H 3700 6850 50  0001 C CNN
-	1    3700 6850
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R?
-U 1 1 61F02399
-P 3700 7250
-AR Path="/61F02399" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F02399" Ref="R28"  Part="1" 
-F 0 "R28" H 3900 7300 50  0000 R CNN
-F 1 "470" H 3900 7200 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 3740 7240 50  0001 C CNN
-F 3 "~" H 3700 7250 50  0001 C CNN
-	1    3700 7250
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	3700 7000 3700 7050
-Wire Wire Line
-	3700 7050 3900 7050
-Connection ~ 3700 7050
-Wire Wire Line
-	3700 7050 3700 7100
-Wire Wire Line
-	3700 6700 3700 6650
-Wire Wire Line
-	3700 6650 4050 6650
-Wire Wire Line
-	3700 7400 3700 7450
-Wire Wire Line
-	3700 7450 4050 7450
-Wire Wire Line
-	3700 6650 3350 6650
-Connection ~ 3700 6650
-Wire Wire Line
-	3350 7450 3700 7450
-Connection ~ 3700 7450
-Wire Wire Line
-	3350 6650 3350 6850
-Wire Wire Line
-	3350 7250 3350 7450
-$Comp
-L power:GND #PWR?
-U 1 1 61F023AD
-P 3900 7150
-AR Path="/61F023AD" Ref="#PWR?"  Part="1" 
-AR Path="/61EC7443/61F023AD" Ref="#PWR06"  Part="1" 
-F 0 "#PWR06" H 3900 6900 50  0001 C CNN
-F 1 "GND" H 3905 6977 50  0000 C CNN
-F 2 "" H 3900 7150 50  0001 C CNN
-F 3 "" H 3900 7150 50  0001 C CNN
-	1    3900 7150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3900 7050 3900 7150
-$Comp
-L lachesis:SN7524 U?
-U 2 1 61F023B4
-P 4900 7050
-AR Path="/61F023B4" Ref="U?"  Part="2" 
-AR Path="/61EC7443/61F023B4" Ref="U3"  Part="2" 
-F 0 "U3" H 4900 7417 50  0000 C CNN
-F 1 "SN7524" H 4900 7326 50  0000 C CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 4900 7050 50  0001 C CNN
-F 3 "" H 4900 7050 50  0001 C CNN
-	2    4900 7050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4050 7450 4050 7150
-Wire Wire Line
-	4050 7150 4600 7150
-Wire Wire Line
-	4050 6650 4050 6950
-Wire Wire Line
-	4050 6950 4600 6950
-$Comp
-L lachesis:Transformer_SP_SS T?
-U 1 1 61F023C4
-P 2950 7050
-AR Path="/61F023C4" Ref="T?"  Part="1" 
-AR Path="/61EC7443/61F023C4" Ref="T6"  Part="1" 
-F 0 "T6" H 2950 6800 50  0000 C CNN
-F 1 "1:1" H 2950 7340 50  0000 C CNN
-F 2 "" H 2950 7050 50  0001 C CNN
-F 3 "~" H 2950 7050 50  0001 C CNN
-	1    2950 7050
-	1    0    0    -1  
-$EndComp
-Entry Wire Line
-	1400 6550 1500 6650
-Entry Wire Line
-	1600 7350 1700 7450
-Text Label 1800 6650 0    50   ~ 0
-GAR6
-Text Label 1800 7450 0    50   ~ 0
-GBR6
-NoConn ~ 2550 7050
-NoConn ~ 3350 7050
-Wire Wire Line
-	4900 7300 4900 7350
-Wire Wire Line
-	4900 7350 4400 7350
-$Comp
-L Device:R_US R?
-U 1 1 61F023D2
-P 2200 7850
-AR Path="/61F023D2" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F023D2" Ref="R13"  Part="1" 
-F 0 "R13" H 2268 7896 50  0000 L CNN
-F 1 "2.7k" H 2268 7805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 2240 7840 50  0001 C CNN
-F 3 "~" H 2200 7850 50  0001 C CNN
-	1    2200 7850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R?
-U 1 1 61F023D8
-P 2200 8250
-AR Path="/61F023D8" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F023D8" Ref="R14"  Part="1" 
-F 0 "R14" H 2268 8296 50  0000 L CNN
-F 1 "2.7k" H 2268 8205 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 2240 8240 50  0001 C CNN
-F 3 "~" H 2200 8250 50  0001 C CNN
-	1    2200 8250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2200 7700 2200 7650
-Wire Wire Line
-	2200 7650 1500 7650
-Wire Wire Line
-	2200 8400 2200 8450
-Wire Wire Line
-	2200 8450 1700 8450
-Wire Wire Line
-	2200 7650 2550 7650
-Wire Wire Line
-	2550 7650 2550 7850
-Connection ~ 2200 7650
-Wire Wire Line
-	2550 8250 2550 8450
-Wire Wire Line
-	2550 8450 2200 8450
-Connection ~ 2200 8450
-$Comp
-L Device:R_US R?
-U 1 1 61F023ED
-P 3700 7850
-AR Path="/61F023ED" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F023ED" Ref="R29"  Part="1" 
-F 0 "R29" H 3900 7900 50  0000 R CNN
-F 1 "470" H 3900 7800 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 3740 7840 50  0001 C CNN
-F 3 "~" H 3700 7850 50  0001 C CNN
-	1    3700 7850
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R?
-U 1 1 61F023F3
-P 3700 8250
-AR Path="/61F023F3" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F023F3" Ref="R30"  Part="1" 
-F 0 "R30" H 3900 8300 50  0000 R CNN
-F 1 "470" H 3900 8200 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 3740 8240 50  0001 C CNN
-F 3 "~" H 3700 8250 50  0001 C CNN
-	1    3700 8250
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	3700 8000 3700 8050
-Wire Wire Line
-	3700 8050 3900 8050
-Connection ~ 3700 8050
-Wire Wire Line
-	3700 8050 3700 8100
-Wire Wire Line
-	3700 7700 3700 7650
-Wire Wire Line
-	3700 7650 4050 7650
-Wire Wire Line
-	3700 8400 3700 8450
-Wire Wire Line
-	3700 8450 4050 8450
-Wire Wire Line
-	3700 7650 3350 7650
-Connection ~ 3700 7650
-Wire Wire Line
-	3350 8450 3700 8450
-Connection ~ 3700 8450
-Wire Wire Line
-	3350 7650 3350 7850
-Wire Wire Line
-	3350 8250 3350 8450
-$Comp
-L power:GND #PWR?
-U 1 1 61F02407
-P 3900 8150
-AR Path="/61F02407" Ref="#PWR?"  Part="1" 
-AR Path="/61EC7443/61F02407" Ref="#PWR07"  Part="1" 
-F 0 "#PWR07" H 3900 7900 50  0001 C CNN
-F 1 "GND" H 3905 7977 50  0000 C CNN
-F 2 "" H 3900 8150 50  0001 C CNN
-F 3 "" H 3900 8150 50  0001 C CNN
-	1    3900 8150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3900 8050 3900 8150
-$Comp
-L lachesis:SN7524 U?
-U 1 1 61F0240E
-P 4900 8050
-AR Path="/61F0240E" Ref="U?"  Part="1" 
-AR Path="/61EC7443/61F0240E" Ref="U4"  Part="1" 
-F 0 "U4" H 4900 8417 50  0000 C CNN
-F 1 "SN7524" H 4900 8326 50  0000 C CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 4900 8050 50  0001 C CNN
-F 3 "" H 4900 8050 50  0001 C CNN
-	1    4900 8050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4050 8450 4050 8150
-Wire Wire Line
-	4050 8150 4600 8150
-Wire Wire Line
-	4050 7650 4050 7950
-Wire Wire Line
-	4050 7950 4600 7950
-$Comp
-L lachesis:Transformer_SP_SS T?
-U 1 1 61F0241E
-P 2950 8050
-AR Path="/61F0241E" Ref="T?"  Part="1" 
-AR Path="/61EC7443/61F0241E" Ref="T7"  Part="1" 
-F 0 "T7" H 2950 7800 50  0000 C CNN
-F 1 "1:1" H 2950 8340 50  0000 C CNN
-F 2 "" H 2950 8050 50  0001 C CNN
-F 3 "~" H 2950 8050 50  0001 C CNN
-	1    2950 8050
-	1    0    0    -1  
-$EndComp
-Entry Wire Line
-	1400 7550 1500 7650
-Entry Wire Line
-	1600 8350 1700 8450
-Text Label 1800 7650 0    50   ~ 0
-GAR7
-Text Label 1800 8450 0    50   ~ 0
-GBR7
-NoConn ~ 2550 8050
-NoConn ~ 3350 8050
-Wire Wire Line
-	4900 8300 4900 8350
-Wire Wire Line
-	4900 8350 4400 8350
-$Comp
-L Device:R_US R?
-U 1 1 61F0242C
-P 2200 8850
-AR Path="/61F0242C" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F0242C" Ref="R15"  Part="1" 
-F 0 "R15" H 2268 8896 50  0000 L CNN
-F 1 "2.7k" H 2268 8805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 2240 8840 50  0001 C CNN
-F 3 "~" H 2200 8850 50  0001 C CNN
-	1    2200 8850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R?
-U 1 1 61F02432
-P 2200 9250
-AR Path="/61F02432" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F02432" Ref="R16"  Part="1" 
-F 0 "R16" H 2268 9296 50  0000 L CNN
-F 1 "2.7k" H 2268 9205 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 2240 9240 50  0001 C CNN
-F 3 "~" H 2200 9250 50  0001 C CNN
-	1    2200 9250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2200 8700 2200 8650
-Wire Wire Line
-	2200 8650 1500 8650
-Wire Wire Line
-	2200 9400 2200 9450
-Wire Wire Line
-	2200 9450 1700 9450
-Wire Wire Line
-	2200 8650 2550 8650
-Wire Wire Line
-	2550 8650 2550 8850
-Connection ~ 2200 8650
-Wire Wire Line
-	2550 9250 2550 9450
-Wire Wire Line
-	2550 9450 2200 9450
-Connection ~ 2200 9450
-$Comp
-L Device:R_US R?
-U 1 1 61F02447
-P 3700 8850
-AR Path="/61F02447" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F02447" Ref="R31"  Part="1" 
-F 0 "R31" H 3900 8900 50  0000 R CNN
-F 1 "470" H 3900 8800 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 3740 8840 50  0001 C CNN
-F 3 "~" H 3700 8850 50  0001 C CNN
-	1    3700 8850
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R?
-U 1 1 61F0244D
-P 3700 9250
-AR Path="/61F0244D" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F0244D" Ref="R32"  Part="1" 
-F 0 "R32" H 3900 9300 50  0000 R CNN
-F 1 "470" H 3900 9200 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 3740 9240 50  0001 C CNN
-F 3 "~" H 3700 9250 50  0001 C CNN
-	1    3700 9250
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	3700 9000 3700 9050
-Wire Wire Line
-	3700 9050 3900 9050
-Connection ~ 3700 9050
-Wire Wire Line
-	3700 9050 3700 9100
-Wire Wire Line
-	3700 8700 3700 8650
-Wire Wire Line
-	3700 8650 4050 8650
-Wire Wire Line
-	3700 9400 3700 9450
-Wire Wire Line
-	3700 9450 4050 9450
-Wire Wire Line
-	3700 8650 3350 8650
-Connection ~ 3700 8650
-Wire Wire Line
-	3350 9450 3700 9450
-Connection ~ 3700 9450
-Wire Wire Line
-	3350 8650 3350 8850
-Wire Wire Line
-	3350 9250 3350 9450
-$Comp
-L power:GND #PWR?
-U 1 1 61F02461
-P 3900 9150
-AR Path="/61F02461" Ref="#PWR?"  Part="1" 
-AR Path="/61EC7443/61F02461" Ref="#PWR08"  Part="1" 
-F 0 "#PWR08" H 3900 8900 50  0001 C CNN
-F 1 "GND" H 3905 8977 50  0000 C CNN
-F 2 "" H 3900 9150 50  0001 C CNN
-F 3 "" H 3900 9150 50  0001 C CNN
-	1    3900 9150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3900 9050 3900 9150
-$Comp
-L lachesis:SN7524 U?
-U 2 1 61F02468
-P 4900 9050
-AR Path="/61F02468" Ref="U?"  Part="2" 
-AR Path="/61EC7443/61F02468" Ref="U4"  Part="2" 
-F 0 "U4" H 4900 9417 50  0000 C CNN
-F 1 "SN7524" H 4900 9326 50  0000 C CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 4900 9050 50  0001 C CNN
-F 3 "" H 4900 9050 50  0001 C CNN
-	2    4900 9050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4050 9450 4050 9150
-Wire Wire Line
-	4050 9150 4600 9150
-Wire Wire Line
-	4050 8650 4050 8950
-Wire Wire Line
-	4050 8950 4600 8950
-$Comp
-L lachesis:Transformer_SP_SS T?
-U 1 1 61F02478
-P 2950 9050
-AR Path="/61F02478" Ref="T?"  Part="1" 
-AR Path="/61EC7443/61F02478" Ref="T8"  Part="1" 
-F 0 "T8" H 2950 8800 50  0000 C CNN
-F 1 "1:1" H 2950 9340 50  0000 C CNN
-F 2 "" H 2950 9050 50  0001 C CNN
-F 3 "~" H 2950 9050 50  0001 C CNN
-	1    2950 9050
-	1    0    0    -1  
-$EndComp
-Entry Wire Line
-	1400 8550 1500 8650
-Entry Wire Line
-	1600 9350 1700 9450
-Text Label 1800 8650 0    50   ~ 0
-GAR8
-Text Label 1800 9450 0    50   ~ 0
-GBR8
-NoConn ~ 2550 9050
-NoConn ~ 3350 9050
-Wire Wire Line
-	4900 9300 4900 9350
-Wire Wire Line
-	4900 9350 4400 9350
-$Comp
-L Device:R_US R?
-U 1 1 61F02486
-P 6700 1850
-AR Path="/61F02486" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F02486" Ref="R33"  Part="1" 
-F 0 "R33" H 6768 1896 50  0000 L CNN
-F 1 "2.7k" H 6768 1805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6740 1840 50  0001 C CNN
-F 3 "~" H 6700 1850 50  0001 C CNN
-	1    6700 1850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R?
-U 1 1 61F0248C
-P 6700 2250
-AR Path="/61F0248C" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F0248C" Ref="R34"  Part="1" 
-F 0 "R34" H 6768 2296 50  0000 L CNN
-F 1 "2.7k" H 6768 2205 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6740 2240 50  0001 C CNN
-F 3 "~" H 6700 2250 50  0001 C CNN
-	1    6700 2250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6700 1700 6700 1650
-Wire Wire Line
-	6700 1650 6000 1650
-Wire Wire Line
-	6700 2400 6700 2450
-Wire Wire Line
-	6700 2450 6200 2450
-Wire Wire Line
-	6700 1650 7050 1650
-Wire Wire Line
-	7050 1650 7050 1850
-Connection ~ 6700 1650
-Wire Wire Line
-	7050 2250 7050 2450
-Wire Wire Line
-	7050 2450 6700 2450
-Connection ~ 6700 2450
-$Comp
-L Device:R_US R?
-U 1 1 61F024A1
-P 8200 1850
-AR Path="/61F024A1" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F024A1" Ref="R49"  Part="1" 
-F 0 "R49" H 8400 1900 50  0000 R CNN
-F 1 "470" H 8400 1800 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 8240 1840 50  0001 C CNN
-F 3 "~" H 8200 1850 50  0001 C CNN
-	1    8200 1850
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R?
-U 1 1 61F024A7
-P 8200 2250
-AR Path="/61F024A7" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F024A7" Ref="R50"  Part="1" 
-F 0 "R50" H 8400 2300 50  0000 R CNN
-F 1 "470" H 8400 2200 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 8240 2240 50  0001 C CNN
-F 3 "~" H 8200 2250 50  0001 C CNN
-	1    8200 2250
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	8200 2000 8200 2050
-Wire Wire Line
-	8200 2050 8400 2050
-Connection ~ 8200 2050
-Wire Wire Line
-	8200 2050 8200 2100
-Wire Wire Line
-	8200 1700 8200 1650
-Wire Wire Line
-	8200 1650 8550 1650
-Wire Wire Line
-	8200 2400 8200 2450
-Wire Wire Line
-	8200 2450 8550 2450
-Wire Wire Line
-	8200 1650 7850 1650
-Connection ~ 8200 1650
-Wire Wire Line
-	7850 2450 8200 2450
-Connection ~ 8200 2450
-Wire Wire Line
-	7850 1650 7850 1850
-Wire Wire Line
-	7850 2250 7850 2450
-$Comp
-L power:GND #PWR?
-U 1 1 61F024BB
-P 8400 2150
-AR Path="/61F024BB" Ref="#PWR?"  Part="1" 
-AR Path="/61EC7443/61F024BB" Ref="#PWR09"  Part="1" 
-F 0 "#PWR09" H 8400 1900 50  0001 C CNN
-F 1 "GND" H 8405 1977 50  0000 C CNN
-F 2 "" H 8400 2150 50  0001 C CNN
-F 3 "" H 8400 2150 50  0001 C CNN
-	1    8400 2150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8400 2050 8400 2150
-$Comp
-L lachesis:SN7524 U?
-U 1 1 61F024C2
-P 9400 2050
-AR Path="/61F024C2" Ref="U?"  Part="1" 
-AR Path="/61EC7443/61F024C2" Ref="U5"  Part="1" 
-F 0 "U5" H 9400 2417 50  0000 C CNN
-F 1 "SN7524" H 9400 2326 50  0000 C CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 9400 2050 50  0001 C CNN
-F 3 "" H 9400 2050 50  0001 C CNN
-	1    9400 2050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8550 2450 8550 2150
-Wire Wire Line
-	8550 2150 9100 2150
-Wire Wire Line
-	8550 1650 8550 1950
-Wire Wire Line
-	8550 1950 9100 1950
-$Comp
-L lachesis:Transformer_SP_SS T?
-U 1 1 61F024D2
-P 7450 2050
-AR Path="/61F024D2" Ref="T?"  Part="1" 
-AR Path="/61EC7443/61F024D2" Ref="T9"  Part="1" 
-F 0 "T9" H 7450 1800 50  0000 C CNN
-F 1 "1:1" H 7450 2340 50  0000 C CNN
-F 2 "" H 7450 2050 50  0001 C CNN
-F 3 "~" H 7450 2050 50  0001 C CNN
-	1    7450 2050
-	1    0    0    -1  
-$EndComp
-Entry Wire Line
-	6000 1650 5900 1750
-Entry Wire Line
-	6200 2450 6100 2550
-Text Label 6300 1650 0    50   ~ 0
-GAR9
-Text Label 6300 2450 0    50   ~ 0
-GBR9
-NoConn ~ 7050 2050
-NoConn ~ 7850 2050
-Wire Wire Line
-	9400 2300 9400 2350
-Wire Wire Line
-	9400 2350 8900 2350
-$Comp
-L Device:R_US R?
-U 1 1 61F024E0
-P 6700 2850
-AR Path="/61F024E0" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F024E0" Ref="R35"  Part="1" 
-F 0 "R35" H 6768 2896 50  0000 L CNN
-F 1 "2.7k" H 6768 2805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6740 2840 50  0001 C CNN
-F 3 "~" H 6700 2850 50  0001 C CNN
-	1    6700 2850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R?
-U 1 1 61F024E6
-P 6700 3250
-AR Path="/61F024E6" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F024E6" Ref="R36"  Part="1" 
-F 0 "R36" H 6768 3296 50  0000 L CNN
-F 1 "2.7k" H 6768 3205 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6740 3240 50  0001 C CNN
-F 3 "~" H 6700 3250 50  0001 C CNN
-	1    6700 3250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6700 2700 6700 2650
-Wire Wire Line
-	6700 2650 6000 2650
-Wire Wire Line
-	6700 3400 6700 3450
-Wire Wire Line
-	6700 3450 6200 3450
-Wire Wire Line
-	6700 2650 7050 2650
-Wire Wire Line
-	7050 2650 7050 2850
-Wire Wire Line
-	7050 3250 7050 3450
-Wire Wire Line
-	7050 3450 6700 3450
-Connection ~ 6700 3450
-$Comp
-L Device:R_US R?
-U 1 1 61F024FA
-P 8200 2850
-AR Path="/61F024FA" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F024FA" Ref="R51"  Part="1" 
-F 0 "R51" H 8400 2900 50  0000 R CNN
-F 1 "470" H 8400 2800 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 8240 2840 50  0001 C CNN
-F 3 "~" H 8200 2850 50  0001 C CNN
-	1    8200 2850
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R?
-U 1 1 61F02500
-P 8200 3250
-AR Path="/61F02500" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F02500" Ref="R52"  Part="1" 
-F 0 "R52" H 8400 3300 50  0000 R CNN
-F 1 "470" H 8400 3200 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 8240 3240 50  0001 C CNN
-F 3 "~" H 8200 3250 50  0001 C CNN
-	1    8200 3250
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	8200 3000 8200 3050
-Wire Wire Line
-	8200 3050 8400 3050
-Connection ~ 8200 3050
-Wire Wire Line
-	8200 3050 8200 3100
-Wire Wire Line
-	8200 2700 8200 2650
-Wire Wire Line
-	8200 2650 8550 2650
-Wire Wire Line
-	8200 3400 8200 3450
-Wire Wire Line
-	8200 3450 8550 3450
-Wire Wire Line
-	8200 2650 7850 2650
-Connection ~ 8200 2650
-Wire Wire Line
-	7850 3450 8200 3450
-Connection ~ 8200 3450
-Wire Wire Line
-	7850 2650 7850 2850
-Wire Wire Line
-	7850 3250 7850 3450
-$Comp
-L power:GND #PWR?
-U 1 1 61F02514
-P 8400 3150
-AR Path="/61F02514" Ref="#PWR?"  Part="1" 
-AR Path="/61EC7443/61F02514" Ref="#PWR010"  Part="1" 
-F 0 "#PWR010" H 8400 2900 50  0001 C CNN
-F 1 "GND" H 8405 2977 50  0000 C CNN
-F 2 "" H 8400 3150 50  0001 C CNN
-F 3 "" H 8400 3150 50  0001 C CNN
-	1    8400 3150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8400 3050 8400 3150
-$Comp
-L lachesis:SN7524 U?
-U 2 1 61F0251B
-P 9400 3050
-AR Path="/61F0251B" Ref="U?"  Part="2" 
-AR Path="/61EC7443/61F0251B" Ref="U5"  Part="2" 
-F 0 "U5" H 9400 3417 50  0000 C CNN
-F 1 "SN7524" H 9400 3326 50  0000 C CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 9400 3050 50  0001 C CNN
-F 3 "" H 9400 3050 50  0001 C CNN
-	2    9400 3050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8550 3450 8550 3150
-Wire Wire Line
-	8550 3150 9100 3150
-Wire Wire Line
-	8550 2650 8550 2950
-Wire Wire Line
-	8550 2950 9100 2950
-$Comp
-L lachesis:Transformer_SP_SS T?
-U 1 1 61F0252B
-P 7450 3050
-AR Path="/61F0252B" Ref="T?"  Part="1" 
-AR Path="/61EC7443/61F0252B" Ref="T10"  Part="1" 
-F 0 "T10" H 7450 2800 50  0000 C CNN
-F 1 "1:1" H 7450 3340 50  0000 C CNN
-F 2 "" H 7450 3050 50  0001 C CNN
-F 3 "~" H 7450 3050 50  0001 C CNN
-	1    7450 3050
-	1    0    0    -1  
-$EndComp
-Entry Wire Line
-	6000 2650 5900 2750
-Entry Wire Line
-	6200 3450 6100 3550
-Text Label 6300 2650 0    50   ~ 0
-GAR10
-Text Label 6300 3450 0    50   ~ 0
-GBR10
-NoConn ~ 7050 3050
-NoConn ~ 7850 3050
-Wire Wire Line
-	9400 3300 9400 3350
-Wire Wire Line
-	9400 3350 8900 3350
-$Comp
-L Device:R_US R?
-U 1 1 61F02539
-P 6700 3850
-AR Path="/61F02539" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F02539" Ref="R37"  Part="1" 
-F 0 "R37" H 6768 3896 50  0000 L CNN
-F 1 "2.7k" H 6768 3805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6740 3840 50  0001 C CNN
-F 3 "~" H 6700 3850 50  0001 C CNN
-	1    6700 3850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R?
-U 1 1 61F0253F
-P 6700 4250
-AR Path="/61F0253F" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F0253F" Ref="R38"  Part="1" 
-F 0 "R38" H 6768 4296 50  0000 L CNN
-F 1 "2.7k" H 6768 4205 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6740 4240 50  0001 C CNN
-F 3 "~" H 6700 4250 50  0001 C CNN
-	1    6700 4250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6700 3700 6700 3650
-Wire Wire Line
-	6700 3650 6000 3650
-Wire Wire Line
-	6700 4400 6700 4450
-Wire Wire Line
-	6700 4450 6200 4450
-Wire Wire Line
-	6700 3650 7050 3650
-Wire Wire Line
-	7050 3650 7050 3850
-Wire Wire Line
-	7050 4250 7050 4450
-Wire Wire Line
-	7050 4450 6700 4450
-Connection ~ 6700 4450
-$Comp
-L Device:R_US R?
-U 1 1 61F02553
-P 8200 3850
-AR Path="/61F02553" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F02553" Ref="R53"  Part="1" 
-F 0 "R53" H 8400 3900 50  0000 R CNN
-F 1 "470" H 8400 3800 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 8240 3840 50  0001 C CNN
-F 3 "~" H 8200 3850 50  0001 C CNN
-	1    8200 3850
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R?
-U 1 1 61F02559
-P 8200 4250
-AR Path="/61F02559" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F02559" Ref="R54"  Part="1" 
-F 0 "R54" H 8400 4300 50  0000 R CNN
-F 1 "470" H 8400 4200 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 8240 4240 50  0001 C CNN
-F 3 "~" H 8200 4250 50  0001 C CNN
-	1    8200 4250
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	8200 4000 8200 4050
-Wire Wire Line
-	8200 4050 8400 4050
-Connection ~ 8200 4050
-Wire Wire Line
-	8200 4050 8200 4100
-Wire Wire Line
-	8200 3700 8200 3650
-Wire Wire Line
-	8200 3650 8550 3650
-Wire Wire Line
-	8200 4400 8200 4450
-Wire Wire Line
-	8200 4450 8550 4450
-Wire Wire Line
-	8200 3650 7850 3650
-Connection ~ 8200 3650
-Wire Wire Line
-	7850 4450 8200 4450
-Connection ~ 8200 4450
-Wire Wire Line
-	7850 3650 7850 3850
-Wire Wire Line
-	7850 4250 7850 4450
-$Comp
-L power:GND #PWR?
-U 1 1 61F0256D
-P 8400 4150
-AR Path="/61F0256D" Ref="#PWR?"  Part="1" 
-AR Path="/61EC7443/61F0256D" Ref="#PWR011"  Part="1" 
-F 0 "#PWR011" H 8400 3900 50  0001 C CNN
-F 1 "GND" H 8405 3977 50  0000 C CNN
-F 2 "" H 8400 4150 50  0001 C CNN
-F 3 "" H 8400 4150 50  0001 C CNN
-	1    8400 4150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8400 4050 8400 4150
-$Comp
-L lachesis:SN7524 U?
-U 1 1 61F02574
-P 9400 4050
-AR Path="/61F02574" Ref="U?"  Part="1" 
-AR Path="/61EC7443/61F02574" Ref="U6"  Part="1" 
-F 0 "U6" H 9400 4417 50  0000 C CNN
-F 1 "SN7524" H 9400 4326 50  0000 C CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 9400 4050 50  0001 C CNN
-F 3 "" H 9400 4050 50  0001 C CNN
-	1    9400 4050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8550 4450 8550 4150
-Wire Wire Line
-	8550 4150 9100 4150
-Wire Wire Line
-	8550 3650 8550 3950
-Wire Wire Line
-	8550 3950 9100 3950
-$Comp
-L lachesis:Transformer_SP_SS T?
-U 1 1 61F02584
-P 7450 4050
-AR Path="/61F02584" Ref="T?"  Part="1" 
-AR Path="/61EC7443/61F02584" Ref="T11"  Part="1" 
-F 0 "T11" H 7450 3800 50  0000 C CNN
-F 1 "1:1" H 7450 4340 50  0000 C CNN
-F 2 "" H 7450 4050 50  0001 C CNN
-F 3 "~" H 7450 4050 50  0001 C CNN
-	1    7450 4050
-	1    0    0    -1  
-$EndComp
-Entry Wire Line
-	6000 3650 5900 3750
-Entry Wire Line
-	6200 4450 6100 4550
-Text Label 6300 3650 0    50   ~ 0
-GAR11
-Text Label 6300 4450 0    50   ~ 0
-GBR11
-NoConn ~ 7050 4050
-NoConn ~ 7850 4050
-Wire Wire Line
-	9400 4300 9400 4350
-Wire Wire Line
-	9400 4350 8900 4350
-$Comp
-L Device:R_US R?
-U 1 1 61F02592
-P 6700 4850
-AR Path="/61F02592" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F02592" Ref="R39"  Part="1" 
-F 0 "R39" H 6768 4896 50  0000 L CNN
-F 1 "2.7k" H 6768 4805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6740 4840 50  0001 C CNN
-F 3 "~" H 6700 4850 50  0001 C CNN
-	1    6700 4850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R?
-U 1 1 61F02598
-P 6700 5250
-AR Path="/61F02598" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F02598" Ref="R40"  Part="1" 
-F 0 "R40" H 6768 5296 50  0000 L CNN
-F 1 "2.7k" H 6768 5205 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6740 5240 50  0001 C CNN
-F 3 "~" H 6700 5250 50  0001 C CNN
-	1    6700 5250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6700 4700 6700 4650
-Wire Wire Line
-	6700 4650 6000 4650
-Wire Wire Line
-	6700 5400 6700 5450
-Wire Wire Line
-	6700 5450 6200 5450
-Wire Wire Line
-	6700 4650 7050 4650
-Wire Wire Line
-	7050 4650 7050 4850
-Wire Wire Line
-	7050 5250 7050 5450
-Wire Wire Line
-	7050 5450 6700 5450
-Connection ~ 6700 5450
-$Comp
-L Device:R_US R?
-U 1 1 61F025AC
-P 8200 4850
-AR Path="/61F025AC" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F025AC" Ref="R55"  Part="1" 
-F 0 "R55" H 8400 4900 50  0000 R CNN
-F 1 "470" H 8400 4800 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 8240 4840 50  0001 C CNN
-F 3 "~" H 8200 4850 50  0001 C CNN
-	1    8200 4850
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R?
-U 1 1 61F025B2
-P 8200 5250
-AR Path="/61F025B2" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F025B2" Ref="R56"  Part="1" 
-F 0 "R56" H 8400 5300 50  0000 R CNN
-F 1 "470" H 8400 5200 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 8240 5240 50  0001 C CNN
-F 3 "~" H 8200 5250 50  0001 C CNN
-	1    8200 5250
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	8200 5000 8200 5050
-Wire Wire Line
-	8200 5050 8400 5050
-Connection ~ 8200 5050
-Wire Wire Line
-	8200 5050 8200 5100
-Wire Wire Line
-	8200 4700 8200 4650
-Wire Wire Line
-	8200 4650 8550 4650
-Wire Wire Line
-	8200 5400 8200 5450
-Wire Wire Line
-	8200 5450 8550 5450
-Wire Wire Line
-	8200 4650 7850 4650
-Connection ~ 8200 4650
-Wire Wire Line
-	7850 5450 8200 5450
-Connection ~ 8200 5450
-Wire Wire Line
-	7850 4650 7850 4850
-Wire Wire Line
-	7850 5250 7850 5450
-$Comp
-L power:GND #PWR?
-U 1 1 61F025C6
-P 8400 5150
-AR Path="/61F025C6" Ref="#PWR?"  Part="1" 
-AR Path="/61EC7443/61F025C6" Ref="#PWR012"  Part="1" 
-F 0 "#PWR012" H 8400 4900 50  0001 C CNN
-F 1 "GND" H 8405 4977 50  0000 C CNN
-F 2 "" H 8400 5150 50  0001 C CNN
-F 3 "" H 8400 5150 50  0001 C CNN
-	1    8400 5150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8400 5050 8400 5150
-$Comp
-L lachesis:SN7524 U?
-U 2 1 61F025CD
-P 9400 5050
-AR Path="/61F025CD" Ref="U?"  Part="2" 
-AR Path="/61EC7443/61F025CD" Ref="U6"  Part="2" 
-F 0 "U6" H 9400 5417 50  0000 C CNN
-F 1 "SN7524" H 9400 5326 50  0000 C CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 9400 5050 50  0001 C CNN
-F 3 "" H 9400 5050 50  0001 C CNN
-	2    9400 5050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8550 5450 8550 5150
-Wire Wire Line
-	8550 5150 9100 5150
-Wire Wire Line
-	8550 4650 8550 4950
-Wire Wire Line
-	8550 4950 9100 4950
-$Comp
-L lachesis:Transformer_SP_SS T?
-U 1 1 61F025DD
-P 7450 5050
-AR Path="/61F025DD" Ref="T?"  Part="1" 
-AR Path="/61EC7443/61F025DD" Ref="T12"  Part="1" 
-F 0 "T12" H 7450 4800 50  0000 C CNN
-F 1 "1:1" H 7450 5340 50  0000 C CNN
-F 2 "" H 7450 5050 50  0001 C CNN
-F 3 "~" H 7450 5050 50  0001 C CNN
-	1    7450 5050
-	1    0    0    -1  
-$EndComp
-Entry Wire Line
-	6000 4650 5900 4750
-Entry Wire Line
-	6200 5450 6100 5550
-Text Label 6300 4650 0    50   ~ 0
-GAR12
-Text Label 6300 5450 0    50   ~ 0
-GBR12
-NoConn ~ 7050 5050
-NoConn ~ 7850 5050
-Wire Wire Line
-	9400 5300 9400 5350
-Wire Wire Line
-	9400 5350 8900 5350
-$Comp
-L Device:R_US R?
-U 1 1 61F025EB
-P 6700 5850
-AR Path="/61F025EB" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F025EB" Ref="R41"  Part="1" 
-F 0 "R41" H 6768 5896 50  0000 L CNN
-F 1 "2.7k" H 6768 5805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6740 5840 50  0001 C CNN
-F 3 "~" H 6700 5850 50  0001 C CNN
-	1    6700 5850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R?
-U 1 1 61F025F1
-P 6700 6250
-AR Path="/61F025F1" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F025F1" Ref="R42"  Part="1" 
-F 0 "R42" H 6768 6296 50  0000 L CNN
-F 1 "2.7k" H 6768 6205 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6740 6240 50  0001 C CNN
-F 3 "~" H 6700 6250 50  0001 C CNN
-	1    6700 6250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6700 5700 6700 5650
-Wire Wire Line
-	6700 5650 6000 5650
-Wire Wire Line
-	6700 6400 6700 6450
-Wire Wire Line
-	6700 6450 6200 6450
-Wire Wire Line
-	6700 5650 7050 5650
-Wire Wire Line
-	7050 5650 7050 5850
-Wire Wire Line
-	7050 6250 7050 6450
-Wire Wire Line
-	7050 6450 6700 6450
-Connection ~ 6700 6450
-$Comp
-L Device:R_US R?
-U 1 1 61F02605
-P 8200 5850
-AR Path="/61F02605" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F02605" Ref="R57"  Part="1" 
-F 0 "R57" H 8400 5900 50  0000 R CNN
-F 1 "470" H 8400 5800 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 8240 5840 50  0001 C CNN
-F 3 "~" H 8200 5850 50  0001 C CNN
-	1    8200 5850
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R?
-U 1 1 61F0260B
-P 8200 6250
-AR Path="/61F0260B" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F0260B" Ref="R58"  Part="1" 
-F 0 "R58" H 8400 6300 50  0000 R CNN
-F 1 "470" H 8400 6200 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 8240 6240 50  0001 C CNN
-F 3 "~" H 8200 6250 50  0001 C CNN
-	1    8200 6250
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	8200 6000 8200 6050
-Wire Wire Line
-	8200 6050 8400 6050
-Connection ~ 8200 6050
-Wire Wire Line
-	8200 6050 8200 6100
-Wire Wire Line
-	8200 5700 8200 5650
-Wire Wire Line
-	8200 5650 8550 5650
-Wire Wire Line
-	8200 6400 8200 6450
-Wire Wire Line
-	8200 6450 8550 6450
-Wire Wire Line
-	8200 5650 7850 5650
-Connection ~ 8200 5650
-Wire Wire Line
-	7850 6450 8200 6450
-Connection ~ 8200 6450
-Wire Wire Line
-	7850 5650 7850 5850
-Wire Wire Line
-	7850 6250 7850 6450
-$Comp
-L power:GND #PWR?
-U 1 1 61F0261F
-P 8400 6150
-AR Path="/61F0261F" Ref="#PWR?"  Part="1" 
-AR Path="/61EC7443/61F0261F" Ref="#PWR013"  Part="1" 
-F 0 "#PWR013" H 8400 5900 50  0001 C CNN
-F 1 "GND" H 8405 5977 50  0000 C CNN
-F 2 "" H 8400 6150 50  0001 C CNN
-F 3 "" H 8400 6150 50  0001 C CNN
-	1    8400 6150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8400 6050 8400 6150
-$Comp
-L lachesis:SN7524 U?
-U 1 1 61F02626
-P 9400 6050
-AR Path="/61F02626" Ref="U?"  Part="1" 
-AR Path="/61EC7443/61F02626" Ref="U7"  Part="1" 
-F 0 "U7" H 9400 6417 50  0000 C CNN
-F 1 "SN7524" H 9400 6326 50  0000 C CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 9400 6050 50  0001 C CNN
-F 3 "" H 9400 6050 50  0001 C CNN
-	1    9400 6050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8550 6450 8550 6150
-Wire Wire Line
-	8550 6150 9100 6150
-Wire Wire Line
-	8550 5650 8550 5950
-Wire Wire Line
-	8550 5950 9100 5950
-$Comp
-L lachesis:Transformer_SP_SS T?
-U 1 1 61F02636
-P 7450 6050
-AR Path="/61F02636" Ref="T?"  Part="1" 
-AR Path="/61EC7443/61F02636" Ref="T13"  Part="1" 
-F 0 "T13" H 7450 5800 50  0000 C CNN
-F 1 "1:1" H 7450 6340 50  0000 C CNN
-F 2 "" H 7450 6050 50  0001 C CNN
-F 3 "~" H 7450 6050 50  0001 C CNN
-	1    7450 6050
-	1    0    0    -1  
-$EndComp
-Entry Wire Line
-	6000 5650 5900 5750
-Entry Wire Line
-	6200 6450 6100 6550
-Text Label 6300 5650 0    50   ~ 0
-GAR13
-Text Label 6300 6450 0    50   ~ 0
-GBR13
-NoConn ~ 7050 6050
-NoConn ~ 7850 6050
-Wire Wire Line
-	9400 6300 9400 6350
-Wire Wire Line
-	9400 6350 8900 6350
-$Comp
-L Device:R_US R?
-U 1 1 61F02644
-P 6700 6850
-AR Path="/61F02644" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F02644" Ref="R43"  Part="1" 
-F 0 "R43" H 6768 6896 50  0000 L CNN
-F 1 "2.7k" H 6768 6805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6740 6840 50  0001 C CNN
-F 3 "~" H 6700 6850 50  0001 C CNN
-	1    6700 6850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R?
-U 1 1 61F0264A
-P 6700 7250
-AR Path="/61F0264A" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F0264A" Ref="R44"  Part="1" 
-F 0 "R44" H 6768 7296 50  0000 L CNN
-F 1 "2.7k" H 6768 7205 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6740 7240 50  0001 C CNN
-F 3 "~" H 6700 7250 50  0001 C CNN
-	1    6700 7250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6700 6700 6700 6650
-Wire Wire Line
-	6700 6650 6000 6650
-Wire Wire Line
-	6700 7400 6700 7450
-Wire Wire Line
-	6700 7450 6200 7450
-Wire Wire Line
-	6700 6650 7050 6650
-Wire Wire Line
-	7050 6650 7050 6850
-Wire Wire Line
-	7050 7250 7050 7450
-Wire Wire Line
-	7050 7450 6700 7450
-Connection ~ 6700 7450
-$Comp
-L Device:R_US R?
-U 1 1 61F0265E
-P 8200 6850
-AR Path="/61F0265E" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F0265E" Ref="R59"  Part="1" 
-F 0 "R59" H 8400 6900 50  0000 R CNN
-F 1 "470" H 8400 6800 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 8240 6840 50  0001 C CNN
-F 3 "~" H 8200 6850 50  0001 C CNN
-	1    8200 6850
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R?
-U 1 1 61F02664
-P 8200 7250
-AR Path="/61F02664" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F02664" Ref="R60"  Part="1" 
-F 0 "R60" H 8400 7300 50  0000 R CNN
-F 1 "470" H 8400 7200 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 8240 7240 50  0001 C CNN
-F 3 "~" H 8200 7250 50  0001 C CNN
-	1    8200 7250
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	8200 7000 8200 7050
-Wire Wire Line
-	8200 7050 8400 7050
-Connection ~ 8200 7050
-Wire Wire Line
-	8200 7050 8200 7100
-Wire Wire Line
-	8200 6700 8200 6650
-Wire Wire Line
-	8200 6650 8550 6650
-Wire Wire Line
-	8200 7400 8200 7450
-Wire Wire Line
-	8200 7450 8550 7450
-Wire Wire Line
-	8200 6650 7850 6650
-Connection ~ 8200 6650
-Wire Wire Line
-	7850 7450 8200 7450
-Connection ~ 8200 7450
-Wire Wire Line
-	7850 6650 7850 6850
-Wire Wire Line
-	7850 7250 7850 7450
-$Comp
-L power:GND #PWR?
-U 1 1 61F02678
-P 8400 7150
-AR Path="/61F02678" Ref="#PWR?"  Part="1" 
-AR Path="/61EC7443/61F02678" Ref="#PWR014"  Part="1" 
-F 0 "#PWR014" H 8400 6900 50  0001 C CNN
-F 1 "GND" H 8405 6977 50  0000 C CNN
-F 2 "" H 8400 7150 50  0001 C CNN
-F 3 "" H 8400 7150 50  0001 C CNN
-	1    8400 7150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8400 7050 8400 7150
-$Comp
-L lachesis:SN7524 U?
-U 2 1 61F0267F
-P 9400 7050
-AR Path="/61F0267F" Ref="U?"  Part="2" 
-AR Path="/61EC7443/61F0267F" Ref="U7"  Part="2" 
-F 0 "U7" H 9400 7417 50  0000 C CNN
-F 1 "SN7524" H 9400 7326 50  0000 C CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 9400 7050 50  0001 C CNN
-F 3 "" H 9400 7050 50  0001 C CNN
-	2    9400 7050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8550 7450 8550 7150
-Wire Wire Line
-	8550 7150 9100 7150
-Wire Wire Line
-	8550 6650 8550 6950
-Wire Wire Line
-	8550 6950 9100 6950
-$Comp
-L lachesis:Transformer_SP_SS T?
-U 1 1 61F0268F
-P 7450 7050
-AR Path="/61F0268F" Ref="T?"  Part="1" 
-AR Path="/61EC7443/61F0268F" Ref="T14"  Part="1" 
-F 0 "T14" H 7450 6800 50  0000 C CNN
-F 1 "1:1" H 7450 7340 50  0000 C CNN
-F 2 "" H 7450 7050 50  0001 C CNN
-F 3 "~" H 7450 7050 50  0001 C CNN
-	1    7450 7050
-	1    0    0    -1  
-$EndComp
-Entry Wire Line
-	6000 6650 5900 6750
-Entry Wire Line
-	6200 7450 6100 7550
-Text Label 6300 6650 0    50   ~ 0
-GAR14
-Text Label 6300 7450 0    50   ~ 0
-GBR14
-NoConn ~ 7050 7050
-NoConn ~ 7850 7050
-Wire Wire Line
-	9400 7300 9400 7350
-Wire Wire Line
-	9400 7350 8900 7350
-$Comp
-L Device:R_US R?
-U 1 1 61F0269D
-P 6700 7850
-AR Path="/61F0269D" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F0269D" Ref="R45"  Part="1" 
-F 0 "R45" H 6768 7896 50  0000 L CNN
-F 1 "2.7k" H 6768 7805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6740 7840 50  0001 C CNN
-F 3 "~" H 6700 7850 50  0001 C CNN
-	1    6700 7850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R?
-U 1 1 61F026A3
-P 6700 8250
-AR Path="/61F026A3" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F026A3" Ref="R46"  Part="1" 
-F 0 "R46" H 6768 8296 50  0000 L CNN
-F 1 "2.7k" H 6768 8205 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6740 8240 50  0001 C CNN
-F 3 "~" H 6700 8250 50  0001 C CNN
-	1    6700 8250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6700 7700 6700 7650
-Wire Wire Line
-	6700 7650 6000 7650
-Wire Wire Line
-	6700 8400 6700 8450
-Wire Wire Line
-	6700 8450 6200 8450
-Wire Wire Line
-	6700 7650 7050 7650
-Wire Wire Line
-	7050 7650 7050 7850
-Wire Wire Line
-	7050 8250 7050 8450
-Wire Wire Line
-	7050 8450 6700 8450
-Connection ~ 6700 8450
-$Comp
-L Device:R_US R?
-U 1 1 61F026B7
-P 8200 7850
-AR Path="/61F026B7" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F026B7" Ref="R61"  Part="1" 
-F 0 "R61" H 8400 7900 50  0000 R CNN
-F 1 "470" H 8400 7800 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 8240 7840 50  0001 C CNN
-F 3 "~" H 8200 7850 50  0001 C CNN
-	1    8200 7850
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R?
-U 1 1 61F026BD
-P 8200 8250
-AR Path="/61F026BD" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F026BD" Ref="R62"  Part="1" 
-F 0 "R62" H 8400 8300 50  0000 R CNN
-F 1 "470" H 8400 8200 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 8240 8240 50  0001 C CNN
-F 3 "~" H 8200 8250 50  0001 C CNN
-	1    8200 8250
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	8200 8000 8200 8050
-Wire Wire Line
-	8200 8050 8400 8050
-Connection ~ 8200 8050
-Wire Wire Line
-	8200 8050 8200 8100
-Wire Wire Line
-	8200 7700 8200 7650
-Wire Wire Line
-	8200 7650 8550 7650
-Wire Wire Line
-	8200 8400 8200 8450
-Wire Wire Line
-	8200 8450 8550 8450
-Wire Wire Line
-	8200 7650 7850 7650
-Connection ~ 8200 7650
-Wire Wire Line
-	7850 8450 8200 8450
-Connection ~ 8200 8450
-Wire Wire Line
-	7850 7650 7850 7850
-Wire Wire Line
-	7850 8250 7850 8450
-$Comp
-L power:GND #PWR?
-U 1 1 61F026D1
-P 8400 8150
-AR Path="/61F026D1" Ref="#PWR?"  Part="1" 
-AR Path="/61EC7443/61F026D1" Ref="#PWR015"  Part="1" 
-F 0 "#PWR015" H 8400 7900 50  0001 C CNN
-F 1 "GND" H 8405 7977 50  0000 C CNN
-F 2 "" H 8400 8150 50  0001 C CNN
-F 3 "" H 8400 8150 50  0001 C CNN
-	1    8400 8150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8400 8050 8400 8150
-$Comp
-L lachesis:SN7524 U?
-U 1 1 61F026D8
-P 9400 8050
-AR Path="/61F026D8" Ref="U?"  Part="1" 
-AR Path="/61EC7443/61F026D8" Ref="U8"  Part="1" 
-F 0 "U8" H 9400 8417 50  0000 C CNN
-F 1 "SN7524" H 9400 8326 50  0000 C CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 9400 8050 50  0001 C CNN
-F 3 "" H 9400 8050 50  0001 C CNN
-	1    9400 8050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8550 8450 8550 8150
-Wire Wire Line
-	8550 8150 9100 8150
-Wire Wire Line
-	8550 7650 8550 7950
-Wire Wire Line
-	8550 7950 9100 7950
-$Comp
-L lachesis:Transformer_SP_SS T?
-U 1 1 61F026E8
-P 7450 8050
-AR Path="/61F026E8" Ref="T?"  Part="1" 
-AR Path="/61EC7443/61F026E8" Ref="T15"  Part="1" 
-F 0 "T15" H 7450 7800 50  0000 C CNN
-F 1 "1:1" H 7450 8340 50  0000 C CNN
-F 2 "" H 7450 8050 50  0001 C CNN
-F 3 "~" H 7450 8050 50  0001 C CNN
-	1    7450 8050
-	1    0    0    -1  
-$EndComp
-Entry Wire Line
-	6000 7650 5900 7750
-Entry Wire Line
-	6200 8450 6100 8550
-Text Label 6300 7650 0    50   ~ 0
-GAR15
-Text Label 6300 8450 0    50   ~ 0
-GBR15
-NoConn ~ 7050 8050
-NoConn ~ 7850 8050
-Wire Wire Line
-	9400 8300 9400 8350
-Wire Wire Line
-	9400 8350 8900 8350
-$Comp
-L Device:R_US R?
-U 1 1 61F026F6
-P 6700 8850
-AR Path="/61F026F6" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F026F6" Ref="R47"  Part="1" 
-F 0 "R47" H 6768 8896 50  0000 L CNN
-F 1 "2.7k" H 6768 8805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6740 8840 50  0001 C CNN
-F 3 "~" H 6700 8850 50  0001 C CNN
-	1    6700 8850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R?
-U 1 1 61F026FC
-P 6700 9250
-AR Path="/61F026FC" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F026FC" Ref="R48"  Part="1" 
-F 0 "R48" H 6768 9296 50  0000 L CNN
-F 1 "2.7k" H 6768 9205 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6740 9240 50  0001 C CNN
-F 3 "~" H 6700 9250 50  0001 C CNN
-	1    6700 9250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6700 8700 6700 8650
-Wire Wire Line
-	6700 8650 6000 8650
-Wire Wire Line
-	6700 9400 6700 9450
-Wire Wire Line
-	6700 9450 6200 9450
-Wire Wire Line
-	6700 8650 7050 8650
-Wire Wire Line
-	7050 8650 7050 8850
-Wire Wire Line
-	7050 9250 7050 9450
-Wire Wire Line
-	7050 9450 6700 9450
-Connection ~ 6700 9450
-$Comp
-L Device:R_US R?
-U 1 1 61F02710
-P 8200 8850
-AR Path="/61F02710" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F02710" Ref="R63"  Part="1" 
-F 0 "R63" H 8400 8900 50  0000 R CNN
-F 1 "470" H 8400 8800 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 8240 8840 50  0001 C CNN
-F 3 "~" H 8200 8850 50  0001 C CNN
-	1    8200 8850
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R?
-U 1 1 61F02716
-P 8200 9250
-AR Path="/61F02716" Ref="R?"  Part="1" 
-AR Path="/61EC7443/61F02716" Ref="R64"  Part="1" 
-F 0 "R64" H 8400 9300 50  0000 R CNN
-F 1 "470" H 8400 9200 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 8240 9240 50  0001 C CNN
-F 3 "~" H 8200 9250 50  0001 C CNN
-	1    8200 9250
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	8200 9000 8200 9050
-Wire Wire Line
-	8200 9050 8400 9050
-Connection ~ 8200 9050
-Wire Wire Line
-	8200 9050 8200 9100
-Wire Wire Line
-	8200 8700 8200 8650
-Wire Wire Line
-	8200 8650 8550 8650
-Wire Wire Line
-	8200 9400 8200 9450
-Wire Wire Line
-	8200 9450 8550 9450
-Wire Wire Line
-	8200 8650 7850 8650
-Connection ~ 8200 8650
-Wire Wire Line
-	7850 9450 8200 9450
-Connection ~ 8200 9450
-Wire Wire Line
-	7850 8650 7850 8850
-Wire Wire Line
-	7850 9250 7850 9450
-$Comp
-L power:GND #PWR?
-U 1 1 61F0272A
-P 8400 9150
-AR Path="/61F0272A" Ref="#PWR?"  Part="1" 
-AR Path="/61EC7443/61F0272A" Ref="#PWR016"  Part="1" 
-F 0 "#PWR016" H 8400 8900 50  0001 C CNN
-F 1 "GND" H 8405 8977 50  0000 C CNN
-F 2 "" H 8400 9150 50  0001 C CNN
-F 3 "" H 8400 9150 50  0001 C CNN
-	1    8400 9150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8400 9050 8400 9150
-$Comp
-L lachesis:SN7524 U?
-U 2 1 61F02731
-P 9400 9050
-AR Path="/61F02731" Ref="U?"  Part="2" 
-AR Path="/61EC7443/61F02731" Ref="U8"  Part="2" 
-F 0 "U8" H 9400 9417 50  0000 C CNN
-F 1 "SN7524" H 9400 9326 50  0000 C CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 9400 9050 50  0001 C CNN
-F 3 "" H 9400 9050 50  0001 C CNN
-	2    9400 9050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8550 9450 8550 9150
-Wire Wire Line
-	8550 9150 9100 9150
-Wire Wire Line
-	8550 8650 8550 8950
-Wire Wire Line
-	8550 8950 9100 8950
-$Comp
-L lachesis:Transformer_SP_SS T?
-U 1 1 61F02741
-P 7450 9050
-AR Path="/61F02741" Ref="T?"  Part="1" 
-AR Path="/61EC7443/61F02741" Ref="T16"  Part="1" 
-F 0 "T16" H 7450 8800 50  0000 C CNN
-F 1 "1:1" H 7450 9340 50  0000 C CNN
-F 2 "" H 7450 9050 50  0001 C CNN
-F 3 "~" H 7450 9050 50  0001 C CNN
-	1    7450 9050
-	1    0    0    -1  
-$EndComp
-Entry Wire Line
-	6000 8650 5900 8750
-Entry Wire Line
-	6200 9450 6100 9550
-Text Label 6300 8650 0    50   ~ 0
-GAR16
-Text Label 6300 9450 0    50   ~ 0
-GBR16
-NoConn ~ 7050 9050
-NoConn ~ 7850 9050
-Wire Wire Line
-	9400 9300 9400 9350
-Wire Wire Line
-	9400 9350 8900 9350
-Wire Bus Line
-	1250 1300 1400 1300
-Wire Bus Line
-	1250 1400 1600 1400
-Wire Bus Line
-	1600 9750 6100 9750
-Wire Bus Line
-	1400 9900 5900 9900
-Wire Wire Line
-	1250 1200 4400 1200
-Wire Wire Line
-	4400 1200 4400 2350
-Connection ~ 4400 2350
-Wire Wire Line
-	4400 2350 4400 3350
-Connection ~ 4400 3350
-Wire Wire Line
-	4400 3350 4400 4350
-Connection ~ 4400 4350
-Wire Wire Line
-	4400 4350 4400 5350
-Connection ~ 4400 5350
-Wire Wire Line
-	4400 5350 4400 6350
-Connection ~ 4400 6350
-Wire Wire Line
-	4400 6350 4400 7350
-Connection ~ 4400 7350
-Wire Wire Line
-	4400 7350 4400 8350
-Connection ~ 4400 8350
-Wire Wire Line
-	4400 8350 4400 9350
-Wire Wire Line
-	4400 9350 4400 9650
-Wire Wire Line
-	4400 9650 8900 9650
-Wire Wire Line
-	8900 9650 8900 9350
-Connection ~ 4400 9350
-Connection ~ 8900 3350
-Wire Wire Line
-	8900 3350 8900 2350
-Connection ~ 8900 4350
-Wire Wire Line
-	8900 4350 8900 3350
-Connection ~ 8900 5350
-Wire Wire Line
-	8900 5350 8900 4350
-Connection ~ 8900 6350
-Wire Wire Line
-	8900 6350 8900 5350
-Connection ~ 8900 7350
-Wire Wire Line
-	8900 7350 8900 6350
-Connection ~ 8900 8350
-Wire Wire Line
-	8900 8350 8900 7350
-Connection ~ 8900 9350
-Wire Wire Line
-	8900 9350 8900 8350
-Text HLabel 1250 1200 0    50   Input ~ 0
+Text HLabel 1750 1250 0    50   Input ~ 0
 SBF
-Text HLabel 1250 1300 0    50   Input ~ 0
+Text HLabel 1750 1050 0    50   Input ~ 0
 GAR[1..16]
-Text HLabel 1250 1400 0    50   Input ~ 0
+Text HLabel 1750 1150 0    50   Input ~ 0
 GBR[1..16]
-Wire Wire Line
-	5200 2050 5500 2050
-Text Label 5250 2050 0    50   ~ 0
-SA1
-Entry Wire Line
-	5500 2050 5600 1950
-Connection ~ 6700 2650
-Connection ~ 6700 3650
-Connection ~ 6700 4650
-Connection ~ 6700 5650
-Connection ~ 6700 6650
-Connection ~ 6700 7650
-Connection ~ 6700 8650
-Wire Wire Line
-	5200 3050 5500 3050
-Text Label 5250 3050 0    50   ~ 0
-SA2
-Entry Wire Line
-	5500 3050 5600 2950
-Wire Wire Line
-	5200 4050 5500 4050
-Text Label 5250 4050 0    50   ~ 0
-SA3
-Entry Wire Line
-	5500 4050 5600 3950
-Wire Wire Line
-	5200 5050 5500 5050
-Text Label 5250 5050 0    50   ~ 0
-SA4
-Entry Wire Line
-	5500 5050 5600 4950
-Wire Wire Line
-	5200 6050 5500 6050
-Text Label 5250 6050 0    50   ~ 0
-SA5
-Entry Wire Line
-	5500 6050 5600 5950
-Wire Wire Line
-	5200 7050 5500 7050
-Text Label 5250 7050 0    50   ~ 0
-SA6
-Entry Wire Line
-	5500 7050 5600 6950
-Wire Wire Line
-	5200 8050 5500 8050
-Text Label 5250 8050 0    50   ~ 0
-SA7
-Entry Wire Line
-	5500 8050 5600 7950
-Wire Wire Line
-	5200 9050 5500 9050
-Text Label 5250 9050 0    50   ~ 0
-SA8
-Entry Wire Line
-	5500 9050 5600 8950
-Wire Wire Line
-	9700 2050 10000 2050
-Text Label 9750 2050 0    50   ~ 0
-SA9
-Entry Wire Line
-	10000 2050 10100 1950
-Wire Wire Line
-	9700 3050 10000 3050
-Text Label 9750 3050 0    50   ~ 0
-SA10
-Entry Wire Line
-	10000 3050 10100 2950
-Wire Wire Line
-	9700 4050 10000 4050
-Text Label 9750 4050 0    50   ~ 0
-SA11
-Entry Wire Line
-	10000 4050 10100 3950
-Wire Wire Line
-	9700 5050 10000 5050
-Text Label 9750 5050 0    50   ~ 0
-SA12
-Entry Wire Line
-	10000 5050 10100 4950
-Wire Wire Line
-	9700 6050 10000 6050
-Text Label 9750 6050 0    50   ~ 0
-SA13
-Entry Wire Line
-	10000 6050 10100 5950
-Wire Wire Line
-	9700 7050 10000 7050
-Text Label 9750 7050 0    50   ~ 0
-SA14
-Entry Wire Line
-	10000 7050 10100 6950
-Wire Wire Line
-	9700 8050 10000 8050
-Text Label 9750 8050 0    50   ~ 0
-SA15
-Entry Wire Line
-	10000 8050 10100 7950
-Wire Wire Line
-	9700 9050 10000 9050
-Text Label 9750 9050 0    50   ~ 0
-SA16
-Entry Wire Line
-	10000 9050 10100 8950
-Wire Bus Line
-	5600 1300 10100 1300
-Wire Bus Line
-	10100 1300 10300 1300
-Connection ~ 10100 1300
-Text HLabel 10300 1300 2    50   Output ~ 0
+Text HLabel 6750 6200 2    50   Output ~ 0
 SA[1..16]
-$Comp
-L lachesis:SN7524 U?
-U 3 1 617E2409
-P 13050 1700
-AR Path="/617E2409" Ref="U?"  Part="1" 
-AR Path="/61EC7443/617E2409" Ref="U1"  Part="3" 
-F 0 "U1" H 13250 1600 50  0000 C CNN
-F 1 "SN7524" H 13200 1500 50  0000 C CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 13050 1700 50  0001 C CNN
-F 3 "" H 13050 1700 50  0001 C CNN
-	3    13050 1700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	12600 1800 12750 1800
-Wire Wire Line
-	12750 1600 12600 1600
-$Comp
-L Device:C_Small C3
-U 1 1 61C0AC6B
-P 12600 1700
-F 0 "C3" H 12509 1654 50  0000 R CNN
-F 1 "10nF" H 12509 1745 50  0000 R CNN
-F 2 "" H 12600 1700 50  0001 C CNN
-F 3 "~" H 12600 1700 50  0001 C CNN
-	1    12600 1700
-	1    0    0    1   
-$EndComp
-Wire Wire Line
-	12600 1800 12250 1800
-Connection ~ 12600 1800
-Wire Wire Line
-	12600 1600 12150 1600
-Connection ~ 12600 1600
-$Comp
-L lachesis:SN7524 U?
-U 3 1 61E2FB2C
-P 13050 2200
-AR Path="/61E2FB2C" Ref="U?"  Part="1" 
-AR Path="/61EC7443/61E2FB2C" Ref="U2"  Part="3" 
-F 0 "U2" H 13250 2100 50  0000 C CNN
-F 1 "SN7524" H 13200 2000 50  0000 C CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 13050 2200 50  0001 C CNN
-F 3 "" H 13050 2200 50  0001 C CNN
-	3    13050 2200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	12600 2300 12750 2300
-Wire Wire Line
-	12750 2100 12600 2100
-$Comp
-L Device:C_Small C4
-U 1 1 61E2FB64
-P 12600 2200
-F 0 "C4" H 12509 2154 50  0000 R CNN
-F 1 "10nF" H 12509 2245 50  0000 R CNN
-F 2 "" H 12600 2200 50  0001 C CNN
-F 3 "~" H 12600 2200 50  0001 C CNN
-	1    12600 2200
-	1    0    0    1   
-$EndComp
-Wire Wire Line
-	12600 2300 12250 2300
-Connection ~ 12600 2300
-Wire Wire Line
-	12600 2100 12150 2100
-Connection ~ 12600 2100
-$Comp
-L lachesis:SN7524 U?
-U 3 1 61E6E789
-P 13050 2700
-AR Path="/61E6E789" Ref="U?"  Part="1" 
-AR Path="/61EC7443/61E6E789" Ref="U3"  Part="3" 
-F 0 "U3" H 13250 2600 50  0000 C CNN
-F 1 "SN7524" H 13200 2500 50  0000 C CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 13050 2700 50  0001 C CNN
-F 3 "" H 13050 2700 50  0001 C CNN
-	3    13050 2700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	12600 2800 12750 2800
-Wire Wire Line
-	12750 2600 12600 2600
-$Comp
-L Device:C_Small C5
-U 1 1 61E6E7C1
-P 12600 2700
-F 0 "C5" H 12509 2654 50  0000 R CNN
-F 1 "10nF" H 12509 2745 50  0000 R CNN
-F 2 "" H 12600 2700 50  0001 C CNN
-F 3 "~" H 12600 2700 50  0001 C CNN
-	1    12600 2700
-	1    0    0    1   
-$EndComp
-Wire Wire Line
-	12600 2800 12250 2800
-Connection ~ 12600 2800
-Wire Wire Line
-	12600 2600 12150 2600
-Connection ~ 12600 2600
-$Comp
-L lachesis:SN7524 U?
-U 3 1 61EAD2BA
-P 13050 3200
-AR Path="/61EAD2BA" Ref="U?"  Part="1" 
-AR Path="/61EC7443/61EAD2BA" Ref="U4"  Part="3" 
-F 0 "U4" H 13250 3100 50  0000 C CNN
-F 1 "SN7524" H 13200 3000 50  0000 C CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 13050 3200 50  0001 C CNN
-F 3 "" H 13050 3200 50  0001 C CNN
-	3    13050 3200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	12600 3300 12750 3300
-Wire Wire Line
-	12750 3100 12600 3100
-$Comp
-L Device:C_Small C6
-U 1 1 61EAD2F2
-P 12600 3200
-F 0 "C6" H 12509 3154 50  0000 R CNN
-F 1 "10nF" H 12509 3245 50  0000 R CNN
-F 2 "" H 12600 3200 50  0001 C CNN
-F 3 "~" H 12600 3200 50  0001 C CNN
-	1    12600 3200
-	1    0    0    1   
-$EndComp
-Wire Wire Line
-	12600 3300 12250 3300
-Connection ~ 12600 3300
-Wire Wire Line
-	12600 3100 12150 3100
-Connection ~ 12600 3100
-$Comp
-L lachesis:SN7524 U?
-U 3 1 61EEC46B
-P 14450 1700
-AR Path="/61EEC46B" Ref="U?"  Part="1" 
-AR Path="/61EC7443/61EEC46B" Ref="U5"  Part="3" 
-F 0 "U5" H 14650 1600 50  0000 C CNN
-F 1 "SN7524" H 14600 1500 50  0000 C CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 14450 1700 50  0001 C CNN
-F 3 "" H 14450 1700 50  0001 C CNN
-	3    14450 1700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	14000 1800 14150 1800
-Wire Wire Line
-	14150 1600 14000 1600
-$Comp
-L Device:C_Small C15
-U 1 1 61EEC477
-P 14000 1700
-F 0 "C15" H 13909 1654 50  0000 R CNN
-F 1 "10nF" H 13909 1745 50  0000 R CNN
-F 2 "" H 14000 1700 50  0001 C CNN
-F 3 "~" H 14000 1700 50  0001 C CNN
-	1    14000 1700
-	1    0    0    1   
-$EndComp
-Connection ~ 14000 1800
-Wire Wire Line
-	14000 1600 13550 1600
-Connection ~ 14000 1600
-$Comp
-L lachesis:SN7524 U?
-U 3 1 61EEC485
-P 14450 2200
-AR Path="/61EEC485" Ref="U?"  Part="1" 
-AR Path="/61EC7443/61EEC485" Ref="U6"  Part="3" 
-F 0 "U6" H 14650 2100 50  0000 C CNN
-F 1 "SN7524" H 14600 2000 50  0000 C CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 14450 2200 50  0001 C CNN
-F 3 "" H 14450 2200 50  0001 C CNN
-	3    14450 2200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	14000 2300 14150 2300
-Wire Wire Line
-	14150 2100 14000 2100
-$Comp
-L Device:C_Small C16
-U 1 1 61EEC491
-P 14000 2200
-F 0 "C16" H 13909 2154 50  0000 R CNN
-F 1 "10nF" H 13909 2245 50  0000 R CNN
-F 2 "" H 14000 2200 50  0001 C CNN
-F 3 "~" H 14000 2200 50  0001 C CNN
-	1    14000 2200
-	1    0    0    1   
-$EndComp
-Wire Wire Line
-	14000 2300 13650 2300
-Connection ~ 14000 2300
-Wire Wire Line
-	14000 2100 13550 2100
-Connection ~ 14000 2100
-$Comp
-L lachesis:SN7524 U?
-U 3 1 61EEC49F
-P 14450 2700
-AR Path="/61EEC49F" Ref="U?"  Part="1" 
-AR Path="/61EC7443/61EEC49F" Ref="U7"  Part="3" 
-F 0 "U7" H 14650 2600 50  0000 C CNN
-F 1 "SN7524" H 14600 2500 50  0000 C CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 14450 2700 50  0001 C CNN
-F 3 "" H 14450 2700 50  0001 C CNN
-	3    14450 2700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	14000 2800 14150 2800
-Wire Wire Line
-	14150 2600 14000 2600
-$Comp
-L Device:C_Small C17
-U 1 1 61EEC4AB
-P 14000 2700
-F 0 "C17" H 13909 2654 50  0000 R CNN
-F 1 "10nF" H 13909 2745 50  0000 R CNN
-F 2 "" H 14000 2700 50  0001 C CNN
-F 3 "~" H 14000 2700 50  0001 C CNN
-	1    14000 2700
-	1    0    0    1   
-$EndComp
-Wire Wire Line
-	14000 2800 13650 2800
-Connection ~ 14000 2800
-Wire Wire Line
-	14000 2600 13550 2600
-Connection ~ 14000 2600
-$Comp
-L lachesis:SN7524 U?
-U 3 1 61EEC4B9
-P 14450 3200
-AR Path="/61EEC4B9" Ref="U?"  Part="1" 
-AR Path="/61EC7443/61EEC4B9" Ref="U8"  Part="3" 
-F 0 "U8" H 14650 3100 50  0000 C CNN
-F 1 "SN7524" H 14600 3000 50  0000 C CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 14450 3200 50  0001 C CNN
-F 3 "" H 14450 3200 50  0001 C CNN
-	3    14450 3200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	14000 3300 14150 3300
-Wire Wire Line
-	14150 3100 14000 3100
-$Comp
-L Device:C_Small C18
-U 1 1 61EEC4C5
-P 14000 3200
-F 0 "C18" H 13909 3154 50  0000 R CNN
-F 1 "10nF" H 13909 3245 50  0000 R CNN
-F 2 "" H 14000 3200 50  0001 C CNN
-F 3 "~" H 14000 3200 50  0001 C CNN
-	1    14000 3200
-	1    0    0    1   
-$EndComp
-Wire Wire Line
-	14000 3300 13650 3300
-Connection ~ 14000 3300
-Wire Wire Line
-	14000 3100 13550 3100
-Connection ~ 14000 3100
-Wire Wire Line
-	13650 1800 14000 1800
-Wire Wire Line
-	13650 1800 13650 2300
-Connection ~ 13650 2300
-Wire Wire Line
-	13650 2300 13650 2800
-Connection ~ 13650 2800
-Wire Wire Line
-	13650 2800 13650 3300
-Wire Wire Line
-	12250 1800 12250 2300
-Connection ~ 12250 2300
-Wire Wire Line
-	12250 2300 12250 2800
-Connection ~ 12250 2800
-Wire Wire Line
-	12250 2800 12250 3300
-Connection ~ 12250 3300
-Wire Wire Line
-	12250 3300 12250 3400
-$Comp
-L power:GND #PWR021
-U 1 1 621CFC63
-P 12250 3400
-F 0 "#PWR021" H 12250 3150 50  0001 C CNN
-F 1 "GND" H 12255 3227 50  0000 C CNN
-F 2 "" H 12250 3400 50  0001 C CNN
-F 3 "" H 12250 3400 50  0001 C CNN
-	1    12250 3400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	12150 3100 12150 2600
-Connection ~ 12150 2100
-Wire Wire Line
-	12150 2100 12150 1600
-Connection ~ 12150 2600
-Wire Wire Line
-	12150 2600 12150 2100
-Wire Wire Line
-	13550 3100 13550 2600
-Connection ~ 13550 2100
-Wire Wire Line
-	13550 2100 13550 1600
-Connection ~ 13550 2600
-Wire Wire Line
-	13550 2600 13550 2100
-Wire Wire Line
-	13550 1600 13550 1400
-Wire Wire Line
-	13550 1400 12150 1400
-Wire Wire Line
-	12150 1400 12150 1600
-Connection ~ 13550 1600
-Connection ~ 12150 1600
-Connection ~ 13650 3300
-Wire Wire Line
-	13650 3300 13650 3400
-$Comp
-L power:GND #PWR028
-U 1 1 62148B45
-P 13650 3400
-F 0 "#PWR028" H 13650 3150 50  0001 C CNN
-F 1 "GND" H 13655 3227 50  0000 C CNN
-F 2 "" H 13650 3400 50  0001 C CNN
-F 3 "" H 13650 3400 50  0001 C CNN
-	1    13650 3400
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR017
-U 1 1 6233ACFD
-P 11650 1700
-F 0 "#PWR017" H 11650 1550 50  0001 C CNN
-F 1 "+5V" H 11665 1873 50  0000 C CNN
-F 2 "" H 11650 1700 50  0001 C CNN
-F 3 "" H 11650 1700 50  0001 C CNN
-	1    11650 1700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_US R65
-U 1 1 6233F225
-P 11650 1900
-F 0 "R65" H 11718 1946 50  0000 L CNN
-F 1 "5k" H 11718 1855 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 11690 1890 50  0001 C CNN
-F 3 "~" H 11650 1900 50  0001 C CNN
-	1    11650 1900
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	11650 1750 11650 1700
-$Comp
-L Device:R_POT_TRIM_US RV1
-U 1 1 623871BB
-P 11650 2300
-F 0 "RV1" H 11583 2346 50  0000 R CNN
-F 1 "100" H 11583 2255 50  0000 R CNN
-F 2 "" H 11650 2300 50  0001 C CNN
-F 3 "~" H 11650 2300 50  0001 C CNN
-	1    11650 2300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	12150 2100 11650 2100
-Wire Wire Line
-	11650 2100 11650 2150
-Wire Wire Line
-	11650 2050 11650 2100
-Connection ~ 11650 2100
-Wire Wire Line
-	11800 2300 11850 2300
-Wire Wire Line
-	11850 2300 11850 2500
-Wire Wire Line
-	11850 2500 11650 2500
-Wire Wire Line
-	11650 2500 11650 2450
-Wire Wire Line
-	11650 2500 11650 2600
-Connection ~ 11650 2500
-$Comp
-L power:GND #PWR018
-U 1 1 624EF409
-P 11650 2600
-F 0 "#PWR018" H 11650 2350 50  0001 C CNN
-F 1 "GND" H 11655 2427 50  0000 C CNN
-F 2 "" H 11650 2600 50  0001 C CNN
-F 3 "" H 11650 2600 50  0001 C CNN
-	1    11650 2600
-	1    0    0    -1  
-$EndComp
 Text Notes 4750 1000 0    50   ~ 0
 Sense Amplifiers
-Text Notes 13000 1250 0    50   ~ 0
-Reference Voltage
-$Comp
-L power:+5V #PWR024
-U 1 1 62615538
-P 13350 6150
-F 0 "#PWR024" H 13350 6000 50  0001 C CNN
-F 1 "+5V" H 13365 6323 50  0000 C CNN
-F 2 "" H 13350 6150 50  0001 C CNN
-F 3 "" H 13350 6150 50  0001 C CNN
-	1    13350 6150
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:-5V #PWR025
-U 1 1 6261761E
-P 13350 7150
-F 0 "#PWR025" H 13350 7250 50  0001 C CNN
-F 1 "-5V" H 13365 7323 50  0000 C CNN
-F 2 "" H 13350 7150 50  0001 C CNN
-F 3 "" H 13350 7150 50  0001 C CNN
-	1    13350 7150
-	-1   0    0    1   
-$EndComp
-$Comp
-L lachesis:SN7524 U?
-U 4 1 627CF252
-P 11700 6650
-AR Path="/627CF252" Ref="U?"  Part="4" 
-AR Path="/61EC7443/627CF252" Ref="U1"  Part="4" 
-F 0 "U1" H 11650 6350 50  0000 L CNN
-F 1 "SN7524" H 11650 6250 50  0000 L CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 11700 6650 50  0001 C CNN
-F 3 "" H 11700 6650 50  0001 C CNN
-	4    11700 6650
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR019
-U 1 1 627D1712
-P 12100 6850
-F 0 "#PWR019" H 12100 6600 50  0001 C CNN
-F 1 "GND" H 12105 6677 50  0000 C CNN
-F 2 "" H 12100 6850 50  0001 C CNN
-F 3 "" H 12100 6850 50  0001 C CNN
-	1    12100 6850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	12050 6800 12100 6800
-Wire Wire Line
-	12100 6800 12100 6850
-$Comp
-L Device:C_Small C1
-U 1 1 629D06A2
-P 12100 6650
-F 0 "C1" H 12009 6604 50  0000 R CNN
-F 1 "100pF" H 12009 6695 50  0000 R CNN
-F 2 "" H 12100 6650 50  0001 C CNN
-F 3 "~" H 12100 6650 50  0001 C CNN
-	1    12100 6650
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	12100 6800 12100 6750
-Connection ~ 12100 6800
-Wire Wire Line
-	12100 6550 12100 6500
-Wire Wire Line
-	12100 6500 12050 6500
-$Comp
-L lachesis:SN7524 U?
-U 4 1 62B3D5BA
-P 12750 6650
-AR Path="/62B3D5BA" Ref="U?"  Part="4" 
-AR Path="/61EC7443/62B3D5BA" Ref="U3"  Part="4" 
-F 0 "U3" H 12700 6350 50  0000 L CNN
-F 1 "SN7524" H 12700 6250 50  0000 L CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 12750 6650 50  0001 C CNN
-F 3 "" H 12750 6650 50  0001 C CNN
-	4    12750 6650
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR022
-U 1 1 62B3D5F0
-P 13150 6850
-F 0 "#PWR022" H 13150 6600 50  0001 C CNN
-F 1 "GND" H 13155 6677 50  0000 C CNN
-F 2 "" H 13150 6850 50  0001 C CNN
-F 3 "" H 13150 6850 50  0001 C CNN
-	1    13150 6850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	13100 6800 13150 6800
-Wire Wire Line
-	13150 6800 13150 6850
-$Comp
-L Device:C_Small C9
-U 1 1 62B3D5FC
-P 13150 6650
-F 0 "C9" H 13059 6604 50  0000 R CNN
-F 1 "100pF" H 13059 6695 50  0000 R CNN
-F 2 "" H 13150 6650 50  0001 C CNN
-F 3 "~" H 13150 6650 50  0001 C CNN
-	1    13150 6650
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	13150 6800 13150 6750
-Connection ~ 13150 6800
-Wire Wire Line
-	13150 6550 13150 6500
-Wire Wire Line
-	13150 6500 13100 6500
-$Comp
-L lachesis:SN7524 U?
-U 4 1 62BD2BAA
-P 13750 6650
-AR Path="/62BD2BAA" Ref="U?"  Part="4" 
-AR Path="/61EC7443/62BD2BAA" Ref="U5"  Part="4" 
-F 0 "U5" H 13700 6350 50  0000 L CNN
-F 1 "SN7524" H 13700 6250 50  0000 L CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 13750 6650 50  0001 C CNN
-F 3 "" H 13750 6650 50  0001 C CNN
-	4    13750 6650
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR029
-U 1 1 62BD2BE0
-P 14150 6850
-F 0 "#PWR029" H 14150 6600 50  0001 C CNN
-F 1 "GND" H 14155 6677 50  0000 C CNN
-F 2 "" H 14150 6850 50  0001 C CNN
-F 3 "" H 14150 6850 50  0001 C CNN
-	1    14150 6850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	14100 6800 14150 6800
-Wire Wire Line
-	14150 6800 14150 6850
-$Comp
-L Device:C_Small C19
-U 1 1 62BD2BEC
-P 14150 6650
-F 0 "C19" H 14059 6604 50  0000 R CNN
-F 1 "100pF" H 14059 6695 50  0000 R CNN
-F 2 "" H 14150 6650 50  0001 C CNN
-F 3 "~" H 14150 6650 50  0001 C CNN
-	1    14150 6650
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	14150 6800 14150 6750
-Connection ~ 14150 6800
-Wire Wire Line
-	14150 6550 14150 6500
-Wire Wire Line
-	14150 6500 14100 6500
-$Comp
-L lachesis:SN7524 U?
-U 4 1 62C21676
-P 14750 6650
-AR Path="/62C21676" Ref="U?"  Part="4" 
-AR Path="/61EC7443/62C21676" Ref="U7"  Part="4" 
-F 0 "U7" H 14700 6350 50  0000 L CNN
-F 1 "SN7524" H 14700 6250 50  0000 L CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 14750 6650 50  0001 C CNN
-F 3 "" H 14750 6650 50  0001 C CNN
-	4    14750 6650
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR033
-U 1 1 62C216AC
-P 15150 6850
-F 0 "#PWR033" H 15150 6600 50  0001 C CNN
-F 1 "GND" H 15155 6677 50  0000 C CNN
-F 2 "" H 15150 6850 50  0001 C CNN
-F 3 "" H 15150 6850 50  0001 C CNN
-	1    15150 6850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	15100 6800 15150 6800
-Wire Wire Line
-	15150 6800 15150 6850
-$Comp
-L Device:C_Small C27
-U 1 1 62C216B8
-P 15150 6650
-F 0 "C27" H 15059 6604 50  0000 R CNN
-F 1 "100pF" H 15059 6695 50  0000 R CNN
-F 2 "" H 15150 6650 50  0001 C CNN
-F 3 "~" H 15150 6650 50  0001 C CNN
-	1    15150 6650
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	15150 6800 15150 6750
-Connection ~ 15150 6800
-Wire Wire Line
-	15150 6550 15150 6500
-Wire Wire Line
-	15150 6500 15100 6500
-Wire Wire Line
-	13350 6150 13350 6200
-Wire Wire Line
-	13350 6200 12650 6200
-Wire Wire Line
-	12650 6200 12650 6250
-Wire Wire Line
-	12650 6200 11600 6200
-Wire Wire Line
-	11600 6200 11600 6250
-Connection ~ 12650 6200
-Wire Wire Line
-	13350 6200 13650 6200
-Wire Wire Line
-	13650 6200 13650 6250
-Connection ~ 13350 6200
-Wire Wire Line
-	13650 6200 14650 6200
-Wire Wire Line
-	14650 6200 14650 6250
-Connection ~ 13650 6200
-Wire Wire Line
-	11600 7100 11600 7050
-Wire Wire Line
-	12650 7100 12650 7050
-Wire Wire Line
-	12650 7100 11600 7100
-Wire Wire Line
-	13350 7100 13650 7100
-Wire Wire Line
-	13650 7100 13650 7050
-Wire Wire Line
-	13650 7100 14650 7100
-Wire Wire Line
-	14650 7100 14650 7050
-Connection ~ 13650 7100
-Wire Wire Line
-	12650 7100 13350 7100
-Wire Wire Line
-	13350 7100 13350 7150
-Connection ~ 12650 7100
-Connection ~ 13350 7100
-Text Notes 13300 4550 0    50   ~ 0
-Power
-$Comp
-L power:+5V #PWR026
-U 1 1 631B7794
-P 13350 7700
-F 0 "#PWR026" H 13350 7550 50  0001 C CNN
-F 1 "+5V" H 13365 7873 50  0000 C CNN
-F 2 "" H 13350 7700 50  0001 C CNN
-F 3 "" H 13350 7700 50  0001 C CNN
-	1    13350 7700
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:-5V #PWR027
-U 1 1 631B77AA
-P 13350 8700
-F 0 "#PWR027" H 13350 8800 50  0001 C CNN
-F 1 "-5V" H 13365 8873 50  0000 C CNN
-F 2 "" H 13350 8700 50  0001 C CNN
-F 3 "" H 13350 8700 50  0001 C CNN
-	1    13350 8700
-	-1   0    0    1   
-$EndComp
-$Comp
-L lachesis:SN7524 U?
-U 4 1 631B77B4
-P 11700 8200
-AR Path="/631B77B4" Ref="U?"  Part="4" 
-AR Path="/61EC7443/631B77B4" Ref="U2"  Part="4" 
-F 0 "U2" H 11650 7900 50  0000 L CNN
-F 1 "SN7524" H 11650 7800 50  0000 L CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 11700 8200 50  0001 C CNN
-F 3 "" H 11700 8200 50  0001 C CNN
-	4    11700 8200
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR020
-U 1 1 631B77BE
-P 12100 8400
-F 0 "#PWR020" H 12100 8150 50  0001 C CNN
-F 1 "GND" H 12105 8227 50  0000 C CNN
-F 2 "" H 12100 8400 50  0001 C CNN
-F 3 "" H 12100 8400 50  0001 C CNN
-	1    12100 8400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	12050 8350 12100 8350
-Wire Wire Line
-	12100 8350 12100 8400
-$Comp
-L Device:C_Small C2
-U 1 1 631B77CA
-P 12100 8200
-F 0 "C2" H 12009 8154 50  0000 R CNN
-F 1 "100pF" H 12009 8245 50  0000 R CNN
-F 2 "" H 12100 8200 50  0001 C CNN
-F 3 "~" H 12100 8200 50  0001 C CNN
-	1    12100 8200
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	12100 8350 12100 8300
-Connection ~ 12100 8350
-Wire Wire Line
-	12100 8100 12100 8050
-Wire Wire Line
-	12100 8050 12050 8050
-$Comp
-L lachesis:SN7524 U?
-U 4 1 631B77D8
-P 12750 8200
-AR Path="/631B77D8" Ref="U?"  Part="4" 
-AR Path="/61EC7443/631B77D8" Ref="U4"  Part="4" 
-F 0 "U4" H 12700 7900 50  0000 L CNN
-F 1 "SN7524" H 12700 7800 50  0000 L CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 12750 8200 50  0001 C CNN
-F 3 "" H 12750 8200 50  0001 C CNN
-	4    12750 8200
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR023
-U 1 1 631B77E2
-P 13150 8400
-F 0 "#PWR023" H 13150 8150 50  0001 C CNN
-F 1 "GND" H 13155 8227 50  0000 C CNN
-F 2 "" H 13150 8400 50  0001 C CNN
-F 3 "" H 13150 8400 50  0001 C CNN
-	1    13150 8400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	13100 8350 13150 8350
-Wire Wire Line
-	13150 8350 13150 8400
-$Comp
-L Device:C_Small C10
-U 1 1 631B77EE
-P 13150 8200
-F 0 "C10" H 13059 8154 50  0000 R CNN
-F 1 "100pF" H 13059 8245 50  0000 R CNN
-F 2 "" H 13150 8200 50  0001 C CNN
-F 3 "~" H 13150 8200 50  0001 C CNN
-	1    13150 8200
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	13150 8350 13150 8300
-Connection ~ 13150 8350
-Wire Wire Line
-	13150 8100 13150 8050
-Wire Wire Line
-	13150 8050 13100 8050
-$Comp
-L lachesis:SN7524 U?
-U 4 1 631B77FC
-P 13750 8200
-AR Path="/631B77FC" Ref="U?"  Part="4" 
-AR Path="/61EC7443/631B77FC" Ref="U6"  Part="4" 
-F 0 "U6" H 13700 7900 50  0000 L CNN
-F 1 "SN7524" H 13700 7800 50  0000 L CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 13750 8200 50  0001 C CNN
-F 3 "" H 13750 8200 50  0001 C CNN
-	4    13750 8200
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR030
-U 1 1 631B7806
-P 14150 8400
-F 0 "#PWR030" H 14150 8150 50  0001 C CNN
-F 1 "GND" H 14155 8227 50  0000 C CNN
-F 2 "" H 14150 8400 50  0001 C CNN
-F 3 "" H 14150 8400 50  0001 C CNN
-	1    14150 8400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	14100 8350 14150 8350
-Wire Wire Line
-	14150 8350 14150 8400
-$Comp
-L Device:C_Small C20
-U 1 1 631B7812
-P 14150 8200
-F 0 "C20" H 14059 8154 50  0000 R CNN
-F 1 "100pF" H 14059 8245 50  0000 R CNN
-F 2 "" H 14150 8200 50  0001 C CNN
-F 3 "~" H 14150 8200 50  0001 C CNN
-	1    14150 8200
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	14150 8350 14150 8300
-Connection ~ 14150 8350
-Wire Wire Line
-	14150 8100 14150 8050
-Wire Wire Line
-	14150 8050 14100 8050
-$Comp
-L lachesis:SN7524 U?
-U 4 1 631B7820
-P 14750 8200
-AR Path="/631B7820" Ref="U?"  Part="4" 
-AR Path="/61EC7443/631B7820" Ref="U8"  Part="4" 
-F 0 "U8" H 14700 7900 50  0000 L CNN
-F 1 "SN7524" H 14700 7800 50  0000 L CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 14750 8200 50  0001 C CNN
-F 3 "" H 14750 8200 50  0001 C CNN
-	4    14750 8200
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR034
-U 1 1 631B782A
-P 15150 8400
-F 0 "#PWR034" H 15150 8150 50  0001 C CNN
-F 1 "GND" H 15155 8227 50  0000 C CNN
-F 2 "" H 15150 8400 50  0001 C CNN
-F 3 "" H 15150 8400 50  0001 C CNN
-	1    15150 8400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	15100 8350 15150 8350
-Wire Wire Line
-	15150 8350 15150 8400
-$Comp
-L Device:C_Small C28
-U 1 1 631B7836
-P 15150 8200
-F 0 "C28" H 15059 8154 50  0000 R CNN
-F 1 "100pF" H 15059 8245 50  0000 R CNN
-F 2 "" H 15150 8200 50  0001 C CNN
-F 3 "~" H 15150 8200 50  0001 C CNN
-	1    15150 8200
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	15150 8350 15150 8300
-Connection ~ 15150 8350
-Wire Wire Line
-	15150 8100 15150 8050
-Wire Wire Line
-	15150 8050 15100 8050
-Wire Wire Line
-	13350 7700 13350 7750
-Wire Wire Line
-	13350 7750 12650 7750
-Wire Wire Line
-	12650 7750 12650 7800
-Wire Wire Line
-	12650 7750 11600 7750
-Wire Wire Line
-	11600 7750 11600 7800
-Connection ~ 12650 7750
-Wire Wire Line
-	13350 7750 13650 7750
-Wire Wire Line
-	13650 7750 13650 7800
-Connection ~ 13350 7750
-Wire Wire Line
-	13650 7750 14650 7750
-Wire Wire Line
-	14650 7750 14650 7800
-Connection ~ 13650 7750
-Wire Wire Line
-	11600 8650 11600 8600
-Wire Wire Line
-	12650 8650 12650 8600
-Wire Wire Line
-	12650 8650 11600 8650
-Wire Wire Line
-	13350 8650 13650 8650
-Wire Wire Line
-	13650 8650 13650 8600
-Wire Wire Line
-	13650 8650 14650 8650
-Wire Wire Line
-	14650 8650 14650 8600
-Connection ~ 13650 8650
-Wire Wire Line
-	12650 8650 13350 8650
-Wire Wire Line
-	13350 8650 13350 8700
-Connection ~ 12650 8650
-Connection ~ 13350 8650
 $Sheet
-S 11300 4950 850  200 
+S 8000 1950 850  200 
 U 61E13129
 F0 "40518" 50
 F1 "filtered_14v.sch" 50
-F2 "14V" O R 12150 5050 50 
+F2 "14V" O R 8850 2050 50 
 $EndSheet
 Wire Wire Line
-	12150 5050 12500 5050
-Text Label 12500 5050 2    50   ~ 0
+	8850 2050 9200 2050
+Text Label 9200 2050 2    50   ~ 0
 BPLSWX
-Text Label 1800 2050 0    50   ~ 0
-BPLSWX
-Wire Wire Line
-	2200 3000 2200 3050
-Wire Wire Line
-	2200 4000 2200 4050
-Wire Wire Line
-	2200 5000 2200 5050
-Wire Wire Line
-	2200 6000 2200 6050
-Wire Wire Line
-	2200 7000 2200 7050
-Wire Wire Line
-	2200 8000 2200 8050
-Wire Wire Line
-	2200 9000 2200 9050
-Wire Wire Line
-	6700 9000 6700 9050
-Wire Wire Line
-	6700 8000 6700 8050
-Wire Wire Line
-	6700 7000 6700 7050
-Wire Wire Line
-	6700 6000 6700 6050
-Wire Wire Line
-	6700 5000 6700 5050
-Wire Wire Line
-	6700 4000 6700 4050
-Wire Wire Line
-	6700 3000 6700 3050
-Wire Wire Line
-	6700 2000 6700 2050
-Wire Wire Line
-	2200 3050 1800 3050
-Text Label 1800 3050 0    50   ~ 0
-BPLSWX
-Connection ~ 2200 3050
-Wire Wire Line
-	2200 3050 2200 3100
-Wire Wire Line
-	2200 4050 1800 4050
-Text Label 1800 4050 0    50   ~ 0
-BPLSWX
-Connection ~ 2200 4050
-Wire Wire Line
-	2200 4050 2200 4100
-Wire Wire Line
-	2200 5050 1800 5050
-Text Label 1800 5050 0    50   ~ 0
-BPLSWX
-Connection ~ 2200 5050
-Wire Wire Line
-	2200 5050 2200 5100
-Wire Wire Line
-	2200 6050 1800 6050
-Text Label 1800 6050 0    50   ~ 0
-BPLSWX
-Connection ~ 2200 6050
-Wire Wire Line
-	2200 6050 2200 6100
-Wire Wire Line
-	2200 7050 1800 7050
-Text Label 1800 7050 0    50   ~ 0
-BPLSWX
-Connection ~ 2200 7050
-Wire Wire Line
-	2200 7050 2200 7100
-Wire Wire Line
-	2200 8050 1800 8050
-Text Label 1800 8050 0    50   ~ 0
-BPLSWX
-Connection ~ 2200 8050
-Wire Wire Line
-	2200 8050 2200 8100
-Wire Wire Line
-	2200 9050 1800 9050
-Text Label 1800 9050 0    50   ~ 0
-BPLSWX
-Connection ~ 2200 9050
-Wire Wire Line
-	2200 9050 2200 9100
-Wire Wire Line
-	6700 9050 6300 9050
-Text Label 6300 9050 0    50   ~ 0
-BPLSWX
-Connection ~ 6700 9050
-Wire Wire Line
-	6700 9050 6700 9100
-Wire Wire Line
-	6700 8050 6300 8050
-Text Label 6300 8050 0    50   ~ 0
-BPLSWX
-Connection ~ 6700 8050
-Wire Wire Line
-	6700 8050 6700 8100
-Wire Wire Line
-	6700 7050 6300 7050
-Text Label 6300 7050 0    50   ~ 0
-BPLSWX
-Connection ~ 6700 7050
-Wire Wire Line
-	6700 7050 6700 7100
-Wire Wire Line
-	6700 6050 6300 6050
-Text Label 6300 6050 0    50   ~ 0
-BPLSWX
-Connection ~ 6700 6050
-Wire Wire Line
-	6700 6050 6700 6100
-Wire Wire Line
-	6700 5050 6300 5050
-Text Label 6300 5050 0    50   ~ 0
-BPLSWX
-Connection ~ 6700 5050
-Wire Wire Line
-	6700 5050 6700 5100
-Wire Wire Line
-	6700 4050 6300 4050
-Text Label 6300 4050 0    50   ~ 0
-BPLSWX
-Connection ~ 6700 4050
-Wire Wire Line
-	6700 4050 6700 4100
-Wire Wire Line
-	6700 3050 6300 3050
-Text Label 6300 3050 0    50   ~ 0
-BPLSWX
-Connection ~ 6700 3050
-Wire Wire Line
-	6700 3050 6700 3100
-Wire Wire Line
-	6700 2050 6300 2050
-Text Label 6300 2050 0    50   ~ 0
-BPLSWX
-Connection ~ 6700 2050
-Wire Wire Line
-	6700 2050 6700 2100
 $Comp
-L Device:C_Small C?
-U 1 1 61CEA254
-P 14700 4950
-AR Path="/652D8F7B/61CEA254" Ref="C?"  Part="1" 
-AR Path="/61EC7443/61CEA254" Ref="C23"  Part="1" 
-F 0 "C23" H 14608 4904 50  0000 R CNN
-F 1 "0.1uF" H 14608 4995 50  0000 R CNN
-F 2 "" H 14700 4950 50  0001 C CNN
-F 3 "~" H 14700 4950 50  0001 C CNN
-	1    14700 4950
+L power:+5V #PWR01
+U 1 1 6233ACFD
+P 7650 3300
+F 0 "#PWR01" H 7650 3150 50  0001 C CNN
+F 1 "+5V" H 7665 3473 50  0000 C CNN
+F 2 "" H 7650 3300 50  0001 C CNN
+F 3 "" H 7650 3300 50  0001 C CNN
+	1    7650 3300
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C?
-U 1 1 61CEA25A
-P 15100 4950
-AR Path="/652D8F7B/61CEA25A" Ref="C?"  Part="1" 
-AR Path="/61EC7443/61CEA25A" Ref="C25"  Part="1" 
-F 0 "C25" H 15008 4904 50  0000 R CNN
-F 1 "0.1uF" H 15008 4995 50  0000 R CNN
-F 2 "" H 15100 4950 50  0001 C CNN
-F 3 "~" H 15100 4950 50  0001 C CNN
-	1    15100 4950
+L lachesis:AD1582 U1
+U 1 1 629FFD37
+P 8450 3450
+F 0 "U1" H 8450 3815 50  0000 C CNN
+F 1 "AD1582BRTZ" H 8450 3724 50  0000 C CNN
+F 2 "" H 8550 3450 50  0001 C CNN
+F 3 "" H 8550 3450 50  0001 C CNN
+	1    8450 3450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	15100 5050 15100 5100
-Connection ~ 15100 5100
+	7650 3300 7650 3350
 $Comp
-L power:GND #PWR?
-U 1 1 61CEA273
-P 16150 5150
-AR Path="/652D8F7B/61CEA273" Ref="#PWR?"  Part="1" 
-AR Path="/61EC7443/61CEA273" Ref="#PWR035"  Part="1" 
-F 0 "#PWR035" H 16150 4900 50  0001 C CNN
-F 1 "GND" H 16155 4977 50  0000 C CNN
-F 2 "" H 16150 5150 50  0001 C CNN
-F 3 "" H 16150 5150 50  0001 C CNN
-	1    16150 5150
-	1    0    0    -1  
+L Device:C C1
+U 1 1 62D03CF6
+P 7800 3550
+F 0 "C1" H 7686 3504 50  0000 R CNN
+F 1 "4.7uF" H 7686 3595 50  0000 R CNN
+F 2 "" H 7838 3400 50  0001 C CNN
+F 3 "~" H 7800 3550 50  0001 C CNN
+	1    7800 3550
+	1    0    0    1   
 $EndComp
 Wire Wire Line
-	14500 5450 14500 5400
+	7800 3350 7800 3400
 Wire Wire Line
-	14700 5100 15100 5100
+	7650 3350 7800 3350
 Wire Wire Line
-	14700 5050 14700 5100
+	7800 3350 8100 3350
+Connection ~ 7800 3350
 Wire Wire Line
-	15100 4850 15100 4800
-Connection ~ 15100 4800
+	8000 3450 8100 3450
 Wire Wire Line
-	14500 4750 14500 4800
+	7800 3700 7800 3750
 Wire Wire Line
-	15100 4800 14700 4800
+	7800 3750 8000 3750
 Wire Wire Line
-	14700 4800 14700 4850
-Connection ~ 15500 4800
+	8000 3450 8000 3750
 Wire Wire Line
-	15500 4850 15500 4800
-Wire Wire Line
-	15900 4800 15500 4800
-Wire Wire Line
-	15900 4850 15900 4800
-Wire Wire Line
-	15500 5100 15900 5100
-Connection ~ 15500 5100
-Wire Wire Line
-	15500 5050 15500 5100
-Wire Wire Line
-	15900 5100 15900 5050
+	7800 3750 7800 3800
+Connection ~ 7800 3750
 $Comp
-L Device:C_Small C?
-U 1 1 61CEA266
-P 15900 4950
-AR Path="/652D8F7B/61CEA266" Ref="C?"  Part="1" 
-AR Path="/61EC7443/61CEA266" Ref="C31"  Part="1" 
-F 0 "C31" H 15808 4904 50  0000 R CNN
-F 1 "0.1uF" H 15808 4995 50  0000 R CNN
-F 2 "" H 15900 4950 50  0001 C CNN
-F 3 "~" H 15900 4950 50  0001 C CNN
-	1    15900 4950
+L power:GND #PWR02
+U 1 1 62F86902
+P 7800 3800
+F 0 "#PWR02" H 7800 3550 50  0001 C CNN
+F 1 "GND" H 7805 3627 50  0000 C CNN
+F 2 "" H 7800 3800 50  0001 C CNN
+F 3 "" H 7800 3800 50  0001 C CNN
+	1    7800 3800
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C?
-U 1 1 61CEA260
-P 15500 4950
-AR Path="/652D8F7B/61CEA260" Ref="C?"  Part="1" 
-AR Path="/61EC7443/61CEA260" Ref="C29"  Part="1" 
-F 0 "C29" H 15408 4904 50  0000 R CNN
-F 1 "0.1uF" H 15408 4995 50  0000 R CNN
-F 2 "" H 15500 4950 50  0001 C CNN
-F 3 "~" H 15500 4950 50  0001 C CNN
-	1    15500 4950
+L power:GND #PWR03
+U 1 1 624EF409
+P 8850 3800
+F 0 "#PWR03" H 8850 3550 50  0001 C CNN
+F 1 "GND" H 8855 3627 50  0000 C CNN
+F 2 "" H 8850 3800 50  0001 C CNN
+F 3 "" H 8850 3800 50  0001 C CNN
+	1    8850 3800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	15100 4800 15500 4800
-Wire Wire Line
-	15100 5100 15500 5100
+	8850 3750 8850 3800
 $Comp
-L Device:C_Small C?
-U 1 1 620AB236
-P 13100 4950
-AR Path="/652D8F7B/620AB236" Ref="C?"  Part="1" 
-AR Path="/61EC7443/620AB236" Ref="C7"  Part="1" 
-F 0 "C7" H 13008 4904 50  0000 R CNN
-F 1 "0.1uF" H 13008 4995 50  0000 R CNN
-F 2 "" H 13100 4950 50  0001 C CNN
-F 3 "~" H 13100 4950 50  0001 C CNN
-	1    13100 4950
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C?
-U 1 1 620AB24E
-P 13500 4950
-AR Path="/652D8F7B/620AB24E" Ref="C?"  Part="1" 
-AR Path="/61EC7443/620AB24E" Ref="C11"  Part="1" 
-F 0 "C11" H 13408 4904 50  0000 R CNN
-F 1 "0.1uF" H 13408 4995 50  0000 R CNN
-F 2 "" H 13500 4950 50  0001 C CNN
-F 3 "~" H 13500 4950 50  0001 C CNN
-	1    13500 4950
+L Device:C C2
+U 1 1 62FF6D0E
+P 8850 3600
+F 0 "C2" H 8965 3646 50  0000 L CNN
+F 1 "1uF" H 8965 3555 50  0000 L CNN
+F 2 "" H 8888 3450 50  0001 C CNN
+F 3 "~" H 8850 3600 50  0001 C CNN
+	1    8850 3600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	13500 5050 13500 5100
-Connection ~ 13500 5100
+	8800 3400 8850 3400
 Wire Wire Line
-	13100 5100 13500 5100
-Wire Wire Line
-	13100 5050 13100 5100
-Wire Wire Line
-	13500 4850 13500 4800
-Connection ~ 13500 4800
-Wire Wire Line
-	13500 4800 13100 4800
-Wire Wire Line
-	13100 4800 13100 4850
-Connection ~ 13900 4800
-Wire Wire Line
-	13900 4850 13900 4800
-Wire Wire Line
-	14300 4800 13900 4800
-Wire Wire Line
-	14300 4850 14300 4800
-Wire Wire Line
-	13900 5100 14300 5100
-Connection ~ 13900 5100
-Wire Wire Line
-	13900 5050 13900 5100
-Wire Wire Line
-	14300 5100 14300 5050
+	8850 3400 8850 3450
+Text Notes 8150 2950 0    50   ~ 0
+Reference Voltage
 $Comp
-L Device:C_Small C?
-U 1 1 620AB268
-P 14300 4950
-AR Path="/652D8F7B/620AB268" Ref="C?"  Part="1" 
-AR Path="/61EC7443/620AB268" Ref="C21"  Part="1" 
-F 0 "C21" H 14208 4904 50  0000 R CNN
-F 1 "0.1uF" H 14208 4995 50  0000 R CNN
-F 2 "" H 14300 4950 50  0001 C CNN
-F 3 "~" H 14300 4950 50  0001 C CNN
-	1    14300 4950
+L Device:R_US R1
+U 1 1 632075B9
+P 9350 3600
+F 0 "R1" H 9418 3646 50  0000 L CNN
+F 1 "1.27k" H 9418 3555 50  0000 L CNN
+F 2 "" V 9390 3590 50  0001 C CNN
+F 3 "~" H 9350 3600 50  0001 C CNN
+	1    9350 3600
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C?
-U 1 1 620AB272
-P 13900 4950
-AR Path="/652D8F7B/620AB272" Ref="C?"  Part="1" 
-AR Path="/61EC7443/620AB272" Ref="C13"  Part="1" 
-F 0 "C13" H 13808 4904 50  0000 R CNN
-F 1 "0.1uF" H 13808 4995 50  0000 R CNN
-F 2 "" H 13900 4950 50  0001 C CNN
-F 3 "~" H 13900 4950 50  0001 C CNN
-	1    13900 4950
+L Device:R_US R2
+U 1 1 6320788E
+P 9350 4000
+F 0 "R2" H 9418 4046 50  0000 L CNN
+F 1 "249" H 9418 3955 50  0000 L CNN
+F 2 "" V 9390 3990 50  0001 C CNN
+F 3 "~" H 9350 4000 50  0001 C CNN
+	1    9350 4000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	13500 4800 13900 4800
-Wire Wire Line
-	13500 5100 13900 5100
-Wire Wire Line
-	14300 5100 14700 5100
-Connection ~ 14300 5100
-Connection ~ 14700 5100
-Wire Wire Line
-	14300 4800 14500 4800
-Connection ~ 14300 4800
-Connection ~ 14700 4800
+	9350 4150 9350 4200
 $Comp
-L Device:C_Small C?
-U 1 1 622398D7
-P 14700 5250
-AR Path="/652D8F7B/622398D7" Ref="C?"  Part="1" 
-AR Path="/61EC7443/622398D7" Ref="C24"  Part="1" 
-F 0 "C24" H 14608 5204 50  0000 R CNN
-F 1 "0.1uF" H 14608 5295 50  0000 R CNN
-F 2 "" H 14700 5250 50  0001 C CNN
-F 3 "~" H 14700 5250 50  0001 C CNN
-	1    14700 5250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C?
-U 1 1 622398EF
-P 15100 5250
-AR Path="/652D8F7B/622398EF" Ref="C?"  Part="1" 
-AR Path="/61EC7443/622398EF" Ref="C26"  Part="1" 
-F 0 "C26" H 15008 5204 50  0000 R CNN
-F 1 "0.1uF" H 15008 5295 50  0000 R CNN
-F 2 "" H 15100 5250 50  0001 C CNN
-F 3 "~" H 15100 5250 50  0001 C CNN
-	1    15100 5250
+L power:GND #PWR04
+U 1 1 6334D461
+P 9350 4200
+F 0 "#PWR04" H 9350 3950 50  0001 C CNN
+F 1 "GND" H 9355 4027 50  0000 C CNN
+F 2 "" H 9350 4200 50  0001 C CNN
+F 3 "" H 9350 4200 50  0001 C CNN
+	1    9350 4200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	15100 5350 15100 5400
-Connection ~ 15100 5400
+	8850 3400 9350 3400
 Wire Wire Line
-	14700 5400 15100 5400
+	9350 3400 9350 3450
+Connection ~ 8850 3400
+$Sheet
+S 2550 1400 900  950 
+U 6357E92C
+F0 "40611" 50
+F1 "sense_amp_pair.sch" 50
+F2 "GARX" I L 2550 1500 50 
+F3 "GBRX" I L 2550 1600 50 
+F4 "GARY" I L 2550 1750 50 
+F5 "GBRY" I L 2550 1850 50 
+F6 "BPLSWX" I L 2550 2150 50 
+F7 "SAX" O R 3450 1550 50 
+F8 "SAY" O R 3450 1800 50 
+F9 "SBF" I L 2550 2000 50 
+F10 "VREF" I L 2550 2250 50 
+$EndSheet
 Wire Wire Line
-	14700 5350 14700 5400
+	9350 3750 9350 3800
+Text Label 2250 1500 0    50   ~ 0
+GAR1
 Wire Wire Line
-	15100 5150 15100 5100
+	2550 1600 2050 1600
+Text Label 2250 1600 0    50   ~ 0
+GBR1
+Entry Wire Line
+	1950 1500 2050 1600
 Wire Wire Line
-	14700 5100 14700 5150
+	2550 1500 2200 1500
+Entry Wire Line
+	2100 1400 2200 1500
+Text Label 2250 1750 0    50   ~ 0
+GAR2
 Wire Wire Line
-	15500 5150 15500 5100
+	2550 1850 2050 1850
+Text Label 2250 1850 0    50   ~ 0
+GBR2
 Wire Wire Line
-	15900 5150 15900 5100
-Wire Wire Line
-	15500 5400 15900 5400
-Connection ~ 15500 5400
-Wire Wire Line
-	15500 5350 15500 5400
-Wire Wire Line
-	15900 5400 15900 5350
-$Comp
-L Device:C_Small C?
-U 1 1 62239909
-P 15900 5250
-AR Path="/652D8F7B/62239909" Ref="C?"  Part="1" 
-AR Path="/61EC7443/62239909" Ref="C32"  Part="1" 
-F 0 "C32" H 15808 5204 50  0000 R CNN
-F 1 "0.1uF" H 15808 5295 50  0000 R CNN
-F 2 "" H 15900 5250 50  0001 C CNN
-F 3 "~" H 15900 5250 50  0001 C CNN
-	1    15900 5250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C?
-U 1 1 62239913
-P 15500 5250
-AR Path="/652D8F7B/62239913" Ref="C?"  Part="1" 
-AR Path="/61EC7443/62239913" Ref="C30"  Part="1" 
-F 0 "C30" H 15408 5204 50  0000 R CNN
-F 1 "0.1uF" H 15408 5295 50  0000 R CNN
-F 2 "" H 15500 5250 50  0001 C CNN
-F 3 "~" H 15500 5250 50  0001 C CNN
-	1    15500 5250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	15100 5400 15500 5400
-$Comp
-L Device:C_Small C?
-U 1 1 6223991F
-P 13100 5250
-AR Path="/652D8F7B/6223991F" Ref="C?"  Part="1" 
-AR Path="/61EC7443/6223991F" Ref="C8"  Part="1" 
-F 0 "C8" H 13008 5204 50  0000 R CNN
-F 1 "0.1uF" H 13008 5295 50  0000 R CNN
-F 2 "" H 13100 5250 50  0001 C CNN
-F 3 "~" H 13100 5250 50  0001 C CNN
-	1    13100 5250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C?
-U 1 1 62239929
-P 13500 5250
-AR Path="/652D8F7B/62239929" Ref="C?"  Part="1" 
-AR Path="/61EC7443/62239929" Ref="C12"  Part="1" 
-F 0 "C12" H 13408 5204 50  0000 R CNN
-F 1 "0.1uF" H 13408 5295 50  0000 R CNN
-F 2 "" H 13500 5250 50  0001 C CNN
-F 3 "~" H 13500 5250 50  0001 C CNN
-	1    13500 5250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	13500 5350 13500 5400
-Connection ~ 13500 5400
-Wire Wire Line
-	13100 5400 13500 5400
-Wire Wire Line
-	13100 5350 13100 5400
-Wire Wire Line
-	13500 5150 13500 5100
-Wire Wire Line
-	13100 5100 13100 5150
-Wire Wire Line
-	13900 5150 13900 5100
-Wire Wire Line
-	14300 5150 14300 5100
-Wire Wire Line
-	13900 5400 14300 5400
-Connection ~ 13900 5400
-Wire Wire Line
-	13900 5350 13900 5400
-Wire Wire Line
-	14300 5400 14300 5350
-$Comp
-L Device:C_Small C?
-U 1 1 62239943
-P 14300 5250
-AR Path="/652D8F7B/62239943" Ref="C?"  Part="1" 
-AR Path="/61EC7443/62239943" Ref="C22"  Part="1" 
-F 0 "C22" H 14208 5204 50  0000 R CNN
-F 1 "0.1uF" H 14208 5295 50  0000 R CNN
-F 2 "" H 14300 5250 50  0001 C CNN
-F 3 "~" H 14300 5250 50  0001 C CNN
-	1    14300 5250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C?
-U 1 1 6223994D
-P 13900 5250
-AR Path="/652D8F7B/6223994D" Ref="C?"  Part="1" 
-AR Path="/61EC7443/6223994D" Ref="C14"  Part="1" 
-F 0 "C14" H 13808 5204 50  0000 R CNN
-F 1 "0.1uF" H 13808 5295 50  0000 R CNN
-F 2 "" H 13900 5250 50  0001 C CNN
-F 3 "~" H 13900 5250 50  0001 C CNN
-	1    13900 5250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	13500 5400 13900 5400
-Wire Wire Line
-	14300 5400 14500 5400
-Connection ~ 14300 5400
-Connection ~ 14700 5400
-Connection ~ 13100 5100
-Connection ~ 15900 5100
-Connection ~ 14500 5400
-Wire Wire Line
-	14500 5400 14700 5400
-Connection ~ 14500 4800
-Wire Wire Line
-	14500 4800 14700 4800
-Wire Wire Line
-	15900 5100 16150 5100
-Wire Wire Line
-	16150 5100 16150 5150
-$Comp
-L power:+5V #PWR031
-U 1 1 62452FBF
-P 14500 4750
-F 0 "#PWR031" H 14500 4600 50  0001 C CNN
-F 1 "+5V" H 14515 4923 50  0000 C CNN
-F 2 "" H 14500 4750 50  0001 C CNN
-F 3 "" H 14500 4750 50  0001 C CNN
-	1    14500 4750
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:-5V #PWR032
-U 1 1 624BD3FC
-P 14500 5450
-F 0 "#PWR032" H 14500 5550 50  0001 C CNN
-F 1 "-5V" H 14515 5623 50  0000 C CNN
-F 2 "" H 14500 5450 50  0001 C CNN
-F 3 "" H 14500 5450 50  0001 C CNN
-	1    14500 5450
-	-1   0    0    1   
-$EndComp
+	2550 1750 2200 1750
+Entry Wire Line
+	2100 1650 2200 1750
+Entry Wire Line
+	1950 1750 2050 1850
 Wire Bus Line
-	10100 1300 10100 8950
+	1750 1050 2100 1050
 Wire Bus Line
-	5600 1300 5600 8950
+	1750 1150 1950 1150
+Wire Wire Line
+	2550 2150 2200 2150
+Text Label 2200 2150 0    50   ~ 0
+BPLSWX
+Wire Wire Line
+	2550 2250 2200 2250
+Text Label 2200 2250 0    50   ~ 0
+VREF
+Wire Wire Line
+	3450 1550 3750 1550
+Entry Wire Line
+	3850 5500 3750 5400
+Text Label 3550 1550 0    50   ~ 0
+SA1
+Wire Wire Line
+	3450 1800 3750 1800
+Entry Wire Line
+	3850 5250 3750 5150
+Text Label 3550 1800 0    50   ~ 0
+SA2
+$Sheet
+S 2550 2600 900  950 
+U 638E79AF
+F0 "40612" 50
+F1 "sense_amp_pair.sch" 50
+F2 "GARX" I L 2550 2700 50 
+F3 "GBRX" I L 2550 2800 50 
+F4 "GARY" I L 2550 2950 50 
+F5 "GBRY" I L 2550 3050 50 
+F6 "BPLSWX" I L 2550 3350 50 
+F7 "SAX" O R 3450 2750 50 
+F8 "SAY" O R 3450 3000 50 
+F9 "SBF" I L 2550 3200 50 
+F10 "VREF" I L 2550 3450 50 
+$EndSheet
+Text Label 2250 2700 0    50   ~ 0
+GAR3
+Wire Wire Line
+	2550 2800 2050 2800
+Text Label 2250 2800 0    50   ~ 0
+GBR3
+Entry Wire Line
+	1950 2700 2050 2800
+Wire Wire Line
+	2550 2700 2200 2700
+Entry Wire Line
+	2100 2600 2200 2700
+Text Label 2250 2950 0    50   ~ 0
+GAR4
+Wire Wire Line
+	2550 3050 2050 3050
+Text Label 2250 3050 0    50   ~ 0
+GBR4
+Wire Wire Line
+	2550 2950 2200 2950
+Entry Wire Line
+	2100 2850 2200 2950
+Entry Wire Line
+	1950 2950 2050 3050
+Wire Wire Line
+	2550 3350 2200 3350
+Text Label 2200 3350 0    50   ~ 0
+BPLSWX
+Wire Wire Line
+	2550 3450 2200 3450
+Text Label 2200 3450 0    50   ~ 0
+VREF
+Wire Wire Line
+	3450 2750 3750 2750
+Entry Wire Line
+	3850 4300 3750 4200
+Text Label 3550 2750 0    50   ~ 0
+SA3
+Wire Wire Line
+	3450 3000 3750 3000
+Entry Wire Line
+	3850 4050 3750 3950
+Text Label 3550 3000 0    50   ~ 0
+SA4
+Wire Wire Line
+	1850 2000 1850 3200
+Wire Wire Line
+	1850 2000 2550 2000
+Wire Wire Line
+	1850 3200 2550 3200
+$Sheet
+S 2550 3800 900  950 
+U 638EA49F
+F0 "40613" 50
+F1 "sense_amp_pair.sch" 50
+F2 "GARX" I L 2550 3900 50 
+F3 "GBRX" I L 2550 4000 50 
+F4 "GARY" I L 2550 4150 50 
+F5 "GBRY" I L 2550 4250 50 
+F6 "BPLSWX" I L 2550 4550 50 
+F7 "SAX" O R 3450 3950 50 
+F8 "SAY" O R 3450 4200 50 
+F9 "SBF" I L 2550 4400 50 
+F10 "VREF" I L 2550 4650 50 
+$EndSheet
+Text Label 2250 3900 0    50   ~ 0
+GAR5
+Wire Wire Line
+	2550 4000 2050 4000
+Text Label 2250 4000 0    50   ~ 0
+GBR5
+Entry Wire Line
+	1950 3900 2050 4000
+Wire Wire Line
+	2550 3900 2200 3900
+Entry Wire Line
+	2100 3800 2200 3900
+Text Label 2250 4150 0    50   ~ 0
+GAR6
+Wire Wire Line
+	2550 4250 2050 4250
+Text Label 2250 4250 0    50   ~ 0
+GBR6
+Wire Wire Line
+	2550 4150 2200 4150
+Entry Wire Line
+	2100 4050 2200 4150
+Entry Wire Line
+	1950 4150 2050 4250
+Wire Wire Line
+	2550 4550 2200 4550
+Text Label 2200 4550 0    50   ~ 0
+BPLSWX
+Wire Wire Line
+	2550 4650 2200 4650
+Text Label 2200 4650 0    50   ~ 0
+VREF
+Wire Wire Line
+	3450 3950 3750 3950
+Entry Wire Line
+	3850 3100 3750 3000
+Text Label 3550 3950 0    50   ~ 0
+SA5
+Wire Wire Line
+	3450 4200 3750 4200
+Entry Wire Line
+	3850 2850 3750 2750
+Text Label 3550 4200 0    50   ~ 0
+SA6
+Wire Wire Line
+	1850 3200 1850 4400
+Wire Wire Line
+	1850 4400 2550 4400
+Connection ~ 1850 3200
+$Sheet
+S 2550 5000 900  950 
+U 638EB9D9
+F0 "40614" 50
+F1 "sense_amp_pair.sch" 50
+F2 "GARX" I L 2550 5100 50 
+F3 "GBRX" I L 2550 5200 50 
+F4 "GARY" I L 2550 5350 50 
+F5 "GBRY" I L 2550 5450 50 
+F6 "BPLSWX" I L 2550 5750 50 
+F7 "SAX" O R 3450 5150 50 
+F8 "SAY" O R 3450 5400 50 
+F9 "SBF" I L 2550 5600 50 
+F10 "VREF" I L 2550 5850 50 
+$EndSheet
+Text Label 2250 5100 0    50   ~ 0
+GAR7
+Wire Wire Line
+	2550 5200 2050 5200
+Text Label 2250 5200 0    50   ~ 0
+GBR7
+Entry Wire Line
+	1950 5100 2050 5200
+Wire Wire Line
+	2550 5100 2200 5100
+Entry Wire Line
+	2100 5000 2200 5100
+Text Label 2250 5350 0    50   ~ 0
+GAR8
+Wire Wire Line
+	2550 5450 2050 5450
+Text Label 2250 5450 0    50   ~ 0
+GBR8
+Wire Wire Line
+	2550 5350 2200 5350
+Entry Wire Line
+	2100 5250 2200 5350
+Entry Wire Line
+	1950 5350 2050 5450
+Wire Wire Line
+	2550 5750 2200 5750
+Text Label 2200 5750 0    50   ~ 0
+BPLSWX
+Wire Wire Line
+	2550 5850 2200 5850
+Text Label 2200 5850 0    50   ~ 0
+VREF
+Wire Wire Line
+	3450 5150 3750 5150
+Entry Wire Line
+	3850 1900 3750 1800
+Text Label 3550 5150 0    50   ~ 0
+SA7
+Wire Wire Line
+	3450 5400 3750 5400
+Entry Wire Line
+	3850 1650 3750 1550
+Text Label 3550 5400 0    50   ~ 0
+SA8
+Wire Wire Line
+	1850 4400 1850 5600
+Wire Wire Line
+	1850 5600 2550 5600
+Connection ~ 1850 4400
+$Sheet
+S 5150 1400 900  950 
+U 638F1154
+F0 "40615" 50
+F1 "sense_amp_pair.sch" 50
+F2 "GARX" I L 5150 1500 50 
+F3 "GBRX" I L 5150 1600 50 
+F4 "GARY" I L 5150 1750 50 
+F5 "GBRY" I L 5150 1850 50 
+F6 "BPLSWX" I L 5150 2150 50 
+F7 "SAX" O R 6050 1550 50 
+F8 "SAY" O R 6050 1800 50 
+F9 "SBF" I L 5150 2000 50 
+F10 "VREF" I L 5150 2250 50 
+$EndSheet
+Text Label 4850 1500 0    50   ~ 0
+GAR9
+Wire Wire Line
+	5150 1600 4650 1600
+Text Label 4850 1600 0    50   ~ 0
+GBR9
+Entry Wire Line
+	4550 1500 4650 1600
+Wire Wire Line
+	5150 1500 4800 1500
+Entry Wire Line
+	4700 1400 4800 1500
+Text Label 4850 1750 0    50   ~ 0
+GAR10
+Wire Wire Line
+	5150 1850 4650 1850
+Text Label 4850 1850 0    50   ~ 0
+GBR10
+Wire Wire Line
+	5150 1750 4800 1750
+Entry Wire Line
+	4700 1650 4800 1750
+Entry Wire Line
+	4550 1750 4650 1850
+Wire Wire Line
+	5150 2150 4800 2150
+Text Label 4800 2150 0    50   ~ 0
+BPLSWX
+Wire Wire Line
+	5150 2250 4800 2250
+Text Label 4800 2250 0    50   ~ 0
+VREF
+Wire Wire Line
+	6050 1550 6350 1550
+Entry Wire Line
+	6450 5500 6350 5400
+Text Label 6150 1550 0    50   ~ 0
+SA9
+Wire Wire Line
+	6050 1800 6350 1800
+Entry Wire Line
+	6450 5250 6350 5150
+Text Label 6150 1800 0    50   ~ 0
+SA10
+$Sheet
+S 5150 2600 900  950 
+U 638F1178
+F0 "40616" 50
+F1 "sense_amp_pair.sch" 50
+F2 "GARX" I L 5150 2700 50 
+F3 "GBRX" I L 5150 2800 50 
+F4 "GARY" I L 5150 2950 50 
+F5 "GBRY" I L 5150 3050 50 
+F6 "BPLSWX" I L 5150 3350 50 
+F7 "SAX" O R 6050 2750 50 
+F8 "SAY" O R 6050 3000 50 
+F9 "SBF" I L 5150 3200 50 
+F10 "VREF" I L 5150 3450 50 
+$EndSheet
+Text Label 4850 2700 0    50   ~ 0
+GAR11
+Wire Wire Line
+	5150 2800 4650 2800
+Text Label 4850 2800 0    50   ~ 0
+GBR11
+Entry Wire Line
+	4550 2700 4650 2800
+Wire Wire Line
+	5150 2700 4800 2700
+Entry Wire Line
+	4700 2600 4800 2700
+Text Label 4850 2950 0    50   ~ 0
+GAR12
+Wire Wire Line
+	5150 3050 4650 3050
+Text Label 4850 3050 0    50   ~ 0
+GBR12
+Wire Wire Line
+	5150 2950 4800 2950
+Entry Wire Line
+	4700 2850 4800 2950
+Entry Wire Line
+	4550 2950 4650 3050
+Wire Wire Line
+	5150 3350 4800 3350
+Text Label 4800 3350 0    50   ~ 0
+BPLSWX
+Wire Wire Line
+	5150 3450 4800 3450
+Text Label 4800 3450 0    50   ~ 0
+VREF
+Wire Wire Line
+	6050 2750 6350 2750
+Entry Wire Line
+	6450 4300 6350 4200
+Text Label 6150 2750 0    50   ~ 0
+SA11
+Wire Wire Line
+	6050 3000 6350 3000
+Entry Wire Line
+	6450 4050 6350 3950
+Text Label 6150 3000 0    50   ~ 0
+SA12
+Wire Wire Line
+	4450 2000 4450 3200
+Connection ~ 4450 2000
+Wire Wire Line
+	4450 2000 5150 2000
+Wire Wire Line
+	4450 3200 5150 3200
+$Sheet
+S 5150 3800 900  950 
+U 638F119D
+F0 "40617" 50
+F1 "sense_amp_pair.sch" 50
+F2 "GARX" I L 5150 3900 50 
+F3 "GBRX" I L 5150 4000 50 
+F4 "GARY" I L 5150 4150 50 
+F5 "GBRY" I L 5150 4250 50 
+F6 "BPLSWX" I L 5150 4550 50 
+F7 "SAX" O R 6050 3950 50 
+F8 "SAY" O R 6050 4200 50 
+F9 "SBF" I L 5150 4400 50 
+F10 "VREF" I L 5150 4650 50 
+$EndSheet
+Text Label 4850 3900 0    50   ~ 0
+GAR13
+Wire Wire Line
+	5150 4000 4650 4000
+Text Label 4850 4000 0    50   ~ 0
+GBR13
+Entry Wire Line
+	4550 3900 4650 4000
+Wire Wire Line
+	5150 3900 4800 3900
+Entry Wire Line
+	4700 3800 4800 3900
+Text Label 4850 4150 0    50   ~ 0
+GAR14
+Wire Wire Line
+	5150 4250 4650 4250
+Text Label 4850 4250 0    50   ~ 0
+GBR14
+Wire Wire Line
+	5150 4150 4800 4150
+Entry Wire Line
+	4700 4050 4800 4150
+Entry Wire Line
+	4550 4150 4650 4250
+Wire Wire Line
+	5150 4550 4800 4550
+Text Label 4800 4550 0    50   ~ 0
+BPLSWX
+Wire Wire Line
+	5150 4650 4800 4650
+Text Label 4800 4650 0    50   ~ 0
+VREF
+Wire Wire Line
+	6050 3950 6350 3950
+Entry Wire Line
+	6450 3100 6350 3000
+Text Label 6150 3950 0    50   ~ 0
+SA13
+Wire Wire Line
+	6050 4200 6350 4200
+Entry Wire Line
+	6450 2850 6350 2750
+Text Label 6150 4200 0    50   ~ 0
+SA14
+Wire Wire Line
+	4450 3200 4450 4400
+Wire Wire Line
+	4450 4400 5150 4400
+Connection ~ 4450 3200
+$Sheet
+S 5150 5000 900  950 
+U 638F11C1
+F0 "40618" 50
+F1 "sense_amp_pair.sch" 50
+F2 "GARX" I L 5150 5100 50 
+F3 "GBRX" I L 5150 5200 50 
+F4 "GARY" I L 5150 5350 50 
+F5 "GBRY" I L 5150 5450 50 
+F6 "BPLSWX" I L 5150 5750 50 
+F7 "SAX" O R 6050 5150 50 
+F8 "SAY" O R 6050 5400 50 
+F9 "SBF" I L 5150 5600 50 
+F10 "VREF" I L 5150 5850 50 
+$EndSheet
+Text Label 4850 5100 0    50   ~ 0
+GAR15
+Wire Wire Line
+	5150 5200 4650 5200
+Text Label 4850 5200 0    50   ~ 0
+GBR15
+Entry Wire Line
+	4550 5100 4650 5200
+Wire Wire Line
+	5150 5100 4800 5100
+Entry Wire Line
+	4700 5000 4800 5100
+Text Label 4850 5350 0    50   ~ 0
+GAR16
+Wire Wire Line
+	5150 5450 4650 5450
+Text Label 4850 5450 0    50   ~ 0
+GBR16
+Wire Wire Line
+	5150 5350 4800 5350
+Entry Wire Line
+	4700 5250 4800 5350
+Entry Wire Line
+	4550 5350 4650 5450
+Wire Wire Line
+	5150 5750 4800 5750
+Text Label 4800 5750 0    50   ~ 0
+BPLSWX
+Wire Wire Line
+	5150 5850 4800 5850
+Text Label 4800 5850 0    50   ~ 0
+VREF
+Wire Wire Line
+	6050 5150 6350 5150
+Entry Wire Line
+	6450 1900 6350 1800
+Text Label 6150 5150 0    50   ~ 0
+SA15
+Wire Wire Line
+	6050 5400 6350 5400
+Entry Wire Line
+	6450 1650 6350 1550
+Text Label 6150 5400 0    50   ~ 0
+SA16
+Wire Wire Line
+	4450 4400 4450 5600
+Wire Wire Line
+	4450 5600 5150 5600
+Connection ~ 4450 4400
+Wire Wire Line
+	1750 1250 1850 1250
+Wire Wire Line
+	1850 1250 1850 2000
+Connection ~ 1850 2000
+Wire Wire Line
+	1850 1250 4450 1250
+Wire Wire Line
+	4450 1250 4450 2000
+Connection ~ 1850 1250
 Wire Bus Line
-	6100 2550 6100 9750
+	1950 1150 4550 1150
+Connection ~ 1950 1150
 Wire Bus Line
-	5900 1750 5900 9900
+	2100 1050 4700 1050
+Connection ~ 2100 1050
 Wire Bus Line
-	1600 1400 1600 9750
+	3850 6200 6450 6200
 Wire Bus Line
-	1400 1300 1400 9900
+	6450 6200 6750 6200
+Connection ~ 6450 6200
+Wire Wire Line
+	9350 3800 9850 3800
+Connection ~ 9350 3800
+Wire Wire Line
+	9350 3800 9350 3850
+Text Label 9850 3800 2    50   ~ 0
+VREF
+Text Notes 8400 1750 0    50   ~ 0
+Power
+Wire Bus Line
+	4550 1150 4550 5350
+Wire Bus Line
+	4700 1050 4700 5250
+Wire Bus Line
+	1950 1150 1950 5350
+Wire Bus Line
+	2100 1050 2100 5250
+Wire Bus Line
+	3850 1650 3850 6200
+Wire Bus Line
+	6450 1650 6450 6200
 $EndSCHEMATC

@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr USLedger 17000 11000
 encoding utf-8
-Sheet 1 69
+Sheet 1 64
 Title ""
 Date ""
 Rev ""
@@ -35,7 +35,7 @@ F1 "strand_select.sch" 50
 F2 "STR[1..12]" O R 10150 3950 50 
 F3 "ROPER" I L 8950 3850 50 
 F4 "MODR1" O R 10150 3850 50 
-F5 "STEN[1..12]" I L 8950 3950 50 
+F5 "SE[1..12]" I L 8950 3950 50 
 $EndSheet
 $Sheet
 S 8950 4300 1200 1050
@@ -66,7 +66,7 @@ U 652D8F7B
 F0 "FPGA and Power" 50
 F1 "fpga_power.sch" 50
 F2 "SA[1..16]" I L 7300 3900 50 
-F3 "STEN[1..12]" O R 8450 3950 50 
+F3 "SE[1..12]" O R 8450 3950 50 
 F4 "SET[1..2]" O R 8450 4400 50 
 F5 "RESET[1..4]" O R 8450 4500 50 
 F6 "IL[1..8]" O R 8450 4650 50 
