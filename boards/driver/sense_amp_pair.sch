@@ -237,7 +237,7 @@ F 1 "1:1" H 3650 2340 50  0000 C CNN
 F 2 "lachesis:Transformer_Murata_786J" H 3650 2050 50  0001 C CNN
 F 3 "~" H 3650 2050 50  0001 C CNN
 	1    3650 2050
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 NoConn ~ 3250 2050
 NoConn ~ 4050 2050
@@ -464,7 +464,7 @@ F 1 "1:1" H 3650 3340 50  0000 C CNN
 F 2 "lachesis:Transformer_Murata_786J" H 3650 3050 50  0001 C CNN
 F 3 "~" H 3650 3050 50  0001 C CNN
 	1    3650 3050
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 NoConn ~ 3250 3050
 NoConn ~ 4050 3050
