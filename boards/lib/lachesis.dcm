@@ -24,6 +24,12 @@ K connector
 F ~
 $ENDCMP
 #
+$CMP DIN41612_03x32_C
+D Generic connector, quadruple row, 04x24
+K connector
+F ~
+$ENDCMP
+#
 $CMP LTC4231-1
 D Hot swap controller
 $ENDCMP
