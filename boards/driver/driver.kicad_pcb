@@ -17939,7 +17939,7 @@
     )
   )
 
-  (module Connector_DIN:DIN41612_C_3x32_Male_Horizontal_THT (layer F.Cu) (tedit 5EAFCB7F) (tstamp 6196A8D2)
+  (module Connector_DIN:DIN41612_C_3x32_Male_Horizontal_THT (layer F.Cu) (tedit 5EAFCB7F) (tstamp 619A050D)
     (at 30.734 124.714 90)
     (descr "DIN41612 connector, type C, Horizontal, 3 rows 32 pins wide, https://www.erni-x-press.com/de/downloads/kataloge/englische_kataloge/erni-din41612-iec60603-2-e.pdf")
     (tags "DIN 41612 IEC 60603 C")
@@ -18217,10 +18217,10 @@
       (net 244 /Connector/XSET1))
     (pad "" np_thru_hole circle (at 83.82 -2.54 90) (size 2.85 2.85) (drill 2.85) (layers *.Cu *.Mask))
     (pad "" np_thru_hole circle (at -5.08 -2.54 90) (size 2.85 2.85) (drill 2.85) (layers *.Cu *.Mask))
-    (model ${KISYS3DMOD}/Connector_DIN.3dshapes/DIN41612_C_3x32_Male_Horizontal_THT.wrl
-      (at (xyz 0 0 0))
+    (model /home/mike/Downloads/86093967113755elf.stp
+      (offset (xyz -7.493 12.573 -1.6002))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz -180 0 0))
     )
   )
 
