@@ -29,3 +29,6 @@ fpga/lachesis
 # Vivado logs
 vivado.jou
 vivado.log
+
+# Binary files
+*.bit
