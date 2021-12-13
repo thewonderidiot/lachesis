@@ -1,54 +1,51 @@
+#include "xparameters.h"
 #include "xuartlite_l.h"
-#include "slip.h"
 #include "intr.h"
 #include "uart.h"
 
-static void uart_send_byte(uart_t *uart, uint8_t byte);
-static void uart_isr(void *uart_ptr);
-static void uart_fill_tx_fifo(uart_t *uart);
+static uart_t g_uart;
 
-int32_t uart_init(uart_t *uart, uint16_t device_id,
-                  uint16_t int_id, uart_callback_t rx_callback,
-                  uint8_t *rx_buffer, uint32_t rx_buffer_size,
-                  uint8_t *tx_buffer, uint32_t tx_buffer_size)
+static void uart_send_byte(uint8_t byte);
+static void uart_isr(void *uart_ptr);
+static void uart_fill_tx_fifo(void);
+static void uart_receive(void);
+
+int32_t uart_init(uart_callback_t rx_callback)
 {
     int32_t status;
 
-    status = XUartLite_Initialize(&uart->device, device_id);
+    status = XUartLite_Initialize(&g_uart.device, XPAR_AXI_UARTLITE_0_DEVICE_ID);
     if (status != XST_SUCCESS)
     {
         return status;
     }
 
-    uart->rx_callback = rx_callback;
-    uart->rx_buffer = rx_buffer;
-    uart->rx_buffer_size = rx_buffer_size;
-    uart->rx_length = 0;
+    g_uart.rx_callback = rx_callback;
+    g_uart.rx_count = 0;
+    g_uart.rx_state = RX_STATE_IDLE;
 
-    uart->tx_buffer = tx_buffer;
-    uart->tx_buffer_size = tx_buffer_size;
-    uart->tx_start = 0;
-    uart->tx_end = 0;
-    uart->tx_length = 0;
+    g_uart.tx_start = 0;
+    g_uart.tx_end = 0;
+    g_uart.tx_count = 0;
 
-    status = intr_attach(int_id, uart_isr, uart);
+    status = intr_attach(XPAR_MICROBLAZE_0_AXI_INTC_AXI_UARTLITE_0_INTERRUPT_INTR, uart_isr, NULL);
     if (status != XST_SUCCESS)
     {
         return status;
     }
 
-    XUartLite_EnableIntr(uart->device.RegBaseAddress);
+    XUartLite_EnableIntr(g_uart.device.RegBaseAddress);
 
     return XST_SUCCESS;
 }
 
-int32_t uart_send(uart_t *uart, uint8_t *data, uint32_t length)
+int32_t uart_send(uint8_t *data, uint32_t length)
 {
     uint32_t free_space;
     uint32_t slipped_length;
     uint32_t i;
 
-    free_space = uart->tx_buffer_size - uart->tx_length;
+    free_space = sizeof(g_uart.tx_buffer) - g_uart.tx_count;
     slipped_length = slip_get_slipped_length(data, length);
 
     if (slipped_length > free_space)
@@ -56,32 +53,32 @@ int32_t uart_send(uart_t *uart, uint8_t *data, uint32_t length)
         return XST_FAILURE;
     }
 
-    uart_send_byte(uart, SLIP_END);
+    uart_send_byte(SLIP_END);
     for (i = 0; i < length; i++)
     {
         switch (data[i])
         {
         case SLIP_END:
-            uart_send_byte(uart, SLIP_ESC);
-            uart_send_byte(uart, SLIP_ESC_END);
+            uart_send_byte(SLIP_ESC);
+            uart_send_byte(SLIP_ESC_END);
             break;
         case SLIP_ESC:
-            uart_send_byte(uart, SLIP_ESC);
-            uart_send_byte(uart, SLIP_ESC_ESC);
+            uart_send_byte(SLIP_ESC);
+            uart_send_byte(SLIP_ESC_ESC);
             break;
         default:
-            uart_send_byte(uart, data[i]);
+            uart_send_byte(data[i]);
             break;
         }
     }
-    uart_send_byte(uart, SLIP_END);
+    uart_send_byte(SLIP_END);
 
     Xil_ExceptionDisable();
-    uart->tx_length += slipped_length;
+    g_uart.tx_count += slipped_length;
 
-    if (uart->tx_length == slipped_length)
+    if (g_uart.tx_count == slipped_length)
     {
-        uart_fill_tx_fifo(uart);
+        uart_fill_tx_fifo();
     }
 
     Xil_ExceptionEnable();
@@ -89,44 +86,111 @@ int32_t uart_send(uart_t *uart, uint8_t *data, uint32_t length)
     return XST_SUCCESS;
 }
 
-static void uart_send_byte(uart_t *uart, uint8_t byte)
+static void uart_send_byte(uint8_t byte)
 {
-    uart->tx_buffer[uart->tx_end++] = byte;
-    if (uart->tx_end >= uart->tx_buffer_size)
+    g_uart.tx_buffer[g_uart.tx_end++] = byte;
+    if (g_uart.tx_end >= sizeof(g_uart.tx_buffer))
     {
-        uart->tx_end = 0;
+        g_uart.tx_end = 0;
     }
 }
 
-static void uart_fill_tx_fifo(uart_t *uart)
+static void uart_fill_tx_fifo(void)
 {
-    uint32_t base_addr = uart->device.RegBaseAddress;
+    uint32_t base_addr = g_uart.device.RegBaseAddress;
 
-    while ((uart->tx_length > 0) && !XUartLite_IsTransmitFull(base_addr))
+    while ((g_uart.tx_count > 0) && !XUartLite_IsTransmitFull(base_addr))
     {
-        XUartLite_SendByte(base_addr, uart->tx_buffer[uart->tx_start++]);
-        if (uart->tx_start >= uart->tx_buffer_size)
+        XUartLite_SendByte(base_addr, g_uart.tx_buffer[g_uart.tx_start++]);
+        if (g_uart.tx_start >= sizeof(g_uart.tx_buffer))
         {
-            uart->tx_start = 0;
+            g_uart.tx_start = 0;
         }
-        uart->tx_length--;
+        g_uart.tx_count--;
     }
 }
 
-static void uart_isr(void *uart_ptr)
+static void uart_receive(void)
 {
-    uart_t *uart = (uart_t *)uart_ptr;
+    uint32_t base_addr = g_uart.device.RegBaseAddress;
+    uint8_t byte;
+
+    while (!XUartLite_IsReceiveEmpty(base_addr))
+    {
+        byte = XUartLite_RecvByte(base_addr);
+        switch (g_uart.rx_state)
+        {
+        case RX_STATE_IDLE:
+            if (byte == SLIP_END)
+            {
+                g_uart.rx_state = RX_STATE_ACTIVE;
+                g_uart.rx_count = 0;
+            }
+            break;
+
+        case RX_STATE_ACTIVE:
+            if (byte == SLIP_END)
+            {
+                if (g_uart.rx_count != 0)
+                {
+                    g_uart.rx_callback(g_uart.rx_buffer, g_uart.rx_count);
+                    g_uart.rx_state = RX_STATE_IDLE;
+                }
+                continue;
+            }
+
+            if (byte == SLIP_ESC)
+            {
+                g_uart.rx_state = RX_STATE_ESCAPED;
+                continue;
+            }
+
+            if (g_uart.rx_count >= sizeof(g_uart.rx_buffer))
+            {
+                g_uart.rx_state = RX_STATE_IDLE;
+                continue;
+            }
+
+            g_uart.rx_buffer[g_uart.rx_count++] = byte;
+            break;
+
+        case RX_STATE_ESCAPED:
+            if ((byte != SLIP_ESC_END) && (byte != SLIP_ESC_ESC))
+            {
+                g_uart.rx_state = RX_STATE_IDLE;
+                continue;
+            }
+
+            if (g_uart.rx_count >= sizeof(g_uart.rx_buffer))
+            {
+                g_uart.rx_state = RX_STATE_IDLE;
+                continue;
+            }
+
+            g_uart.rx_buffer[g_uart.rx_count++] = (byte == SLIP_ESC_END) ? SLIP_END : SLIP_ESC;
+            g_uart.rx_state = RX_STATE_ACTIVE;
+            break;
+
+        default:
+            g_uart.rx_state = RX_STATE_IDLE;
+            break;
+        }
+    }
+}
+
+static void uart_isr(void *arg)
+{
     uint32_t status_reg;
 
-    status_reg = XUartLite_ReadReg(uart->device.RegBaseAddress, XUL_STATUS_REG_OFFSET);
+    status_reg = XUartLite_ReadReg(g_uart.device.RegBaseAddress, XUL_STATUS_REG_OFFSET);
 
     if (status_reg & (XUL_SR_RX_FIFO_FULL | XUL_SR_RX_FIFO_VALID_DATA))
     {
-        // FIXME: RECEIVE
+        uart_receive();
     }
 
-    if ((status_reg & XUL_SR_TX_FIFO_EMPTY) && (uart->tx_length > 0))
+    if ((status_reg & XUL_SR_TX_FIFO_EMPTY) && (g_uart.tx_count > 0))
     {
-        uart_fill_tx_fifo(uart);
+        uart_fill_tx_fifo();
     }
 }
