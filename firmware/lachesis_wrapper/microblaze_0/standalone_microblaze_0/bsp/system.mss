@@ -42,4 +42,10 @@ BEGIN DRIVER
  PARAMETER HW_INSTANCE = microblaze_0_local_memory_ilmb_bram_if_cntlr
 END
 
+BEGIN DRIVER
+ PARAMETER DRIVER_NAME = wdttb
+ PARAMETER DRIVER_VER = 5.3
+ PARAMETER HW_INSTANCE = axi_timebase_wdt_0
+END
+
 

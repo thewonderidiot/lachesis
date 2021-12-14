@@ -1441,3 +1441,775 @@ TRACE::2021-12-12.17:12:19::SCWMssOS::Checking the sw design at  /home/mike/lach
 TRACE::2021-12-12.17:12:19::SCWMssOS::DEBUG:  swdes dump  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
 
 TRACE::2021-12-12.17:12:19::SCWMssOS::Sw design exists and opened at  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.00:29:06::SCWPlatform::Clearing the existing platform
+TRACE::2021-12-13.00:29:06::SCWSystem::Clearing the existing sysconfig
+TRACE::2021-12-13.00:29:06::SCWMssOS::Removing the swdes entry for  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.00:29:06::SCWSystem::Clearing the domains completed.
+TRACE::2021-12-13.00:29:06::SCWPlatform::Clearing the opened hw db.
+TRACE::2021-12-13.00:29:06::SCWPlatform::DSA given /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:06::SCWPlatform::DSA absoulate path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:06::SCWPlatform:: Platform location is /home/mike/lachesis/firmware/lachesis_wrapper/hw
+TRACE::2021-12-13.00:29:06::SCWPlatform:: Platform Path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:06::SCWPlatform:: Unique name xilinx:cmod_a7-35t::0.0
+TRACE::2021-12-13.00:29:06::SCWPlatform::Removing the HwDB with name /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:07::SCWPlatform::Trying to open the hw design at /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:07::SCWPlatform::DSA given /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:07::SCWPlatform::DSA absoulate path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:07::SCWPlatform::DSA directory /home/mike/lachesis/firmware/lachesis_wrapper/hw
+TRACE::2021-12-13.00:29:07::SCWPlatform:: Platform Path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:07::SCWPlatform:: Unique name xilinx:cmod_a7-35t::0.0
+TRACE::2021-12-13.00:29:07::SCWPlatform::Do not have an existing db opened. 
+TRACE::2021-12-13.00:29:07::SCWPlatform::Opened new HwDB with name lachesis_wrapper_5
+TRACE::2021-12-13.00:29:07::SCWReader::Active system found as  lachesis_wrapper
+TRACE::2021-12-13.00:29:07::SCWReader::Handling sysconfig lachesis_wrapper
+TRACE::2021-12-13.00:29:07::SCWDomain::checking for install qemu data   : 
+TRACE::2021-12-13.00:29:07::SCWPlatform::Trying to open the hw design at /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:07::SCWPlatform::DSA given /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:07::SCWPlatform::DSA absoulate path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:07::SCWPlatform::DSA directory /home/mike/lachesis/firmware/lachesis_wrapper/hw
+TRACE::2021-12-13.00:29:07::SCWPlatform:: Platform Path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:07::SCWPlatform:: Unique name xilinx:cmod_a7-35t::0.0
+TRACE::2021-12-13.00:29:07::SCWPlatform::Trying to set the existing hwdb with name lachesis_wrapper_5
+TRACE::2021-12-13.00:29:07::SCWPlatform::Opened existing hwdb lachesis_wrapper_5
+TRACE::2021-12-13.00:29:07::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-12-13.00:29:07::SCWPlatform::Trying to open the hw design at /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:07::SCWPlatform::DSA given /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:07::SCWPlatform::DSA absoulate path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:07::SCWPlatform::DSA directory /home/mike/lachesis/firmware/lachesis_wrapper/hw
+TRACE::2021-12-13.00:29:07::SCWPlatform:: Platform Path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:07::SCWPlatform:: Unique name xilinx:cmod_a7-35t::0.0
+TRACE::2021-12-13.00:29:07::SCWPlatform::Trying to set the existing hwdb with name lachesis_wrapper_5
+TRACE::2021-12-13.00:29:07::SCWPlatform::Opened existing hwdb lachesis_wrapper_5
+TRACE::2021-12-13.00:29:07::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-12-13.00:29:07::SCWPlatform::Trying to open the hw design at /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:07::SCWPlatform::DSA given /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:07::SCWPlatform::DSA absoulate path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:07::SCWPlatform::DSA directory /home/mike/lachesis/firmware/lachesis_wrapper/hw
+TRACE::2021-12-13.00:29:07::SCWPlatform:: Platform Path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:07::SCWPlatform:: Unique name xilinx:cmod_a7-35t::0.0
+TRACE::2021-12-13.00:29:07::SCWPlatform::Trying to set the existing hwdb with name lachesis_wrapper_5
+TRACE::2021-12-13.00:29:07::SCWPlatform::Opened existing hwdb lachesis_wrapper_5
+TRACE::2021-12-13.00:29:07::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-12-13.00:29:07::SCWPlatform::Trying to open the hw design at /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:07::SCWPlatform::DSA given /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:07::SCWPlatform::DSA absoulate path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:07::SCWPlatform::DSA directory /home/mike/lachesis/firmware/lachesis_wrapper/hw
+TRACE::2021-12-13.00:29:07::SCWPlatform:: Platform Path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:07::SCWPlatform:: Unique name xilinx:cmod_a7-35t::0.0
+TRACE::2021-12-13.00:29:07::SCWPlatform::Trying to set the existing hwdb with name lachesis_wrapper_5
+TRACE::2021-12-13.00:29:07::SCWPlatform::Opened existing hwdb lachesis_wrapper_5
+TRACE::2021-12-13.00:29:07::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-12-13.00:29:07::SCWMssOS::Checking the sw design at  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.00:29:07::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2021-12-13.00:29:07::SCWMssOS::No sw design opened at  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.00:29:07::SCWMssOS::mss exists loading the mss file  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.00:29:07::SCWMssOS::Opened the sw design from mss  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.00:29:07::SCWMssOS::Adding the swdes entry /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss with des name system
+TRACE::2021-12-13.00:29:07::SCWMssOS::updating the scw layer about changes
+TRACE::2021-12-13.00:29:07::SCWMssOS::Opened the sw design.  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.00:29:07::SCWMssOS::Saving the mss changes /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.00:29:07::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-12-13.00:29:07::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-12-13.00:29:07::SCWMssOS::Commit changes completed.
+TRACE::2021-12-13.00:29:07::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2021-12-13.00:29:07::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2021-12-13.00:29:07::SCWPlatform::Trying to open the hw design at /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:07::SCWPlatform::DSA given /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:07::SCWPlatform::DSA absoulate path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:07::SCWPlatform::DSA directory /home/mike/lachesis/firmware/lachesis_wrapper/hw
+TRACE::2021-12-13.00:29:07::SCWPlatform:: Platform Path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:07::SCWPlatform:: Unique name xilinx:cmod_a7-35t::0.0
+TRACE::2021-12-13.00:29:07::SCWPlatform::Trying to set the existing hwdb with name lachesis_wrapper_5
+TRACE::2021-12-13.00:29:07::SCWPlatform::Opened existing hwdb lachesis_wrapper_5
+TRACE::2021-12-13.00:29:07::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-12-13.00:29:07::SCWMssOS::Checking the sw design at  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.00:29:07::SCWMssOS::DEBUG:  swdes dump  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2021-12-13.00:29:07::SCWMssOS::Sw design exists and opened at  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.00:29:07::SCWReader::No isolation master present  
+TRACE::2021-12-13.00:29:10::SCWPlatform::DSA given /home/mike/lachesis/firmware/lachesis_wrapper/tempdsa/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:10::SCWPlatform::DSA absoulate path /home/mike/lachesis/firmware/lachesis_wrapper/tempdsa/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:10::SCWPlatform:: Platform location is /home/mike/lachesis/firmware/lachesis_wrapper/tempdsa
+TRACE::2021-12-13.00:29:10::SCWPlatform:: Platform Path /home/mike/lachesis/firmware/lachesis_wrapper/tempdsa/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:10::SCWPlatform:: Unique name xilinx:cmod_a7-35t::0.0
+TRACE::2021-12-13.00:29:11::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-12-13.00:29:11::SCWMssOS::Doing hw sync for the mss in domain: standalone_microblaze_0
+TRACE::2021-12-13.00:29:11::SCWPlatform::Trying to open the hw design at /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:11::SCWPlatform::DSA given /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:11::SCWPlatform::DSA absoulate path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:11::SCWPlatform::DSA directory /home/mike/lachesis/firmware/lachesis_wrapper/hw
+TRACE::2021-12-13.00:29:11::SCWPlatform:: Platform Path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:11::SCWPlatform:: Unique name xilinx:cmod_a7-35t::0.0
+TRACE::2021-12-13.00:29:11::SCWPlatform::Trying to set the existing hwdb with name lachesis_wrapper_5
+TRACE::2021-12-13.00:29:11::SCWPlatform::Opened existing hwdb lachesis_wrapper_5
+TRACE::2021-12-13.00:29:11::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-12-13.00:29:11::SCWPlatform::Trying to open the hw design at /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:11::SCWPlatform::DSA given /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:11::SCWPlatform::DSA absoulate path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:11::SCWPlatform::DSA directory /home/mike/lachesis/firmware/lachesis_wrapper/hw
+TRACE::2021-12-13.00:29:11::SCWPlatform:: Platform Path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:11::SCWPlatform:: Unique name xilinx:cmod_a7-35t::0.0
+TRACE::2021-12-13.00:29:11::SCWPlatform::Trying to set the existing hwdb with name lachesis_wrapper_5
+TRACE::2021-12-13.00:29:11::SCWPlatform::Opened existing hwdb lachesis_wrapper_5
+TRACE::2021-12-13.00:29:11::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-12-13.00:29:11::SCWMssOS::Checking the sw design at  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.00:29:11::SCWMssOS::DEBUG:  swdes dump  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2021-12-13.00:29:11::SCWMssOS::Sw design exists and opened at  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.00:29:11::SCWPlatform::Trying to open the hw design at /home/mike/lachesis/firmware/lachesis_wrapper/tempdsa/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:11::SCWPlatform::DSA given /home/mike/lachesis/firmware/lachesis_wrapper/tempdsa/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:11::SCWPlatform::DSA absoulate path /home/mike/lachesis/firmware/lachesis_wrapper/tempdsa/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:11::SCWPlatform::DSA directory /home/mike/lachesis/firmware/lachesis_wrapper/tempdsa
+TRACE::2021-12-13.00:29:11::SCWPlatform:: Platform Path /home/mike/lachesis/firmware/lachesis_wrapper/tempdsa/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:11::SCWPlatform:: Unique name xilinx:cmod_a7-35t::0.0
+TRACE::2021-12-13.00:29:11::SCWPlatform::update - Opened existing hwdb lachesis_wrapper_6
+TRACE::2021-12-13.00:29:11::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-12-13.00:29:11::SCWMssOS::Saving the mss changes /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.00:29:11::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-12-13.00:29:11::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-12-13.00:29:11::SCWMssOS::Commit changes completed.
+TRACE::2021-12-13.00:29:11::SCWMssOS::Completed hw sync for the mss in domain: standalone_microblaze_0
+TRACE::2021-12-13.00:29:11::SCWMssOS::Removing the swdes entry for  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.00:29:11::SCWPlatform::Trying to open the hw design at /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:11::SCWPlatform::DSA given /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:11::SCWPlatform::DSA absoulate path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:11::SCWPlatform::DSA directory /home/mike/lachesis/firmware/lachesis_wrapper/hw
+TRACE::2021-12-13.00:29:11::SCWPlatform:: Platform Path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:11::SCWPlatform:: Unique name xilinx:cmod_a7-35t::0.0
+TRACE::2021-12-13.00:29:11::SCWPlatform::Do not have an existing db opened. 
+TRACE::2021-12-13.00:29:11::SCWPlatform::Opened new HwDB with name lachesis_wrapper_7
+TRACE::2021-12-13.00:29:11::SCWMssOS::Saving the mss changes /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.00:29:11::SCWMssOS::Adding the swdes entry, mss present, able to open swdb /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss with des name system
+TRACE::2021-12-13.00:29:11::SCWMssOS::Writing the mss file completed /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.00:29:11::SCWMssOS::Commit changes completed.
+TRACE::2021-12-13.00:29:11::SCWPlatform::Trying to open the hw design at /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:11::SCWPlatform::DSA given /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:11::SCWPlatform::DSA absoulate path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:11::SCWPlatform::DSA directory /home/mike/lachesis/firmware/lachesis_wrapper/hw
+TRACE::2021-12-13.00:29:11::SCWPlatform:: Platform Path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:11::SCWPlatform:: Unique name xilinx:cmod_a7-35t::0.0
+TRACE::2021-12-13.00:29:11::SCWPlatform::Trying to set the existing hwdb with name lachesis_wrapper_7
+TRACE::2021-12-13.00:29:11::SCWPlatform::Opened existing hwdb lachesis_wrapper_7
+TRACE::2021-12-13.00:29:11::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-12-13.00:29:11::SCWMssOS::Checking the sw design at  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.00:29:11::SCWMssOS::DEBUG:  swdes dump  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2021-12-13.00:29:11::SCWMssOS::Sw design exists and opened at  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.00:29:11::SCWWriter::formatted JSON is {
+	"platformName":	"lachesis_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"lachesis_wrapper",
+	"platHandOff":	"/home/mike/lachesis/fpga/lachesis/lachesis_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/lachesis_wrapper.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"lachesis_wrapper",
+	"systems":	[{
+			"systemName":	"lachesis_wrapper",
+			"systemDesc":	"lachesis_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"lachesis_wrapper",
+			"sysActiveDom":	"standalone_microblaze_0",
+			"sysDefaultDom":	"standalone_microblaze_0",
+			"domains":	[{
+					"domainName":	"standalone_microblaze_0",
+					"domainDispName":	"standalone_microblaze_0",
+					"domainDesc":	"standalone_microblaze_0",
+					"processors":	"microblaze_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.6",
+					"mssFile":	"",
+					"md5Digest":	"4b3fe1ad882db80f3f5b3528b438249e",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2021-12-13.00:29:59::SCWPlatform::Started generating the artifacts platform lachesis_wrapper
+TRACE::2021-12-13.00:29:59::SCWPlatform::Sanity checking of platform is completed
+LOG::2021-12-13.00:29:59::SCWPlatform::Started generating the artifacts for system configuration lachesis_wrapper
+LOG::2021-12-13.00:29:59::SCWSystem::Checking the domain standalone_microblaze_0
+LOG::2021-12-13.00:29:59::SCWSystem::Not a boot domain 
+LOG::2021-12-13.00:29:59::SCWSystem::Started Processing the domain standalone_microblaze_0
+TRACE::2021-12-13.00:29:59::SCWDomain::Generating domain artifcats
+TRACE::2021-12-13.00:29:59::SCWMssOS::Generating standalone artifcats
+TRACE::2021-12-13.00:29:59::SCWMssOS:: Copying the user libraries. 
+TRACE::2021-12-13.00:29:59::SCWPlatform::Trying to open the hw design at /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:59::SCWPlatform::DSA given /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:59::SCWPlatform::DSA absoulate path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:59::SCWPlatform::DSA directory /home/mike/lachesis/firmware/lachesis_wrapper/hw
+TRACE::2021-12-13.00:29:59::SCWPlatform:: Platform Path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:29:59::SCWPlatform:: Unique name xilinx:cmod_a7-35t::0.0
+TRACE::2021-12-13.00:29:59::SCWPlatform::Trying to set the existing hwdb with name lachesis_wrapper_7
+TRACE::2021-12-13.00:29:59::SCWPlatform::Opened existing hwdb lachesis_wrapper_7
+TRACE::2021-12-13.00:29:59::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-12-13.00:29:59::SCWMssOS::Checking the sw design at  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.00:29:59::SCWMssOS::DEBUG:  swdes dump  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2021-12-13.00:29:59::SCWMssOS::Sw design exists and opened at  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.00:29:59::SCWMssOS::Completed writing the mss file at /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp
+TRACE::2021-12-13.00:29:59::SCWMssOS::Mss edits present, copying mssfile into export location /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.00:29:59::SCWMssOS::bsp generated is stale removing and regenerating. 
+TRACE::2021-12-13.00:29:59::SCWMssOS::doing bsp build ... 
+TRACE::2021-12-13.00:29:59::SCWMssOS::System Command Ran  cd  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp ; bash -c "make  " 
+TRACE::2021-12-13.00:29:59::SCWMssOS::make --no-print-directory seq_libs
+
+TRACE::2021-12-13.00:29:59::SCWMssOS::Finished building libraries sequentially.
+
+TRACE::2021-12-13.00:29:59::SCWMssOS::make -j 6 --no-print-directory par_libs
+
+TRACE::2021-12-13.00:29:59::SCWMssOS::Running Make include in microblaze_0/libsrc/cpu_v2_14/src
+
+TRACE::2021-12-13.00:29:59::SCWMssOS::Running Make include in microblaze_0/libsrc/bram_v4_7/src
+
+TRACE::2021-12-13.00:29:59::SCWMssOS::Running Make include in microblaze_0/libsrc/intc_v3_13/src
+
+TRACE::2021-12-13.00:29:59::SCWMssOS::Running Make include in microblaze_0/libsrc/standalone_v7_6/src
+
+TRACE::2021-12-13.00:29:59::SCWMssOS::make -C microblaze_0/libsrc/bram_v4_7/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COM
+TRACE::2021-12-13.00:29:59::SCWMssOS::PILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -W
+TRACE::2021-12-13.00:29:59::SCWMssOS::all -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2021-12-13.00:29:59::SCWMssOS::make -C microblaze_0/libsrc/cpu_v2_14/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COM
+TRACE::2021-12-13.00:29:59::SCWMssOS::PILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -W
+TRACE::2021-12-13.00:29:59::SCWMssOS::all -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2021-12-13.00:29:59::SCWMssOS::make -C microblaze_0/libsrc/intc_v3_13/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "CO
+TRACE::2021-12-13.00:29:59::SCWMssOS::MPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -
+TRACE::2021-12-13.00:29:59::SCWMssOS::Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2021-12-13.00:29:59::SCWMssOS::make -C microblaze_0/libsrc/standalone_v7_6/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar
+TRACE::2021-12-13.00:29:59::SCWMssOS::" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-secti
+TRACE::2021-12-13.00:29:59::SCWMssOS::ons -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2021-12-13.00:29:59::SCWMssOS::Running Make include in microblaze_0/libsrc/uartlite_v3_6/src
+
+TRACE::2021-12-13.00:29:59::SCWMssOS::make -C microblaze_0/libsrc/uartlite_v3_6/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" 
+TRACE::2021-12-13.00:29:59::SCWMssOS::"COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-section
+TRACE::2021-12-13.00:29:59::SCWMssOS::s -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2021-12-13.00:29:59::SCWMssOS::Running Make include in microblaze_0/libsrc/wdttb_v5_3/src
+
+TRACE::2021-12-13.00:29:59::SCWMssOS::make -C microblaze_0/libsrc/wdttb_v5_3/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "CO
+TRACE::2021-12-13.00:29:59::SCWMssOS::MPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -
+TRACE::2021-12-13.00:29:59::SCWMssOS::Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2021-12-13.00:29:59::SCWMssOS::Running Make libs in microblaze_0/libsrc/bram_v4_7/src
+
+TRACE::2021-12-13.00:29:59::SCWMssOS::make -C microblaze_0/libsrc/bram_v4_7/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
+TRACE::2021-12-13.00:29:59::SCWMssOS::ER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall
+TRACE::2021-12-13.00:29:59::SCWMssOS:: -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2021-12-13.00:29:59::SCWMssOS::Running Make libs in microblaze_0/libsrc/intc_v3_13/src
+
+TRACE::2021-12-13.00:29:59::SCWMssOS::make -C microblaze_0/libsrc/intc_v3_13/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPI
+TRACE::2021-12-13.00:29:59::SCWMssOS::LER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wal
+TRACE::2021-12-13.00:29:59::SCWMssOS::l -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2021-12-13.00:29:59::SCWMssOS::Running Make libs in microblaze_0/libsrc/standalone_v7_6/src
+
+TRACE::2021-12-13.00:29:59::SCWMssOS::Running Make libs in microblaze_0/libsrc/cpu_v2_14/src
+
+TRACE::2021-12-13.00:29:59::SCWMssOS::Running Make libs in microblaze_0/libsrc/wdttb_v5_3/src
+
+TRACE::2021-12-13.00:29:59::SCWMssOS::make -C microblaze_0/libsrc/cpu_v2_14/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
+TRACE::2021-12-13.00:29:59::SCWMssOS::ER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall
+TRACE::2021-12-13.00:29:59::SCWMssOS:: -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2021-12-13.00:29:59::SCWMssOS::Running Make libs in microblaze_0/libsrc/uartlite_v3_6/src
+
+TRACE::2021-12-13.00:29:59::SCWMssOS::make -C microblaze_0/libsrc/standalone_v7_6/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "
+TRACE::2021-12-13.00:29:59::SCWMssOS::COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections
+TRACE::2021-12-13.00:29:59::SCWMssOS:: -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2021-12-13.00:29:59::SCWMssOS::make -C microblaze_0/libsrc/uartlite_v3_6/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "CO
+TRACE::2021-12-13.00:29:59::SCWMssOS::MPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -
+TRACE::2021-12-13.00:29:59::SCWMssOS::Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2021-12-13.00:29:59::SCWMssOS::make -C microblaze_0/libsrc/wdttb_v5_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPI
+TRACE::2021-12-13.00:29:59::SCWMssOS::LER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wal
+TRACE::2021-12-13.00:29:59::SCWMssOS::l -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2021-12-13.00:30:02::SCWMssOS::DEBUG NON_LTO_OBJECTS is ../../../lib/microblaze_interrupt_handler.o
+
+TRACE::2021-12-13.00:30:02::SCWMssOS::Finished building libraries parallelly.
+
+TRACE::2021-12-13.00:30:02::SCWMssOS::make --no-print-directory archive
+
+TRACE::2021-12-13.00:30:02::SCWMssOS::mb-ar -r  microblaze_0/lib/libxil.a microblaze_0/lib/errno.o microblaze_0/lib/_exit.o microblaze_0/lib/fcntl.o microblaze_0/lib
+TRACE::2021-12-13.00:30:02::SCWMssOS::/hw_exception_handler.o microblaze_0/lib/inbyte.o microblaze_0/lib/microblaze_disable_dcache.o microblaze_0/lib/microblaze_disa
+TRACE::2021-12-13.00:30:02::SCWMssOS::ble_exceptions.o microblaze_0/lib/microblaze_disable_icache.o microblaze_0/lib/microblaze_disable_interrupts.o microblaze_0/lib
+TRACE::2021-12-13.00:30:02::SCWMssOS::/microblaze_enable_dcache.o microblaze_0/lib/microblaze_enable_exceptions.o microblaze_0/lib/microblaze_enable_icache.o microbl
+TRACE::2021-12-13.00:30:02::SCWMssOS::aze_0/lib/microblaze_enable_interrupts.o microblaze_0/lib/microblaze_exception_handler.o microblaze_0/lib/microblaze_flush_cach
+TRACE::2021-12-13.00:30:02::SCWMssOS::e_ext.o microblaze_0/lib/microblaze_flush_cache_ext_range.o microblaze_0/lib/microblaze_flush_dcache.o microblaze_0/lib/microbl
+TRACE::2021-12-13.00:30:02::SCWMssOS::aze_flush_dcache_range.o microblaze_0/lib/microblaze_init_dcache_range.o microblaze_0/lib/microblaze_init_icache_range.o microb
+TRACE::2021-12-13.00:30:02::SCWMssOS::laze_0/lib/microblaze_interrupt_handler.o microblaze_0/lib/microblaze_interrupts_g.o microblaze_0/lib/microblaze_invalidate_cac
+TRACE::2021-12-13.00:30:02::SCWMssOS::he_ext.o microblaze_0/lib/microblaze_invalidate_cache_ext_range.o microblaze_0/lib/microblaze_invalidate_dcache.o microblaze_0/
+TRACE::2021-12-13.00:30:02::SCWMssOS::lib/microblaze_invalidate_dcache_range.o microblaze_0/lib/microblaze_invalidate_icache.o microblaze_0/lib/microblaze_invalidate
+TRACE::2021-12-13.00:30:02::SCWMssOS::_icache_range.o microblaze_0/lib/microblaze_scrub.o microblaze_0/lib/microblaze_selftest.o microblaze_0/lib/microblaze_sleep.o 
+TRACE::2021-12-13.00:30:02::SCWMssOS::microblaze_0/lib/microblaze_update_dcache.o microblaze_0/lib/microblaze_update_icache.o microblaze_0/lib/outbyte.o microblaze_0
+TRACE::2021-12-13.00:30:02::SCWMssOS::/lib/print.o microblaze_0/lib/pvr.o microblaze_0/lib/xbram_g.o microblaze_0/lib/xbram_intr.o microblaze_0/lib/xbram.o microblaz
+TRACE::2021-12-13.00:30:02::SCWMssOS::e_0/lib/xbram_selftest.o microblaze_0/lib/xbram_sinit.o microblaze_0/lib/xil_assert.o microblaze_0/lib/xil_cache.o microblaze_0
+TRACE::2021-12-13.00:30:02::SCWMssOS::/lib/xil_clocking.o microblaze_0/lib/xil_exception.o microblaze_0/lib/xil_mem.o microblaze_0/lib/xil_misc_psreset_api.o microbl
+TRACE::2021-12-13.00:30:02::SCWMssOS::aze_0/lib/xil_printf.o microblaze_0/lib/xil_sleepcommon.o microblaze_0/lib/xil_testcache.o microblaze_0/lib/xil_testio.o microb
+TRACE::2021-12-13.00:30:02::SCWMssOS::laze_0/lib/xil_testmem.o microblaze_0/lib/xil_util.o microblaze_0/lib/xintc_g.o microblaze_0/lib/xintc_intr.o microblaze_0/lib/
+TRACE::2021-12-13.00:30:02::SCWMssOS::xintc_l.o microblaze_0/lib/xintc.o microblaze_0/lib/xintc_options.o microblaze_0/lib/xintc_selftest.o microblaze_0/lib/xio.o mi
+TRACE::2021-12-13.00:30:02::SCWMssOS::croblaze_0/lib/xplatform_info.o microblaze_0/lib/xuartlite_g.o microblaze_0/lib/xuartlite_intr.o microblaze_0/lib/xuartlite_l.o
+TRACE::2021-12-13.00:30:02::SCWMssOS:: microblaze_0/lib/xuartlite.o microblaze_0/lib/xuartlite_selftest.o microblaze_0/lib/xuartlite_sinit.o microblaze_0/lib/xuartli
+TRACE::2021-12-13.00:30:02::SCWMssOS::te_stats.o microblaze_0/lib/xwdttb_config.o microblaze_0/lib/xwdttb_g.o microblaze_0/lib/xwdttb.o microblaze_0/lib/xwdttb_selft
+TRACE::2021-12-13.00:30:02::SCWMssOS::est.o microblaze_0/lib/xwdttb_sinit.o
+
+TRACE::2021-12-13.00:30:02::SCWMssOS::Finished building libraries
+
+TRACE::2021-12-13.00:30:02::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2021-12-13.00:30:02::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2021-12-13.00:30:02::SCWSystem::Completed Processing the domain standalone_microblaze_0
+LOG::2021-12-13.00:30:02::SCWSystem::Completed Processing the sysconfig lachesis_wrapper
+LOG::2021-12-13.00:30:02::SCWPlatform::Completed generating the artifacts for system configuration lachesis_wrapper
+TRACE::2021-12-13.00:30:02::SCWPlatform::Started preparing the platform 
+TRACE::2021-12-13.00:30:02::SCWSystem::Writing the bif file for system config lachesis_wrapper
+TRACE::2021-12-13.00:30:02::SCWSystem::dir created 
+TRACE::2021-12-13.00:30:02::SCWSystem::Writing the bif 
+TRACE::2021-12-13.00:30:02::SCWPlatform::Started writing the spfm file 
+TRACE::2021-12-13.00:30:02::SCWPlatform::Started writing the xpfm file 
+TRACE::2021-12-13.00:30:02::SCWPlatform::Completed generating the platform
+TRACE::2021-12-13.00:30:02::SCWMssOS::Saving the mss changes /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.00:30:02::SCWMssOS::Adding the swdes entry, mss present, able to open swdb /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss with des name system
+TRACE::2021-12-13.00:30:02::SCWMssOS::Writing the mss file completed /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.00:30:02::SCWMssOS::Commit changes completed.
+TRACE::2021-12-13.00:30:02::SCWPlatform::Trying to open the hw design at /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:30:02::SCWPlatform::DSA given /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:30:02::SCWPlatform::DSA absoulate path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:30:02::SCWPlatform::DSA directory /home/mike/lachesis/firmware/lachesis_wrapper/hw
+TRACE::2021-12-13.00:30:02::SCWPlatform:: Platform Path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:30:02::SCWPlatform:: Unique name xilinx:cmod_a7-35t::0.0
+TRACE::2021-12-13.00:30:02::SCWPlatform::Trying to set the existing hwdb with name lachesis_wrapper_7
+TRACE::2021-12-13.00:30:02::SCWPlatform::Opened existing hwdb lachesis_wrapper_7
+TRACE::2021-12-13.00:30:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-12-13.00:30:02::SCWMssOS::Checking the sw design at  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.00:30:02::SCWMssOS::DEBUG:  swdes dump  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2021-12-13.00:30:02::SCWMssOS::Sw design exists and opened at  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.00:30:02::SCWWriter::formatted JSON is {
+	"platformName":	"lachesis_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"lachesis_wrapper",
+	"platHandOff":	"/home/mike/lachesis/fpga/lachesis/lachesis_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/lachesis_wrapper.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"lachesis_wrapper",
+	"systems":	[{
+			"systemName":	"lachesis_wrapper",
+			"systemDesc":	"lachesis_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"lachesis_wrapper",
+			"sysActiveDom":	"standalone_microblaze_0",
+			"sysDefaultDom":	"standalone_microblaze_0",
+			"domains":	[{
+					"domainName":	"standalone_microblaze_0",
+					"domainDispName":	"standalone_microblaze_0",
+					"domainDesc":	"standalone_microblaze_0",
+					"processors":	"microblaze_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.6",
+					"mssFile":	"",
+					"md5Digest":	"ac063ce7cda58532582f739c317dce78",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2021-12-13.00:30:02::SCWPlatform::updated the xpfm file.
+TRACE::2021-12-13.00:30:02::SCWPlatform::Trying to open the hw design at /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:30:02::SCWPlatform::DSA given /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:30:02::SCWPlatform::DSA absoulate path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:30:02::SCWPlatform::DSA directory /home/mike/lachesis/firmware/lachesis_wrapper/hw
+TRACE::2021-12-13.00:30:02::SCWPlatform:: Platform Path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.00:30:02::SCWPlatform:: Unique name xilinx:cmod_a7-35t::0.0
+TRACE::2021-12-13.00:30:02::SCWPlatform::Trying to set the existing hwdb with name lachesis_wrapper_7
+TRACE::2021-12-13.00:30:02::SCWPlatform::Opened existing hwdb lachesis_wrapper_7
+TRACE::2021-12-13.00:30:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-12-13.00:30:02::SCWMssOS::Checking the sw design at  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.00:30:02::SCWMssOS::DEBUG:  swdes dump  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2021-12-13.00:30:02::SCWMssOS::Sw design exists and opened at  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.22:39:40::SCWPlatform::Trying to open the hw design at /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:40::SCWPlatform::DSA given /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:40::SCWPlatform::DSA absoulate path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:40::SCWPlatform::DSA directory /home/mike/lachesis/firmware/lachesis_wrapper/hw
+TRACE::2021-12-13.22:39:40::SCWPlatform:: Platform Path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:40::SCWPlatform:: Unique name xilinx:cmod_a7-35t::0.0
+TRACE::2021-12-13.22:39:40::SCWPlatform::Do not have an existing db opened. 
+TRACE::2021-12-13.22:39:40::SCWPlatform::Opened new HwDB with name lachesis_wrapper_2
+TRACE::2021-12-13.22:39:40::SCWReader::Active system found as  lachesis_wrapper
+TRACE::2021-12-13.22:39:40::SCWReader::Handling sysconfig lachesis_wrapper
+TRACE::2021-12-13.22:39:40::SCWDomain::checking for install qemu data   : 
+TRACE::2021-12-13.22:39:40::SCWPlatform::Trying to open the hw design at /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:40::SCWPlatform::DSA given /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:40::SCWPlatform::DSA absoulate path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:40::SCWPlatform::DSA directory /home/mike/lachesis/firmware/lachesis_wrapper/hw
+TRACE::2021-12-13.22:39:40::SCWPlatform:: Platform Path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:40::SCWPlatform:: Unique name xilinx:cmod_a7-35t::0.0
+TRACE::2021-12-13.22:39:40::SCWPlatform::Trying to set the existing hwdb with name lachesis_wrapper_2
+TRACE::2021-12-13.22:39:40::SCWPlatform::Opened existing hwdb lachesis_wrapper_2
+TRACE::2021-12-13.22:39:40::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-12-13.22:39:40::SCWPlatform::Trying to open the hw design at /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:40::SCWPlatform::DSA given /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:40::SCWPlatform::DSA absoulate path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:40::SCWPlatform::DSA directory /home/mike/lachesis/firmware/lachesis_wrapper/hw
+TRACE::2021-12-13.22:39:40::SCWPlatform:: Platform Path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:40::SCWPlatform:: Unique name xilinx:cmod_a7-35t::0.0
+TRACE::2021-12-13.22:39:40::SCWPlatform::Trying to set the existing hwdb with name lachesis_wrapper_2
+TRACE::2021-12-13.22:39:40::SCWPlatform::Opened existing hwdb lachesis_wrapper_2
+TRACE::2021-12-13.22:39:40::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-12-13.22:39:40::SCWPlatform::Trying to open the hw design at /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:40::SCWPlatform::DSA given /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:40::SCWPlatform::DSA absoulate path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:40::SCWPlatform::DSA directory /home/mike/lachesis/firmware/lachesis_wrapper/hw
+TRACE::2021-12-13.22:39:40::SCWPlatform:: Platform Path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:40::SCWPlatform:: Unique name xilinx:cmod_a7-35t::0.0
+TRACE::2021-12-13.22:39:40::SCWPlatform::Trying to set the existing hwdb with name lachesis_wrapper_2
+TRACE::2021-12-13.22:39:40::SCWPlatform::Opened existing hwdb lachesis_wrapper_2
+TRACE::2021-12-13.22:39:40::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-12-13.22:39:40::SCWPlatform::Trying to open the hw design at /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:40::SCWPlatform::DSA given /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:40::SCWPlatform::DSA absoulate path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:40::SCWPlatform::DSA directory /home/mike/lachesis/firmware/lachesis_wrapper/hw
+TRACE::2021-12-13.22:39:40::SCWPlatform:: Platform Path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:40::SCWPlatform:: Unique name xilinx:cmod_a7-35t::0.0
+TRACE::2021-12-13.22:39:40::SCWPlatform::Trying to set the existing hwdb with name lachesis_wrapper_2
+TRACE::2021-12-13.22:39:40::SCWPlatform::Opened existing hwdb lachesis_wrapper_2
+TRACE::2021-12-13.22:39:40::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-12-13.22:39:40::SCWMssOS::Checking the sw design at  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.22:39:40::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2021-12-13.22:39:40::SCWMssOS::No sw design opened at  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.22:39:40::SCWMssOS::mss exists loading the mss file  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.22:39:40::SCWMssOS::Opened the sw design from mss  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.22:39:40::SCWMssOS::Adding the swdes entry /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss with des name system
+TRACE::2021-12-13.22:39:40::SCWMssOS::updating the scw layer about changes
+TRACE::2021-12-13.22:39:40::SCWMssOS::Opened the sw design.  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.22:39:40::SCWMssOS::Saving the mss changes /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.22:39:40::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-12-13.22:39:40::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-12-13.22:39:40::SCWMssOS::Commit changes completed.
+TRACE::2021-12-13.22:39:40::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2021-12-13.22:39:40::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2021-12-13.22:39:40::SCWPlatform::Trying to open the hw design at /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:40::SCWPlatform::DSA given /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:40::SCWPlatform::DSA absoulate path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:40::SCWPlatform::DSA directory /home/mike/lachesis/firmware/lachesis_wrapper/hw
+TRACE::2021-12-13.22:39:40::SCWPlatform:: Platform Path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:40::SCWPlatform:: Unique name xilinx:cmod_a7-35t::0.0
+TRACE::2021-12-13.22:39:40::SCWPlatform::Trying to set the existing hwdb with name lachesis_wrapper_2
+TRACE::2021-12-13.22:39:40::SCWPlatform::Opened existing hwdb lachesis_wrapper_2
+TRACE::2021-12-13.22:39:40::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-12-13.22:39:40::SCWMssOS::Checking the sw design at  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.22:39:40::SCWMssOS::DEBUG:  swdes dump  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2021-12-13.22:39:40::SCWMssOS::Sw design exists and opened at  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.22:39:40::SCWReader::No isolation master present  
+TRACE::2021-12-13.22:39:43::SCWPlatform::DSA given /home/mike/lachesis/firmware/lachesis_wrapper/tempdsa/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:43::SCWPlatform::DSA absoulate path /home/mike/lachesis/firmware/lachesis_wrapper/tempdsa/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:43::SCWPlatform:: Platform location is /home/mike/lachesis/firmware/lachesis_wrapper/tempdsa
+TRACE::2021-12-13.22:39:43::SCWPlatform:: Platform Path /home/mike/lachesis/firmware/lachesis_wrapper/tempdsa/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:43::SCWPlatform:: Unique name xilinx:cmod_a7-35t::0.0
+TRACE::2021-12-13.22:39:44::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-12-13.22:39:44::SCWMssOS::Doing hw sync for the mss in domain: standalone_microblaze_0
+TRACE::2021-12-13.22:39:44::SCWPlatform::Trying to open the hw design at /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:44::SCWPlatform::DSA given /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:44::SCWPlatform::DSA absoulate path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:44::SCWPlatform::DSA directory /home/mike/lachesis/firmware/lachesis_wrapper/hw
+TRACE::2021-12-13.22:39:44::SCWPlatform:: Platform Path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:44::SCWPlatform:: Unique name xilinx:cmod_a7-35t::0.0
+TRACE::2021-12-13.22:39:44::SCWPlatform::Trying to set the existing hwdb with name lachesis_wrapper_2
+TRACE::2021-12-13.22:39:44::SCWPlatform::Opened existing hwdb lachesis_wrapper_2
+TRACE::2021-12-13.22:39:44::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-12-13.22:39:44::SCWPlatform::Trying to open the hw design at /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:44::SCWPlatform::DSA given /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:44::SCWPlatform::DSA absoulate path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:44::SCWPlatform::DSA directory /home/mike/lachesis/firmware/lachesis_wrapper/hw
+TRACE::2021-12-13.22:39:44::SCWPlatform:: Platform Path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:44::SCWPlatform:: Unique name xilinx:cmod_a7-35t::0.0
+TRACE::2021-12-13.22:39:44::SCWPlatform::Trying to set the existing hwdb with name lachesis_wrapper_2
+TRACE::2021-12-13.22:39:44::SCWPlatform::Opened existing hwdb lachesis_wrapper_2
+TRACE::2021-12-13.22:39:44::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-12-13.22:39:44::SCWMssOS::Checking the sw design at  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.22:39:44::SCWMssOS::DEBUG:  swdes dump  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2021-12-13.22:39:44::SCWMssOS::Sw design exists and opened at  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.22:39:44::SCWPlatform::Trying to open the hw design at /home/mike/lachesis/firmware/lachesis_wrapper/tempdsa/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:44::SCWPlatform::DSA given /home/mike/lachesis/firmware/lachesis_wrapper/tempdsa/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:44::SCWPlatform::DSA absoulate path /home/mike/lachesis/firmware/lachesis_wrapper/tempdsa/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:44::SCWPlatform::DSA directory /home/mike/lachesis/firmware/lachesis_wrapper/tempdsa
+TRACE::2021-12-13.22:39:44::SCWPlatform:: Platform Path /home/mike/lachesis/firmware/lachesis_wrapper/tempdsa/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:44::SCWPlatform:: Unique name xilinx:cmod_a7-35t::0.0
+TRACE::2021-12-13.22:39:44::SCWPlatform::update - Opened existing hwdb lachesis_wrapper_3
+TRACE::2021-12-13.22:39:44::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-12-13.22:39:44::SCWMssOS::Saving the mss changes /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.22:39:44::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-12-13.22:39:44::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-12-13.22:39:44::SCWMssOS::Commit changes completed.
+TRACE::2021-12-13.22:39:44::SCWMssOS::Completed hw sync for the mss in domain: standalone_microblaze_0
+TRACE::2021-12-13.22:39:44::SCWMssOS::Removing the swdes entry for  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.22:39:44::SCWPlatform::Trying to open the hw design at /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:44::SCWPlatform::DSA given /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:44::SCWPlatform::DSA absoulate path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:44::SCWPlatform::DSA directory /home/mike/lachesis/firmware/lachesis_wrapper/hw
+TRACE::2021-12-13.22:39:44::SCWPlatform:: Platform Path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:44::SCWPlatform:: Unique name xilinx:cmod_a7-35t::0.0
+TRACE::2021-12-13.22:39:44::SCWPlatform::Do not have an existing db opened. 
+TRACE::2021-12-13.22:39:44::SCWPlatform::Opened new HwDB with name lachesis_wrapper_4
+TRACE::2021-12-13.22:39:44::SCWMssOS::Saving the mss changes /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.22:39:44::SCWMssOS::Adding the swdes entry, mss present, able to open swdb /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss with des name system
+TRACE::2021-12-13.22:39:44::SCWMssOS::Writing the mss file completed /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.22:39:44::SCWMssOS::Commit changes completed.
+TRACE::2021-12-13.22:39:44::SCWPlatform::Trying to open the hw design at /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:44::SCWPlatform::DSA given /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:44::SCWPlatform::DSA absoulate path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:44::SCWPlatform::DSA directory /home/mike/lachesis/firmware/lachesis_wrapper/hw
+TRACE::2021-12-13.22:39:44::SCWPlatform:: Platform Path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:44::SCWPlatform:: Unique name xilinx:cmod_a7-35t::0.0
+TRACE::2021-12-13.22:39:44::SCWPlatform::Trying to set the existing hwdb with name lachesis_wrapper_4
+TRACE::2021-12-13.22:39:44::SCWPlatform::Opened existing hwdb lachesis_wrapper_4
+TRACE::2021-12-13.22:39:44::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-12-13.22:39:44::SCWMssOS::Checking the sw design at  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.22:39:44::SCWMssOS::DEBUG:  swdes dump  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2021-12-13.22:39:44::SCWMssOS::Sw design exists and opened at  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.22:39:44::SCWWriter::formatted JSON is {
+	"platformName":	"lachesis_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"lachesis_wrapper",
+	"platHandOff":	"/home/mike/lachesis/fpga/lachesis/lachesis_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/lachesis_wrapper.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"lachesis_wrapper",
+	"systems":	[{
+			"systemName":	"lachesis_wrapper",
+			"systemDesc":	"lachesis_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"lachesis_wrapper",
+			"sysActiveDom":	"standalone_microblaze_0",
+			"sysDefaultDom":	"standalone_microblaze_0",
+			"domains":	[{
+					"domainName":	"standalone_microblaze_0",
+					"domainDispName":	"standalone_microblaze_0",
+					"domainDesc":	"standalone_microblaze_0",
+					"processors":	"microblaze_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.6",
+					"mssFile":	"",
+					"md5Digest":	"ac063ce7cda58532582f739c317dce78",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2021-12-13.22:39:54::SCWPlatform::Started generating the artifacts platform lachesis_wrapper
+TRACE::2021-12-13.22:39:54::SCWPlatform::Sanity checking of platform is completed
+LOG::2021-12-13.22:39:54::SCWPlatform::Started generating the artifacts for system configuration lachesis_wrapper
+LOG::2021-12-13.22:39:54::SCWSystem::Checking the domain standalone_microblaze_0
+LOG::2021-12-13.22:39:54::SCWSystem::Not a boot domain 
+LOG::2021-12-13.22:39:54::SCWSystem::Started Processing the domain standalone_microblaze_0
+TRACE::2021-12-13.22:39:54::SCWDomain::Generating domain artifcats
+TRACE::2021-12-13.22:39:54::SCWMssOS::Generating standalone artifcats
+TRACE::2021-12-13.22:39:54::SCWMssOS:: Copying the user libraries. 
+TRACE::2021-12-13.22:39:54::SCWPlatform::Trying to open the hw design at /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:54::SCWPlatform::DSA given /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:54::SCWPlatform::DSA absoulate path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:54::SCWPlatform::DSA directory /home/mike/lachesis/firmware/lachesis_wrapper/hw
+TRACE::2021-12-13.22:39:54::SCWPlatform:: Platform Path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:54::SCWPlatform:: Unique name xilinx:cmod_a7-35t::0.0
+TRACE::2021-12-13.22:39:54::SCWPlatform::Trying to set the existing hwdb with name lachesis_wrapper_4
+TRACE::2021-12-13.22:39:54::SCWPlatform::Opened existing hwdb lachesis_wrapper_4
+TRACE::2021-12-13.22:39:54::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-12-13.22:39:54::SCWMssOS::Checking the sw design at  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.22:39:54::SCWMssOS::DEBUG:  swdes dump  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2021-12-13.22:39:54::SCWMssOS::Sw design exists and opened at  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.22:39:54::SCWMssOS::Completed writing the mss file at /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp
+TRACE::2021-12-13.22:39:54::SCWMssOS::Mss edits present, copying mssfile into export location /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.22:39:54::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2021-12-13.22:39:54::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2021-12-13.22:39:54::SCWDomain::Skipping the build for domain :  standalone_microblaze_0
+TRACE::2021-12-13.22:39:54::SCWMssOS::skipping the bsp build ... 
+TRACE::2021-12-13.22:39:54::SCWMssOS::Copying to export directory.
+TRACE::2021-12-13.22:39:54::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2021-12-13.22:39:54::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2021-12-13.22:39:54::SCWSystem::Completed Processing the domain standalone_microblaze_0
+LOG::2021-12-13.22:39:54::SCWSystem::Completed Processing the sysconfig lachesis_wrapper
+LOG::2021-12-13.22:39:54::SCWPlatform::Completed generating the artifacts for system configuration lachesis_wrapper
+TRACE::2021-12-13.22:39:54::SCWPlatform::Started preparing the platform 
+TRACE::2021-12-13.22:39:54::SCWSystem::Writing the bif file for system config lachesis_wrapper
+TRACE::2021-12-13.22:39:54::SCWSystem::dir created 
+TRACE::2021-12-13.22:39:54::SCWSystem::Writing the bif 
+TRACE::2021-12-13.22:39:54::SCWPlatform::Started writing the spfm file 
+TRACE::2021-12-13.22:39:54::SCWPlatform::Started writing the xpfm file 
+TRACE::2021-12-13.22:39:54::SCWPlatform::Completed generating the platform
+TRACE::2021-12-13.22:39:54::SCWMssOS::Saving the mss changes /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.22:39:54::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-12-13.22:39:54::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-12-13.22:39:54::SCWMssOS::Commit changes completed.
+TRACE::2021-12-13.22:39:54::SCWPlatform::Trying to open the hw design at /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:54::SCWPlatform::DSA given /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:54::SCWPlatform::DSA absoulate path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:54::SCWPlatform::DSA directory /home/mike/lachesis/firmware/lachesis_wrapper/hw
+TRACE::2021-12-13.22:39:54::SCWPlatform:: Platform Path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:54::SCWPlatform:: Unique name xilinx:cmod_a7-35t::0.0
+TRACE::2021-12-13.22:39:54::SCWPlatform::Trying to set the existing hwdb with name lachesis_wrapper_4
+TRACE::2021-12-13.22:39:54::SCWPlatform::Opened existing hwdb lachesis_wrapper_4
+TRACE::2021-12-13.22:39:54::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-12-13.22:39:54::SCWMssOS::Checking the sw design at  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.22:39:54::SCWMssOS::DEBUG:  swdes dump  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2021-12-13.22:39:54::SCWMssOS::Sw design exists and opened at  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.22:39:54::SCWWriter::formatted JSON is {
+	"platformName":	"lachesis_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"lachesis_wrapper",
+	"platHandOff":	"/home/mike/lachesis/fpga/lachesis/lachesis_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/lachesis_wrapper.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"lachesis_wrapper",
+	"systems":	[{
+			"systemName":	"lachesis_wrapper",
+			"systemDesc":	"lachesis_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"lachesis_wrapper",
+			"sysActiveDom":	"standalone_microblaze_0",
+			"sysDefaultDom":	"standalone_microblaze_0",
+			"domains":	[{
+					"domainName":	"standalone_microblaze_0",
+					"domainDispName":	"standalone_microblaze_0",
+					"domainDesc":	"standalone_microblaze_0",
+					"processors":	"microblaze_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.6",
+					"mssFile":	"",
+					"md5Digest":	"ac063ce7cda58532582f739c317dce78",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2021-12-13.22:39:54::SCWPlatform::updated the xpfm file.
+TRACE::2021-12-13.22:39:54::SCWPlatform::Trying to open the hw design at /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:54::SCWPlatform::DSA given /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:54::SCWPlatform::DSA absoulate path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:54::SCWPlatform::DSA directory /home/mike/lachesis/firmware/lachesis_wrapper/hw
+TRACE::2021-12-13.22:39:54::SCWPlatform:: Platform Path /home/mike/lachesis/firmware/lachesis_wrapper/hw/lachesis_wrapper.xsa
+TRACE::2021-12-13.22:39:54::SCWPlatform:: Unique name xilinx:cmod_a7-35t::0.0
+TRACE::2021-12-13.22:39:54::SCWPlatform::Trying to set the existing hwdb with name lachesis_wrapper_4
+TRACE::2021-12-13.22:39:54::SCWPlatform::Opened existing hwdb lachesis_wrapper_4
+TRACE::2021-12-13.22:39:54::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-12-13.22:39:54::SCWMssOS::Checking the sw design at  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2021-12-13.22:39:54::SCWMssOS::DEBUG:  swdes dump  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2021-12-13.22:39:54::SCWMssOS::Sw design exists and opened at  /home/mike/lachesis/firmware/lachesis_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss

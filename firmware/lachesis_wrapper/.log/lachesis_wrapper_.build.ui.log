@@ -1,2 +1,6 @@
-2021-12-12T23:52:41.234191000-Nothing to build in platform 'lachesis_wrapper'
+2021-12-13T22:39:50.96637300255-22:39:50 **** Incremental Build of project lachesis_wrapper ****
+000-buildplatform.sh 37823 lachesis_wrapper no_domain_build 
+000-XSDB Server Channel: tcfchan#4
+00255-
+22:39:57 Build Finished (took 6s.785ms)
 
