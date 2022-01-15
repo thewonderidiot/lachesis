@@ -86,6 +86,8 @@ F 0 "Q88" H 5091 3746 50  0000 L CNN
 F 1 "MMBT2222" H 5091 3655 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 5100 3800 50  0001 C CNN
 F 3 "~" H 4900 3700 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/MMBT2222A-G/641-1942-1-ND/9477875" H 4900 3700 50  0001 C CNN "Digikey"
+F 5 "MMBT2222A-G" H 4900 3700 50  0001 C CNN "Part Number"
 	1    4900 3700
 	1    0    0    -1  
 $EndComp
@@ -133,6 +135,8 @@ F 0 "D158" V 5646 4230 50  0000 R CNN
 F 1 "1N4148" V 5555 4230 50  0000 R CNN
 F 2 "Diode_SMD:D_SOD-323" V 5600 4300 50  0001 C CNN
 F 3 "~" V 5600 4300 50  0001 C CNN
+F 4 "1N4148WSTR" V 4900 3150 50  0001 C CNN "Part Number"
+F 5 "https://www.digikey.com/en/products/detail/smc-diode-solutions/1N4148WSTR/6022449" V 4900 3150 50  0001 C CNN "Digikey"
 	1    5600 4300
 	0    -1   -1   0   
 $EndComp
@@ -170,6 +174,8 @@ F 0 "D157" V 5646 3980 50  0000 R CNN
 F 1 "1N4148" V 5555 3980 50  0000 R CNN
 F 2 "Diode_SMD:D_SOD-323" V 5600 4050 50  0001 C CNN
 F 3 "~" V 5600 4050 50  0001 C CNN
+F 4 "1N4148WSTR" V 4900 3150 50  0001 C CNN "Part Number"
+F 5 "https://www.digikey.com/en/products/detail/smc-diode-solutions/1N4148WSTR/6022449" V 4900 3150 50  0001 C CNN "Digikey"
 	1    5600 4050
 	0    -1   -1   0   
 $EndComp
@@ -207,6 +213,8 @@ F 0 "D156" V 5646 3730 50  0000 R CNN
 F 1 "1N4148" V 5555 3730 50  0000 R CNN
 F 2 "Diode_SMD:D_SOD-323" V 5600 3800 50  0001 C CNN
 F 3 "~" V 5600 3800 50  0001 C CNN
+F 4 "1N4148WSTR" V 4900 3150 50  0001 C CNN "Part Number"
+F 5 "https://www.digikey.com/en/products/detail/smc-diode-solutions/1N4148WSTR/6022449" V 4900 3150 50  0001 C CNN "Digikey"
 	1    5600 3800
 	0    -1   -1   0   
 $EndComp
@@ -250,6 +258,8 @@ F 0 "Q89" H 6241 3396 50  0000 L CNN
 F 1 "MMBT2222" H 6241 3305 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 6250 3450 50  0001 C CNN
 F 3 "~" H 6050 3350 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/MMBT2222A-G/641-1942-1-ND/9477875" H 6050 3350 50  0001 C CNN "Digikey"
+F 5 "MMBT2222A-G" H 6050 3350 50  0001 C CNN "Part Number"
 	1    6050 3350
 	1    0    0    -1  
 $EndComp
@@ -424,6 +434,8 @@ F 0 "D159" V 6196 4730 50  0000 R CNN
 F 1 "1N4148" V 6105 4730 50  0000 R CNN
 F 2 "Diode_SMD:D_SOD-323" V 6150 4800 50  0001 C CNN
 F 3 "~" V 6150 4800 50  0001 C CNN
+F 4 "1N4148WSTR" V 4900 3150 50  0001 C CNN "Part Number"
+F 5 "https://www.digikey.com/en/products/detail/smc-diode-solutions/1N4148WSTR/6022449" V 4900 3150 50  0001 C CNN "Digikey"
 	1    6150 4800
 	0    -1   -1   0   
 $EndComp
@@ -468,6 +480,11 @@ F 0 "L38" H 6203 4496 50  0000 L CNN
 F 1 "2.2uH" H 6203 4405 50  0000 L CNN
 F 2 "Inductor_SMD:L_1812_4532Metric" H 6150 4450 50  0001 C CNN
 F 3 "~" H 6150 4450 50  0001 C CNN
+F 4 "0.7" H 6150 4450 50  0001 C CNN "DCR"
+F 5 "https://www.digikey.com/en/products/detail/api-delevan-inc/1812R-222J/1115305" H 6150 4450 50  0001 C CNN "Digikey"
+F 6 "1812R-222J" H 6150 4450 50  0001 C CNN "Part Number"
+F 7 "535mA" H 6150 4450 50  0001 C CNN "Rating"
+F 8 "5%" H 6150 4450 50  0001 C CNN "Tolerance"
 	1    6150 4450
 	1    0    0    -1  
 $EndComp

@@ -80,6 +80,8 @@ F 0 "U10" H 3850 5000 50  0000 C CNN
 F 1 "74LVC245" H 3800 4900 50  0000 C CNN
 F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 3450 5650 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74HC245" H 3450 5650 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/SN74LVC245APWRG4/296-31913-1-ND/3506158" H 3450 5650 50  0001 C CNN "Digikey"
+F 5 "SN74LVC245APWRG4" H 3450 5650 50  0001 C CNN "Part Number"
 	1    3450 5650
 	1    0    0    -1  
 $EndComp
@@ -145,6 +147,8 @@ F 0 "U11" H 3850 7300 50  0000 C CNN
 F 1 "74LVC245" H 3800 7200 50  0000 C CNN
 F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 3450 7950 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74HC245" H 3450 7950 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/SN74LVC245APWRG4/296-31913-1-ND/3506158" H 3450 7950 50  0001 C CNN "Digikey"
+F 5 "SN74LVC245APWRG4" H 3450 7950 50  0001 C CNN "Part Number"
 	1    3450 7950
 	1    0    0    -1  
 $EndComp
@@ -462,6 +466,8 @@ F 0 "U15" H 13450 3000 50  0000 C CNN
 F 1 "74LVC2G04" H 13600 2800 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-6" H 13400 2900 50  0001 C CNN
 F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 13400 2900 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/SN74LVC2G04DBVT/296-26612-1-ND/2255070" H 13400 2900 50  0001 C CNN "Digikey"
+F 5 "SN74LVC2G04DBVT" H 13400 2900 50  0001 C CNN "Part Number"
 	1    13400 2900
 	1    0    0    -1  
 $EndComp
@@ -473,6 +479,8 @@ F 0 "U15" H 13450 3300 50  0000 C CNN
 F 1 "74LVC2G04" H 13600 3100 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-6" H 13400 3200 50  0001 C CNN
 F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 13400 3200 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/SN74LVC2G04DBVT/296-26612-1-ND/2255070" H 13400 3200 50  0001 C CNN "Digikey"
+F 5 "SN74LVC2G04DBVT" H 13400 3200 50  0001 C CNN "Part Number"
 	2    13400 3200
 	1    0    0    -1  
 $EndComp
@@ -484,6 +492,8 @@ F 0 "U16" H 13450 3600 50  0000 C CNN
 F 1 "74LVC2G04" H 13600 3400 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-6" H 13400 3500 50  0001 C CNN
 F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 13400 3500 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/SN74LVC2G04DBVT/296-26612-1-ND/2255070" H 13400 3500 50  0001 C CNN "Digikey"
+F 5 "SN74LVC2G04DBVT" H 13400 3500 50  0001 C CNN "Part Number"
 	1    13400 3500
 	1    0    0    -1  
 $EndComp
@@ -495,6 +505,8 @@ F 0 "U16" H 13450 3900 50  0000 C CNN
 F 1 "74LVC2G04" H 13600 3700 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-6" H 13400 3800 50  0001 C CNN
 F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 13400 3800 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/SN74LVC2G04DBVT/296-26612-1-ND/2255070" H 13400 3800 50  0001 C CNN "Digikey"
+F 5 "SN74LVC2G04DBVT" H 13400 3800 50  0001 C CNN "Part Number"
 	2    13400 3800
 	1    0    0    -1  
 $EndComp
@@ -506,6 +518,8 @@ F 0 "U17" H 13450 4200 50  0000 C CNN
 F 1 "74LVC2G04" H 13600 4000 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-6" H 13400 4100 50  0001 C CNN
 F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 13400 4100 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/SN74LVC2G04DBVT/296-26612-1-ND/2255070" H 13400 4100 50  0001 C CNN "Digikey"
+F 5 "SN74LVC2G04DBVT" H 13400 4100 50  0001 C CNN "Part Number"
 	1    13400 4100
 	1    0    0    -1  
 $EndComp
@@ -517,6 +531,8 @@ F 0 "U17" H 13450 4500 50  0000 C CNN
 F 1 "74LVC2G04" H 13600 4300 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-6" H 13400 4400 50  0001 C CNN
 F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 13400 4400 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/SN74LVC2G04DBVT/296-26612-1-ND/2255070" H 13400 4400 50  0001 C CNN "Digikey"
+F 5 "SN74LVC2G04DBVT" H 13400 4400 50  0001 C CNN "Part Number"
 	2    13400 4400
 	1    0    0    -1  
 $EndComp
@@ -528,6 +544,8 @@ F 0 "U18" H 13450 4800 50  0000 C CNN
 F 1 "74LVC2G04" H 13600 4600 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-6" H 13400 4700 50  0001 C CNN
 F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 13400 4700 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/SN74LVC2G04DBVT/296-26612-1-ND/2255070" H 13400 4700 50  0001 C CNN "Digikey"
+F 5 "SN74LVC2G04DBVT" H 13400 4700 50  0001 C CNN "Part Number"
 	1    13400 4700
 	1    0    0    -1  
 $EndComp
@@ -539,6 +557,8 @@ F 0 "U18" H 13450 5100 50  0000 C CNN
 F 1 "74LVC2G04" H 13600 4900 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-6" H 13400 5000 50  0001 C CNN
 F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 13400 5000 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/SN74LVC2G04DBVT/296-26612-1-ND/2255070" H 13400 5000 50  0001 C CNN "Digikey"
+F 5 "SN74LVC2G04DBVT" H 13400 5000 50  0001 C CNN "Part Number"
 	2    13400 5000
 	1    0    0    -1  
 $EndComp
@@ -643,6 +663,8 @@ F 0 "U16" H 13850 8000 50  0000 L CNN
 F 1 "74LVC2G04" H 13750 7900 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-6" H 13950 7900 50  0001 C CNN
 F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 13950 7900 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/SN74LVC2G04DBVT/296-26612-1-ND/2255070" H 13950 7900 50  0001 C CNN "Digikey"
+F 5 "SN74LVC2G04DBVT" H 13950 7900 50  0001 C CNN "Part Number"
 	3    13950 7900
 	1    0    0    -1  
 $EndComp
@@ -654,6 +676,8 @@ F 0 "U17" H 14450 8000 50  0000 L CNN
 F 1 "74LVC2G04" H 14350 7900 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-6" H 14550 7900 50  0001 C CNN
 F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 14550 7900 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/SN74LVC2G04DBVT/296-26612-1-ND/2255070" H 14550 7900 50  0001 C CNN "Digikey"
+F 5 "SN74LVC2G04DBVT" H 14550 7900 50  0001 C CNN "Part Number"
 	3    14550 7900
 	1    0    0    -1  
 $EndComp
@@ -665,6 +689,8 @@ F 0 "U18" H 15050 8000 50  0000 L CNN
 F 1 "74LVC2G04" H 14950 7900 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-6" H 15150 7900 50  0001 C CNN
 F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 15150 7900 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/SN74LVC2G04DBVT/296-26612-1-ND/2255070" H 15150 7900 50  0001 C CNN "Digikey"
+F 5 "SN74LVC2G04DBVT" H 15150 7900 50  0001 C CNN "Part Number"
 	3    15150 7900
 	1    0    0    -1  
 $EndComp
@@ -1182,6 +1208,8 @@ F 0 "U14" H 10650 6900 50  0000 C CNN
 F 1 "74HC4514" H 10650 6800 50  0000 C CNN
 F 2 "Package_SO:SOIC-24W_7.5x15.4mm_P1.27mm" H 10250 7750 50  0001 C CNN
 F 3 "" H 10250 7750 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/CD74HC4514M96/296-29484-1-ND/2747415" H 10250 7750 50  0001 C CNN "Digikey"
+F 5 "CD74HC4514M96" H 10250 7750 50  0001 C CNN "Part Number"
 	1    10250 7750
 	1    0    0    -1  
 $EndComp
@@ -1213,6 +1241,8 @@ F 0 "U15" H 13250 8000 50  0000 L CNN
 F 1 "74LVC2G04" H 13150 7900 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-6" H 13350 7900 50  0001 C CNN
 F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 13350 7900 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/SN74LVC2G04DBVT/296-26612-1-ND/2255070" H 13350 7900 50  0001 C CNN "Digikey"
+F 5 "SN74LVC2G04DBVT" H 13350 7900 50  0001 C CNN "Part Number"
 	3    13350 7900
 	1    0    0    -1  
 $EndComp
@@ -1361,6 +1391,8 @@ F 0 "U13" H 7050 2450 50  0000 C CNN
 F 1 "LTC4231-1" H 7050 2350 50  0000 C CNN
 F 2 "Package_SO:MSOP-12_3x4mm_P0.65mm" H 7250 2900 50  0001 C CNN
 F 3 "" H 7250 2900 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/LTC4231CMS-1%23PBF/LTC4231CMS-1%23PBF-ND/4964746" H 7400 3200 50  0001 C CNN "Digikey"
+F 5 "LTC4231-1" H 7400 3200 50  0001 C CNN "Part Number"
 	1    7400 3200
 	1    0    0    -1  
 $EndComp
@@ -1491,6 +1523,10 @@ F 0 "C50" H 8215 2496 50  0000 L CNN
 F 1 "10nF" H 8215 2405 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 8138 2300 50  0001 C CNN
 F 3 "~" H 8100 2450 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10B103KC8NNNC/3886854" H 8100 2450 50  0001 C CNN "Digikey"
+F 5 "CL10B103KC8NNNC" H 8100 2450 50  0001 C CNN "Part Number"
+F 6 "100V" H 8100 2450 50  0001 C CNN "Rating"
+F 7 "10%" H 8100 2450 50  0001 C CNN "Tolerance"
 	1    8100 2450
 	1    0    0    -1  
 $EndComp
@@ -1621,8 +1657,10 @@ U 1 1 627695AC
 P 2400 1550
 F 0 "J1" H 2457 1867 50  0000 C CNN
 F 1 "Barrel_Jack_Switch" H 2457 1776 50  0000 C CNN
-F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 2450 1510 50  0001 C CNN
+F 2 "lachesis:BarrelJack_CUI_PJ-002A" H 2450 1510 50  0001 C CNN
 F 3 "~" H 2450 1510 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/PJ-002A/CP-002A-ND/96962" H 2400 1550 50  0001 C CNN "Digikey"
+F 5 "PJ-002A" H 2400 1550 50  0001 C CNN "Part Number"
 	1    2400 1550
 	1    0    0    -1  
 $EndComp
@@ -1661,6 +1699,8 @@ F 0 "Q90" V 7892 1550 50  0000 C CNN
 F 1 "IRF7413" V 7801 1550 50  0000 C CNN
 F 2 "Package_SO:SO-8_3.9x4.9mm_P1.27mm" H 7750 1650 50  0001 C CNN
 F 3 "~" H 7550 1550 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/infineon-technologies/IRF7413ZTRPBF/812705" H 7550 1550 50  0001 C CNN "Digikey"
+F 5 "IRF7413" H 7550 1550 50  0001 C CNN "Part Number"
 	1    7550 1550
 	0    -1   -1   0   
 $EndComp
@@ -1761,6 +1801,8 @@ F 0 "D162" V 9089 1932 50  0000 R CNN
 F 1 "ORANGE" V 8998 1932 50  0000 R CNN
 F 2 "LED_SMD:LED_0603_1608Metric" H 9050 2050 50  0001 C CNN
 F 3 "~" H 9050 2050 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/stanley-electric-co/SJW1151CKS-100-TR/8544257?s=N4IgjCBcpgbFoDGUBmBDANgZwKYBoQB7KAbRAGYBOAJgBZ4BdAgBwBcoQBlVgJwEsAdgHMQAXwIBWahIQhkkdNnxFSFABzVyE2iCYg2Hbv2FiCAWmqz5vAK7LikMjIajXQA" H 9050 2050 50  0001 C CNN "Digikey"
+F 5 "SJW1151CKS-100-TR" H 9050 2050 50  0001 C CNN "Part Number"
 	1    9050 2050
 	0    -1   -1   0   
 $EndComp
@@ -1818,6 +1860,8 @@ F 0 "D161" V 5339 3132 50  0000 R CNN
 F 1 "TEAL" V 5248 3132 50  0000 R CNN
 F 2 "LED_SMD:LED_0603_1608Metric" H 5300 3250 50  0001 C CNN
 F 3 "~" H 5300 3250 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/rohm-semiconductor/SMLD12E3N1WT86/9826161?s=N4IgjCBcpgbFoDGUBmBDANgZwKYBoQB7KAbRAGYBOAJgBZ4BdAgBwBcoQBlVgJwEsAdgHMQAXwLkA7AhDJI6bPiKkK1AAyww0piDYdu-YWIKxKMuQtwFikMrTWUq5EDr2QuvQSPEgAtNXMoXgBXJRsyAFYXURigA" H 5300 3250 50  0001 C CNN "Digikey"
+F 5 "SMLD12E3N1WT86" H 5300 3250 50  0001 C CNN "Part Number"
 	1    5300 3250
 	0    -1   -1   0   
 $EndComp
@@ -1857,6 +1901,8 @@ F 0 "D160" V 4750 3100 50  0000 R CNN
 F 1 "BLUE" V 4850 3100 50  0000 R CNN
 F 2 "LED_SMD:LED_0603_1608Metric" H 4800 3250 50  0001 C CNN
 F 3 "~" H 4800 3250 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/rohm-semiconductor/SMLD12BN1WT86/9826162?s=N4IgTCBcDaIMoFkAyARAjGAQgOTQdRAF0BfIA" H 4800 3250 50  0001 C CNN "Digikey"
+F 5 "SMLD12BN1WT86" H 4800 3250 50  0001 C CNN "Part Number"
 	1    4800 3250
 	0    -1   1    0   
 $EndComp

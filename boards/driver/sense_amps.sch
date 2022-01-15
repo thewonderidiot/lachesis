@@ -53,6 +53,8 @@ F 0 "U1" H 8450 3815 50  0000 C CNN
 F 1 "AD1582BRTZ" H 8450 3724 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 8550 3450 50  0001 C CNN
 F 3 "" H 8550 3450 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/analog-devices-inc/AD1582BRTZ-REEL7/750867" H 8450 3450 50  0001 C CNN "Digikey"
+F 5 "AD1582BRTZ" H 8450 3450 50  0001 C CNN "Part Number"
 	1    8450 3450
 	1    0    0    -1  
 $EndComp
@@ -64,8 +66,12 @@ U 1 1 62D03CF6
 P 7800 3550
 F 0 "C1" H 7686 3504 50  0000 R CNN
 F 1 "4.7uF" H 7686 3595 50  0000 R CNN
-F 2 "" H 7838 3400 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7838 3400 50  0001 C CNN
 F 3 "~" H 7800 3550 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL21B475KOFNFNE/3888628" H 7800 3550 50  0001 C CNN "Digikey"
+F 5 "CL21B475KOFNFNE" H 7800 3550 50  0001 C CNN "Part Number"
+F 6 "16V" H 7600 3700 50  0000 C CNN "Rating"
+F 7 "10%" H 7600 3800 50  0000 C CNN "Tolerance"
 	1    7800 3550
 	1    0    0    1   
 $EndComp
@@ -116,9 +122,14 @@ L Device:C C2
 U 1 1 62FF6D0E
 P 8850 3600
 F 0 "C2" H 8965 3646 50  0000 L CNN
-F 1 "1uF" H 8965 3555 50  0000 L CNN
-F 2 "" H 8888 3450 50  0001 C CNN
+F 1 "1.0uF" H 8965 3555 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8888 3450 50  0001 C CNN
 F 3 "~" H 8850 3600 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10B105KP8NNNC/3887604" H 8850 3600 50  0001 C CNN "Digikey"
+F 5 "" H 8850 3600 50  0001 C CNN "ESR"
+F 6 "CL10B105KP8NNNC" H 8850 3600 50  0001 C CNN "Part Number"
+F 7 "10V" H 9050 3450 50  0000 C CNN "Rating"
+F 8 "10%" H 9050 3350 50  0000 C CNN "Tolerance"
 	1    8850 3600
 	1    0    0    -1  
 $EndComp

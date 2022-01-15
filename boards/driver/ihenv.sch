@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 48 64
+Sheet 42 64
 Title ""
 Date ""
 Rev ""
@@ -52,6 +52,8 @@ F 0 "Q59" H 4591 3696 50  0000 L CNN
 F 1 "MMBT2222" H 4591 3605 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 4600 3750 50  0001 C CNN
 F 3 "~" H 4400 3650 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/MMBT2222A-G/641-1942-1-ND/9477875" H 4400 3650 50  0001 C CNN "Digikey"
+F 5 "MMBT2222A-G" H 4400 3650 50  0001 C CNN "Part Number"
 	1    4400 3650
 	1    0    0    -1  
 $EndComp
@@ -104,6 +106,8 @@ F 0 "Q60" H 5191 3004 50  0000 L CNN
 F 1 "MMBT2907" H 5191 3095 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 5200 3150 50  0001 C CNN
 F 3 "~" H 5000 3050 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/MMBT2907A-G/641-1952-1-ND/9477883" H 5000 3050 50  0001 C CNN "Digikey"
+F 5 "MMBT2907A-G" H 5000 3050 50  0001 C CNN "Part Number"
 	1    5000 3050
 	1    0    0    1   
 $EndComp
@@ -170,6 +174,8 @@ F 0 "Q61" H 5741 3496 50  0000 L CNN
 F 1 "MMBT2222" H 5741 3405 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 5750 3550 50  0001 C CNN
 F 3 "~" H 5550 3450 50  0001 C CNN
+F 4 "https://www.digikey.com/en/products/detail/MMBT2222A-G/641-1942-1-ND/9477875" H 5550 3450 50  0001 C CNN "Digikey"
+F 5 "MMBT2222A-G" H 5550 3450 50  0001 C CNN "Part Number"
 	1    5550 3450
 	1    0    0    -1  
 $EndComp
