@@ -11,6 +11,7 @@ _autosave-*
 *-save.kicad_pcb
 fp-info-cache
 replicate_layout.log
+driver-backups
 
 # Netlist files (exported from Eeschema)
 *.net
