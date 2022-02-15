@@ -401,7 +401,7 @@
     (uuid f686f314-e4c1-4c2d-a83a-58da96d3edf9)
   )
 
-  (hierarchical_label "0V" (shape input) (at 90.17 102.87 180)
+  (hierarchical_label "4036nA" (shape input) (at 90.17 102.87 180)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 0e0a4b84-f32d-4d0d-bb01-e1a33da32acb)
   )
@@ -413,7 +413,7 @@
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 62b6b2b3-6ade-4e95-8062-936451a2172f)
   )
-  (hierarchical_label "PWR" (shape input) (at 99.06 66.04 180)
+  (hierarchical_label "BPLIZ" (shape input) (at 99.06 66.04 180)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 93b580d1-c2df-48c4-9d06-465ca9d3eebc)
   )
