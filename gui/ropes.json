@@ -1,0 +1,516 @@
+{
+    "0200": {
+        "assembly": "2021100",
+        "program": "RETREAD",
+        "revision": "44",
+        "module": "B1",
+        "partno": [
+            "2003053-011"
+        ]
+    },
+    "0201": {
+        "assembly": "2021100",
+        "program": "RETREAD",
+        "revision": "44",
+        "module": "B2",
+        "partno": [
+            "2003053-021"
+        ]
+    },
+    "0202": {
+        "assembly": "2021103",
+        "program": "RETREAD",
+        "revision": "50",
+        "module": "B1",
+        "partno": [
+            "2003053-031"
+        ]
+    },
+    "0203": {
+        "assembly": "2021103",
+        "program": "RETREAD",
+        "revision": "50",
+        "module": "B2",
+        "partno": [
+            "2003053-041"
+        ]
+    },
+    "0204": {
+        "assembly": "2021102",
+        "program": "VENUS",
+        "revision": "?",
+        "module": "B1",
+        "partno": [
+            "2003053-051"
+        ]
+    },
+    "0205": {
+        "assembly": "2021101-011",
+        "program": "AURORA",
+        "revision": "85",
+        "module": "B1",
+        "partno": [
+            "2003053-061",
+            "2003972-011"
+        ]
+    },
+    "0206": {
+        "assembly": "2021101-011",
+        "program": "AURORA",
+        "revision": "85",
+        "module": "B2",
+        "partno": [
+            "2003053-071",
+            "2003972-021"
+        ]
+    },
+    "0207": {
+        "assembly": "2021101-011",
+        "program": "AURORA",
+        "revision": "85",
+        "module": "B2",
+        "partno": [
+            "2003053-081",
+            "2003972-031"
+        ]
+    },
+    "0208": {
+        "assembly": "2021105-011",
+        "program": "NEWSPEAK",
+        "revision": "0",
+        "module": "B1",
+        "partno": [
+            "2003053-091",
+            "2003960-011",
+            "2003972-121"
+        ]
+    },
+    "0209": {
+        "assembly": "2021105-011",
+        "program": "NEWSPEAK",
+        "revision": "0",
+        "module": "B2",
+        "partno": [
+            "2003053-111",
+            "2003960-021",
+            "2003972-131"
+        ]
+    },
+    "0210": {
+        "assembly": "2021104-011",
+        "program": "SUNDIAL",
+        "revision": "B",
+        "module": "B1",
+        "partno": [
+            "2003053-121",
+            "2003972-041"
+        ],
+        "buggers": [
+            "725531",
+            "012200",
+            "777410",
+            "757310",
+            "661210",
+            "752471"
+        ]
+    },
+    "0211": {
+        "assembly": "2021104-011",
+        "program": "SUNDIAL",
+        "revision": "B",
+        "module": "B2",
+        "partno": [
+            "2003053-131",
+            "2003972-051"
+        ]
+    },
+    "0212": {
+        "assembly": "2021104-011",
+        "program": "SUNDIAL",
+        "revision": "B",
+        "module": "B3",
+        "partno": [
+            "2003053-141",
+            "2003972-061"
+        ]
+    },
+    "0213": {
+        "assembly": "2021104-021",
+        "program": "SUNDIAL",
+        "revision": "D",
+        "module": "B2",
+        "partno": [
+            "2003053-151",
+            "2003972-071"
+        ],
+        "buggers": [
+            "455161",
+            "543440",
+            "713661",
+            "746070",
+            "667401",
+            "743211"
+        ]
+    },
+    "0214": {
+        "assembly": "2021104-021",
+        "program": "SUNDIAL",
+        "revision": "D",
+        "module": "B3",
+        "partno": [
+            "2003053-161",
+            "2003972-081"
+        ],
+        "buggers": [
+            "455161",
+            "543440",
+            "713661",
+            "746070",
+            "667401",
+            "743211"
+        ]
+    },
+    "0215": {
+        "assembly": "2021101-021",
+        "program": "AURORA",
+        "revision": "88",
+        "module": "B2",
+        "partno": [
+            "2003053-171",
+            "2003972-091"
+        ]
+    },
+    "0216": {
+        "assembly": "2021101-021",
+        "program": "AURORA",
+        "revision": "88",
+        "module": "B3",
+        "partno": [
+            "2003053-181",
+            "2003972-111"
+        ]
+    },
+    "0217": {
+        "assembly": "2021106-011",
+        "program": "SUNBURST",
+        "revision": "?",
+        "module": "B1",
+        "partno": [
+            "2003972-141"
+        ]
+    },
+    "0218": {
+        "assembly": "2021106-011",
+        "program": "SUNBURST",
+        "revision": "?",
+        "module": "B2",
+        "partno": [
+            "2003972-151"
+        ],
+        "buggers": [
+            "434351",
+            "723361",
+            "466731",
+            "551060",
+            "575740",
+            "070700"
+        ]
+    },
+    "0219": {
+        "assembly": "2021106-011",
+        "program": "SUNBURST",
+        "revision": "?",
+        "module": "B3",
+        "partno": [
+            "2003972-161"
+        ]
+    },
+    "0220": {
+        "assembly": "2021106-011",
+        "program": "SUNBURST",
+        "revision": "?",
+        "module": "B4",
+        "partno": [
+            "2003972-171"
+        ],
+        "buggers": [
+            "470421",
+            "627001",
+            "464200",
+            "410631",
+            "770230",
+            "630551"
+        ]
+    },
+    "0221": {
+        "assembly": "2021106-011",
+        "program": "SUNBURST",
+        "revision": "?",
+        "module": "B5",
+        "partno": [
+            "2003972-181"
+        ]
+    },
+    "0222": {
+        "assembly": "2021106-011",
+        "program": "SUNBURST",
+        "revision": "?",
+        "module": "B6",
+        "partno": [
+            "2003972-191"
+        ],
+        "buggers": [
+            "450140",
+            "756541",
+            "000000",
+            "000000",
+            "000000",
+            "000000"
+        ]
+    },
+    "0223": {
+        "assembly": "2021104-041",
+        "program": "SUNDIAL",
+        "revision": "E",
+        "module": "B3",
+        "partno": [
+            "2003972-211"
+        ],
+        "buggers": [
+            "444611",
+            "435360",
+            "702250",
+            "735151",
+            "740160",
+            "740171"
+        ]
+    },
+    "0224": {
+        "assembly": "2021105-041",
+        "program": "NEWSPEAK",
+        "revision": "?",
+        "module": "B1",
+        "partno": [
+            "2003972-221"
+        ]
+    },
+    "0225": {
+        "assembly": "2021106-021",
+        "program": "SUNBURST",
+        "revision": "116",
+        "module": "B1",
+        "partno": [
+            "2003972-231"
+        ],
+        "buggers": [
+            "552621",
+            "105321",
+            "674760",
+            "410160",
+            "666670",
+            "053051"
+        ]
+    },
+    "0226": {
+        "assembly": "2021106-021",
+        "program": "SUNBURST",
+        "revision": "116",
+        "module": "B3",
+        "partno": [
+            "2003972-241"
+        ]
+    },
+    "0227": {
+        "assembly": "2021106-021",
+        "program": "SUNBURST",
+        "revision": "116",
+        "module": "B5",
+        "partno": [
+            "2003972-251"
+        ],
+        "buggers": [
+            "030031",
+            "000010",
+            "617301",
+            "623161",
+            "762601",
+            "770531"
+        ]
+    },
+    "0229": {
+        "assembly": "2021107-011",
+        "program": "LAMESH",
+        "revision": "?",
+        "module": "B2",
+        "partno": [
+            "2003972-271"
+        ]
+    },
+    "0230": {
+        "assembly": "2021107-011",
+        "program": "LAMESH",
+        "revision": "?",
+        "module": "B1",
+        "partno": [
+            "2003972-261"
+        ]
+    },
+    "0231": {
+        "assembly": "2021106-031",
+        "program": "SUNBURST",
+        "revision": "120",
+        "module": "B3",
+        "partno": [
+            "2003972-281"
+        ],
+        "buggers": [
+            "672760",
+            "744210",
+            "435011",
+            "640650",
+            "430611",
+            "646420"
+        ]
+    },
+    "0238": {
+        "assembly": "2021107-021",
+        "program": "LAMESH",
+        "revision": "?",
+        "module": "B1",
+        "partno": [
+            "2003972-291"
+        ]
+    },
+    "0239": {
+        "assembly": "2021108-021",
+        "program": "SUNDISK",
+        "revision": "282",
+        "module": "B1",
+        "partno": [
+            "2003972-311"
+        ]
+    },
+    "0240": {
+        "assembly": "2021108-021",
+        "program": "SUNDISK",
+        "revision": "282",
+        "module": "B2",
+        "partno": [
+            "2003972-321"
+        ]
+    },
+    "0241": {
+        "assembly": "2021108-021",
+        "program": "SUNDISK",
+        "revision": "282",
+        "module": "B3",
+        "partno": [
+            "2003972-331"
+        ]
+    },
+    "0242": {
+        "assembly": "2021108-021",
+        "program": "SUNDISK",
+        "revision": "282",
+        "module": "B4",
+        "partno": [
+            "2003972-341"
+        ]
+    },
+    "0243": {
+        "assembly": "2021108-021",
+        "program": "SUNDISK",
+        "revision": "282",
+        "module": "B5",
+        "partno": [
+            "2003972-351"
+        ]
+    },
+    "0244": {
+        "assembly": "2021108-021",
+        "program": "SUNDISK",
+        "revision": "282",
+        "module": "B6",
+        "partno": [
+            "2003972-361"
+        ]
+    },
+    "0245": {
+        "assembly": "2021110-011",
+        "program": "SUNDANCE",
+        "revision": "292",
+        "module": "B1",
+        "partno": [
+            "2003972-371"
+        ],
+        "buggers": [
+            "621421",
+            "765671",
+            "544750",
+            "435600",
+            "626641",
+            "501220"
+        ]
+    },
+    "0246": {
+        "assembly": "2021110-011",
+        "program": "SUNDANCE",
+        "revision": "292",
+        "module": "B2",
+        "partno": [
+            "2003972-381"
+        ]
+    },
+    "0247": {
+        "assembly": "2021110-011",
+        "program": "SUNDANCE",
+        "revision": "292",
+        "module": "B3",
+        "partno": [
+            "2003972-391"
+        ],
+        "buggers": [
+            "766041",
+            "605661",
+            "710121",
+            "437460",
+            "510761",
+            "704510"
+        ]
+    },
+    "0248": {
+        "assembly": "2021110-011",
+        "program": "SUNDANCE",
+        "revision": "292",
+        "module": "B4",
+        "partno": [
+            "2003972-411"
+        ]
+    },
+    "0249": {
+        "assembly": "2021110-011",
+        "program": "SUNDANCE",
+        "revision": "292",
+        "module": "B5",
+        "partno": [
+            "2003972-421"
+        ],
+        "buggers": [
+            "671130",
+            "412300",
+            "705571",
+            "654731",
+            "521331",
+            "767211"
+        ]
+    },
+    "0250": {
+        "assembly": "2021110-011",
+        "program": "SUNDANCE",
+        "revision": "292",
+        "module": "B6",
+        "partno": [
+            "2003972-431"
+        ]
+    }
+}
