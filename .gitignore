@@ -33,3 +33,6 @@ vivado.log
 
 # Binary files
 *.bit
+
+# Archives
+*.zip
