@@ -2734,7 +2734,7 @@
     (property "Part Number" "CL10B105KP8NNNC" (id 6) (at 53.34 99.06 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Rating" "10V" (id 7) (at 58.42 102.87 0))
+    (property "Rating" "25V" (id 7) (at 58.42 102.87 0))
     (property "Tolerance" "10%" (id 8) (at 58.42 105.41 0))
     (pin "1" (uuid 9a675ea3-48e8-44ef-bd07-a807ca79e312))
     (pin "2" (uuid 63545de2-4f20-4f07-a235-62bd63f3ae70))
@@ -4159,7 +4159,7 @@
       (reference "C7") (unit 1) (value "1.0uF") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/c196771a-fa22-4343-a89f-be4540560780/00000000-0000-0000-0000-000061b55c06"
-      (reference "C8") (unit 1) (value "0.33uF") (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (reference "C8") (unit 1) (value "100pF") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/c196771a-fa22-4343-a89f-be4540560780/00000000-0000-0000-0000-000061ad1b2d"
       (reference "C9") (unit 1) (value "10nF") (footprint "Capacitor_SMD:C_0603_1608Metric")
@@ -4171,16 +4171,16 @@
       (reference "C11") (unit 1) (value "0.1uF") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/a15a860d-e886-4151-b20b-0f1fdf1eaddf/00000000-0000-0000-0000-0000635b04dd"
-      (reference "C12") (unit 1) (value "10nF") (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (reference "C12") (unit 1) (value "0.01uF") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/a15a860d-e886-4151-b20b-0f1fdf1eaddf/00000000-0000-0000-0000-00006359bb40"
       (reference "C13") (unit 1) (value "100pF") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/a15a860d-e886-4151-b20b-0f1fdf1eaddf/00000000-0000-0000-0000-0000635a5721"
-      (reference "C14") (unit 1) (value "0.1uF") (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (reference "C14") (unit 1) (value "0.01uF") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/a15a860d-e886-4151-b20b-0f1fdf1eaddf/00000000-0000-0000-0000-0000635a572b"
-      (reference "C15") (unit 1) (value "0.1uF") (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (reference "C15") (unit 1) (value "0.01uF") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/3cf15102-d63a-4525-b340-a08e48783995/00000000-0000-0000-0000-0000628400bf"
       (reference "C16") (unit 1) (value "6.8uF") (footprint "Capacitor_Tantalum_SMD:CP_EIA-7343-31_Kemet-D")
@@ -4624,16 +4624,16 @@
       (reference "R30") (unit 1) (value "2.7k") (footprint "Resistor_SMD:R_0603_1608Metric")
     )
     (path "/a15a860d-e886-4151-b20b-0f1fdf1eaddf/00000000-0000-0000-0000-00006358f0d6"
-      (reference "R31") (unit 1) (value "470") (footprint "Resistor_SMD:R_0603_1608Metric")
+      (reference "R31") (unit 1) (value "100") (footprint "Resistor_SMD:R_0603_1608Metric")
     )
     (path "/a15a860d-e886-4151-b20b-0f1fdf1eaddf/00000000-0000-0000-0000-00006358f0dc"
-      (reference "R32") (unit 1) (value "470") (footprint "Resistor_SMD:R_0603_1608Metric")
+      (reference "R32") (unit 1) (value "100") (footprint "Resistor_SMD:R_0603_1608Metric")
     )
     (path "/a15a860d-e886-4151-b20b-0f1fdf1eaddf/00000000-0000-0000-0000-00006358f125"
-      (reference "R33") (unit 1) (value "470") (footprint "Resistor_SMD:R_0603_1608Metric")
+      (reference "R33") (unit 1) (value "100") (footprint "Resistor_SMD:R_0603_1608Metric")
     )
     (path "/a15a860d-e886-4151-b20b-0f1fdf1eaddf/00000000-0000-0000-0000-00006358f12b"
-      (reference "R34") (unit 1) (value "470") (footprint "Resistor_SMD:R_0603_1608Metric")
+      (reference "R34") (unit 1) (value "100") (footprint "Resistor_SMD:R_0603_1608Metric")
     )
     (path "/e9ae5b56-9661-4785-af7a-48e9ad409f89/00000000-0000-0000-0000-0000623343fa"
       (reference "R35") (unit 1) (value "1k") (footprint "Resistor_SMD:R_0603_1608Metric")
