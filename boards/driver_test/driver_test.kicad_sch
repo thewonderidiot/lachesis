@@ -4162,7 +4162,7 @@
       (reference "C8") (unit 1) (value "100pF") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/c196771a-fa22-4343-a89f-be4540560780/00000000-0000-0000-0000-000061ad1b2d"
-      (reference "C9") (unit 1) (value "10nF") (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (reference "C9") (unit 1) (value "0.01uF") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/c196771a-fa22-4343-a89f-be4540560780/00000000-0000-0000-0000-000061a43fc3"
       (reference "C10") (unit 1) (value "0.1uF") (footprint "Capacitor_SMD:C_0603_1608Metric")

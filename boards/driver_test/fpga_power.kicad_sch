@@ -3203,7 +3203,7 @@
     (property "Reference" "C9" (id 0) (at 208.661 61.0616 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "10nF" (id 1) (at 208.661 63.373 0)
+    (property "Value" "0.01uF" (id 1) (at 208.661 63.373 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (id 2) (at 206.7052 66.04 0)
