@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="ASCII"?>
-<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="lachesis" location="/home/mike/workspace2/lachesis" platform="/home/mike/workspace2/lachesis_wrapper/export/lachesis_wrapper/lachesis_wrapper.xpfm" platformUID="xilinx:cmod_a7-35t::0.0(custom)" systemProject="lachesis_system" sysConfig="lachesis_wrapper" runtime="cpp" cpu="standalone_microblaze_0" cpuInstance="microblaze_0" os="standalone" mssSignature="c579530d9bc2d762d7d497160ba593d3">
-  <configuration name="Debug" id="xilinx.gnu.mb.exe.debug.1402260469">
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="lachesis" location="/home/mike/workspace/lachesis" platform="/home/mike/workspace/lachesis_wrapper/export/lachesis_wrapper/lachesis_wrapper.xpfm" platformUID="xilinx:cmod_a7-35t::0.0(custom)" systemProject="lachesis_system" sysConfig="lachesis_wrapper" runtime="cpp" cpu="standalone_microblaze_0" cpuInstance="microblaze_0" os="standalone" mssSignature="b2848e25868ad5a6504ac0a215f5ac28">
+  <configuration name="Debug" id="xilinx.gnu.mb.exe.debug.1213880147">
     <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
     <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
   </configuration>
-  <configuration name="Release" id="xilinx.gnu.mb.exe.release.813274791" dirty="true">
+  <configuration name="Release" id="xilinx.gnu.mb.exe.release.1497049766" dirty="true">
     <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
   </configuration>
   <template appTemplateName="empty_application"/>

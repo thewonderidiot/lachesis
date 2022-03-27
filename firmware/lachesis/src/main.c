@@ -2,6 +2,7 @@
 #include "uart.h"
 #include "wdt.h"
 #include "cmd.h"
+#include "sys.h"
 
 static int32_t system_init(void);
 
@@ -17,6 +18,7 @@ int main(void)
 
     while (1)
     {
+        sys_service();
         wdt_service();
         cmd_service();
     }
@@ -38,6 +40,12 @@ static int32_t system_init(void)
         return status;
     }
 
+    status = sys_init();
+    if (status != XST_SUCCESS)
+    {
+        return status;
+    }
+
     status = uart_init(cmd_callback);
     if (status != XST_SUCCESS)
     {
@@ -47,6 +55,8 @@ static int32_t system_init(void)
     cmd_init();
 
     Xil_ExceptionEnable();
+
+    uart_send("Hello\r\n", 8);
 
     return XST_SUCCESS;
 }

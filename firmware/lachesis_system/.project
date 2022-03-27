@@ -3,7 +3,6 @@
 	<name>lachesis_system</name>
 	<comment></comment>
 	<projects>
-		<project>lachesis</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

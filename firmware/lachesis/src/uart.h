@@ -31,6 +31,6 @@ typedef struct {
 } uart_t;
 
 int32_t uart_init(uart_callback_t rx_callback);
-int32_t uart_send(uint8_t *data, uint32_t length);
+int32_t uart_send(void *data, uint32_t length);
 
 #endif//_UART_H_

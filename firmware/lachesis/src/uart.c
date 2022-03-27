@@ -39,11 +39,13 @@ int32_t uart_init(uart_callback_t rx_callback)
     return XST_SUCCESS;
 }
 
-int32_t uart_send(uint8_t *data, uint32_t length)
+int32_t uart_send(void *buf, uint32_t length)
 {
     uint32_t free_space;
     uint32_t slipped_length;
     uint32_t i;
+
+    uint8_t *data = (uint8_t*)buf;
 
     free_space = sizeof(g_uart.tx_buffer) - g_uart.tx_count;
     slipped_length = slip_get_slipped_length(data, length);

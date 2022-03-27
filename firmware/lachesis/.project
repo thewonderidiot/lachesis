@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>lachesis</name>
-	<comment>Created by Vitis v2021.2</comment>
+	<comment>Created by Vitis v2021.1</comment>
 	<projects>
 		<project>lachesis_wrapper</project>
 	</projects>

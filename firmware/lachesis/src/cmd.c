@@ -31,7 +31,7 @@ void cmd_service(void)
         return;
     }
 
-    uart_send("SUCCESS\r\n", 9);
+    // PROCESS
 }
 
 void cmd_callback(uint8_t *data, uint32_t length)
