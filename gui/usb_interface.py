@@ -1,7 +1,12 @@
 from PySide2.QtCore import QObject, QIODevice, Signal
 from PySide2.QtSerialPort import QSerialPort, QSerialPortInfo
-from slip import unslip_from
+import crcmod.predefined
+import struct
+
+from slip import slip, unslip_from
 import usb_msg
+
+crc8 = crcmod.predefined.mkCrcFun('crc-8')
 
 class USBInterface(QObject):
     msg_received = Signal(object)
@@ -37,3 +42,9 @@ class USBInterface(QObject):
             msg = usb_msg.unpack(msg_bytes)
             if msg is not None:
                 self.msg_received.emit(msg)
+
+    def send(self, msg):
+        packed = usb_msg.pack(msg)
+        packed += struct.pack('<B', crc8(packed))
+        slipped = slip(packed)
+        self._serial.write(slipped)

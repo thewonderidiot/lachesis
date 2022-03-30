@@ -1,6 +1,7 @@
 from PySide2.QtWidgets import QWidget, QSizePolicy
 from PySide2.QtGui import QPainter, QColor, QPalette, QPen
 from PySide2.QtCore import Qt
+import math
 
 class Waveform(QWidget):
     def __init__(self, parent):
@@ -14,8 +15,8 @@ class Waveform(QWidget):
         self.setSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.MinimumExpanding)
         self.setMinimumSize(600, 40)
 
-        self._programmed_offset = None
-        self._programmed_width = None
+        self._programmed_offset = 0
+        self._programmed_width = 0
 
         self._pulse_offset = 0.1
         self._pulse_width = 0.1
@@ -28,9 +29,23 @@ class Waveform(QWidget):
         self._pulse_width = width
         self.update()
 
+    def set_programmed_offset(self, offset):
+        self._programmed_offset = offset
+        self.update()
+
+    def set_programmed_width(self, width):
+        self._programmed_width = width
+        self.update()
+
+    def get_programmed_offset(self):
+        return self._programmed_offset
+
+    def get_programmed_width(self):
+        return self._programmed_width
+
     def _matches_programmed(self):
-        return ((round(self._pulse_width * 100) == self._programmed_width) and
-                (round(self._pulse_offset * 100) == self._programmed_offset))
+        return (math.isclose(self._pulse_width, self._programmed_width) and
+                math.isclose(self._pulse_offset, self._programmed_offset))
 
     def paintEvent(self, e):
         painter = QPainter()
@@ -47,7 +62,7 @@ class Waveform(QWidget):
 
         pen.setStyle(Qt.SolidLine)
 
-        if self._programmed_width is None:
+        if self._programmed_width == 0:
             pen.setColor(QColor(0x70, 0x70, 0x70))
         elif self._matches_programmed():
             pen.setColor(QColor(0x00, 0xFF, 0x00))

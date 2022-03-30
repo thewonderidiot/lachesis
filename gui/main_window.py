@@ -1,7 +1,8 @@
 from PySide2.QtWidgets import QMainWindow, QVBoxLayout, QPushButton, QWidget
 from usb_interface import USBInterface
 from measurements import Measurements
-from tuning import TuningWindow
+from timing_window import TimingWindow
+# from control_window import ControlWindow
 
 class MainWindow(QMainWindow):
     def __init__(self, parent):
@@ -12,7 +13,8 @@ class MainWindow(QMainWindow):
 
         # Set up the UI
         self._setup_ui()
-        self._tuning_window = TuningWindow()
+        self._timing_window = TimingWindow(self._usbif)
+        # self._control_window = ControlWindow()
 
     def _setup_ui(self):
         self.setWindowTitle('Core Rope Reader')
@@ -28,9 +30,16 @@ class MainWindow(QMainWindow):
         self._measurements = Measurements(self, self._usbif)
         layout.addWidget(self._measurements)
 
-        button = QPushButton('Tuning')
-        button.clicked.connect(self._open_tuning)
+        button = QPushButton('Timing')
+        button.clicked.connect(self._open_timing)
         layout.addWidget(button)
 
-    def _open_tuning(self):
-        self._tuning_window.show()
+        # button = QPushButton('Control')
+        # button.clicked.connect(self._open_control)
+        # layout.addWidget(button)
+
+    def _open_timing(self):
+        self._timing_window.show()
+
+    # def _open_control(self):
+    #     self._control_window.show()
