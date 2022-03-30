@@ -606,6 +606,17 @@
 
 /******************************************************************/
 
+/* Definitions for driver ROPE_DRIVER */
+#define XPAR_ROPE_DRIVER_NUM_INSTANCES 1
+
+/* Definitions for peripheral ROPE_DRIVER_0 */
+#define XPAR_ROPE_DRIVER_0_DEVICE_ID 0
+#define XPAR_ROPE_DRIVER_0_S00_AXI_BASEADDR 0x44A10000
+#define XPAR_ROPE_DRIVER_0_S00_AXI_HIGHADDR 0x44A1FFFF
+
+
+/******************************************************************/
+
 /* Definitions for driver SYSMON */
 #define XPAR_XSYSMON_NUM_INSTANCES 1U
 

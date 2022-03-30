@@ -1,3 +1,4 @@
+#include <stdbool.h>
 #include "xparameters.h"
 #include "xuartlite_l.h"
 #include "intr.h"
@@ -8,9 +9,9 @@ static uart_t g_uart;
 static void uart_send_byte(uint8_t byte);
 static void uart_isr(void *uart_ptr);
 static void uart_fill_tx_fifo(void);
-static void uart_receive(void);
+static void uart_fill_rx_fifo(void);
 
-int32_t uart_init(uart_callback_t rx_callback)
+int32_t uart_init(void)
 {
     int32_t status;
 
@@ -20,9 +21,8 @@ int32_t uart_init(uart_callback_t rx_callback)
         return status;
     }
 
-    g_uart.rx_callback = rx_callback;
-    g_uart.rx_count = 0;
-    g_uart.rx_state = RX_STATE_IDLE;
+    g_uart.rx_start = 0;
+    g_uart.rx_end = 0;
 
     g_uart.tx_start = 0;
     g_uart.tx_end = 0;
@@ -39,13 +39,12 @@ int32_t uart_init(uart_callback_t rx_callback)
     return XST_SUCCESS;
 }
 
-int32_t uart_send(void *buf, uint32_t length)
+int32_t uart_send(void *msg, uint16_t length)
 {
-    uint32_t free_space;
-    uint32_t slipped_length;
-    uint32_t i;
-
-    uint8_t *data = (uint8_t*)buf;
+    uint16_t free_space;
+    uint16_t slipped_length;
+    uint16_t i;
+    uint8_t *data = (uint8_t*)msg;
 
     free_space = sizeof(g_uart.tx_buffer) - g_uart.tx_count;
     slipped_length = slip_get_slipped_length(data, length);
@@ -88,13 +87,99 @@ int32_t uart_send(void *buf, uint32_t length)
     return XST_SUCCESS;
 }
 
+int32_t uart_receive(uint8_t *buf, uint16_t buf_size)
+{
+    uint16_t buf_idx = 0;
+    uint16_t new_start;
+    uint8_t byte;
+    bool escaped = false;
+
+    // Nothing to do if there's no data
+    if (g_uart.rx_start == g_uart.rx_end)
+    {
+        return 0;
+    }
+
+    // First, drop off any crap from the start
+    while (g_uart.rx_buffer[g_uart.rx_start] != SLIP_END)
+    {
+        g_uart.rx_start = (g_uart.rx_start + 1) % sizeof(g_uart.rx_buffer);
+        if (g_uart.rx_start == g_uart.rx_end)
+        {
+            return 0;
+        }
+    }
+
+    // Now, seek forward to the first non-END character
+    new_start = g_uart.rx_start;
+    while (g_uart.rx_buffer[new_start] == SLIP_END)
+    {
+        new_start = (new_start + 1) % sizeof(g_uart.rx_buffer);
+        if (new_start == g_uart.rx_end)
+        {
+            return 0;
+        }
+    }
+
+    // Begin unslipping into the target buffer, until we either
+    // run out of bytes, fail, or find the end.
+    while (new_start != g_uart.rx_end)
+    {
+        byte = g_uart.rx_buffer[new_start];
+        new_start = (new_start + 1) % sizeof(g_uart.rx_buffer);
+
+        if (!escaped)
+        {
+            if (byte == SLIP_ESC)
+            {
+                escaped = true;
+                continue;
+            }
+            else if (byte == SLIP_END)
+            {
+                g_uart.rx_start = new_start;
+                return buf_idx;
+            }
+        }
+        else
+        {
+            // Translate the escaped byte
+            if (byte == SLIP_ESC_END)
+            {
+                byte = SLIP_END;
+            }
+            else if (byte == SLIP_ESC_ESC)
+            {
+                byte = SLIP_ESC;
+            }
+            else
+            {
+                // No good -- bomb out
+                g_uart.rx_start = new_start;
+                return 0;
+            }
+            escaped = false;
+        }
+
+        // Copy the byte over into the message buffer if there's room
+        if (buf_idx >= buf_size)
+        {
+            // No room!
+            g_uart.rx_start = new_start;
+            return 0;
+        }
+
+        buf[buf_idx++] = byte;
+    }
+    
+    // We ran out of time; don't update anything because it may become valid
+    return 0;
+}
+
 static void uart_send_byte(uint8_t byte)
 {
-    g_uart.tx_buffer[g_uart.tx_end++] = byte;
-    if (g_uart.tx_end >= sizeof(g_uart.tx_buffer))
-    {
-        g_uart.tx_end = 0;
-    }
+    g_uart.tx_buffer[g_uart.tx_end] = byte;
+    g_uart.tx_end = (g_uart.tx_end + 1) % sizeof(g_uart.tx_buffer);
 }
 
 static void uart_fill_tx_fifo(void)
@@ -103,80 +188,31 @@ static void uart_fill_tx_fifo(void)
 
     while ((g_uart.tx_count > 0) && !XUartLite_IsTransmitFull(base_addr))
     {
-        XUartLite_SendByte(base_addr, g_uart.tx_buffer[g_uart.tx_start++]);
-        if (g_uart.tx_start >= sizeof(g_uart.tx_buffer))
-        {
-            g_uart.tx_start = 0;
-        }
+        XUartLite_SendByte(base_addr, g_uart.tx_buffer[g_uart.tx_start]);
+        g_uart.tx_start = (g_uart.tx_start + 1) % sizeof(g_uart.tx_buffer);
         g_uart.tx_count--;
     }
 }
 
-static void uart_receive(void)
+static void uart_fill_rx_fifo(void)
 {
     uint32_t base_addr = g_uart.device.RegBaseAddress;
     uint8_t byte;
+    uint16_t new_end;
 
     while (!XUartLite_IsReceiveEmpty(base_addr))
     {
         byte = XUartLite_RecvByte(base_addr);
-        switch (g_uart.rx_state)
+
+        new_end = (g_uart.rx_end + 1) % sizeof(g_uart.rx_buffer);
+        if (new_end == g_uart.rx_start)
         {
-        case RX_STATE_IDLE:
-            if (byte == SLIP_END)
-            {
-                g_uart.rx_state = RX_STATE_ACTIVE;
-                g_uart.rx_count = 0;
-            }
-            break;
-
-        case RX_STATE_ACTIVE:
-            if (byte == SLIP_END)
-            {
-                if (g_uart.rx_count != 0)
-                {
-                    g_uart.rx_callback(g_uart.rx_buffer, g_uart.rx_count);
-                    g_uart.rx_state = RX_STATE_IDLE;
-                }
-                continue;
-            }
-
-            if (byte == SLIP_ESC)
-            {
-                g_uart.rx_state = RX_STATE_ESCAPED;
-                continue;
-            }
-
-            if (g_uart.rx_count >= sizeof(g_uart.rx_buffer))
-            {
-                g_uart.rx_state = RX_STATE_IDLE;
-                continue;
-            }
-
-            g_uart.rx_buffer[g_uart.rx_count++] = byte;
-            break;
-
-        case RX_STATE_ESCAPED:
-            if ((byte != SLIP_ESC_END) && (byte != SLIP_ESC_ESC))
-            {
-                g_uart.rx_state = RX_STATE_IDLE;
-                continue;
-            }
-
-            if (g_uart.rx_count >= sizeof(g_uart.rx_buffer))
-            {
-                g_uart.rx_state = RX_STATE_IDLE;
-                continue;
-            }
-
-            g_uart.rx_buffer[g_uart.rx_count++] = (byte == SLIP_ESC_END) ? SLIP_END : SLIP_ESC;
-            g_uart.rx_state = RX_STATE_ACTIVE;
-            break;
-
-        default:
-            g_uart.rx_state = RX_STATE_IDLE;
-            break;
+            // No room -- drop this byte on the floor
+            continue;
         }
+
+        g_uart.rx_buffer[g_uart.rx_end] = byte;
+        g_uart.rx_end = new_end;
     }
 }
 
@@ -188,7 +224,7 @@ static void uart_isr(void *arg)
 
     if (status_reg & (XUL_SR_RX_FIFO_FULL | XUL_SR_RX_FIFO_VALID_DATA))
     {
-        uart_receive();
+        uart_fill_rx_fifo();
     }
 
     if ((status_reg & XUL_SR_TX_FIFO_EMPTY) && (g_uart.tx_count > 0))

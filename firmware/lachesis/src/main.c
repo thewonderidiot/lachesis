@@ -3,6 +3,7 @@
 #include "wdt.h"
 #include "cmd.h"
 #include "sys.h"
+#include "rope.h"
 
 static int32_t system_init(void);
 
@@ -20,6 +21,7 @@ int main(void)
     {
         sys_service();
         wdt_service();
+        rope_service();
         cmd_service();
     }
 }
@@ -46,17 +48,25 @@ static int32_t system_init(void)
         return status;
     }
 
-    status = uart_init(cmd_callback);
+    status = uart_init();
     if (status != XST_SUCCESS)
     {
         return status;
     }
 
     cmd_init();
+    if (status != XST_SUCCESS)
+    {
+        return status;
+    }
+
+    rope_init();
+    if (status != XST_SUCCESS)
+    {
+        return status;
+    }
 
     Xil_ExceptionEnable();
-
-    uart_send("Hello\r\n", 8);
 
     return XST_SUCCESS;
 }

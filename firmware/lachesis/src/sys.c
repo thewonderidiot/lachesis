@@ -2,7 +2,7 @@
 #include "xtmrctr.h"
 #include "xsysmon.h"
 #include "uart.h"
-#include "tlm.h"
+#include "msg.h"
 #include "sys.h"
 
 static XTmrCtr g_timer;
@@ -39,20 +39,19 @@ int32_t sys_init(void)
 
 void sys_service(void)
 {
-    sys_tlm_t tlm;
+    sys_status_t sys_status;
 
     if (sys_time_elapsed(g_last_us, 500000))
     {
         g_last_us = sys_get_time();
 
-        tlm.id = TLM_ID_SYS;
-        tlm.pad = 0;
-        tlm.temp = XSysMon_GetAdcData(&g_sysmon, XSM_CH_TEMP);
-        tlm.vccint = XSysMon_GetAdcData(&g_sysmon, XSM_CH_VCCINT);
-        tlm.vccaux = XSysMon_GetAdcData(&g_sysmon, XSM_CH_VCCAUX);
-        tlm.v14p0 = XSysMon_GetAdcData(&g_sysmon, XSM_CH_AUX_MIN + 4);
-        tlm.v5p0 = XSysMon_GetAdcData(&g_sysmon, XSM_CH_AUX_MIN + 12);
-        uart_send(&tlm, sizeof(tlm));
+        sys_status.msgid = MSGID_SYS_STATUS;
+        sys_status.temp = XSysMon_GetAdcData(&g_sysmon, XSM_CH_TEMP);
+        sys_status.vccint = XSysMon_GetAdcData(&g_sysmon, XSM_CH_VCCINT);
+        sys_status.vccaux = XSysMon_GetAdcData(&g_sysmon, XSM_CH_VCCAUX);
+        sys_status.v14p0 = XSysMon_GetAdcData(&g_sysmon, XSM_CH_AUX_MIN + 4);
+        sys_status.v5p0 = XSysMon_GetAdcData(&g_sysmon, XSM_CH_AUX_MIN + 12);
+        uart_send(&sys_status, sizeof(sys_status));
     }
 }
 
