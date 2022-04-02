@@ -5,6 +5,10 @@ class MsgId:
     Debug = 0
     SysStatus = 1
     Timing = 2
+    RopeStatus = 3
+    SetBPLSSWState = 4
+    SetSBFState = 5
+    ReadSingleWord = 6
 
 SysStatus = namedtuple('SysStatus', ['temp', 'vccint', 'vccaux', 'v14p0', 'v5p0'])
 Timing = namedtuple('Timing', ['bplssw_pg_loss_timeout', 'bplssw_poweron_timeout',
@@ -14,6 +18,11 @@ Timing = namedtuple('Timing', ['bplssw_pg_loss_timeout', 'bplssw_poweron_timeout
                                'strgat_offset', 'strgat_width',
                                'reset2_offset', 'reset2_width',
                                'sbf_offset', 'sbf_width'])
+RopeStatus = namedtuple('RopeStatus', ['bplssw_state', 'sbf_state', 'last_address', 'sensed_word'])
+ReadSingleWord = namedtuple('ReadSingleWord', ['address'])
+SetBPLSSWState = namedtuple('SetBPLSSWState', ['on'])
+SetSBFState = namedtuple('SetSBFState', ['on'])
+
 
 def unpack(msg_bytes):
     msg = None
@@ -38,6 +47,9 @@ def unpack(msg_bytes):
             params[i] /= 100.0
         msg = Timing(*params)
 
+    elif msg_id == MsgId.RopeStatus:
+        msg = RopeStatus(*struct.unpack_from('<??HH', msg_bytes, 2))
+
     return msg
 
 def pack(msg):
@@ -49,5 +61,17 @@ def pack(msg):
         for i in range(2, len(params)):
             params[i] = round(params[i] * 100)
         msg_bytes += struct.pack('<HI12H', *params)
+
+    elif isinstance(msg, SetBPLSSWState):
+        msg_bytes += struct.pack('<H', MsgId.SetBPLSSWState)
+        msg_bytes += struct.pack('<?x', msg.on)
+
+    elif isinstance(msg, SetSBFState):
+        msg_bytes += struct.pack('<H', MsgId.SetSBFState)
+        msg_bytes += struct.pack('<?x', msg.on)
+
+    elif isinstance(msg, ReadSingleWord):
+        msg_bytes += struct.pack('<H', MsgId.ReadSingleWord)
+        msg_bytes += struct.pack('<H', msg.address)
 
     return msg_bytes

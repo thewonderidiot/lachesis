@@ -25,7 +25,8 @@ class USBInterface(QObject):
                 break
 
         if self._serial == None:
-            raise RuntimeError('Unable to locate serial device!')
+            print('Unable to locate serial device!')
+            return
 
         self._serial.setBaudRate(115200)
         self._serial.readyRead.connect(self._read_data)
