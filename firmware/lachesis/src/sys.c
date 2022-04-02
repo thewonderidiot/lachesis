@@ -39,7 +39,7 @@ int32_t sys_init(void)
 
 void sys_service(void)
 {
-    sys_status_t sys_status;
+    sys_status_msg_t sys_status;
 
     if (sys_time_elapsed(g_last_us, 500000))
     {

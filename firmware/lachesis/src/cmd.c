@@ -32,7 +32,16 @@ void cmd_service(void)
     switch (msgid)
     {
     case MSGID_TIMING:
-        rope_set_timing((timing_t*)g_cmd_buf);
+        rope_set_timing((timing_msg_t*)g_cmd_buf);
+        break;
+    case MSGID_SET_BPLSSW_STATE:
+        rope_set_bplssw_state(((set_state_msg_t*)g_cmd_buf)->on);
+        break;
+    case MSGID_SET_SBF_STATE:
+        rope_set_sbf_state(((set_state_msg_t*)g_cmd_buf)->on);
+        break;
+    case MSGID_READ_SINGLE_WORD:
+        rope_read_word(((read_single_word_msg_t*)g_cmd_buf)->address);
         break;
     default:
         break;
