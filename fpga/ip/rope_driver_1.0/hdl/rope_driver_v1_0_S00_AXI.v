@@ -141,6 +141,7 @@
 	reg	 aw_en;
 	wire busy;
 	wire [2:1] sa;
+        wire [1:0] cycle_address;
 
 	// I/O Connections assignments
 
@@ -536,9 +537,9 @@
 	      // Address decoding for reading registers
 	      case ( axi_araddr[ADDR_LSB+OPT_MEM_ADDR_BITS:ADDR_LSB] )
 	        5'h00   : reg_data_out <= busy;
-	        5'h01   : reg_data_out <= slv_reg1[1:0];
+	        5'h01   : reg_data_out <= cycle_address;
 	        5'h02   : reg_data_out <= sa;
-	        5'h03   : reg_data_out <= slv_reg3[0];
+	        5'h03   : reg_data_out <= bplssw;
 	        5'h04   : reg_data_out <= slv_reg4[0];
 	        5'h05   : reg_data_out <= slv_reg5[10:0];
 	        5'h06   : reg_data_out <= slv_reg6[10:0];
@@ -579,46 +580,47 @@
 
 	// Add user logic here
 	rope_driver rope_driver(
-	    .clk(S_AXI_ACLK),
-        .rst_n(S_AXI_ARESETN),
+            .clk(S_AXI_ACLK),
+            .rst_n(S_AXI_ARESETN),
 
-        .enable(slv_reg0[5:0]),
-        .address(slv_reg1[1:0]),
+            .enable(slv_reg0[5:0]),
+            .address(slv_reg1[1:0]),
 
-        .sbf_enable(slv_reg2[0]),
-        .bplssw_enable(slv_reg3[0]),
+            .bplssw_enable(slv_reg3[0]),
+            .sbf_enable(slv_reg4[0]),
 
-        .o_ihenv(slv_reg4[10:0]),
-        .w_ihenv(slv_reg5[10:0]),
-        .o_reset1(slv_reg6[10:0]),
-        .w_reset1(slv_reg7[10:0]),
-        .o_set(slv_reg8[10:0]),
-        .w_set(slv_reg9[10:0]),
-        .o_strgat(slv_reg10[10:0]),
-        .w_strgat(slv_reg11[10:0]),
-        .o_reset2(slv_reg12[10:0]),
-        .w_reset2(slv_reg13[10:0]),
-        .o_sbf(slv_reg14[10:0]),
-        .w_sbf(slv_reg15[10:0]),
-        
-        .bplssw_poweron_timeout(slv_reg16),
-        .bplssw_pg_loss_timeout(slv_reg17),
-        
-        .bplssw_pg(bplssw_pg),
-        .saf(saf),
+            .o_ihenv(slv_reg5[10:0]),
+            .w_ihenv(slv_reg6[10:0]),
+            .o_reset1(slv_reg7[10:0]),
+            .w_reset1(slv_reg8[10:0]),
+            .o_set(slv_reg9[10:0]),
+            .w_set(slv_reg10[10:0]),
+            .o_strgat(slv_reg11[10:0]),
+            .w_strgat(slv_reg12[10:0]),
+            .o_reset2(slv_reg13[10:0]),
+            .w_reset2(slv_reg14[10:0]),
+            .o_sbf(slv_reg15[10:0]),
+            .w_sbf(slv_reg16[10:0]),
+            
+            .bplssw_poweron_timeout(slv_reg17),
+            .bplssw_pg_loss_timeout(slv_reg18),
+            
+            .bplssw_pg(bplssw_pg),
+            .saf(saf),
 
-        .bplssw(bplssw),
-        .set(set),
-        .reset(reset),
-        .ihenv(ihenv),
-        .il(il),
-        .roper(roper),
-        .str(str),
-        .sbf(sbf),
-        
-        .busy(busy),
-        .sa(sa)
-    );
+            .bplssw(bplssw),
+            .set(set),
+            .reset(reset),
+            .ihenv(ihenv),
+            .il(il),
+            .roper(roper),
+            .str(str),
+            .sbf(sbf),
+            
+            .busy(busy),
+            .sa(sa),
+            .cycle_address(cycle_address)
+        );
 
 
 	// User logic ends

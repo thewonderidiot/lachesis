@@ -32,6 +32,7 @@ module rope_driver(
 
     output reg [2:1] sa,
     output wire busy,
+    output reg [1:0] cycle_address,
 
     output wire bplssw,
     output wire set,
@@ -53,7 +54,6 @@ module rope_driver(
 
 reg [1:0] cycle_state;
 reg [1:0] cycle_state_next;
-reg [1:0] cycle_address;
 reg [1:0] cycle_address_next;
 reg [10:0] cycle_count;
 reg [10:0] cycle_count_next;
