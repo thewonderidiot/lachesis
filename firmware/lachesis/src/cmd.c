@@ -40,8 +40,23 @@ void cmd_service(void)
     case MSGID_SET_SBF_STATE:
         rope_set_sbf_state(((set_state_msg_t*)g_cmd_buf)->on);
         break;
-    case MSGID_READ_SINGLE_WORD:
-        rope_read_word(((read_single_word_msg_t*)g_cmd_buf)->address);
+    case MSGID_READ_ADDRESS:
+        rope_read_word(((read_address_msg_t*)g_cmd_buf)->address);
+        break;
+    case MSGID_JAM_ADDRESS:
+        rope_jam_address(((read_address_msg_t*)g_cmd_buf)->address);
+        break;
+    case MSGID_PULSE_SET:
+        rope_pulse_set(((pulse_msg_t*)g_cmd_buf)->circuit);
+        break;
+    case MSGID_PULSE_RESET:
+        rope_pulse_reset(((pulse_msg_t*)g_cmd_buf)->circuit);
+        break;
+    case MSGID_PULSE_INHIBIT:
+        rope_pulse_inhibit(((pulse_msg_t*)g_cmd_buf)->circuit);
+        break;
+    case MSGID_PULSE_STRAND:
+        rope_pulse_strand(((pulse_msg_t*)g_cmd_buf)->circuit);
         break;
     default:
         break;

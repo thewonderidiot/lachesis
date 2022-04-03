@@ -11,7 +11,12 @@ typedef enum
     MSGID_ROPE_STATUS,
     MSGID_SET_BPLSSW_STATE,
     MSGID_SET_SBF_STATE,
-    MSGID_READ_SINGLE_WORD,
+    MSGID_READ_ADDRESS,
+    MSGID_JAM_ADDRESS,
+    MSGID_PULSE_SET,
+    MSGID_PULSE_RESET,
+    MSGID_PULSE_INHIBIT,
+    MSGID_PULSE_STRAND,
 } msgid_t;
 
 typedef struct
@@ -58,8 +63,7 @@ typedef struct
     uint16_t sensed_word;
 } rope_status_msg_t;
 
-typedef struct
-{
+typedef struct {
     uint16_t msgid;
     uint8_t on;
     uint8_t pad;
@@ -69,6 +73,13 @@ typedef struct
 {
     uint16_t msgid;
     uint16_t address;
-} read_single_word_msg_t;
+} read_address_msg_t;
+
+typedef struct
+{
+    uint16_t msgid;
+    uint8_t circuit;
+    uint8_t pad;
+} pulse_msg_t;
 
 #endif//_MSG_H_

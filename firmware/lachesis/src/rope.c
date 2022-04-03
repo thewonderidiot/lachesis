@@ -31,9 +31,16 @@ void rope_service(void)
 uint16_t rope_read_word(uint16_t address)
 {
     rope_driver_set_address(&g_rope_driver, address);
-    rope_driver_start_cycle(&g_rope_driver, 0x3F);
+    rope_driver_start_cycle(&g_rope_driver, ROPE_DRIVER_ENABLE_ALL);
     while (rope_driver_busy(&g_rope_driver));
     return rope_driver_get_sensed_word(&g_rope_driver);
+}
+
+void rope_jam_address(uint16_t address)
+{
+    rope_driver_set_address(&g_rope_driver, address);
+    rope_driver_start_cycle(&g_rope_driver, ROPE_DRIVER_ENABLE_SBF);
+    while (rope_driver_busy(&g_rope_driver));
 }
 
 void rope_set_bplssw_state(bool on)
@@ -44,6 +51,34 @@ void rope_set_bplssw_state(bool on)
 void rope_set_sbf_state(bool on)
 {
     rope_driver_set_sbf_state(&g_rope_driver, on);
+}
+
+void rope_pulse_set(uint8_t circuit)
+{
+    rope_driver_start_cycle(&g_rope_driver, ROPE_DRIVER_ENABLE_SET);
+    while (rope_driver_busy(&g_rope_driver));
+}
+
+void rope_pulse_reset(uint8_t circuit)
+{
+    rope_driver_start_cycle(&g_rope_driver, ROPE_DRIVER_ENABLE_RESET2);
+    while (rope_driver_busy(&g_rope_driver));
+}
+
+void rope_pulse_inhibit(uint8_t circuit)
+{
+    uint16_t address = (circuit < 010) ? 01 : 00;
+    rope_driver_set_address(&g_rope_driver, address);
+    rope_driver_start_cycle(&g_rope_driver, ROPE_DRIVER_ENABLE_IHENV);
+    while (rope_driver_busy(&g_rope_driver));
+}
+
+void rope_pulse_strand(uint8_t circuit)
+{
+    uint16_t address = (circuit & 01) ? 02 : 00;
+    rope_driver_set_address(&g_rope_driver, address);
+    rope_driver_start_cycle(&g_rope_driver, ROPE_DRIVER_ENABLE_STRGAT);
+    while (rope_driver_busy(&g_rope_driver));
 }
 
 void rope_set_timing(timing_msg_t *timing)
