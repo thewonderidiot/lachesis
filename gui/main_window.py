@@ -4,7 +4,7 @@ from usb_interface import USBInterface
 from measurements import Measurements
 from timing_window import TimingWindow
 from indicator import Indicator
-# from control_window import ControlWindow
+from control_window import ControlWindow
 import usb_msg
 
 class MainWindow(QMainWindow):
@@ -17,7 +17,7 @@ class MainWindow(QMainWindow):
         # Set up the UI
         self._setup_ui()
         self._timing_window = TimingWindow(self._usbif)
-        # self._control_window = ControlWindow()
+        self._control_window = ControlWindow(self._usbif)
 
         self._usbif.msg_received.connect(self._update)
 
@@ -46,14 +46,17 @@ class MainWindow(QMainWindow):
 
         button = QPushButton('Timing')
         button.clicked.connect(self._open_timing)
-        layout.addWidget(button, 3, 2, 3, 2)
+        layout.addWidget(button, 3, 2, 1, 2)
 
-        button = QPushButton('Test Cycle')
-        button.clicked.connect(self._test_cycle)
-        layout.addWidget(button, 6, 2, 6, 2)
+        button = QPushButton('Manual Control')
+        button.clicked.connect(self._open_control)
+        layout.addWidget(button, 4, 2, 1, 2)
 
     def _open_timing(self):
         self._timing_window.show()
+
+    def _open_control(self):
+        self._control_window.show()
 
     def _toggle_bplssw(self):
         on = self._bplssw_button.isChecked()
@@ -63,12 +66,13 @@ class MainWindow(QMainWindow):
         if not on:
             self._bplssw_ind.set_color(QColor(0, 255, 0))
 
-    def _test_cycle(self):
-        msg = usb_msg.ReadSingleWord(0x0000)
-        self._usbif.send(msg)
-
     def _update(self, msg):
         if isinstance(msg, usb_msg.RopeStatus):
             if msg.bplssw_state != self._bplssw_button.isChecked():
                 self._bplssw_ind.set_on(True)
                 self._bplssw_ind.set_color(QColor(255, 0, 0))
+
+    def closeEvent(self, event):
+        self._timing_window.close()
+        self._control_window.close()
+        event.accept()

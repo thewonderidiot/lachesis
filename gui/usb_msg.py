@@ -8,7 +8,12 @@ class MsgId:
     RopeStatus = 3
     SetBPLSSWState = 4
     SetSBFState = 5
-    ReadSingleWord = 6
+    ReadAddress = 6
+    JamAddress = 7
+    PulseSet = 8
+    PulseReset = 9
+    PulseInhibit = 10
+    PulseStrand = 11
 
 SysStatus = namedtuple('SysStatus', ['temp', 'vccint', 'vccaux', 'v14p0', 'v5p0'])
 Timing = namedtuple('Timing', ['bplssw_pg_loss_timeout', 'bplssw_poweron_timeout',
@@ -19,9 +24,14 @@ Timing = namedtuple('Timing', ['bplssw_pg_loss_timeout', 'bplssw_poweron_timeout
                                'reset2_offset', 'reset2_width',
                                'sbf_offset', 'sbf_width'])
 RopeStatus = namedtuple('RopeStatus', ['bplssw_state', 'sbf_state', 'last_address', 'sensed_word'])
-ReadSingleWord = namedtuple('ReadSingleWord', ['address'])
 SetBPLSSWState = namedtuple('SetBPLSSWState', ['on'])
 SetSBFState = namedtuple('SetSBFState', ['on'])
+ReadAddress = namedtuple('ReadAddress', ['address'])
+JamAddress = namedtuple('JamAddress', ['address'])
+PulseSet = namedtuple('PulseSet', ['circuit'])
+PulseReset = namedtuple('PulseReset', ['circuit'])
+PulseInhibit = namedtuple('PulseInhibit', ['circuit'])
+PulseStrand = namedtuple('PulseStrand', ['circuit'])
 
 
 def unpack(msg_bytes):
@@ -53,9 +63,9 @@ def unpack(msg_bytes):
     return msg
 
 def pack(msg):
-    msg_bytes = b''
+    msgid = getattr(MsgId, type(msg).__name__)
+    msg_bytes = struct.pack('<H', msgid)
     if isinstance(msg, Timing):
-        msg_bytes += struct.pack('<H', MsgId.Timing)
         params = list(msg)
         params[1] = round(params[1] * 100000)
         for i in range(2, len(params)):
@@ -63,15 +73,27 @@ def pack(msg):
         msg_bytes += struct.pack('<HI12H', *params)
 
     elif isinstance(msg, SetBPLSSWState):
-        msg_bytes += struct.pack('<H', MsgId.SetBPLSSWState)
         msg_bytes += struct.pack('<?x', msg.on)
 
     elif isinstance(msg, SetSBFState):
-        msg_bytes += struct.pack('<H', MsgId.SetSBFState)
         msg_bytes += struct.pack('<?x', msg.on)
 
-    elif isinstance(msg, ReadSingleWord):
-        msg_bytes += struct.pack('<H', MsgId.ReadSingleWord)
+    elif isinstance(msg, ReadAddress):
         msg_bytes += struct.pack('<H', msg.address)
+
+    elif isinstance(msg, JamAddress):
+        msg_bytes += struct.pack('<H', msg.address)
+
+    elif isinstance(msg, PulseSet):
+        msg_bytes += struct.pack('<Bx', msg.circuit)
+
+    elif isinstance(msg, PulseReset):
+        msg_bytes += struct.pack('<Bx', msg.circuit)
+
+    elif isinstance(msg, PulseInhibit):
+        msg_bytes += struct.pack('<Bx', msg.circuit)
+
+    elif isinstance(msg, PulseStrand):
+        msg_bytes += struct.pack('<Bx', msg.circuit)
 
     return msg_bytes
