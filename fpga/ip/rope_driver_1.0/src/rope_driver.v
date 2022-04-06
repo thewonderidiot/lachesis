@@ -133,7 +133,7 @@ assign sbf   = (enable_mask[5] && (cycle_count >= o_sbf)   && (cycle_count < (o_
 
 assign roper = strgat;
 assign str = strgat ? (cycle_address[1] + 4'b1) : 4'b0;
-assign il = {cycle_address[0], cycle_address[0]};
+assign il = ~{cycle_address[0], cycle_address[0]};
 
 reg [1:0] bplssw_state;
 reg [1:0] bplssw_state_next;
