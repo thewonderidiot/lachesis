@@ -26,6 +26,7 @@ class ControlWindow(QWidget):
 
     def _read_address(self):
         self._usbif.send(usb_msg.ReadAddress(self._next_address.value()))
+        self._usbif.send(usb_msg.ReadAddress(self._next_address.value()))
 
     def _jam_address(self):
         self._usbif.send(usb_msg.JamAddress(self._next_address.value()))

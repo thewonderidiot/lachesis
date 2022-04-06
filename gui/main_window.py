@@ -1,4 +1,4 @@
-from PySide2.QtWidgets import QMainWindow, QGridLayout, QPushButton, QWidget
+from PySide2.QtWidgets import QMainWindow, QGridLayout, QPushButton, QWidget, QTextEdit
 from PySide2.QtGui import QColor
 from usb_interface import USBInterface
 from measurements import Measurements
@@ -52,11 +52,22 @@ class MainWindow(QMainWindow):
         button.clicked.connect(self._open_control)
         layout.addWidget(button, 4, 2, 1, 2)
 
+        self._text = QTextEdit(self)
+        layout.addWidget(self._text, 1, 0, 3, 2)
+        self._text.setReadOnly(True)
+
+        button = QPushButton('Read Rope')
+        button.clicked.connect(self._read_rope)
+        layout.addWidget(button, 4, 0, 1, 2)
+
     def _open_timing(self):
         self._timing_window.show()
 
     def _open_control(self):
         self._control_window.show()
+
+    def _read_rope(self):
+        self._usbif.send(usb_msg.ReadStrand(0))
 
     def _toggle_bplssw(self):
         on = self._bplssw_button.isChecked()
@@ -71,6 +82,10 @@ class MainWindow(QMainWindow):
             if msg.bplssw_state != self._bplssw_button.isChecked():
                 self._bplssw_ind.set_on(True)
                 self._bplssw_ind.set_color(QColor(255, 0, 0))
+
+        elif isinstance(msg, usb_msg.Strand):
+            strings = [str(w) for w in msg.words]
+            self._text.setText(' '.join(strings))
 
     def closeEvent(self, event):
         self._timing_window.close()

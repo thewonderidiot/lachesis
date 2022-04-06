@@ -14,6 +14,8 @@ class MsgId:
     PulseReset = 9
     PulseInhibit = 10
     PulseStrand = 11
+    ReadStrand = 12
+    Strand = 13
 
 SysStatus = namedtuple('SysStatus', ['temp', 'vccint', 'vccaux', 'v14p0', 'v5p0'])
 Timing = namedtuple('Timing', ['bplssw_pg_loss_timeout', 'bplssw_poweron_timeout',
@@ -32,6 +34,8 @@ PulseSet = namedtuple('PulseSet', ['circuit'])
 PulseReset = namedtuple('PulseReset', ['circuit'])
 PulseInhibit = namedtuple('PulseInhibit', ['circuit'])
 PulseStrand = namedtuple('PulseStrand', ['circuit'])
+ReadStrand = namedtuple('ReadStrand', ['strand'])
+Strand = namedtuple('Strand', ['strand', 'words'])
 
 
 def unpack(msg_bytes):
@@ -60,6 +64,10 @@ def unpack(msg_bytes):
     elif msg_id == MsgId.RopeStatus:
         msg = RopeStatus(*struct.unpack_from('<??HH', msg_bytes, 2))
 
+    elif msg_id == MsgId.Strand:
+        data = struct.unpack_from('<H512H', msg_bytes, 2)
+        msg = Strand(data[0], list(data[1:]))
+
     return msg
 
 def pack(msg):
@@ -73,10 +81,10 @@ def pack(msg):
         msg_bytes += struct.pack('<HI12H', *params)
 
     elif isinstance(msg, SetBPLSSWState):
-        msg_bytes += struct.pack('<?x', msg.on)
+        msg_bytes += struct.pack('<H', 1 if msg.on else 0)
 
     elif isinstance(msg, SetSBFState):
-        msg_bytes += struct.pack('<?x', msg.on)
+        msg_bytes += struct.pack('<H', 1 if msg.on else 0)
 
     elif isinstance(msg, ReadAddress):
         msg_bytes += struct.pack('<H', msg.address)
@@ -85,15 +93,18 @@ def pack(msg):
         msg_bytes += struct.pack('<H', msg.address)
 
     elif isinstance(msg, PulseSet):
-        msg_bytes += struct.pack('<Bx', msg.circuit)
+        msg_bytes += struct.pack('<H', msg.circuit)
 
     elif isinstance(msg, PulseReset):
-        msg_bytes += struct.pack('<Bx', msg.circuit)
+        msg_bytes += struct.pack('<H', msg.circuit)
 
     elif isinstance(msg, PulseInhibit):
-        msg_bytes += struct.pack('<Bx', msg.circuit)
+        msg_bytes += struct.pack('<H', msg.circuit)
 
     elif isinstance(msg, PulseStrand):
-        msg_bytes += struct.pack('<Bx', msg.circuit)
+        msg_bytes += struct.pack('<H', msg.circuit)
+
+    elif isinstance(msg, ReadStrand):
+        msg_bytes += struct.pack('<H', msg.strand)
 
     return msg_bytes
