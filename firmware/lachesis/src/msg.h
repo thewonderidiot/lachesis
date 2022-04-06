@@ -2,6 +2,7 @@
 #define _MSG_H_
 
 #include "xil_types.h"
+#include "rope_defs.h"
 
 typedef enum
 {
@@ -17,6 +18,8 @@ typedef enum
     MSGID_PULSE_RESET,
     MSGID_PULSE_INHIBIT,
     MSGID_PULSE_STRAND,
+    MSGID_READ_STRAND,
+    MSGID_STRAND,
 } msgid_t;
 
 typedef struct
@@ -65,8 +68,7 @@ typedef struct
 
 typedef struct {
     uint16_t msgid;
-    uint8_t on;
-    uint8_t pad;
+    uint16_t on;
 } set_state_msg_t;
 
 typedef struct
@@ -78,8 +80,20 @@ typedef struct
 typedef struct
 {
     uint16_t msgid;
-    uint8_t circuit;
-    uint8_t pad;
+    uint16_t circuit;
 } pulse_msg_t;
+
+typedef struct
+{
+    uint16_t msgid;
+    uint16_t strand;
+} read_strand_msg_t;
+
+typedef struct
+{
+    uint16_t msgid;
+    uint16_t strand;
+    uint16_t words[WORDS_PER_STRAND];
+} strand_msg_t;
 
 #endif//_MSG_H_

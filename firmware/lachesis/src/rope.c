@@ -4,14 +4,19 @@
 #include "msg.h"
 #include "sys.h"
 #include "rope_driver.h"
+#include "rope_defs.h"
 #include "rope.h"
 
 static void rope_report_timing(void);
 static void rope_report_status(void);
 
 static rope_driver_t g_rope_driver;
+static rope_t g_rope;
+
 int32_t rope_init(void)
 {
+    memset(&g_rope, 0, sizeof(g_rope));
+    g_rope.strand_msg.msgid = MSGID_STRAND;
     rope_driver_initialize(&g_rope_driver, XPAR_ROPE_DRIVER_0_S00_AXI_BASEADDR);
     return XST_SUCCESS;
 }
@@ -26,6 +31,17 @@ void rope_service(void)
         rope_report_timing();
         rope_report_status();
     }
+
+    if (g_rope.state == ROPE_STATE_ACTIVE)
+    {
+        g_rope.strand_msg.words[g_rope.offset] = rope_read_word(g_rope.strand_msg.strand*WORDS_PER_STRAND + g_rope.offset);
+        g_rope.offset++;
+        if (g_rope.offset >= WORDS_PER_STRAND)
+        {
+            g_rope.state = ROPE_STATE_IDLE;
+            uart_send(&g_rope.strand_msg, sizeof(g_rope.strand_msg));
+        }
+    }
 }
 
 uint16_t rope_read_word(uint16_t address)
@@ -34,6 +50,13 @@ uint16_t rope_read_word(uint16_t address)
     rope_driver_start_cycle(&g_rope_driver, ROPE_DRIVER_ENABLE_ALL);
     while (rope_driver_busy(&g_rope_driver));
     return rope_driver_get_sensed_word(&g_rope_driver);
+}
+
+void rope_read_strand(uint8_t strand)
+{
+    g_rope.strand_msg.strand = strand;
+    g_rope.offset = 0;
+    g_rope.state = ROPE_STATE_ACTIVE;
 }
 
 void rope_jam_address(uint16_t address)

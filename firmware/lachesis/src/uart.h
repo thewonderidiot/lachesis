@@ -5,8 +5,8 @@
 #include "xuartlite.h"
 #include "slip.h"
 
-#define RX_BUFFER_SIZE 1024
-#define TX_BUFFER_SIZE 1024
+#define RX_BUFFER_SIZE 256
+#define TX_BUFFER_SIZE 2048
 
 typedef struct {
     XUartLite device;

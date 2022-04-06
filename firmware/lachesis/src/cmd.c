@@ -58,6 +58,9 @@ void cmd_service(void)
     case MSGID_PULSE_STRAND:
         rope_pulse_strand(((pulse_msg_t*)g_cmd_buf)->circuit);
         break;
+    case MSGID_READ_STRAND:
+        rope_read_strand(((read_strand_msg_t*)g_cmd_buf)->strand);
+        break;
     default:
         break;
     }
