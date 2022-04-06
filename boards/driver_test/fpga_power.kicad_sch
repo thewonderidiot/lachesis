@@ -3369,7 +3369,7 @@
     (property "Reference" "R26" (id 0) (at 231.5972 42.0116 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "620" (id 1) (at 231.5972 44.323 0)
+    (property "Value" "1k" (id 1) (at 231.5972 44.323 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (id 2) (at 230.886 43.434 90)
