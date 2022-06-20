@@ -1746,23 +1746,11 @@
     (path "/00000000-0000-0000-0000-0000652d8f7b/00000000-0000-0000-0000-0000628b7815"
       (reference "J4") (unit 1) (value "Conn_01x24") (footprint "Connector_PinSocket_2.54mm:PinSocket_1x24_P2.54mm_Vertical")
     )
-    (path "/00000000-0000-0000-0000-00006183fae6/00000000-0000-0000-0000-0000625cad37/adef3452-bedd-42f6-a626-1bfe2964775d"
-      (reference "JP1") (unit 1) (value "Jumper_2_Open") (footprint "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical")
+    (path "/00000000-0000-0000-0000-00006183fae6/00000000-0000-0000-0000-0000625cad37/6658a0ce-400d-401c-9961-dc523e8e2bbc"
+      (reference "JP1") (unit 1) (value "Conn_02x03_Odd_Even") (footprint "Connector_PinHeader_2.00mm:PinHeader_2x03_P2.00mm_Vertical")
     )
-    (path "/00000000-0000-0000-0000-00006183fae6/00000000-0000-0000-0000-0000625cad37/b5af5270-9a69-411e-b028-673497ca35ec"
-      (reference "JP2") (unit 1) (value "Jumper_2_Open") (footprint "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical")
-    )
-    (path "/00000000-0000-0000-0000-00006183fae6/00000000-0000-0000-0000-0000625cad37/fb7bc4ee-bc41-4e7b-b5a2-f58f3cfa70a6"
-      (reference "JP3") (unit 1) (value "Jumper_2_Open") (footprint "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical")
-    )
-    (path "/00000000-0000-0000-0000-00006183fae6/00000000-0000-0000-0000-00006261206b/adef3452-bedd-42f6-a626-1bfe2964775d"
-      (reference "JP4") (unit 1) (value "Jumper_2_Open") (footprint "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical")
-    )
-    (path "/00000000-0000-0000-0000-00006183fae6/00000000-0000-0000-0000-00006261206b/b5af5270-9a69-411e-b028-673497ca35ec"
-      (reference "JP5") (unit 1) (value "Jumper_2_Open") (footprint "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical")
-    )
-    (path "/00000000-0000-0000-0000-00006183fae6/00000000-0000-0000-0000-00006261206b/fb7bc4ee-bc41-4e7b-b5a2-f58f3cfa70a6"
-      (reference "JP6") (unit 1) (value "Jumper_2_Open") (footprint "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical")
+    (path "/00000000-0000-0000-0000-00006183fae6/00000000-0000-0000-0000-00006261206b/6658a0ce-400d-401c-9961-dc523e8e2bbc"
+      (reference "JP2") (unit 1) (value "Conn_02x03_Odd_Even") (footprint "Connector_PinHeader_2.00mm:PinHeader_2x03_P2.00mm_Vertical")
     )
     (path "/00000000-0000-0000-0000-00006183fae6/00000000-0000-0000-0000-000062442cc1/00000000-0000-0000-0000-000062448417"
       (reference "L1") (unit 1) (value "2.2uH") (footprint "lachesis:API_Delevan_1812R")
