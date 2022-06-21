@@ -1053,7 +1053,7 @@
     (uuid ff163833-80b9-4bc7-baa1-aa11870ad397)
   )
 
-  (text "Module Select" (at 88.9 74.93 180)
+  (text "40361\nModule Select" (at 88.9 74.93 180)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 2af1d271-3c6a-476d-8eba-6b2aab466da3)
   )
