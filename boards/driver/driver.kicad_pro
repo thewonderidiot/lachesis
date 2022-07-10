@@ -426,7 +426,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "driver.net",
-      "specctra_dsn": "",
+      "specctra_dsn": "../../../driver.dsn",
       "step": "",
       "vrml": ""
     },
