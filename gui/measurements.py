@@ -1,9 +1,9 @@
-from PySide2.QtWidgets import QFrame, QGridLayout, QLabel, QLineEdit
+from PySide2.QtWidgets import QGroupBox, QGridLayout, QLabel, QLineEdit
 from PySide2.QtGui import QFont
 from PySide2.QtCore import Qt
 import usb_msg
 
-class Measurements(QFrame):
+class Measurements(QGroupBox):
     def __init__(self, parent, usbif):
         super().__init__(parent)
         
@@ -22,11 +22,9 @@ class Measurements(QFrame):
             self._v5p0.setText('%.02f V' % msg.v5p0)
 
     def _setup_ui(self):
-        self.setFrameStyle(QFrame.StyledPanel | QFrame.Raised)
-
         layout = QGridLayout(self)
         self.setLayout(layout)
-        layout.setMargin(1)
+        layout.setMargin(3)
         layout.setHorizontalSpacing(10)
         layout.setVerticalSpacing(1)
 

@@ -1,15 +1,25 @@
-from PySide2.QtWidgets import QMainWindow, QGridLayout, QPushButton, QWidget, QTextEdit
-from PySide2.QtGui import QColor
+from PySide2.QtWidgets import QMainWindow, QGridLayout, QPushButton, QWidget, QPlainTextEdit, QLabel, QLineEdit
+from PySide2.QtGui import QColor, QFont
+from PySide2.QtCore import Qt
 from usb_interface import USBInterface
 from measurements import Measurements
 from timing_window import TimingWindow
 from indicator import Indicator
 from control_window import ControlWindow
+from rope_db import RopeDB
 import usb_msg
+import agc
+
+#temp
+import array
+import os
 
 class MainWindow(QMainWindow):
-    def __init__(self, parent):
+    def __init__(self, parent, app):
         super().__init__(parent)
+        self._app = app
+
+        self._rope_db = RopeDB()
 
         # Set up the serial port
         self._usbif = USBInterface(self)
@@ -18,6 +28,8 @@ class MainWindow(QMainWindow):
         self._setup_ui()
         self._timing_window = TimingWindow(self._usbif)
         self._control_window = ControlWindow(self._usbif)
+
+        self._reset()
 
         self._usbif.msg_received.connect(self._update)
 
@@ -29,36 +41,144 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(central)
         layout = QGridLayout(central)
         central.setLayout(layout)
-        layout.setSpacing(0)
-        layout.setMargin(0)
+        # layout.setSpacing(0)
+        # layout.setMargin(0)
 
-        self._bplssw_button = QPushButton('BPLSSW Power')
-        self._bplssw_button.clicked.connect(self._toggle_bplssw)
-        self._bplssw_button.setCheckable(True)
-        layout.addWidget(self._bplssw_button, 0, 0)
+        self._banks = []
+        self._sums = []
+        self._healths = []
 
-        self._bplssw_ind = Indicator(self, QColor(0, 255, 0))
-        self._bplssw_ind.setMinimumSize(25, 25)
-        layout.addWidget(self._bplssw_ind, 0, 1)
+        row = 0
+
+        label = QLabel('Rope')
+        label.setAlignment(Qt.AlignCenter)
+        layout.addWidget(label, row, 0, 1, 3)
+
+        label = QLabel('Module')
+        label.setAlignment(Qt.AlignCenter)
+        layout.addWidget(label, row, 3)
+
+        label = QLabel('P/N')
+        label.setAlignment(Qt.AlignCenter)
+        layout.addWidget(label, row, 4)
+
+        label = QLabel('Deck')
+        label.setAlignment(Qt.AlignCenter)
+        layout.addWidget(label, row, 5)
+
+        row += 1
+
+        label = QLabel('-')
+        font = label.font()
+        font.setPointSize(16)
+        font.setBold(True)
+
+        label.setAlignment(Qt.AlignCenter)
+        label.setFont(font)
+        layout.addWidget(label, row, 0, 1, 3)
+        self._rope_label = label
+
+        label = QLabel('-')
+        label.setAlignment(Qt.AlignCenter)
+        label.setFont(font)
+        layout.addWidget(label, row, 3)
+        self._module_label = label
+
+        label = QLabel('-')
+        label.setAlignment(Qt.AlignCenter)
+        label.setFont(font)
+        layout.addWidget(label, row, 4)
+        self._pn_label = label
+
+        label = QLabel('-')
+        label.setAlignment(Qt.AlignCenter)
+        label.setFont(font)
+        layout.addWidget(label, row, 5)
+        self._deck_label = label
+
+        row += 1
+
+        label = QLabel('Bank')
+        layout.addWidget(label, row, 0)
+        label.setAlignment(Qt.AlignCenter)
+
+        label = QLabel('Bugger')
+        label.setAlignment(Qt.AlignCenter)
+        layout.addWidget(label, row, 1)
+
+        label = QLabel('Health')
+        layout.addWidget(label, row, 2)
+        label.setAlignment(Qt.AlignCenter)
+
+        label = QLabel('Data')
+        layout.addWidget(label, row, 3, 1, 2)
+        label.setAlignment(Qt.AlignCenter)
+
+        label = QLabel('Analogs')
+        layout.addWidget(label, row, 5)
+        label.setAlignment(Qt.AlignCenter)
+
+        row += 1
+
+        for bank in range(row, row+6):
+            bank_label = QLabel('--', self)
+            layout.addWidget(bank_label, bank, 0)
+            self._banks.append(bank_label)
+
+            bank_label.setFont(font)
+            bank_label.setAlignment(Qt.AlignCenter)
+
+            sum_edit = QLineEdit(self)
+            sum_edit.setText('000000')
+            sum_edit.setFont(font)
+            sum_edit.setFixedWidth(90)
+            sum_edit.setReadOnly(True)
+            sum_edit.setAlignment(Qt.AlignCenter)
+            layout.addWidget(sum_edit, bank, 1)
+            self._sums.append(sum_edit)
+
+            health = Indicator(self, QColor(0, 255, 0))
+            health.setMinimumSize(25, 25)
+            layout.addWidget(health, bank, 2)
+            self._healths.append(health)
+            
+        self._data_text = QPlainTextEdit(self)
+        self._data_text.setReadOnly(True)
+        self._data_text.setFixedWidth(260)
+        self._data_text.setUndoRedoEnabled(False)
+        self._data_text.verticalScrollBar().setValue(0)
+        font = QFont('Monospace')
+        font.setStyleHint(QFont.TypeWriter)
+        self._data_text.setFont(font)
+        layout.addWidget(self._data_text, row, 3, 7, 2)
 
         self._measurements = Measurements(self, self._usbif)
-        layout.addWidget(self._measurements, 0, 2, 2, 2)
+        layout.addWidget(self._measurements, row, 5, 4, 1)
 
         button = QPushButton('Timing')
         button.clicked.connect(self._open_timing)
-        layout.addWidget(button, 3, 2, 1, 2)
+        layout.addWidget(button, row + 4, 5)
 
         button = QPushButton('Manual Control')
         button.clicked.connect(self._open_control)
-        layout.addWidget(button, 4, 2, 1, 2)
+        layout.addWidget(button, row + 5, 5)
 
-        self._text = QTextEdit(self)
-        layout.addWidget(self._text, 1, 0, 3, 2)
-        self._text.setReadOnly(True)
+        row += 6
+
+        self._bplssw_button = QPushButton('BPLSSW')
+        self._bplssw_button.clicked.connect(self._toggle_bplssw)
+        self._bplssw_button.setCheckable(True)
+        layout.addWidget(self._bplssw_button, row, 0, 1, 2)
+
+        self._bplssw_ind = Indicator(self, QColor(0, 255, 0))
+        self._bplssw_ind.setMinimumSize(25, 25)
+        layout.addWidget(self._bplssw_ind, row, 2)
 
         button = QPushButton('Read Rope')
         button.clicked.connect(self._read_rope)
-        layout.addWidget(button, 4, 0, 1, 2)
+        button.setEnabled(False)
+        layout.addWidget(button, row, 5)
+        self._read_rope_button = button
 
     def _open_timing(self):
         self._timing_window.show()
@@ -67,15 +187,33 @@ class MainWindow(QMainWindow):
         self._control_window.show()
 
     def _read_rope(self):
+        self._reset()
+        self._read_rope_button.setEnabled(False)
+        self._app.processEvents()
+
+        #------TESTING-----------
+        # self._words = [0]*6*1204
+        # words = array.array('H')
+        # fn = 'sundance292_b1.bin'
+        # with open(fn, 'rb') as f:
+        #     words.fromfile(f, int(os.path.getsize(fn)/2))
+        # words.byteswap()
+        # self._words = list(words)
+        # self._process_rope()
+        # self._read_rope_button.setEnabled(True)
+        #------------------------
+
         self._usbif.send(usb_msg.ReadStrand(0))
 
     def _toggle_bplssw(self):
         on = self._bplssw_button.isChecked()
-        self._usbif.send(usb_msg.SetBPLSSWState(on))
+        self._read_rope_button.setEnabled(on) # FIXME: Make this depend on PGOOD
 
         self._bplssw_ind.set_on(on)
         if not on:
             self._bplssw_ind.set_color(QColor(0, 255, 0))
+
+        self._usbif.send(usb_msg.SetBPLSSWState(on))
 
     def _update(self, msg):
         if isinstance(msg, usb_msg.RopeStatus):
@@ -84,8 +222,49 @@ class MainWindow(QMainWindow):
                 self._bplssw_ind.set_color(QColor(255, 0, 0))
 
         elif isinstance(msg, usb_msg.Strand):
-            strings = [str(w) for w in msg.words]
+            strings = [str(w) for w in msg.words[:4]]
             self._text.setText(' '.join(strings))
+
+    def _process_rope(self):
+        html, buggers, banks, healths = agc.disassemble(self._words)
+        for i, bugger in enumerate(buggers):
+            self._sums[i].setText('%06o' % bugger)
+
+        for i, bank in enumerate(banks):
+            self._banks[i].setText('%02o' % bank)
+
+        for i, health in enumerate(healths):
+            self._healths[i].set_on(True)
+            if health:
+                self._healths[i].set_color(QColor(0, 255, 0))
+            else:
+                self._healths[i].set_color(QColor(255, 0, 0))
+
+        prog, mod, pn, deck = self._rope_db.find_rope(buggers)
+        self._rope_label.setText(prog)
+        self._module_label.setText(mod)
+        self._pn_label.setText(pn)
+        self._deck_label.setText(deck)
+
+        self._data_text.setPlainText('')
+        for i,line in enumerate(html):
+            self._data_text.appendHtml(line)
+            if i % 0o400 == 0o377:
+                self._app.processEvents()
+        self._data_text.verticalScrollBar().setValue(0)
+
+    def _reset(self):
+        self._words = [0]*6*1024
+        self._data_text.setPlainText('')
+        for i in range(6):
+            self._sums[i].setText('000000')
+            self._banks[i].setText('--')
+            self._healths[i].set_color(QColor(0, 255, 0))
+            self._healths[i].set_on(False)
+        self._rope_label.setText('-')
+        self._module_label.setText('-')
+        self._pn_label.setText('-')
+        self._deck_label.setText('-')
 
     def closeEvent(self, event):
         self._timing_window.close()
