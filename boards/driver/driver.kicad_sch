@@ -981,32 +981,38 @@
     (path "/00000000-0000-0000-0000-0000652d8f7b/a20f8afd-32fa-4147-b914-160354e10a31"
       (reference "#PWR0152") (unit 1) (value "GND") (footprint "")
     )
+    (path "/00000000-0000-0000-0000-0000652d8f7b/72edfd8c-e124-4f22-848b-1ecdd4203a52"
+      (reference "#PWR0153") (unit 1) (value "GND") (footprint "")
+    )
     (path "/00000000-0000-0000-0000-0000652d8f7b/00000000-0000-0000-0000-000061cf82d6"
-      (reference "#PWR0153") (unit 1) (value "+3.3V") (footprint "")
+      (reference "#PWR0154") (unit 1) (value "+3.3V") (footprint "")
     )
     (path "/00000000-0000-0000-0000-0000652d8f7b/00000000-0000-0000-0000-000061cebc29"
-      (reference "#PWR0154") (unit 1) (value "GND") (footprint "")
+      (reference "#PWR0155") (unit 1) (value "GND") (footprint "")
     )
     (path "/00000000-0000-0000-0000-0000652d8f7b/00000000-0000-0000-0000-000062954e8a"
-      (reference "#PWR0155") (unit 1) (value "+3.3V") (footprint "")
+      (reference "#PWR0156") (unit 1) (value "+3.3V") (footprint "")
     )
     (path "/00000000-0000-0000-0000-0000652d8f7b/00000000-0000-0000-0000-000062942968"
-      (reference "#PWR0156") (unit 1) (value "GND") (footprint "")
+      (reference "#PWR0157") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-0000652d8f7b/2c55841d-4a7d-4403-8a02-64e31a650969"
+      (reference "#PWR0158") (unit 1) (value "+14V") (footprint "")
     )
     (path "/00000000-0000-0000-0000-000061ec7443/00000000-0000-0000-0000-00006233acfd"
-      (reference "#PWR0157") (unit 1) (value "+5V") (footprint "")
+      (reference "#PWR0159") (unit 1) (value "+5V") (footprint "")
     )
     (path "/00000000-0000-0000-0000-000061ec7443/00000000-0000-0000-0000-00006334d461"
-      (reference "#PWR0158") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000061ec7443/d120f203-d287-4b15-ae54-45bc74186cb1"
-      (reference "#PWR0159") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-000064d2df1e/00000000-0000-0000-0000-0000639cc9ab"
       (reference "#PWR0160") (unit 1) (value "GND") (footprint "")
     )
-    (path "/00000000-0000-0000-0000-000064d2df1e/00000000-0000-0000-0000-000063a4b88b"
+    (path "/00000000-0000-0000-0000-000061ec7443/d120f203-d287-4b15-ae54-45bc74186cb1"
       (reference "#PWR0161") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000064d2df1e/00000000-0000-0000-0000-0000639cc9ab"
+      (reference "#PWR0162") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-000064d2df1e/00000000-0000-0000-0000-000063a4b88b"
+      (reference "#PWR0163") (unit 1) (value "GND") (footprint "")
     )
     (path "/00000000-0000-0000-0000-00006183fae6/00000000-0000-0000-0000-000062980982/00000000-0000-0000-0000-0000628500b5"
       (reference "C1") (unit 1) (value "1.0uF") (footprint "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B")
@@ -1718,6 +1724,12 @@
     )
     (path "/00000000-0000-0000-0000-0000652d8f7b/35a45113-362f-4299-a48e-632d513a2e81"
       (reference "H8") (unit 1) (value "MountingHole_Pad") (footprint "lachesis:MountingHole_No2_Pad")
+    )
+    (path "/00000000-0000-0000-0000-0000652d8f7b/b6d567a5-6687-4943-bdd4-888b75412674"
+      (reference "H9") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_2mm")
+    )
+    (path "/00000000-0000-0000-0000-0000652d8f7b/366bde11-aba2-4b7b-a2a3-58dffb7d8840"
+      (reference "H10") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_2mm")
     )
     (path "/00000000-0000-0000-0000-000061d45a0d/00000000-0000-0000-0000-0000619873ff"
       (reference "J1") (unit 1) (value "DIN41612_03x32_C") (footprint "Connector_DIN:DIN41612_C_3x32_Male_Horizontal_THT")
@@ -3002,6 +3014,18 @@
     )
     (path "/00000000-0000-0000-0000-000061ec7443/00000000-0000-0000-0000-0000638f11c1/00000000-0000-0000-0000-00006358f150"
       (reference "T16") (unit 1) (value "1:1") (footprint "lachesis:Transformer_Murata_786J")
+    )
+    (path "/00000000-0000-0000-0000-0000652d8f7b/a91b81f7-bc76-450f-bbd1-f533e2a68e84"
+      (reference "TP1") (unit 1) (value "TestPoint") (footprint "TestPoint:TestPoint_Keystone_5000-5004_Miniature")
+    )
+    (path "/00000000-0000-0000-0000-0000652d8f7b/3d6f236f-9fe9-410e-891c-97cb553de8b8"
+      (reference "TP2") (unit 1) (value "TestPoint") (footprint "TestPoint:TestPoint_Keystone_5000-5004_Miniature")
+    )
+    (path "/00000000-0000-0000-0000-0000652d8f7b/d29844ea-9617-4f66-8779-34cf1ffe680c"
+      (reference "TP3") (unit 1) (value "TestPoint") (footprint "TestPoint:TestPoint_Keystone_5000-5004_Miniature")
+    )
+    (path "/00000000-0000-0000-0000-0000652d8f7b/afab111f-9240-4c95-b119-eee42211f63c"
+      (reference "TP4") (unit 1) (value "TestPoint") (footprint "TestPoint:TestPoint_Keystone_5000-5004_Miniature")
     )
     (path "/00000000-0000-0000-0000-000061ec7443/00000000-0000-0000-0000-00006357e92c/00000000-0000-0000-0000-00006358f0f7"
       (reference "U1") (unit 1) (value "SN7524") (footprint "Package_DIP:DIP-16_W7.62mm_Socket")
