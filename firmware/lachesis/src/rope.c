@@ -78,19 +78,32 @@ void rope_set_sbf_state(bool on)
 
 void rope_pulse_set(uint8_t circuit)
 {
+    rope_driver_set_address(&g_rope_driver, circuit << 8);
     rope_driver_start_cycle(&g_rope_driver, ROPE_DRIVER_ENABLE_SET);
     while (rope_driver_busy(&g_rope_driver));
 }
 
 void rope_pulse_reset(uint8_t circuit)
 {
+    rope_driver_set_address(&g_rope_driver, circuit << 7);
     rope_driver_start_cycle(&g_rope_driver, ROPE_DRIVER_ENABLE_RESET2);
     while (rope_driver_busy(&g_rope_driver));
 }
 
 void rope_pulse_inhibit(uint8_t circuit)
 {
-    uint16_t address = (circuit < 010) ? 01 : 00;
+    bool inverted = false;
+    uint16_t address = 0;
+    if (circuit >= 8) {
+        circuit -= 8;
+        inverted = true;
+    }
+    if (circuit < 7) {
+        address = (1 << circuit);
+    }
+    if (inverted) {
+        address ^= 0177;
+    }
     rope_driver_set_address(&g_rope_driver, address);
     rope_driver_start_cycle(&g_rope_driver, ROPE_DRIVER_ENABLE_IHENV);
     while (rope_driver_busy(&g_rope_driver));
@@ -98,8 +111,7 @@ void rope_pulse_inhibit(uint8_t circuit)
 
 void rope_pulse_strand(uint8_t circuit)
 {
-    uint16_t address = (circuit & 01) ? 02 : 00;
-    rope_driver_set_address(&g_rope_driver, address);
+    rope_driver_set_address(&g_rope_driver, circuit << 9);
     rope_driver_start_cycle(&g_rope_driver, ROPE_DRIVER_ENABLE_STRGAT);
     while (rope_driver_busy(&g_rope_driver));
 }
