@@ -15,14 +15,14 @@
 	)
 	(
 		// Users to add ports here
-		input wire [2:1] saf,
+		input wire [16:1] saf,
 		input wire bplssw_pg,
 		
         output wire bplssw,
-        output wire set,
-        output wire reset,
+        output wire [2:1] set,
+        output wire [4:1] reset,
         output wire ihenv,
-        output wire [2:1] il,
+        output wire [8:1] il,
         output wire roper,
         output wire [3:0] str,
         output wire sbf,
@@ -140,8 +140,8 @@
 	integer	 byte_index;
 	reg	 aw_en;
 	wire busy;
-	wire [2:1] sa;
-        wire [1:0] cycle_address;
+	wire [16:1] sa;
+        wire [13:1] cycle_address;
 
 	// I/O Connections assignments
 
@@ -584,7 +584,7 @@
             .rst_n(S_AXI_ARESETN),
 
             .enable(slv_reg0[5:0]),
-            .address(slv_reg1[1:0]),
+            .address(slv_reg1[12:0]),
 
             .bplssw_enable(slv_reg3[0]),
             .sbf_enable(slv_reg4[0]),

@@ -15,14 +15,14 @@
 	)
 	(
 		// Users to add ports here
-		input wire [2:1] saf,
+		input wire [16:1] saf,
 		input wire bplssw_pg,
 		
         output wire bplssw,
-        output wire set,
-        output wire reset,
+        output wire [2:1] set,
+        output wire [4:1] reset,
         output wire ihenv,
-        output wire [2:1] il,
+        output wire [8:1] il,
         output wire roper,
         output wire [3:0] str,
         output wire sbf,

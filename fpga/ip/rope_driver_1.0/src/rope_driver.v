@@ -6,7 +6,7 @@ module rope_driver(
     input wire rst_n,
 
     input wire [5:0] enable,
-    input wire [1:0] address,
+    input wire [13:1] address,
 
     input wire sbf_enable,
     input wire bplssw_enable,
@@ -28,17 +28,17 @@ module rope_driver(
     input wire [31:0] bplssw_pg_loss_timeout,
 
     input wire bplssw_pg,
-    input wire [2:1] saf,
+    input wire [16:1] saf,
 
-    output reg [2:1] sa,
+    output reg [16:1] sa,
     output wire busy,
-    output reg [1:0] cycle_address,
+    output reg [13:1] cycle_address,
 
     output wire bplssw,
-    output wire set,
-    output wire reset,
+    output wire [2:1] set,
+    output wire [4:1] reset,
     output wire ihenv,
-    output wire [2:1] il,
+    output wire [8:1] il,
     output wire roper,
     output wire [3:0] str,
     output wire sbf
@@ -54,12 +54,12 @@ module rope_driver(
 
 reg [1:0] cycle_state;
 reg [1:0] cycle_state_next;
-reg [1:0] cycle_address_next;
+reg [13:1] cycle_address_next;
 reg [10:0] cycle_count;
 reg [10:0] cycle_count_next;
 reg [5:0] enable_mask;
 reg [5:0] enable_mask_next;
-reg [1:0] sa_next;
+reg [16:1] sa_next;
 
 always @(*) begin
     cycle_state_next = cycle_state;
@@ -74,7 +74,7 @@ always @(*) begin
             cycle_count_next = 11'd0;
             cycle_address_next = address;
             enable_mask_next = enable;
-            sa_next = 2'b0;
+            sa_next = 16'b0;
         end
     end
     `CYCLE_STATE_ACTIVE: begin
@@ -85,22 +85,22 @@ always @(*) begin
             end
         end else begin
             cycle_state_next = `CYCLE_STATE_DONE;
-            enable_mask_next = 6'd0;
+            enable_mask_next = 6'b0;
         end
     end
     `CYCLE_STATE_DONE: begin
         if (enable == 6'd0) begin
             cycle_state_next = `CYCLE_STATE_IDLE;
             cycle_count_next = 11'd0;
-            enable_mask_next = 6'd0;
+            enable_mask_next = 6'b0;
         end
     end
     default: begin
         cycle_state_next = `CYCLE_STATE_IDLE;
-        enable_mask_next = 6'd0;
-        cycle_address_next = 2'd0;
+        enable_mask_next = 6'b0;
+        cycle_address_next = 13'b0;
         cycle_count_next = 11'd0;
-        sa_next = 2'b0;
+        sa_next = 16'b0;
     end
     endcase
 end
@@ -108,10 +108,10 @@ end
 always @(posedge clk or negedge rst_n) begin
     if (~rst_n) begin
         cycle_count <= 11'd0;
-        cycle_address <= 2'd0;
+        cycle_address <= 13'b0;
         cycle_state <= `CYCLE_STATE_IDLE;
-        enable_mask <= 6'd0;
-        sa <= 2'b0;
+        enable_mask <= 6'b0;
+        sa <= 16'b0;
     end else begin
         cycle_count <= cycle_count_next;
         cycle_address <= cycle_address_next;
@@ -124,16 +124,31 @@ end
 assign busy = (cycle_state == `CYCLE_STATE_ACTIVE);
 
 wire strgat;
+wire t_set;
+wire t_reset1;
+wire t_reset2;
 
-assign ihenv  = enable_mask[0] && (cycle_count >= o_ihenv)  && (cycle_count < (o_ihenv + w_ihenv));
-assign set    = enable_mask[2] && (cycle_count >= o_set)    && (cycle_count < (o_set + w_set));
-assign strgat = enable_mask[3] && (cycle_count >= o_strgat) && (cycle_count < (o_strgat + w_strgat));
-assign reset  = enable_mask[4] && (cycle_count >= o_reset2) && (cycle_count < (o_reset2 + w_reset2));
-assign sbf   = (enable_mask[5] && (cycle_count >= o_sbf)   && (cycle_count < (o_sbf + w_sbf))) || sbf_enable;
+assign ihenv    = enable_mask[0] && (cycle_count >= o_ihenv)  && (cycle_count < (o_ihenv + w_ihenv));
+assign t_reset1 = enable_mask[1] && (cycle_count >= o_reset1) && (cycle_count < (o_reset1 + w_reset1));
+assign t_set    = enable_mask[2] && (cycle_count >= o_set)    && (cycle_count < (o_set + w_set));
+assign strgat   = enable_mask[3] && (cycle_count >= o_strgat) && (cycle_count < (o_strgat + w_strgat));
+assign t_reset2 = enable_mask[4] && (cycle_count >= o_reset2) && (cycle_count < (o_reset2 + w_reset2));
+assign sbf      = (enable_mask[5] && (cycle_count >= o_sbf)   && (cycle_count < (o_sbf + w_sbf))) || sbf_enable;
 
 assign roper = strgat;
-assign str = strgat ? (cycle_address[1] + 4'b1) : 4'b0;
-assign il = ~{cycle_address[0], cycle_address[0]};
+assign set[1] = t_set && ~cycle_address[9];
+assign set[2] = t_set &&  cycle_address[9];
+assign reset[1] = (t_reset1 && (cycle_address[9:8] == 2'd1)) ||
+                  (t_reset2 && (cycle_address[9:8] == 2'd0));
+assign reset[2] = (t_reset1 && (cycle_address[9:8] == 2'd0)) ||
+                  (t_reset2 && (cycle_address[9:8] == 2'd1));
+assign reset[3] = (t_reset1 && (cycle_address[9:8] == 2'd3)) ||
+                  (t_reset2 && (cycle_address[9:8] == 2'd2));
+assign reset[4] = (t_reset1 && (cycle_address[9:8] == 2'd2)) ||
+                  (t_reset2 && (cycle_address[9:8] == 2'd3));
+assign il[8] = ^cycle_address[7:1];
+assign il[7:1] = ~{cycle_address[7:1]};
+assign str = strgat ? (cycle_address[13:10] + 4'b1) : 4'b0;
 
 reg [1:0] bplssw_state;
 reg [1:0] bplssw_state_next;
