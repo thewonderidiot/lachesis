@@ -1,4 +1,4 @@
-def disassemble_bank(words):
+def disassemble_bank(words, bank_idx=0):
     extended = False
     banksum = 0
     lines = [''] * 1024
@@ -52,12 +52,12 @@ def disassemble_bank(words):
         if arg_str:
             lines[s] += '<span style="color:magenta;">%s</span>' % arg_str
 
-        if (bank == 2) and (word == 0o4000 + s):
+        if (bank_idx == 2) and (word == 0o4000 + s):
             bs2 += 1
         else:
             bs2 = 0
 
-        if (bank == 3) and (word == 0o6000 + s):
+        if (bank_idx == 3) and (word == 0o6000 + s):
             bs3 += 1
         else:
             bs3 = 0

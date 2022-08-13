@@ -222,7 +222,7 @@ class MainWindow(QMainWindow):
 
             if self._next_strand % 2 == 0:
                 bank_idx = self._next_strand // 2 - 1
-                html, bugger, bank, health = agc.disassemble_bank(self._words[-1024:])
+                html, bugger, bank, health = agc.disassemble_bank(self._words[-1024:], bank_idx)
                 self._buggers.append(bugger)
                 self._sums[bank_idx].setText('%06o' % bugger)
                 self._banks[bank_idx].setText(bank)
