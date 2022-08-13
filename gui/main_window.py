@@ -1,6 +1,10 @@
-from PySide2.QtWidgets import QMainWindow, QGridLayout, QPushButton, QWidget, QPlainTextEdit, QLabel, QLineEdit
+from PySide2.QtWidgets import QMainWindow, QGridLayout, QPushButton, QWidget, QPlainTextEdit, QLabel, QLineEdit, QInputDialog
 from PySide2.QtGui import QColor, QFont
 from PySide2.QtCore import Qt
+import array
+import glob
+import os
+
 from usb_interface import USBInterface
 from measurements import Measurements
 from timing_window import TimingWindow
@@ -9,10 +13,6 @@ from control_window import ControlWindow
 from rope_db import RopeDB
 import usb_msg
 import agc
-
-#temp
-import array
-import os
 
 class MainWindow(QMainWindow):
     def __init__(self, parent, app):
@@ -215,7 +215,7 @@ class MainWindow(QMainWindow):
         elif isinstance(msg, usb_msg.Strand):
             # Immediately kick off the next strand so the hardware can think
             # while we're processing this one
-            if self._next_strand > 0:
+            if self._next_strand < 12:
                 self._usbif.send(usb_msg.ReadStrand(self._next_strand))
 
             self._words.extend(msg.words)
@@ -231,28 +231,46 @@ class MainWindow(QMainWindow):
                     self._healths[bank_idx].set_color(QColor(0, 255, 0))
                 else:
                     self._healths[bank_idx].set_color(QColor(255, 0, 0))
+                    self._all_healthy = False
                 self._app.processEvents()
                 self._data_text.appendHtml(html)
 
             self._next_strand += 1
-            if self._next_strand >= 12:
-                self._identify_rope()
+            if self._next_strand > 12:
+                self._process_rope()
                 self._next_strand = 0
                 self._read_rope_button.setEnabled(True)
+                self._data_text.verticalScrollBar().setValue(0)
                 
 
-    def _identify_rope(self):
+    def _process_rope(self):
         prog, mod, pn, deck = self._rope_db.find_rope(self._buggers)
+        if pn == '-':
+            pn, ok = QInputDialog.getItem(self, 'Rope Module Part Number', 'Select P/N of Unknown Module:',
+                                          self._rope_db.get_unknown_partnos())
+            prog, mod, pn, deck = self._rope_db.identify_rope(pn, self._buggers, self._all_healthy)
+
+        fn = pn
+        existing_dumps = glob.glob(pn + '*', root_dir='dumps')
+        if len(existing_dumps) > 0:
+            fn += chr(ord('a') + len(existing_dumps) - 1)
+        fn += '.bin'
+
+        word_array = array.array('H', self._words)
+        word_array.byteswap()
+        with open(os.path.join('dumps', fn), 'wb') as f:
+            word_array.tofile(f)
+
         self._rope_label.setText(prog)
         self._module_label.setText(mod)
         self._pn_label.setText(pn)
         self._deck_label.setText(deck)
-        self._data_text.verticalScrollBar().setValue(0)
 
     def _reset(self):
         self._words = []
         self._buggers = []
         self._data_text.setPlainText('')
+        self._all_healthy = True
         for i in range(6):
             self._sums[i].setText('000000')
             self._banks[i].setText('--')
