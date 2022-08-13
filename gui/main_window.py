@@ -20,6 +20,7 @@ class MainWindow(QMainWindow):
         self._app = app
 
         self._rope_db = RopeDB()
+        self._next_strand = 0
 
         # Set up the serial port
         self._usbif = USBInterface(self)
@@ -189,20 +190,10 @@ class MainWindow(QMainWindow):
     def _read_rope(self):
         self._reset()
         self._read_rope_button.setEnabled(False)
+        self._data_text.setPlainText('')
         self._app.processEvents()
 
-        #------TESTING-----------
-        # self._words = [0]*6*1204
-        # words = array.array('H')
-        # fn = 'sundance292_b1.bin'
-        # with open(fn, 'rb') as f:
-        #     words.fromfile(f, int(os.path.getsize(fn)/2))
-        # words.byteswap()
-        # self._words = list(words)
-        # self._process_rope()
-        # self._read_rope_button.setEnabled(True)
-        #------------------------
-
+        self._next_strand = 1
         self._usbif.send(usb_msg.ReadStrand(0))
 
     def _toggle_bplssw(self):
@@ -222,39 +213,45 @@ class MainWindow(QMainWindow):
                 self._bplssw_ind.set_color(QColor(255, 0, 0))
 
         elif isinstance(msg, usb_msg.Strand):
-            strings = [str(w) for w in msg.words[:4]]
-            self._text.setText(' '.join(strings))
+            # Immediately kick off the next strand so the hardware can think
+            # while we're processing this one
+            if self._next_strand > 0:
+                self._usbif.send(usb_msg.ReadStrand(self._next_strand))
 
-    def _process_rope(self):
-        html, buggers, banks, healths = agc.disassemble(self._words)
-        for i, bugger in enumerate(buggers):
-            self._sums[i].setText('%06o' % bugger)
+            self._words.extend(msg.words)
 
-        for i, bank in enumerate(banks):
-            self._banks[i].setText('%02o' % bank)
+            if self._next_strand % 2 == 0:
+                bank_idx = self._next_strand // 2 - 1
+                html, bugger, bank, health = agc.disassemble_bank(self._words[-1024:])
+                self._buggers.append(bugger)
+                self._sums[bank_idx].setText('%06o' % bugger)
+                self._banks[bank_idx].setText(bank)
+                self._healths[bank_idx].set_on(True)
+                if health:
+                    self._healths[bank_idx].set_color(QColor(0, 255, 0))
+                else:
+                    self._healths[bank_idx].set_color(QColor(255, 0, 0))
+                self._app.processEvents()
+                self._data_text.appendHtml(html)
 
-        for i, health in enumerate(healths):
-            self._healths[i].set_on(True)
-            if health:
-                self._healths[i].set_color(QColor(0, 255, 0))
-            else:
-                self._healths[i].set_color(QColor(255, 0, 0))
+            self._next_strand += 1
+            if self._next_strand >= 12:
+                self._identify_rope()
+                self._next_strand = 0
+                self._read_rope_button.setEnabled(True)
+                
 
-        prog, mod, pn, deck = self._rope_db.find_rope(buggers)
+    def _identify_rope(self):
+        prog, mod, pn, deck = self._rope_db.find_rope(self._buggers)
         self._rope_label.setText(prog)
         self._module_label.setText(mod)
         self._pn_label.setText(pn)
         self._deck_label.setText(deck)
-
-        self._data_text.setPlainText('')
-        for i,line in enumerate(html):
-            self._data_text.appendHtml(line)
-            if i % 0o400 == 0o377:
-                self._app.processEvents()
         self._data_text.verticalScrollBar().setValue(0)
 
     def _reset(self):
-        self._words = [0]*6*1024
+        self._words = []
+        self._buggers = []
         self._data_text.setPlainText('')
         for i in range(6):
             self._sums[i].setText('000000')

@@ -1,126 +1,90 @@
-def disassemble(words, first_bank=0):
+def disassemble_bank(words):
     extended = False
     banksum = 0
-    lines = [''] * 6 * 1024
-    buggers = []
-    banks = []
-    health = []
+    lines = [''] * 1024
 
-    for bank_idx in range(6):
-        banksum = 0
-        parity_good = True
-        bs2 = 0
-        bs3 = 0
-        bsn = 0
-        last_sum = False
-        if words[bank_idx * 0o2000] != 0:
-            summing = True
+    banksum = 0
+    parity_good = True
+    bs2 = 0
+    bs3 = 0
+    bsn = 0
+    last_sum = False
+    bank = -1
+    bugger = 0
+    summing = (words[0] != 0)
+
+    for s in range(0o2000):
+        raw_word = words[s]
+        word = ((raw_word >> 1) & 0o40000) | (raw_word & 0o37777)
+        parity = (raw_word >> 14) & 1
+        word_parity = calc_parity(raw_word)
+
+        if not summing:
+            word_color = 'gray' if word == 0 else 'red'
+            parity_color = 'gray' if parity == 0 else 'red'
+            lines[s] += '<span style="color:%s;">%05o</span>&nbsp;' % (word_color, word)
+            lines[s] += '<span style="color:%s;">%o</span>' % (parity_color, parity)
+            continue
+
+        lines[s] += '<span style="color:blue;">%05o</span>&nbsp;' % word
+
+        if parity == word_parity:
+            parity_color = 'blue'
         else:
+            parity_color = 'red'
+            parity_good = False
+
+        lines[s] += '<span style="color:%s;">%o</span>&nbsp;&nbsp;' % (parity_color, parity)
+
+        banksum = add(banksum, word)
+        if last_sum or s == 0o1777:
+            bank = banksum ^ 0o77777 if (banksum & 0o40000) else banksum
+            bugger = (word << 3) | parity
             summing = False
-            banks.append(0)
-            buggers.append(0)
-
-        for s in range(0o2000):
-            word_idx = bank_idx*0o2000 + s
-            raw_word = words[word_idx]
-            word = ((raw_word >> 1) & 0o40000) | (raw_word & 0o37777)
-            parity = (raw_word >> 14) & 1
-            word_parity = calc_parity(raw_word)
-
-            if not summing:
-                word_color = 'gray' if word == 0 else 'red'
-                parity_color = 'gray' if parity == 0 else 'red'
-                lines[word_idx] += '<span style="color:%s;">%05o</span>&nbsp;' % (word_color, word)
-                lines[word_idx] += '<span style="color:%s;">%o</span>' % (parity_color, parity)
-                continue
-
-            lines[word_idx] += '<span style="color:blue;">%05o</span>&nbsp;' % word
-
-            if parity == word_parity:
-                parity_color = 'blue'
-            else:
-                parity_color = 'red'
-                parity_good = False
-
-            lines[word_idx] += '<span style="color:%s;">%o</span>&nbsp;&nbsp;' % (parity_color, parity)
-
-            banksum = add(banksum, word)
-            if last_sum or s == 0o1777:
-                bank_no = banksum ^ 0o77777 if (banksum & 0o40000) else banksum
-                banks.append(bank_no)
-                buggers.append((word << 3) | parity)
-                summing = False
-                op_str = 'BNKSUM'
-                arg_str = '%o' % bank_no
-            else:
-                op_str, arg_str, extended = disassemble_instruction(word, extended)
-
-            op_str += '&nbsp;' * (7 - len(op_str))
-
-            lines[word_idx] += '<span style="color:green;">%s</span>' % op_str
-            if arg_str:
-                lines[word_idx] += '<span style="color:magenta;">%s</span>' % arg_str
-
-            if (bank_idx == 2) and (word == 0o4000 + s):
-                bs2 += 1
-            else:
-                bs2 = 0
-
-            if (bank_idx == 3) and (word == 0o6000 + s):
-                bs3 += 1
-            else:
-                bs3 = 0
-
-            if word == 0o2000 + s:
-                bsn += 1
-            else:
-                bsn = 0
-            
-            if bs2 >= 2 or bs3 >= 2 or bsn >= 2:
-                last_sum = True
-
-        health.append(parity_good)
-
-    # Now inspect banks
-    best_module = 0
-    best_matches = 0
-    possible_modules = [
-        list(range(0o00, 0o06)),
-        list(range(0o06, 0o14)),
-        list(range(0o14, 0o22)),
-        list(range(0o22, 0o30)),
-        list(range(0o30, 0o36)),
-        list(range(0o36, 0o44)),
-    ]
-
-    for i,possible_module in enumerate(possible_modules):
-        matches = 0
-        for a, b in zip(possible_module, banks):
-            if a == b:
-                matches += 1
-
-        if matches > best_matches:
-            best_matches = matches
-            best_module = i
-
-    for i,bank in enumerate(banks):
-        if bank != possible_modules[best_module][i]:
-            health[i] = False
-
-    banks = possible_modules[best_module]
-
-    for i in range(len(lines)):
-        bank_idx = i // 0o2000
-        fb = banks[bank_idx]
-        s = i % 0o2000
-
-        if fb == 2 or fb == 3:
-            addr_str = '&nbsp;&nbsp;&nbsp;%04o' % (s + fb*0o2000)
+            op_str = 'BNKSUM'
+            arg_str = '%o' % bank
         else:
-            addr_str = '%02o,%04o' % (fb, s + 0o2000)
-        lines[i] = ('<span style="color:gray;">%s</span>&nbsp;' % addr_str) + lines[i]
+            op_str, arg_str, extended = disassemble_instruction(word, extended)
 
-    return lines, buggers, banks, health
+        op_str += '&nbsp;' * (7 - len(op_str))
+
+        lines[s] += '<span style="color:green;">%s</span>' % op_str
+        if arg_str:
+            lines[s] += '<span style="color:magenta;">%s</span>' % arg_str
+
+        if (bank == 2) and (word == 0o4000 + s):
+            bs2 += 1
+        else:
+            bs2 = 0
+
+        if (bank == 3) and (word == 0o6000 + s):
+            bs3 += 1
+        else:
+            bs3 = 0
+
+        if word == 0o2000 + s:
+            bsn += 1
+        else:
+            bsn = 0
+        
+        if bs2 >= 2 or bs3 >= 2 or bsn >= 2:
+            last_sum = True
+
+    health = parity_good
+    if bank < 0 or bank > 0o43:
+        health = False
+        bank_str = '??'
+    else:
+        bank_str = '%02o' % bank
+
+    for s in range(len(lines)):
+        if bank == 2 or bank == 3:
+            addr_str = '&nbsp;&nbsp;&nbsp;%04o' % (s + bank*0o2000)
+        else:
+            addr_str = '%s,%04o' % (bank_str, s + 0o2000)
+        lines[s] = ('<span style="color:gray;">%s</span>&nbsp;' % addr_str) + lines[s]
+
+    return '<br/>'.join(lines), bugger, bank_str, health
 
 def disassemble_instruction(word, extended):
     op_str = ''
