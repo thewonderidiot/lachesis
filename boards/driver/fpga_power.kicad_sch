@@ -5238,7 +5238,7 @@
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-000061ab75da)
     (property "Reference" "U9" (id 0) (at 62.23 50.3682 0))
-    (property "Value" "JTE0624D05" (id 1) (at 62.23 52.6796 0))
+    (property "Value" "TEN 5-1221‎" (id 1) (at 62.23 52.6796 0))
     (property "Footprint" "Converter_DCDC:Converter_DCDC_XP_POWER_JTExxxxDxx_THT" (id 2) (at 62.23 72.39 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )

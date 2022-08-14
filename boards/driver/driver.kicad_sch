@@ -2941,7 +2941,7 @@
       (reference "R266") (unit 1) (value "1k") (footprint "Resistor_SMD:R_0603_1608Metric")
     )
     (path "/00000000-0000-0000-0000-000061ec7443/00000000-0000-0000-0000-00006320788e"
-      (reference "R267") (unit 1) (value "75") (footprint "Resistor_SMD:R_0603_1608Metric")
+      (reference "R267") (unit 1) (value "7.5") (footprint "Resistor_SMD:R_0603_1608Metric")
     )
     (path "/00000000-0000-0000-0000-000064d2df1e/00000000-0000-0000-0000-0000639cc993"
       (reference "R268") (unit 1) (value "1k") (footprint "Resistor_SMD:R_0603_1608Metric")
@@ -3124,7 +3124,7 @@
       (reference "U8") (unit 4) (value "SN7524") (footprint "Package_DIP:DIP-16_W7.62mm_Socket")
     )
     (path "/00000000-0000-0000-0000-0000652d8f7b/00000000-0000-0000-0000-000061ab75da"
-      (reference "U9") (unit 1) (value "JTE0624D05") (footprint "Converter_DCDC:Converter_DCDC_XP_POWER_JTExxxxDxx_THT")
+      (reference "U9") (unit 1) (value "TEN 5-1221‎") (footprint "Converter_DCDC:Converter_DCDC_XP_POWER_JTExxxxDxx_THT")
     )
     (path "/00000000-0000-0000-0000-0000652d8f7b/00000000-0000-0000-0000-00006182a1c6"
       (reference "U10") (unit 1) (value "74LVC245") (footprint "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm")
