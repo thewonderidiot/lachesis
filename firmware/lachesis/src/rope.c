@@ -49,6 +49,7 @@ uint16_t rope_read_word(uint16_t address)
     rope_driver_set_address(&g_rope_driver, address);
     rope_driver_start_cycle(&g_rope_driver, ROPE_DRIVER_ENABLE_ALL);
     while (rope_driver_busy(&g_rope_driver));
+    sys_delay(500);
     return rope_driver_get_sensed_word(&g_rope_driver);
 }
 
