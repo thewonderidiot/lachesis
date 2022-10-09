@@ -1,6 +1,7 @@
 from PySide2.QtWidgets import QMainWindow, QGridLayout, QPushButton, QWidget, QPlainTextEdit, QLabel, QLineEdit, QInputDialog
 from PySide2.QtGui import QColor, QFont
 from PySide2.QtCore import Qt
+import time
 import array
 import glob
 import os
@@ -21,6 +22,7 @@ class MainWindow(QMainWindow):
 
         self._rope_db = RopeDB()
         self._next_strand = 0
+        self._bplssw_time = 0
 
         # Set up the serial port
         self._usbif = USBInterface(self)
@@ -198,17 +200,18 @@ class MainWindow(QMainWindow):
 
     def _toggle_bplssw(self):
         on = self._bplssw_button.isChecked()
-        self._read_rope_button.setEnabled(on) # FIXME: Make this depend on PGOOD
 
         self._bplssw_ind.set_on(on)
         if not on:
             self._bplssw_ind.set_color(QColor(0, 255, 0))
 
+        self._bplssw_time = time.time()
         self._usbif.send(usb_msg.SetBPLSSWState(on))
 
     def _update(self, msg):
         if isinstance(msg, usb_msg.RopeStatus):
-            if msg.bplssw_state != self._bplssw_button.isChecked():
+            self._read_rope_button.setEnabled(msg.bplssw_state)
+            if (time.time() > self._bplssw_time + 0.1) and (msg.bplssw_state != self._bplssw_button.isChecked()):
                 self._bplssw_ind.set_on(True)
                 self._bplssw_ind.set_color(QColor(255, 0, 0))
 

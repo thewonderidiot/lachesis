@@ -17,8 +17,10 @@ class ControlWindow(QWidget):
     def _update(self, msg):
         if isinstance(msg, usb_msg.RopeStatus):
             self._sbf_ind.set_on(msg.sbf_state)
-            self._cycle_address.setText('%o' % msg.last_address)
-            self._cycle_word.setText('%o' % msg.sensed_word)
+            self._cycle_address.setText('%05o' % msg.last_address)
+            word = ((msg.sensed_word >> 1) & 0o40000) | (msg.sensed_word & 0o37777)
+            parity = (msg.sensed_word >> 14) & 1
+            self._cycle_word.setText('%05o %o' % (word, parity))
 
     def _toggle_sbf(self):
         on = self._sbf_button.isChecked()
@@ -94,7 +96,7 @@ class ControlWindow(QWidget):
         box_layout.addWidget(label, 0, 0)
 
         self._cycle_address = QLineEdit(self)
-        self._cycle_address.setText('0')
+        self._cycle_address.setText('00000')
         self._cycle_address.setReadOnly(True)
         box_layout.addWidget(self._cycle_address, 0, 1)
 
@@ -102,7 +104,7 @@ class ControlWindow(QWidget):
         box_layout.addWidget(label, 1, 0)
 
         self._cycle_word = QLineEdit(self)
-        self._cycle_word.setText('0')
+        self._cycle_word.setText('00000 0')
         self._cycle_word.setReadOnly(True)
         box_layout.addWidget(self._cycle_word, 1, 1)
 
