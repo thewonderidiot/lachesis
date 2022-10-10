@@ -146,7 +146,7 @@ assign reset[3] = (t_reset1 && (cycle_address[9:8] == 2'd3)) ||
                   (t_reset2 && (cycle_address[9:8] == 2'd2));
 assign reset[4] = (t_reset1 && (cycle_address[9:8] == 2'd2)) ||
                   (t_reset2 && (cycle_address[9:8] == 2'd3));
-assign il[8] = ^cycle_address[7:1];
+assign il[8] = ^cycle_address[8:1];
 assign il[7:1] = ~{cycle_address[7:1]};
 assign str = strgat ? (cycle_address[13:10] + 4'b1) : 4'b0;
 
