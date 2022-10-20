@@ -1,4 +1,561 @@
 {
+    "0001": {
+        "assembly": "1003203-1",
+        "program": "ECLIPSE",
+        "revision": "A",
+        "module": "B21",
+        "partno": [
+            "1003133-1"
+        ]
+    },
+    "0002": {
+        "assembly": "1003203-1",
+        "program": "ECLIPSE",
+        "revision": "A",
+        "module": "B22",
+        "partno": [
+            "1003133-2"
+        ]
+    },
+    "0003": {
+        "assembly": "1003203-1",
+        "program": "ECLIPSE",
+        "revision": "A",
+        "module": "B28",
+        "partno": [
+            "1003133-3"
+        ]
+    },
+    "0004": {
+        "assembly": "1003203-1",
+        "program": "ECLIPSE",
+        "revision": "A",
+        "module": "B29",
+        "partno": [
+            "1003133-4"
+        ]
+    },
+    "0005": {
+        "assembly": "1003203-2",
+        "program": "ECLIPSE",
+        "revision": "B",
+        "module": "B21",
+        "partno": [
+            "1003133-5"
+        ]
+    },
+    "0006": {
+        "assembly": "1003203-2",
+        "program": "ECLIPSE",
+        "revision": "B",
+        "module": "B22",
+        "partno": [
+            "1003133-6"
+        ]
+    },
+    "0007": {
+        "assembly": "1021100-1",
+        "program": "ARTEMIS",
+        "revision": "-",
+        "module": "B21",
+        "partno": [
+            "1003133-7"
+        ]
+    },
+    "0008": {
+        "assembly": "1021100-1",
+        "program": "ARTEMIS",
+        "revision": "-",
+        "module": "B22",
+        "partno": [
+            "1003133-8"
+        ]
+    },
+    "0009": {
+        "assembly": "1021100-1",
+        "program": "ARTEMIS",
+        "revision": "-",
+        "module": "B23",
+        "partno": [
+            "1003133-9"
+        ]
+    },
+    "0010": {
+        "assembly": "1021100-1",
+        "program": "ARTEMIS",
+        "revision": "-",
+        "module": "B24",
+        "partno": [
+            "1003133-10"
+        ]
+    },
+    "0011": {
+        "assembly": "1021100-1",
+        "program": "ARTEMIS",
+        "revision": "-",
+        "module": "B28",
+        "partno": [
+            "1003133-11"
+        ]
+    },
+    "0012": {
+        "assembly": "1021100-1",
+        "program": "ARTEMIS",
+        "revision": "-",
+        "module": "B29",
+        "partno": [
+            "1003133-12"
+        ]
+    },
+    "0013": {
+        "assembly": "1021101-1",
+        "program": "MOONGLOW",
+        "revision": "-",
+        "module": "B21",
+        "partno": [
+            "1003133-13"
+        ]
+    },
+    "0014": {
+        "assembly": "1021101-1",
+        "program": "MOONGLOW",
+        "revision": "-",
+        "module": "B28",
+        "partno": [
+            "1003133-14"
+        ]
+    },
+    "0015": {
+        "assembly": "1021101-1",
+        "program": "MOONGLOW",
+        "revision": "-",
+        "module": "B29",
+        "partno": [
+            "1003133-15"
+        ]
+    },
+    "0016": {
+        "assembly": "1021102-1",
+        "program": "SUNRISE",
+        "revision": "33",
+        "module": "B21",
+        "partno": [
+            "1003133-16"
+        ]
+    },
+    "0017": {
+        "assembly": "1021102-1",
+        "program": "SUNRISE",
+        "revision": "33",
+        "module": "B28",
+        "partno": [
+            "1003133-17"
+        ]
+    },
+    "0018": {
+        "assembly": "1021102-1",
+        "program": "SUNRISE",
+        "revision": "33",
+        "module": "B29",
+        "partno": [
+            "1003133-18",
+            "1003733-031",
+            "1003733-061"
+        ]
+    },
+    "0019": {
+        "assembly": "1021102-2",
+        "program": "SUNRISE",
+        "revision": "38",
+        "module": "B21",
+        "partno": [
+            "1003133-19",
+            "1003733-011",
+            "1003733-041"
+        ]
+    },
+    "0020": {
+        "assembly": "1021102-3",
+        "program": "SUNRISE",
+        "revision": "45",
+        "module": "B28",
+        "partno": [
+            "1003133-20",
+            "1003733-021",
+            "1003733-051"
+        ]
+    },
+    "0021": {
+        "assembly": "?",
+        "program": "?",
+        "revision": "?",
+        "module": "B28",
+        "partno": [
+            "1003133-21",
+            "1003733-081"
+        ]
+    },
+    "0022": {
+        "assembly": "?",
+        "program": "?",
+        "revision": "?",
+        "module": "B29",
+        "partno": [
+            "1003133-22",
+            "1003733-091"
+        ]
+    },
+    "0023": {
+        "assembly": "1021103-031",
+        "program": "SUNRISE",
+        "revision": "69",
+        "module": "B22",
+        "partno": [
+            "1003733-071"
+        ]
+    },
+    "0024": {
+        "assembly": "1021104",
+        "program": "ARES",
+        "revision": "?",
+        "module": "B21",
+        "partno": [
+            "1003733-111"
+        ]
+    },
+    "0025": {
+        "assembly": "1021104",
+        "program": "ARES",
+        "revision": "?",
+        "module": "B22",
+        "partno": [
+            "1003733-121"
+        ]
+    },
+    "0026": {
+        "assembly": "1021104",
+        "program": "ARES",
+        "revision": "?",
+        "module": "B23",
+        "partno": [
+            "1003733-131"
+        ]
+    },
+    "0027": {
+        "assembly": "1021104",
+        "program": "ARES",
+        "revision": "?",
+        "module": "B24",
+        "partno": [
+            "1003733-141"
+        ]
+    },
+    "0028": {
+        "assembly": "1021104",
+        "program": "ARES",
+        "revision": "?",
+        "module": "B28",
+        "partno": [
+            "1003733-151"
+        ]
+    },
+    "0029": {
+        "assembly": "1021104",
+        "program": "ARES",
+        "revision": "?",
+        "module": "B29",
+        "partno": [
+            "1003733-161"
+        ]
+    },
+    "0030": {
+        "assembly": "1021106-011",
+        "program": "CORONA",
+        "revision": "?",
+        "module": "B21",
+        "partno": [
+            "1003733-171"
+        ]
+    },
+    "0031": {
+        "assembly": "1021106-011",
+        "program": "CORONA",
+        "revision": "?",
+        "module": "B22",
+        "partno": [
+            "1003733-181"
+        ]
+    },
+    "0032": {
+        "assembly": "1021106-011",
+        "program": "CORONA",
+        "revision": "?",
+        "module": "B23",
+        "partno": [
+            "1003733-191"
+        ]
+    },
+    "0033": {
+        "assembly": "1021106-011",
+        "program": "CORONA",
+        "revision": "?",
+        "module": "B24",
+        "partno": [
+            "1003733-211"
+        ]
+    },
+    "0034": {
+        "assembly": "1021106-011",
+        "program": "CORONA",
+        "revision": "?",
+        "module": "B28",
+        "partno": [
+            "1003733-221"
+        ]
+    },
+    "0035": {
+        "assembly": "1021106-011",
+        "program": "CORONA",
+        "revision": "?",
+        "module": "B29",
+        "partno": [
+            "1003733-231"
+        ]
+    },
+    "0036": {
+        "assembly": "1021106-021",
+        "program": "CORONA",
+        "revision": "?",
+        "module": "B22",
+        "partno": [
+            "1003733-241"
+        ]
+    },
+    "0037": {
+        "assembly": "?",
+        "program": "?",
+        "revision": "?",
+        "module": "B21",
+        "partno": [
+            "1003733-251"
+        ]
+    },
+    "0038": {
+        "assembly": "?",
+        "program": "?",
+        "revision": "?",
+        "module": "B22",
+        "partno": [
+            "1003733-261"
+        ]
+    },
+    "0039": {
+        "assembly": "?",
+        "program": "?",
+        "revision": "?",
+        "module": "B23",
+        "partno": [
+            "1003733-271"
+        ]
+    },
+    "0040": {
+        "assembly": "?",
+        "program": "?",
+        "revision": "?",
+        "module": "B24",
+        "partno": [
+            "1003733-281"
+        ]
+    },
+    "0041": {
+        "assembly": "?",
+        "program": "?",
+        "revision": "?",
+        "module": "B28",
+        "partno": [
+            "1003733-291"
+        ]
+    },
+    "0042": {
+        "assembly": "?",
+        "program": "?",
+        "revision": "?",
+        "module": "B29",
+        "partno": [
+            "1003733-311"
+        ]
+    },
+    "0043": {
+        "assembly": "?",
+        "program": "?",
+        "revision": "?",
+        "module": "B21",
+        "partno": [
+            "1003733-321"
+        ]
+    },
+    "0044": {
+        "assembly": "?",
+        "program": "?",
+        "revision": "?",
+        "module": "B22",
+        "partno": [
+            "1003733-331"
+        ]
+    },
+    "0045": {
+        "assembly": "?",
+        "program": "?",
+        "revision": "?",
+        "module": "B23",
+        "partno": [
+            "1003733-341"
+        ]
+    },
+    "0046": {
+        "assembly": "?",
+        "program": "?",
+        "revision": "?",
+        "module": "B24",
+        "partno": [
+            "1003733-351"
+        ]
+    },
+    "0047": {
+        "assembly": "?",
+        "program": "?",
+        "revision": "?",
+        "module": "B28",
+        "partno": [
+            "1003733-361"
+        ]
+    },
+    "0048": {
+        "assembly": "?",
+        "program": "?",
+        "revision": "?",
+        "module": "B29",
+        "partno": [
+            "1003733-371"
+        ]
+    },
+    "0049": {
+        "assembly": "?",
+        "program": "?",
+        "revision": "?",
+        "module": "B21",
+        "partno": [
+            "1003733-381"
+        ]
+    },
+    "0050": {
+        "assembly": "?",
+        "program": "?",
+        "revision": "?",
+        "module": "B22",
+        "partno": [
+            "1003733-391"
+        ]
+    },
+    "0051": {
+        "assembly": "?",
+        "program": "?",
+        "revision": "?",
+        "module": "B23",
+        "partno": [
+            "1003733-411"
+        ]
+    },
+    "0052": {
+        "assembly": "?",
+        "program": "?",
+        "revision": "?",
+        "module": "B24",
+        "partno": [
+            "1003733-421"
+        ]
+    },
+    "0053": {
+        "assembly": "?",
+        "program": "?",
+        "revision": "?",
+        "module": "B28",
+        "partno": [
+            "1003733-431"
+        ]
+    },
+    "0054": {
+        "assembly": "?",
+        "program": "?",
+        "revision": "?",
+        "module": "B29",
+        "partno": [
+            "1003733-441"
+        ]
+    },
+    "0055": {
+        "assembly": "1021108-011",
+        "program": "SOLARIUM",
+        "revision": "54",
+        "module": "B21",
+        "partno": [
+            "1003733-451"
+        ]
+    },
+    "0056": {
+        "assembly": "1021108-011",
+        "program": "SOLARIUM",
+        "revision": "54",
+        "module": "B22",
+        "partno": [
+            "1003733-461"
+        ]
+    },
+    "0057": {
+        "assembly": "1021108-011",
+        "program": "SOLARIUM",
+        "revision": "54",
+        "module": "B23",
+        "partno": [
+            "1003733-471"
+        ]
+    },
+    "0058": {
+        "assembly": "1021108-011",
+        "program": "SOLARIUM",
+        "revision": "54",
+        "module": "B24",
+        "partno": [
+            "1003733-481"
+        ]
+    },
+    "0059": {
+        "assembly": "1021108-011",
+        "program": "SOLARIUM",
+        "revision": "54",
+        "module": "B28",
+        "partno": [
+            "1003733-491"
+        ]
+    },
+    "0060": {
+        "assembly": "1021108-011",
+        "program": "SOLARIUM",
+        "revision": "54",
+        "module": "B29",
+        "partno": [
+            "1003733-511"
+        ]
+    },
+    "0061": {
+        "assembly": "1021108-011",
+        "program": "SOLARIUM",
+        "revision": "55",
+        "module": "B21",
+        "partno": [
+            "1003733-521"
+        ]
+    },
     "0200": {
         "assembly": "2021100",
         "program": "RETREAD",
