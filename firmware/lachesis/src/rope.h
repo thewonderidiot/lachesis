@@ -16,6 +16,9 @@ typedef struct
     rope_state_t state;
     strand_msg_t strand_msg;
     uint16_t offset;
+    uint16_t last_address;
+    uint16_t last_word;
+    bool blk1;
 } rope_t;
 
 int32_t rope_init(void);
@@ -24,7 +27,9 @@ void rope_set_timing(timing_msg_t *timing);
 void rope_set_bplssw_state(bool on);
 void rope_set_sbf_state(bool on);
 uint16_t rope_read_word(uint16_t address);
+uint16_t rope_read_word_blk1(uint16_t address);
 void rope_read_strand(uint8_t strand);
+void rope_read_strand_blk1(uint8_t strand);
 void rope_jam_address(uint16_t address);
 void rope_pulse_set(uint8_t circuit);
 void rope_pulse_reset(uint8_t circuit);

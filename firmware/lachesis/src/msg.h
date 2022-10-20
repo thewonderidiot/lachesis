@@ -20,6 +20,8 @@ typedef enum
     MSGID_PULSE_STRAND,
     MSGID_READ_STRAND,
     MSGID_STRAND,
+    MSGID_READ_ADDRESS_BLK1,
+    MSGID_READ_STRAND_BLK1,
 } msgid_t;
 
 typedef struct

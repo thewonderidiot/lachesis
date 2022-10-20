@@ -61,6 +61,12 @@ void cmd_service(void)
     case MSGID_READ_STRAND:
         rope_read_strand(((read_strand_msg_t*)g_cmd_buf)->strand);
         break;
+    case MSGID_READ_ADDRESS_BLK1:
+        rope_read_word_blk1(((read_address_msg_t*)g_cmd_buf)->address);
+        break;
+    case MSGID_READ_STRAND_BLK1:
+        rope_read_strand_blk1(((read_strand_msg_t*)g_cmd_buf)->strand);
+        break;
     default:
         break;
     }
