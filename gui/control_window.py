@@ -6,9 +6,10 @@ from indicator import Indicator
 import usb_msg
 
 class ControlWindow(QWidget):
-    def __init__(self, usbif):
+    def __init__(self, usbif, block1):
         super().__init__()
 
+        self._block1 = block1
         self._usbif = usbif
         self._setup_ui()
 
@@ -27,7 +28,10 @@ class ControlWindow(QWidget):
         self._usbif.send(usb_msg.SetSBFState(on))
 
     def _read_address(self):
-        self._usbif.send(usb_msg.ReadAddress(self._next_address.value()))
+        if self._block1:
+            self._usbif.send(usb_msg.ReadAddressBlk1(self._next_address.value()))
+        else:
+            self._usbif.send(usb_msg.ReadAddress(self._next_address.value()))
 
     def _jam_address(self):
         self._usbif.send(usb_msg.JamAddress(self._next_address.value()))

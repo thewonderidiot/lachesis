@@ -16,21 +16,27 @@ import usb_msg
 import agc
 
 class MainWindow(QMainWindow):
-    def __init__(self, parent, app):
+    def __init__(self, parent, app, block1):
         super().__init__(parent)
         self._app = app
+        self._block1 = block1
 
         self._rope_db = RopeDB()
         self._next_strand = 0
         self._bplssw_time = 0
+
+        if block1:
+            self._num_strands = 8
+        else:
+            self._num_strands = 12
 
         # Set up the serial port
         self._usbif = USBInterface(self)
 
         # Set up the UI
         self._setup_ui()
-        self._timing_window = TimingWindow(self._usbif)
-        self._control_window = ControlWindow(self._usbif)
+        self._timing_window = TimingWindow(self._usbif, block1)
+        self._control_window = ControlWindow(self._usbif, block1)
 
         self._reset()
 
@@ -123,7 +129,7 @@ class MainWindow(QMainWindow):
 
         row += 1
 
-        for bank in range(row, row+6):
+        for bank in range(row, row+self._num_strands//2):
             bank_label = QLabel('--', self)
             layout.addWidget(bank_label, bank, 0)
             self._banks.append(bank_label)
@@ -196,7 +202,10 @@ class MainWindow(QMainWindow):
         self._app.processEvents()
 
         self._next_strand = 1
-        self._usbif.send(usb_msg.ReadStrand(0))
+        if self._block1:
+            self._usbif.send(usb_msg.ReadStrandBlk1(0))
+        else:
+            self._usbif.send(usb_msg.ReadStrand(0))
 
     def _toggle_bplssw(self):
         on = self._bplssw_button.isChecked()
@@ -218,8 +227,11 @@ class MainWindow(QMainWindow):
         elif isinstance(msg, usb_msg.Strand):
             # Immediately kick off the next strand so the hardware can think
             # while we're processing this one
-            if self._next_strand < 12:
-                self._usbif.send(usb_msg.ReadStrand(self._next_strand))
+            if self._next_strand < self._num_strands:
+                if self._block1:
+                    self._usbif.send(usb_msg.ReadStrandBlk1(self._next_strand))
+                else:
+                    self._usbif.send(usb_msg.ReadStrand(self._next_strand))
 
             self._words.extend(msg.words)
 
@@ -239,7 +251,7 @@ class MainWindow(QMainWindow):
                 self._data_text.appendHtml(html)
 
             self._next_strand += 1
-            if self._next_strand > 12:
+            if self._next_strand > self._num_strands:
                 self._process_rope()
                 self._next_strand = 0
                 self._read_rope_button.setEnabled(True)
@@ -274,7 +286,7 @@ class MainWindow(QMainWindow):
         self._buggers = []
         self._data_text.setPlainText('')
         self._all_healthy = True
-        for i in range(6):
+        for i in range(self._num_strands//2):
             self._sums[i].setText('000000')
             self._banks[i].setText('--')
             self._healths[i].set_color(QColor(0, 255, 0))

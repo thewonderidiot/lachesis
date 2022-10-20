@@ -5,11 +5,15 @@ from waveform import Waveform
 import usb_msg
 
 class TimingWindow(QWidget):
-    def __init__(self, usbif):
+    def __init__(self, usbif, block1):
         super().__init__()
 
         self._usbif = usbif
-        self._settings = QSettings('timing.ini', QSettings.IniFormat)
+        if block1:
+            settings_file = 'timing_block1.ini'
+        else:
+            settings_file = 'timing_block2.ini'
+        self._settings = QSettings(settings_file, QSettings.IniFormat)
 
         self._signals = [
             'IHENV',

@@ -16,6 +16,8 @@ class MsgId:
     PulseStrand = 11
     ReadStrand = 12
     Strand = 13
+    ReadAddressBlk1 = 14
+    ReadStrandBlk1 = 15
 
 SysStatus = namedtuple('SysStatus', ['temp', 'vccint', 'vccaux', 'v14p0', 'v5p0'])
 Timing = namedtuple('Timing', ['bplssw_pg_loss_timeout', 'bplssw_poweron_timeout',
@@ -36,6 +38,8 @@ PulseInhibit = namedtuple('PulseInhibit', ['circuit'])
 PulseStrand = namedtuple('PulseStrand', ['circuit'])
 ReadStrand = namedtuple('ReadStrand', ['strand'])
 Strand = namedtuple('Strand', ['strand', 'words'])
+ReadAddressBlk1 = namedtuple('ReadAddressBlk1', ['address'])
+ReadStrandBlk1 = namedtuple('ReadStrandBlk1', ['strand'])
 
 
 def unpack(msg_bytes):
@@ -105,6 +109,12 @@ def pack(msg):
         msg_bytes += struct.pack('<H', msg.circuit)
 
     elif isinstance(msg, ReadStrand):
+        msg_bytes += struct.pack('<H', msg.strand)
+
+    elif isinstance(msg, ReadAddressBlk1):
+        msg_bytes += struct.pack('<H', msg.address)
+
+    elif isinstance(msg, ReadStrandBlk1):
         msg_bytes += struct.pack('<H', msg.strand)
 
     return msg_bytes
