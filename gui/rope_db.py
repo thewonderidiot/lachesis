@@ -1,13 +1,17 @@
 import json
 
 class RopeDB():
-    def __init__(self):
+    def __init__(self, block1):
+        self._block1 = block1
         self._bugger_sets = {}
         self._unknown_partnos = []
         with open('ropes.json') as f:
             self._rope_data = json.load(f)
 
         for deck,data in self._rope_data.items():
+            if (self._block1 and int(deck) >= 200) or ((not self._block1) and int(deck) < 200):
+                continue
+
             if 'buggers' in data:
                 key = tuple(data['buggers'])
                 self._bugger_sets[key] = deck
@@ -41,3 +45,5 @@ class RopeDB():
                     self._bugger_sets[buggers] = deck
 
                 return data['program'] + ' ' + data['revision'], data['module'], data['partno'][-1], deck
+
+        return None

@@ -1,12 +1,11 @@
-def disassemble_bank(words, bank_idx=0):
+def disassemble_bank(block1, words, bank_idx=0):
     extended = False
     banksum = 0
     lines = [''] * 1024
 
     banksum = 0
     parity_good = True
-    bs2 = 0
-    bs3 = 0
+    bsf = [0, 0]
     bsn = 0
     last_sum = False
     bank = -1
@@ -44,7 +43,10 @@ def disassemble_bank(words, bank_idx=0):
             op_str = 'BNKSUM'
             arg_str = '%o' % bank
         else:
-            op_str, arg_str, extended = disassemble_instruction(word, extended)
+            if block1:
+                op_str, arg_str, extended = disassemble_blk1(word, extended)
+            else:
+                op_str, arg_str, extended = disassemble_blk2(word, extended)
 
         op_str += '&nbsp;' * (7 - len(op_str))
 
@@ -52,22 +54,38 @@ def disassemble_bank(words, bank_idx=0):
         if arg_str:
             lines[s] += '<span style="color:magenta;">%s</span>' % arg_str
 
-        if (bank_idx == 2) and (word == 0o4000 + s):
-            bs2 += 1
-        else:
-            bs2 = 0
+        if block1:
+            if (bank_idx == 1) and (word == 0o2000 + s):
+                bsf[0] += 1
+            else:
+                bsf[0] = 0
 
-        if (bank_idx == 3) and (word == 0o6000 + s):
-            bs3 += 1
-        else:
-            bs3 = 0
+            if (bank_idx == 0) and (word == 0o4000 + s):
+                bsf[1] += 1
+            else:
+                bsf[1] = 0
 
-        if word == 0o2000 + s:
-            bsn += 1
+            if word == 0o6000 + s:
+                bsn += 1
+            else:
+                bsn = 0
         else:
-            bsn = 0
-        
-        if bs2 >= 2 or bs3 >= 2 or bsn >= 2:
+            if (bank_idx == 2) and (word == 0o4000 + s):
+                bsf[0] += 1
+            else:
+                bsf[0] = 0
+
+            if (bank_idx == 3) and (word == 0o6000 + s):
+                bsf[1] += 1
+            else:
+                bsf[1] = 0
+
+            if word == 0o2000 + s:
+                bsn += 1
+            else:
+                bsn = 0
+
+        if bsf[0] >= 2 or bsf[1] >= 2 or bsn >= 2:
             last_sum = True
 
     health = parity_good
@@ -78,15 +96,21 @@ def disassemble_bank(words, bank_idx=0):
         bank_str = '%02o' % bank
 
     for s in range(len(lines)):
-        if bank == 2 or bank == 3:
-            addr_str = '&nbsp;&nbsp;&nbsp;%04o' % (s + bank*0o2000)
+        if block1:
+            if bank == 1 or bank == 2:
+                addr_str = '&nbsp;&nbsp;&nbsp;%04o' % (s + bank*0o2000)
+            else:
+                addr_str = '%s,%04o' % (bank_str, s + 0o6000)
         else:
-            addr_str = '%s,%04o' % (bank_str, s + 0o2000)
+            if bank == 2 or bank == 3:
+                addr_str = '&nbsp;&nbsp;&nbsp;%04o' % (s + bank*0o2000)
+            else:
+                addr_str = '%s,%04o' % (bank_str, s + 0o2000)
         lines[s] = ('<span style="color:gray;">%s</span>&nbsp;' % addr_str) + lines[s]
 
     return '<br/>'.join(lines), bugger, bank_str, health
 
-def disassemble_instruction(word, extended):
+def disassemble_blk2(word, extended):
     op_str = ''
     arg_str = '%04o' % (word & 0o7777)
     sq = word >> 12
@@ -198,6 +222,55 @@ def disassemble_instruction(word, extended):
                 op_str = 'BZMF'
         elif sq == 7:
             op_str = 'MP'
+
+    return op_str, arg_str, extended
+
+def disassemble_blk1(word, extended):
+    op_str = ''
+    arg_str = '%04o' % (word & 0o7777)
+    sq = word >> 12
+
+    if not extended:
+        if sq == 0:
+            op_str = 'TC'
+        elif sq == 1:
+            op_str = 'CCS'
+        elif sq == 2:
+            op_str = 'INDEX'
+            if arg_str == '0016':
+                op_str = 'RELINT'
+                arg_str = ''
+            elif arg_str == '0017':
+                op_str = 'INHINT'
+                arg_str = ''
+            elif arg_str == '0025':
+                op_str = 'RESUME'
+                arg_str = ''
+            elif arg_str == '5777':
+                op_str = 'EXTEND'
+                arg_str = ''
+                extended = True
+        elif sq == 3:
+            if int(arg_str, 8) >= 0o2000:
+                op_str = 'CAF'
+            else:
+                op_str = 'XCH'
+        elif sq == 4:
+            op_str = 'CS'
+        elif sq == 5:
+            op_str = 'TS'
+        elif sq == 6:
+            op_str = 'AD'
+        elif sq == 7:
+            op_str = 'MASK'
+    else:
+        extended = False
+        if sq == 4:
+            op_str = 'MP'
+        elif sq == 5:
+            op_str = 'DV'
+        elif sq == 6:
+            op_str = 'SU'
 
     return op_str, arg_str, extended
 

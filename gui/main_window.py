@@ -21,7 +21,7 @@ class MainWindow(QMainWindow):
         self._app = app
         self._block1 = block1
 
-        self._rope_db = RopeDB()
+        self._rope_db = RopeDB(block1)
         self._next_strand = 0
         self._bplssw_time = 0
 
@@ -237,7 +237,7 @@ class MainWindow(QMainWindow):
 
             if self._next_strand % 2 == 0:
                 bank_idx = self._next_strand // 2 - 1
-                html, bugger, bank, health = agc.disassemble_bank(self._words[-1024:], bank_idx)
+                html, bugger, bank, health = agc.disassemble_bank(self._block1, self._words[-1024:], bank_idx)
                 self._buggers.append(bugger)
                 self._sums[bank_idx].setText('%06o' % bugger)
                 self._banks[bank_idx].setText(bank)
@@ -264,17 +264,23 @@ class MainWindow(QMainWindow):
             pn, ok = QInputDialog.getItem(self, 'Rope Module Part Number', 'Select P/N of Unknown Module:',
                                           self._rope_db.get_unknown_partnos())
             prog, mod, pn, deck = self._rope_db.identify_rope(pn, self._buggers, self._all_healthy)
+            if not ok:
+                prog = '?'
+                mod = '?'
+                pn = '?'
+                deck = '?'
 
         fn = pn
-        existing_dumps = glob.glob(pn + '*', root_dir='dumps')
-        if len(existing_dumps) > 0:
-            fn += chr(ord('a') + len(existing_dumps) - 1)
-        fn += '.bin'
+        if fn != '?':
+            existing_dumps = glob.glob(pn + '*', root_dir='dumps')
+            if len(existing_dumps) > 0:
+                fn += chr(ord('a') + len(existing_dumps) - 1)
+            fn += '.bin'
 
-        word_array = array.array('H', self._words)
-        word_array.byteswap()
-        with open(os.path.join('dumps', fn), 'wb') as f:
-            word_array.tofile(f)
+            word_array = array.array('H', self._words)
+            word_array.byteswap()
+            with open(os.path.join('dumps', fn), 'wb') as f:
+                word_array.tofile(f)
 
         self._rope_label.setText(prog)
         self._module_label.setText(mod)
