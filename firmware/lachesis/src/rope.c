@@ -36,9 +36,12 @@ void rope_service(void)
     if (g_rope.state == ROPE_STATE_ACTIVE)
     {
         next_addr = g_rope.strand_msg.strand*WORDS_PER_STRAND + g_rope.offset;
-        if (!g_rope.blk1) {
+        if (!g_rope.blk1)
+        {
             g_rope.strand_msg.words[g_rope.offset] = rope_read_word(next_addr);
-        } else {
+        }
+        else
+        {
             g_rope.strand_msg.words[g_rope.offset] = rope_read_word_blk1(next_addr);
         }
         g_rope.offset++;
@@ -65,19 +68,44 @@ uint16_t rope_read_word_blk1(uint16_t address)
 {
     uint16_t substrand = address & 01400;
     uint16_t set = address & 02000;
+    uint8_t set_enables;
+    uint8_t reset_enables;
+    rope_driver_timings_t driver_timings;
+
+    // Block I reads are split across 2 cycles. Depending on when the strobe
+    // is desired (during SET or RESET), these cycles need to be broken down
+    // differently.
+    rope_driver_get_timings(&g_rope_driver, &driver_timings);
+    if (driver_timings.sbf_offset > driver_timings.set_offset)
+    {
+        set_enables = ROPE_DRIVER_ENABLE_IHENV | ROPE_DRIVER_ENABLE_RESET2;
+        reset_enables = ROPE_DRIVER_ENABLE_SET | ROPE_DRIVER_ENABLE_STRGAT | \
+                        ROPE_DRIVER_ENABLE_SBF;
+    }
+    else
+    {
+        set_enables = ROPE_DRIVER_ENABLE_IHENV | ROPE_DRIVER_ENABLE_STRGAT | \
+                      ROPE_DRIVER_ENABLE_RESET2 | ROPE_DRIVER_ENABLE_SBF;
+        reset_enables = ROPE_DRIVER_ENABLE_SET;
+    }
+
 
     g_rope.last_address = address;
     address &= ~03400;
     address |= (substrand << 1) | (set >> 2);
     rope_driver_set_address(&g_rope_driver, address);
-    rope_driver_start_cycle(&g_rope_driver, ROPE_DRIVER_ENABLE_IHENV | ROPE_DRIVER_ENABLE_STRGAT | \
-                                            ROPE_DRIVER_ENABLE_RESET2 | ROPE_DRIVER_ENABLE_SBF);
+    rope_driver_start_cycle(&g_rope_driver, set_enables);
     while (rope_driver_busy(&g_rope_driver));
     g_rope.last_word = rope_driver_get_sensed_word(&g_rope_driver);
     sys_delay(100);
 
-    rope_driver_set_address(&g_rope_driver, 0);
-    rope_driver_start_cycle(&g_rope_driver, ROPE_DRIVER_ENABLE_SET);
+    rope_driver_set_address(&g_rope_driver, address & (~0777));
+    rope_driver_start_cycle(&g_rope_driver, reset_enables);
+    while (rope_driver_busy(&g_rope_driver));
+    if (driver_timings.sbf_offset > driver_timings.set_offset)
+    {
+        g_rope.last_word = rope_driver_get_sensed_word(&g_rope_driver);
+    }
     sys_delay(500);
 
     return g_rope.last_word;
