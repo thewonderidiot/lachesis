@@ -4,6 +4,7 @@ from PySide2.QtGui import QColor
 from address_spinbox import AddressSpinBox
 from indicator import Indicator
 import usb_msg
+import special_capture
 
 class ControlWindow(QWidget):
     def __init__(self, usbif, block1):
@@ -145,3 +146,25 @@ class ControlWindow(QWidget):
         self._sbf_ind = Indicator(self, QColor(0, 255, 0))
         self._sbf_ind.setMinimumSize(25, 25)
         box_layout.addWidget(self._sbf_ind)
+
+        try:
+            self._special_capture = special_capture.SpecialCapture()
+            self._spec_button = QPushButton('Special Capture')
+            self._spec_button.clicked.connect(self._special)
+            column_layout.addWidget(self._spec_button)
+        except:
+            pass
+
+    def _special(self):
+        banks = [0o4, 0o1, 0o24, 0o21]
+        base = 0o5400
+        bit = 11
+
+        for addr in range(base, base+0o400):
+            s = 0o6000 + (addr % 0o2000)
+            bank = banks[addr // 0o2000]
+            name = '%02o,%04o_b%u' % (bank,s,bit)
+            # 5.4, 8.5
+            self._special_capture.setup()
+            self._usbif.send(usb_msg.ReadAddressBlk1(addr))
+            data = self._special_capture.capture(name)
