@@ -1,5 +1,5 @@
-from PySide2.QtCore import QObject, QIODevice, Signal
-from PySide2.QtSerialPort import QSerialPort, QSerialPortInfo
+from PySide6.QtCore import QObject, QIODevice, Signal
+from PySide6.QtSerialPort import QSerialPort, QSerialPortInfo
 import crcmod.predefined
 import struct
 
@@ -22,7 +22,10 @@ class USBInterface(QObject):
                 (info.hasVendorIdentifier() and info.vendorIdentifier() == 0x0403) and
                 (info.hasProductIdentifier() and info.productIdentifier() == 0x6010)):
                 self._serial = QSerialPort(info, self)
-                break
+                # The FT2232H can appear as multiple serial ports. We always want
+                # the second... which (hopefully) will always appear second in
+                # this list.
+                # break
 
         if self._serial == None:
             print('Unable to locate serial device!')

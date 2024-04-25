@@ -1,6 +1,6 @@
-from PySide2.QtWidgets import QWidget, QSizePolicy
-from PySide2.QtGui import QPainter, QColor, QPalette, QPen
-from PySide2.QtCore import Qt
+from PySide6.QtWidgets import QWidget, QSizePolicy
+from PySide6.QtGui import QPainter, QColor, QPalette, QPen
+from PySide6.QtCore import Qt
 import math
 
 class Waveform(QWidget):

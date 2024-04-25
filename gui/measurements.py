@@ -1,6 +1,6 @@
-from PySide2.QtWidgets import QGroupBox, QGridLayout, QLabel, QLineEdit
-from PySide2.QtGui import QFont
-from PySide2.QtCore import Qt
+from PySide6.QtWidgets import QGroupBox, QGridLayout, QLabel, QLineEdit
+from PySide6.QtGui import QFont
+from PySide6.QtCore import Qt
 import usb_msg
 
 class Measurements(QGroupBox):
@@ -24,7 +24,7 @@ class Measurements(QGroupBox):
     def _setup_ui(self):
         layout = QGridLayout(self)
         self.setLayout(layout)
-        layout.setMargin(3)
+        # layout.setMargin(3)
         layout.setHorizontalSpacing(10)
         layout.setVerticalSpacing(1)
 

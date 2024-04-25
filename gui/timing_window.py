@@ -1,6 +1,6 @@
-from PySide2.QtWidgets import QWidget, QLabel, QDoubleSpinBox, QGridLayout, \
+from PySide6.QtWidgets import QWidget, QLabel, QDoubleSpinBox, QGridLayout, \
                               QHBoxLayout, QSpacerItem, QSizePolicy, QPushButton
-from PySide2.QtCore import QSettings
+from PySide6.QtCore import QSettings
 from waveform import Waveform
 import usb_msg
 

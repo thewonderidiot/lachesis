@@ -1,6 +1,6 @@
-from PySide2.QtWidgets import QWidget, QLabel, QVBoxLayout, QHBoxLayout, QGridLayout, \
+from PySide6.QtWidgets import QWidget, QLabel, QVBoxLayout, QHBoxLayout, QGridLayout, \
                               QGroupBox, QPushButton, QLineEdit, QSizePolicy
-from PySide2.QtGui import QColor
+from PySide6.QtGui import QColor
 from address_spinbox import AddressSpinBox
 from indicator import Indicator
 import usb_msg
@@ -86,8 +86,8 @@ class ControlWindow(QWidget):
         column = QWidget(self)
         layout.addWidget(column)
         column_layout = QVBoxLayout()
-        column_layout.setMargin(0)
-        column.setMaximumWidth(150)
+        # column_layout.setMargin(0)
+        column.setMaximumWidth(160)
         column.setLayout(column_layout)
 
         box = QGroupBox('Cycle Results', self)

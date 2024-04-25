@@ -1,6 +1,6 @@
-from PySide2.QtWidgets import QMainWindow, QGridLayout, QPushButton, QWidget, QPlainTextEdit, QLabel, QLineEdit, QInputDialog
-from PySide2.QtGui import QColor, QFont
-from PySide2.QtCore import Qt
+from PySide6.QtWidgets import QMainWindow, QGridLayout, QPushButton, QWidget, QPlainTextEdit, QLabel, QLineEdit, QInputDialog
+from PySide6.QtGui import QColor, QFont
+from PySide6.QtCore import Qt
 import time
 import array
 import glob
