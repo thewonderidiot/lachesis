@@ -41,6 +41,7 @@ class MainWindow(QMainWindow):
         self._reset()
 
         self._usbif.msg_received.connect(self._update)
+        self._usbif.connected.connect(self._connected)
 
     def _setup_ui(self):
         self.setWindowTitle('Core Rope Reader')
@@ -50,8 +51,6 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(central)
         layout = QGridLayout(central)
         central.setLayout(layout)
-        # layout.setSpacing(0)
-        # layout.setMargin(0)
 
         self._banks = []
         self._sums = []
@@ -301,6 +300,12 @@ class MainWindow(QMainWindow):
         self._module_label.setText('-')
         self._pn_label.setText('-')
         self._deck_label.setText('-')
+
+    def _connected(self, connected):
+        if not connected:
+            on = self._bplssw_button.setChecked(False)
+            self._bplssw_ind.set_on(False)
+            self._bplssw_ind.set_color(QColor(0, 255, 0))
 
     def closeEvent(self, event):
         self._timing_window.close()

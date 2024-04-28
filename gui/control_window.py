@@ -86,7 +86,7 @@ class ControlWindow(QWidget):
         column = QWidget(self)
         layout.addWidget(column)
         column_layout = QVBoxLayout()
-        # column_layout.setMargin(0)
+        column_layout.setContentsMargins(0,0,0,0)
         column.setMaximumWidth(160)
         column.setLayout(column_layout)
 

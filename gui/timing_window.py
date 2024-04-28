@@ -27,6 +27,7 @@ class TimingWindow(QWidget):
         self._setup_ui()
 
         usbif.msg_received.connect(self._update)
+        usbif.connected.connect(self._connected)
 
     def _setup_ui(self):
         self.setWindowTitle('Rope Cycle Timing')
@@ -160,3 +161,9 @@ class TimingWindow(QWidget):
             for signal in self._signals:
                 self._waveforms[signal].set_programmed_offset(getattr(msg, signal.lower() + '_offset'))
                 self._waveforms[signal].set_programmed_width(getattr(msg, signal.lower() + '_width'))
+
+    def _connected(self, connected):
+        if not connected:
+            for signal in self._signals:
+                self._waveforms[signal].set_programmed_offset(0)
+                self._waveforms[signal].set_programmed_width(0)

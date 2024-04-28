@@ -12,6 +12,7 @@ class Measurements(QGroupBox):
         self._setup_ui()
 
         usbif.msg_received.connect(self._update)
+        usbif.connected.connect(self._connected)
 
     def _update(self, msg):
         if isinstance(msg, usb_msg.SysStatus):
@@ -24,7 +25,7 @@ class Measurements(QGroupBox):
     def _setup_ui(self):
         layout = QGridLayout(self)
         self.setLayout(layout)
-        # layout.setMargin(3)
+        layout.setContentsMargins(3,3,3,3)
         layout.setHorizontalSpacing(10)
         layout.setVerticalSpacing(1)
 
@@ -51,11 +52,17 @@ class Measurements(QGroupBox):
         font.setPointSize(10)
         meas_value.setFont(font)
         meas_value.setAlignment(Qt.AlignCenter)
-        if temp:
-            meas_value.setText('0.00 C')
-        else:
-            meas_value.setText('0.00 V')
+        meas_value.setText('-')
         layout.addWidget(meas_value, row, col + 1)
         layout.setAlignment(meas_value, Qt.AlignLeft)
 
         return meas_value
+
+
+    def _connected(self, connected):
+        if not connected:
+            self._temp.setText('-')
+            self._vccint.setText('-')
+            self._vccaux.setText('-')
+            self._v14p0.setText('-')
+            self._v5p0.setText('-')
