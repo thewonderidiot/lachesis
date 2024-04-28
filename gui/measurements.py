@@ -1,6 +1,6 @@
-from PySide6.QtWidgets import QGroupBox, QGridLayout, QLabel, QLineEdit
-from PySide6.QtGui import QFont
-from PySide6.QtCore import Qt
+from qtpy.QtWidgets import QGroupBox, QGridLayout, QLabel, QLineEdit
+from qtpy.QtGui import QFont
+from qtpy.QtCore import Qt
 import usb_msg
 
 class Measurements(QGroupBox):

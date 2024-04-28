@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QSpinBox
+from qtpy.QtWidgets import QSpinBox
 
 class AddressSpinBox(QSpinBox):
     def __init__(self, parent):

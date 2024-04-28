@@ -1,6 +1,6 @@
-from PySide6.QtWidgets import QWidget, QLabel, QVBoxLayout, QHBoxLayout, QGridLayout, \
+from qtpy.QtWidgets import QWidget, QLabel, QVBoxLayout, QHBoxLayout, QGridLayout, \
                               QGroupBox, QPushButton, QLineEdit, QSizePolicy
-from PySide6.QtGui import QColor
+from qtpy.QtGui import QColor
 from address_spinbox import AddressSpinBox
 from indicator import Indicator
 import usb_msg

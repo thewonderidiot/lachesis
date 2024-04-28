@@ -1,5 +1,5 @@
-from PySide6.QtCore import QObject, QIODevice, QTimer, Signal
-from PySide6.QtSerialPort import QSerialPort, QSerialPortInfo
+from qtpy.QtCore import QObject, QIODevice, QTimer, Signal
+from qtpy.QtSerialPort import QSerialPort, QSerialPortInfo
 import crcmod.predefined
 import struct
 
