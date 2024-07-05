@@ -3,15 +3,17 @@ from qtpy.QtWidgets import QWidget, QLabel, QVBoxLayout, QHBoxLayout, QGridLayou
 from qtpy.QtGui import QColor
 from address_spinbox import AddressSpinBox
 from indicator import Indicator
+from scope_window import ScopeWindow
 import usb_msg
 
 class ControlWindow(QWidget):
-    def __init__(self, usbif, block1):
+    def __init__(self, usbif, block1, rope_db):
         super().__init__()
 
         self._block1 = block1
         self._usbif = usbif
         self._setup_ui()
+        self._scope_window = ScopeWindow(self._usbif, block1, rope_db)
 
         usbif.msg_received.connect(self._update)
 
@@ -73,8 +75,15 @@ class ControlWindow(QWidget):
             button.clicked.connect(lambda s=0, c=i+len(wires): self._usbif.send(usb_msg.PulseInhibit(c)))
             box_layout.addWidget(button, i, 1)
 
+        column = QWidget(self)
+        layout.addWidget(column)
+        column_layout = QVBoxLayout()
+        column_layout.setContentsMargins(0,0,0,0)
+        column.setMaximumWidth(160)
+        column.setLayout(column_layout)
+
         box = QGroupBox('Strands', self)
-        layout.addWidget(box)
+        column_layout.addWidget(box)
         box_layout = QGridLayout()
         box.setLayout(box_layout)
 
@@ -82,6 +91,20 @@ class ControlWindow(QWidget):
             button = QPushButton('STR%02u' % (i + 1))
             button.clicked.connect(lambda s=0, c=i: self._usbif.send(usb_msg.PulseStrand(c)))
             box_layout.addWidget(button, i % 6, i // 6)
+
+        box = QGroupBox('Sense Strobe', self)
+        column_layout.addWidget(box)
+        box_layout = QHBoxLayout()
+        box.setLayout(box_layout)
+
+        self._sbf_button = QPushButton('SBF Hold')
+        self._sbf_button.setCheckable(True)
+        self._sbf_button.clicked.connect(self._toggle_sbf)
+        box_layout.addWidget(self._sbf_button)
+
+        self._sbf_ind = Indicator(self, QColor(0, 255, 0))
+        self._sbf_ind.setMinimumSize(25, 25)
+        box_layout.addWidget(self._sbf_ind)
 
         column = QWidget(self)
         layout.addWidget(column)
@@ -132,16 +155,18 @@ class ControlWindow(QWidget):
         button.clicked.connect(self._jam_address)
         box_layout.addWidget(button, 3, 0, 1, 2)
 
-        box = QGroupBox('Sense Strobe', self)
+        box = QGroupBox('Data Capture', self)
         column_layout.addWidget(box)
-        box_layout = QHBoxLayout()
+        box_layout = QGridLayout()
         box.setLayout(box_layout)
 
-        self._sbf_button = QPushButton('SBF Hold')
-        self._sbf_button.setCheckable(True)
-        self._sbf_button.clicked.connect(self._toggle_sbf)
-        box_layout.addWidget(self._sbf_button)
+        button = QPushButton('Scope Capture')
+        button.clicked.connect(self._open_scope)
+        box_layout.addWidget(button, 0, 0)
 
-        self._sbf_ind = Indicator(self, QColor(0, 255, 0))
-        self._sbf_ind.setMinimumSize(25, 25)
-        box_layout.addWidget(self._sbf_ind)
+    def _open_scope(self):
+        self._scope_window.show()
+
+    def closeEvent(self, event):
+        self._scope_window.close()
+        event.accept()

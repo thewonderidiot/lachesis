@@ -37,3 +37,6 @@ vivado.log
 
 # Archives
 *.zip
+
+# Captures
+*.npz

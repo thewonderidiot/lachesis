@@ -30,8 +30,18 @@ class RopeDB():
 
         return data['program'] + ' ' + data['revision'], data['module'], data['partno'][-1], deck
 
-    def get_unknown_partnos(self):
-        return self._unknown_partnos
+    def get_partnos(self, unknown=False):
+        if unknown:
+            return self._unknown_partnos
+
+        partnos = []
+        for deck, data in self._rope_data.items():
+            if (self._block1 and int(deck) >= 200) or ((not self._block1) and int(deck) < 200):
+                continue
+            partnos.extend(data['partno'])
+
+        return sorted(partnos)
+
 
     def identify_rope(self, partno, raw_buggers, healthy):
         buggers = tuple(['%06o' % bugger for bugger in raw_buggers])
@@ -45,5 +55,12 @@ class RopeDB():
                     self._bugger_sets[buggers] = deck
 
                 return data['program'] + ' ' + data['revision'], data['module'], data['partno'][-1], deck
+
+        return None
+
+    def get_module(self, partno):
+        for deck, data in self._rope_data.items():
+            if partno in data['partno']:
+                return data['module']
 
         return None

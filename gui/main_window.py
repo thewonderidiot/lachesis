@@ -36,7 +36,7 @@ class MainWindow(QMainWindow):
         # Set up the UI
         self._setup_ui()
         self._timing_window = TimingWindow(self._usbif, block1)
-        self._control_window = ControlWindow(self._usbif, block1)
+        self._control_window = ControlWindow(self._usbif, block1, self._rope_db)
 
         self._reset()
 
@@ -261,7 +261,7 @@ class MainWindow(QMainWindow):
         prog, mod, pn, deck = self._rope_db.find_rope(self._buggers)
         if pn == '-':
             pn, ok = QInputDialog.getItem(self, 'Rope Module Part Number', 'Select P/N of Unknown Module:',
-                                          self._rope_db.get_unknown_partnos())
+                                          self._rope_db.get_partnos(unknown=True))
             prog, mod, pn, deck = self._rope_db.identify_rope(pn, self._buggers, self._all_healthy)
             if not ok:
                 prog = '?'
