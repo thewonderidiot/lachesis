@@ -100,7 +100,7 @@ class TimingWindow(QWidget):
         button_row.setLayout(button_layout)
 
         button = QPushButton('Defaults')
-        button.clicked.connect(self._restore_defaults)
+        button.clicked.connect(self.restore_defaults)
         button_layout.addWidget(button)
 
         button = QPushButton('Save')
@@ -112,12 +112,12 @@ class TimingWindow(QWidget):
         button_layout.addWidget(button)
 
         button = QPushButton('Program')
-        button.clicked.connect(self._program)
+        button.clicked.connect(self.program)
         button_layout.addWidget(button)
 
         layout.addWidget(button_row, len(self._signals) + 1, 6)
 
-    def _restore_defaults(self):
+    def restore_defaults(self):
         for signal in self._signals:
             offset = float(self._settings.value('Offsets/' + signal))
             width = float(self._settings.value('Widths/' + signal))
@@ -125,6 +125,12 @@ class TimingWindow(QWidget):
             self._width_spins[signal].setValue(width)
 
         self._bplssw_spin.setValue(float(self._settings.value('Timeouts/BPLSSW')))
+
+    def set_offset(self, signal, offset):
+        self._offset_spins[signal].setValue(offset)
+
+    def set_width(self, signal, width):
+        self._width_spins[signal].setValue(width)
 
     def _save_defaults(self):
         for signal in self._signals:
@@ -141,7 +147,7 @@ class TimingWindow(QWidget):
             self._offset_spins[signal].setValue(self._waveforms[signal].get_programmed_offset())
             self._width_spins[signal].setValue(self._waveforms[signal].get_programmed_width())
 
-    def _program(self):
+    def program(self):
         params = [
             2, # clock cycles for PG loss,
             self._bplssw_spin.value()
@@ -155,7 +161,7 @@ class TimingWindow(QWidget):
     def _update(self, msg):
         if isinstance(msg, usb_msg.Timing):
             if msg.bplssw_poweron_timeout == 0:
-                self._program()
+                self.program()
                 return
 
             for signal in self._signals:

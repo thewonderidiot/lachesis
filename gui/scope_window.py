@@ -36,12 +36,13 @@ BANKS = {
 }
 
 class ScopeWindow(QWidget):
-    def __init__(self, usbif, block1, rope_db):
+    def __init__(self, usbif, block1, rope_db, timing_window):
         super().__init__()
 
         self._block1 = block1
         self._usbif = usbif
         self._rope_db = rope_db
+        self._timing_window = timing_window
 
         self._setup_ui()
         self._setup_scope()
@@ -256,9 +257,11 @@ class ScopeWindow(QWidget):
             if strand > 4:
                 base += 0o4000
             addrs = list(range(base, base+0o400)) + list(range(base+0o2000, base+0o2400))
+            sbfs = ['set', 'rst']
         else:
             base = 0o1000 * (strand - 1)
             addrs = list(range(base, base+0o1000))
+            sbfs = ['rst']
 
         partno_dir = 'captures/%s' % partno
         try:
@@ -268,36 +271,45 @@ class ScopeWindow(QWidget):
         
         self._reset_graph()
 
-        for addr in addrs:
-            voltages = None
-            start = time()
+        self._timing_window.restore_defaults()
+        self._timing_window.program()
 
-            addr_str = self._get_addr_str(module, addr)
-            self._address.setText(addr_str)
+        for sbf in sbfs:
+            if self._block1 and sbf == 'rst':
+                self._timing_window.set_offset('STRGAT', 5.4)
+                self._timing_window.set_offset('SBF', 8.5)
+                self._timing_window.program()
 
-            for i in range(samples):
-                self.setup()
-                if self._block1:
-                    self._usbif.send(usb_msg.ReadAddressBlk1(addr))
-                else:
-                    self._usbif.send(usb_msg.ReadAddressBlk(addr))
-                v = self.capture()
+            for addr in addrs:
+                voltages = None
+                start = time()
 
-                if voltages is None:
-                    voltages = v
-                else:
-                    voltages = np.vstack((voltages, v))
+                addr_str = self._get_addr_str(module, addr)
+                self._address.setText(addr_str)
 
-                if (i % 10 == 1):
-                    self._update_graph(voltages.mean(axis=0))
+                for i in range(samples):
+                    self.setup()
+                    if self._block1:
+                        self._usbif.send(usb_msg.ReadAddressBlk1(addr))
+                    else:
+                        self._usbif.send(usb_msg.ReadAddressBlk(addr))
+                    v = self.capture()
 
-            self._update_graph(voltages.mean(axis=0))
+                    if voltages is None:
+                        voltages = v
+                    else:
+                        voltages = np.vstack((voltages, v))
 
-            fn = os.path.join(partno_dir, '%s_b%u.npz' % (addr_str, bit))
-            with open(fn, 'wb') as f:
-                np.savez_compressed(file=f, arr=voltages)
+                    if (i % 10 == 1):
+                        self._update_graph(voltages.mean(axis=0))
 
-            if not self._running:
-                break
+                self._update_graph(voltages.mean(axis=0))
+
+                fn = os.path.join(partno_dir, '%s_b%u_%s.npz' % (addr_str, bit, sbf))
+                with open(fn, 'wb') as f:
+                    np.savez_compressed(file=f, arr=voltages)
+
+                if not self._running:
+                    return
 
         self._stop()

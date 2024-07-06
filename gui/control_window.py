@@ -7,13 +7,13 @@ from scope_window import ScopeWindow
 import usb_msg
 
 class ControlWindow(QWidget):
-    def __init__(self, usbif, block1, rope_db):
+    def __init__(self, usbif, block1, rope_db, timing_window):
         super().__init__()
 
         self._block1 = block1
         self._usbif = usbif
         self._setup_ui()
-        self._scope_window = ScopeWindow(self._usbif, block1, rope_db)
+        self._scope_window = ScopeWindow(self._usbif, block1, rope_db, timing_window)
 
         usbif.msg_received.connect(self._update)
 

@@ -36,7 +36,7 @@ class MainWindow(QMainWindow):
         # Set up the UI
         self._setup_ui()
         self._timing_window = TimingWindow(self._usbif, block1)
-        self._control_window = ControlWindow(self._usbif, block1, self._rope_db)
+        self._control_window = ControlWindow(self._usbif, block1, self._rope_db, self._timing_window)
 
         self._reset()
 
