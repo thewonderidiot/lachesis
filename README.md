@@ -3,7 +3,7 @@
 This repository contains all of the design files for safe, portable Block I and Block II Apollo Guidance Computer (AGC) core rope memory readers. For a detailed explanation of how it all works, check out [CuriousMarc's video featuring this project](https://www.youtube.com/watch?v=hckwxq8rnr0).
 
 ![Block 2 reader being used to dump the rope modules flown on Skylab-2](https://github.com/user-attachments/assets/ad910397-74e2-4fa6-97a8-e1cc0ad0b4b5)
-*Block 2 reader being used to dump the rope modules flown on Skylab-2*
+*Block 2 reader being used to dump the rope modules flown on Skylab-2 at the New Mexico Museum of Space History*
 
 ## Rope Safety Considerations
 
