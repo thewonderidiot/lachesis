@@ -78,7 +78,7 @@ class ScopeWindow(QWidget):
         label = QLabel('Strand')
         box_layout.addWidget(label, 1, 0)
 
-        strands = [str(i) for i in range(1, 9 if self._block1 else 13)]
+        strands = [str(i) for i in range(1, 9 if self._block1 else 13)] + ['ALL']
         self._strands = QComboBox()
         box_layout.addWidget(self._strands, 1, 1)
         self._strands.addItems(strands)
@@ -248,19 +248,27 @@ class ScopeWindow(QWidget):
     def _run_capture(self):
         partno = self._partnos.currentText()
         module = self._rope_db.get_module(partno)
-        strand = int(self._strands.currentText())
+        strand = self._strands.currentText()
         bit = int(self._bits.currentText())
         samples = self._samples.value()
 
         if self._block1:
-            base = 0o400 * ((strand - 1) % 4)
-            if strand > 4:
-                base += 0o4000
-            addrs = list(range(base, base+0o400)) + list(range(base+0o2000, base+0o2400))
+            if strand == 'ALL':
+                addrs = list(range(0, 0o10000))
+            else:
+                strand = int(strand)
+                base = 0o400 * ((strand - 1) % 4)
+                if strand > 4:
+                    base += 0o4000
+                addrs = list(range(base, base+0o400)) + list(range(base+0o2000, base+0o2400))
             sbfs = ['set', 'rst']
         else:
-            base = 0o1000 * (strand - 1)
-            addrs = list(range(base, base+0o1000))
+            if strand == 'ALL':
+                addrs = list(range(0, 0o14000))
+            else:
+                strand = int(strand)
+                base = 0o1000 * (strand - 1)
+                addrs = list(range(base, base+0o1000))
             sbfs = ['rst']
 
         partno_dir = 'captures/%s' % partno
